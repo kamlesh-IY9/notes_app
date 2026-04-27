@@ -1,0 +1,58 @@
+# App configuration for screenshot rendering
+
+apps:
+  - id: apple_notes
+    label: "Apple Notes"
+    os: "iOS"
+    default_share: 50
+    resolution: [591, 1280]
+    light_dark_ratio: [80, 20]
+    date_format: "{month} {day}, {year} at {time12}"  # "August 17, 2023 at 11:12 PM"
+    date_position: "center"
+    template: "apple_notes.html"
+    font_family: "'SF Pro Text', 'Inter', -apple-system, sans-serif"
+    title_font_weight: 700
+    body_font_size: 17
+    title_font_size: 22
+
+  - id: google_keep
+    label: "Google Keep"
+    os: "Android"
+    default_share: 30
+    resolution: [1080, 2280]
+    light_dark_ratio: [60, 40]
+    date_format: "Edited {mon} {day}, {year}, {time12}"  # "Edited Aug 17, 2023, 11:12 PM"
+    date_position: "bottom-right"
+    template: "google_keep.html"
+    font_family: "'Roboto', 'Google Sans', sans-serif"
+    title_font_weight: 500
+    body_font_size: 16
+    title_font_size: 24
+
+  - id: samsung_notes
+    label: "Samsung Notes"
+    os: "Android"
+    default_share: 20
+    resolution: [1080, 2340]
+    light_dark_ratio: [70, 30]
+    date_format: "{mon} {day}, {year}, {time12}"  # "Aug 17, 2023, 11:12 PM"
+    date_position: "top"
+    template: "samsung_notes.html"
+    font_family: "'Roboto', 'Samsung Sans', sans-serif"
+    title_font_weight: 600
+    body_font_size: 16
+    title_font_size: 22
+
+connectivity_states:
+  - id: wifi_cellular
+    label: "WiFi + Cellular Signal"
+    default_share: 60
+  - id: cellular_only
+    label: "Cellular Signal Only"
+    default_share: 25
+  - id: wifi_only
+    label: "WiFi Only"
+    default_share: 10
+  - id: no_service
+    label: "No Service"
+    default_share: 5

@@ -1,0 +1,132 @@
+# US-only spelling lint rules
+# Substrings that indicate non-US English — auto-reject or auto-fix
+
+british_words:
+  - mum          # → mom
+  - neighbour    # → neighbor
+  - colour       # → color
+  - favourite    # → favorite
+  - honour       # → honor
+  - behaviour    # → behavior
+  - flavour      # → flavor
+  - humour       # → humor
+  - labour       # → labor
+  - favour       # → favor
+  - harbour      # → harbor
+  - armour       # → armor
+  - rumour       # → rumor
+  - tumour       # → tumor
+  - vapour       # → vapor
+  - centre       # → center
+  - theatre      # → theater
+  - litre        # → liter
+  - metre        # → meter
+  - fibre        # → fiber
+  - sombre       # → somber
+  - lustre       # → luster
+  - organise     # → organize
+  - realise      # → realize
+  - recognise    # → recognize
+  - apologise    # → apologize
+  - specialise   # → specialize
+  - criticise    # → criticize
+  - analyse      # → analyze
+  - paralyse     # → paralyze
+  - catalogue    # → catalog
+  - dialogue     # → dialog (when used as UI term)
+  - programme    # → program
+  - cheque       # → check
+  - grey         # → gray
+  - tyre         # → tire
+  - kerb         # → curb
+  - orientated   # → oriented
+  - whilst       # → while
+  - amongst      # → among
+  - towards      # → toward (US prefers no -s)
+  - afterwards   # → afterward
+  - forwards     # → forward
+  - learnt       # → learned
+  - spelt        # → spelled
+  - dreamt       # → dreamed
+  - burnt        # → burned
+
+british_phrases:
+  - "shall"              # UK future tense; US uses "will" or "going to"
+  - "on holiday"         # → "on vacation"
+  - "go on holiday"      # → "go on vacation"
+  - "at university"      # → "at college" or "in college"
+  - "at uni"             # → "at school" or "in college"
+  - "ring me"            # → "call me"
+  - "give me a ring"     # → "give me a call"
+  - "mobile phone"       # → "cell phone" or just "phone"
+  - "lovely"             # overused British; rarely in US casual notes
+  - "brilliant"          # British praise; US uses "awesome" / "great"
+  - "quite good"         # British understatement
+  - "rubbish"            # → "trash" or "garbage"
+  - "fortnight"          # → "two weeks"
+  - "flat"               # → "apartment" (when living quarters)
+  - "boot"               # → "trunk" (car)
+  - "bonnet"             # → "hood" (car)
+  - "petrol"             # → "gas"
+  - "lift"               # → "elevator"
+  - "queue"              # → "line"
+  - "post"               # → "mail" (noun/verb for letters)
+  - "lorry"              # → "truck"
+  - "biscuit"            # → "cookie" (UK sense)
+  - "crisps"             # → "chips"
+  - "chips"              # (context: UK=fries) → "fries"
+  - "nappy"              # → "diaper"
+  - "dummy"              # → "pacifier"
+  - "pram"               # → "stroller"
+  - "jumper"             # → "sweater"
+  - "trainers"           # → "sneakers"
+  - "trousers"           # → "pants"
+
+# Excluded states + cities regex patterns
+excluded_locations:
+  states:
+    - "Texas"
+    - "Illinois"
+    - "Washington"
+  cities:
+    - "Houston"
+    - "Dallas"
+    - "Austin"
+    - "San Antonio"
+    - "Fort Worth"
+    - "El Paso"
+    - "Chicago"
+    - "Seattle"
+    - "Tacoma"
+    - "Spokane"
+    - "Springfield"  # context-dependent, IL has the capital
+
+auto_fixes:
+  mum: "mom"
+  neighbour: "neighbor"
+  colour: "color"
+  favourite: "favorite"
+  honour: "honor"
+  behaviour: "behavior"
+  flavour: "flavor"
+  humour: "humor"
+  labour: "labor"
+  centre: "center"
+  theatre: "theater"
+  litre: "liter"
+  metre: "meter"
+  fibre: "fiber"
+  organise: "organize"
+  realise: "realize"
+  recognise: "recognize"
+  apologise: "apologize"
+  specialise: "specialize"
+  criticise: "criticize"
+  analyse: "analyze"
+  grey: "gray"
+  whilst: "while"
+  amongst: "among"
+  learnt: "learned"
+  spelt: "spelled"
+  dreamt: "dreamed"
+  burnt: "burned"

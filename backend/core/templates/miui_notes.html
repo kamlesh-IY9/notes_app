@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--bg, #1a1a1a);
+    color: var(--fg, #ffffff);
+  }
+
+  /* ── Optional wallpaper overlay ── */
+  .wallpaper {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+
+  .wallpaper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+  }
+
+  /* ── Status Bar ── */
+  .status-bar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 38px 56px 18px 56px;
+    height: 110px;
+    color: var(--status-fg, #ffffff);
+  }
+
+  .status-bar .left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 38px;
+    font-weight: 500;
+  }
+
+  .status-bar .left .notif-icons {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .notif-icons .icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+  }
+
+  .icon-snap { background: #FFFC00; color: #000; }
+  .icon-insta { background: linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5); }
+  .icon-telegram { background: #2AABEE; }
+  .icon-whatsapp { background: #25D366; }
+  .icon-gmail { background: #fff; }
+  .icon-fb { background: #4267B2; }
+
+  .icon-snap::before { content: '👻'; font-size: 18px; }
+  .icon-telegram::before { content: '✈'; color: #fff; transform: rotate(-15deg); font-size: 18px; }
+  .icon-whatsapp::before { content: '💬'; font-size: 18px; }
+  .icon-gmail::before { content: 'M'; color: #EA4335; font-weight: 800; font-size: 18px; }
+  .icon-fb::before { content: 'f'; color: #fff; font-weight: 900; font-size: 22px; font-style: italic; }
+  .icon-insta::before { content: '📷'; font-size: 18px; }
+
+  .status-bar .right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 32px;
+    font-weight: 500;
+  }
+
+  .nfc {
+    font-family: monospace;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: -1px;
+  }
+
+  .alarm-icon {
+    width: 32px; height: 32px;
+    fill: var(--status-fg, #fff);
+  }
+
+  .vonr-stack {
+    font-size: 18px;
+    line-height: 1.05;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .data-stack {
+    font-size: 18px;
+    line-height: 1.05;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .gnet-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.0;
+  }
+  .gnet-stack .label { font-size: 18px; font-weight: 500; }
+  .gnet-stack .arrows { font-size: 14px; opacity: 0.85; }
+
+  .signal-bars {
+    display: flex;
+    gap: 3px;
+    align-items: flex-end;
+    height: 28px;
+  }
+  .signal-bars .bar {
+    width: 6px;
+    background: var(--status-fg, #fff);
+    border-radius: 1px;
+  }
+  .signal-bars .bar.empty { opacity: 0.30; }
+  .signal-bars .bar:nth-child(1) { height: 8px; }
+  .signal-bars .bar:nth-child(2) { height: 14px; }
+  .signal-bars .bar:nth-child(3) { height: 20px; }
+  .signal-bars .bar:nth-child(4) { height: 26px; }
+
+  .battery {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 6px;
+  }
+  .battery-body {
+    width: 56px;
+    height: 26px;
+    border: 2.5px solid var(--status-fg, #fff);
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    padding: 2px;
+  }
+  .battery-fill {
+    height: 100%;
+    background: var(--status-fg, #fff);
+    border-radius: 2px;
+  }
+  .battery-fill.low { background: #FF3B30; }
+  .battery-fill.charging { background: #34C759; }
+  .battery-tip {
+    width: 4px;
+    height: 12px;
+    background: var(--status-fg, #fff);
+    border-radius: 0 2px 2px 0;
+  }
+  .battery-pct {
+    font-size: 32px;
+    font-weight: 700;
+    margin-left: 6px;
+  }
+
+  /* ── Top Toolbar (back / sliders / 3-dot) ── */
+  .top-toolbar {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 56px 0 56px;
+    height: 100px;
+  }
+
+  .back-btn {
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 1;
+    color: var(--toolbar-fg, #fff);
+  }
+
+  .top-icons {
+    display: flex;
+    gap: 38px;
+  }
+
+  .top-icons svg {
+    width: 50px;
+    height: 50px;
+    stroke: var(--toolbar-fg, #fff);
+    fill: none;
+    stroke-width: 2;
+  }
+
+  .three-dot {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+  }
+  .three-dot .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--toolbar-fg, #fff);
+  }
+
+  /* ── Title placeholder ── */
+  .title-row {
+    position: relative;
+    z-index: 2;
+    padding: 60px 60px 0 60px;
+    font-size: 90px;
+    font-weight: 400;
+    color: var(--title-color, rgba(255,255,255,0.30));
+    line-height: 1.05;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .title-row.has-title {
+    color: var(--fg);
+    font-weight: 500;
+  }
+
+  /* ── Meta line ── */
+  .meta-row {
+    position: relative;
+    z-index: 2;
+    padding: 14px 60px 0 60px;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--meta-color, rgba(255,255,255,0.45));
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    line-height: 1.2;
+  }
+
+  .meta-row .sep {
+    opacity: 0.6;
+    font-weight: 300;
+  }
+
+  .meta-row .uncat-arrow {
+    margin-left: 4px;
+    font-size: 22px;
+  }
+
+  /* ── Body text ── */
+  .body-row {
+    position: relative;
+    z-index: 2;
+    padding: 50px 60px 0 60px;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.45;
+    white-space: pre-wrap;
+    color: var(--body-color, var(--fg));
+    letter-spacing: var(--letter-spacing, 0px);
+  }
+
+  /* ── Cream/red-border theme: needs an outline ── */
+  body.theme-warm-paper::before {
+    content: '';
+    position: absolute;
+    top: 220px;
+    bottom: 60px;
+    left: 30px;
+    right: 30px;
+    border: 4px solid #C04040;
+    border-radius: 8px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* ── Bottom edit toolbar (only theme-yellow-italic shows it) ── */
+  .bottom-edit-toolbar {
+    position: absolute;
+    bottom: 0;
+    left: 0; right: 0;
+    z-index: 3;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    padding: 24px 30px;
+    background: rgba(45,45,45,0.95);
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+
+  body.theme-yellow-italic .bottom-edit-toolbar { display: flex; }
+
+  .bottom-edit-toolbar .tool {
+    width: 60px; height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.65);
+    font-size: 28px;
+  }
+
+  /* Optional notification banner (top pop-up) */
+  .notif-banner {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    right: 30px;
+    z-index: 10;
+    display: none;
+    background: rgba(35,35,40,0.92);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 22px 26px;
+    align-items: center;
+    gap: 18px;
+    border: 1px solid rgba(255,255,255,0.06);
+  }
+  .notif-banner.show { display: flex; }
+  .notif-banner .avatar {
+    width: 80px; height: 80px;
+    background: #2AABEE;
+    border-radius: 50%;
+    color: white;
+    font-size: 38px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .notif-banner .content {
+    flex: 1;
+    color: #fff;
+  }
+  .notif-banner .name {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 4px;
+  }
+  .notif-banner .preview {
+    font-size: 26px;
+    color: rgba(255,255,255,0.7);
+  }
+  .notif-banner .when {
+    font-size: 24px;
+    color: rgba(255,255,255,0.5);
+    align-self: flex-start;
+  }
+
+  /* ── THEME DEFINITIONS ── */
+  /* 1: Light gray-blue + white text */
+  body.theme-gray-white {
+    --bg: #a0a8ae;
+    --fg: #ffffff;
+    --status-fg: #ffffff;
+    --toolbar-fg: #ffffff;
+    --title-color: rgba(255,255,255,0.30);
+    --meta-color: rgba(255,255,255,0.55);
+    --body-color: #ffffff;
+  }
+
+  /* 2: Pure black + white text */
+  body.theme-black-white {
+    --bg: #000000;
+    --fg: #ffffff;
+    --status-fg: #ffffff;
+    --toolbar-fg: #ffffff;
+    --title-color: rgba(255,255,255,0.25);
+    --meta-color: rgba(255,255,255,0.50);
+    --body-color: #ffffff;
+  }
+
+  /* 3: Dark gray + yellow italic */
+  body.theme-yellow-italic {
+    --bg: #2a2a2a;
+    --fg: #f5b73e;
+    --status-fg: #ffffff;
+    --toolbar-fg: #ffffff;
+    --title-color: rgba(255,255,255,0.25);
+    --meta-color: rgba(255,255,255,0.50);
+    --body-color: #f5b73e;
+  }
+  body.theme-yellow-italic .body-row { font-style: italic; font-weight: 700; }
+  body.theme-yellow-italic .title-row { font-style: italic; }
+
+  /* 4: Black + light blue text */
+  body.theme-black-blue {
+    --bg: #000000;
+    --fg: #5cbcfd;
+    --status-fg: #ffffff;
+    --toolbar-fg: #ffffff;
+    --title-color: rgba(255,255,255,0.25);
+    --meta-color: rgba(255,255,255,0.50);
+    --body-color: #5cbcfd;
+  }
+
+  /* 5: Soft gray + light blue */
+  body.theme-gray-blue {
+    --bg: #939aa0;
+    --fg: #5cbcfd;
+    --status-fg: #ffffff;
+    --toolbar-fg: #ffffff;
+    --title-color: rgba(255,255,255,0.30);
+    --meta-color: rgba(255,255,255,0.55);
+    --body-color: #5cbcfd;
+  }
+
+  /* 6: Cream/brown + red-pink italic + red border */
+  body.theme-warm-paper {
+    --bg: #a89a85;
+    --fg: #d63d3d;
+    --status-fg: #ffffff;
+    --toolbar-fg: #ffffff;
+    --title-color: rgba(255,255,255,0.30);
+    --meta-color: rgba(255,255,255,0.55);
+    --body-color: #e84d4d;
+  }
+  body.theme-warm-paper .body-row {
+    font-style: italic;
+    font-weight: 600;
+  }
+  body.theme-warm-paper .title-row.has-title {
+    color: rgba(255,255,255,0.55);
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  /* 7: Pure white + black text */
+  body.theme-white-black {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --status-fg: #1a1a1a;
+    --toolbar-fg: #1a1a1a;
+    --title-color: rgba(0,0,0,0.30);
+    --meta-color: rgba(0,0,0,0.55);
+    --body-color: #1a1a1a;
+  }
+
+  /* 8: Dark blue + orange (boat wallpaper) */
+  body.theme-boat-orange {
+    --bg: #0d1a26;
+    --fg: #e8a857;
+    --status-fg: #ffffff;
+    --toolbar-fg: #ffffff;
+    --title-color: rgba(255,255,255,0.25);
+    --meta-color: rgba(255,255,255,0.50);
+    --body-color: #e8a857;
+  }
+
+  /* 9: Dark blue + white (boat wallpaper) */
+  body.theme-boat-white {
+    --bg: #0d1a26;
+    --fg: #ffffff;
+    --status-fg: #ffffff;
+    --toolbar-fg: #ffffff;
+    --title-color: rgba(255,255,255,0.30);
+    --meta-color: rgba(255,255,255,0.55);
+    --body-color: #ffffff;
+  }
+
+  /* 10-14: Wallpaper themes (set via inline style) */
+  body.theme-wallpaper {
+    --bg: #1a1a1a;
+    --fg: #ffffff;
+    --status-fg: #ffffff;
+    --toolbar-fg: #ffffff;
+    --title-color: rgba(255,255,255,0.30);
+    --meta-color: rgba(255,255,255,0.60);
+    --body-color: #ffffff;
+  }
+
+  /* NEW: Midnight purple + soft lilac text */
+  body.theme-midnight-purple {
+    --bg: #1a0a2e;
+    --fg: #c9a0ff;
+    --status-fg: #e0d0ff;
+    --toolbar-fg: #e0d0ff;
+    --title-color: rgba(201,160,255,0.30);
+    --meta-color: rgba(201,160,255,0.55);
+    --body-color: #c9a0ff;
+  }
+
+  /* NEW: Deep ocean teal + aqua text */
+  body.theme-ocean-teal {
+    --bg: #0a1f2e;
+    --fg: #4de8c2;
+    --status-fg: #b0f0e8;
+    --toolbar-fg: #b0f0e8;
+    --title-color: rgba(77,232,194,0.30);
+    --meta-color: rgba(77,232,194,0.55);
+    --body-color: #4de8c2;
+  }
+
+  /* NEW: Dark + hot coral/pink text */
+  body.theme-neon-coral {
+    --bg: #1a0f14;
+    --fg: #ff6b8a;
+    --status-fg: #ffa0b4;
+    --toolbar-fg: #ffa0b4;
+    --title-color: rgba(255,107,138,0.30);
+    --meta-color: rgba(255,107,138,0.55);
+    --body-color: #ff6b8a;
+  }
+
+  /* NEW: Soft lavender bg + pink accent */
+  body.theme-lavender-pink {
+    --bg: #e8dff5;
+    --fg: #7b2d8e;
+    --status-fg: #4a1a5e;
+    --toolbar-fg: #4a1a5e;
+    --title-color: rgba(123,45,142,0.30);
+    --meta-color: rgba(123,45,142,0.55);
+    --body-color: #7b2d8e;
+  }
+
+  /* NEW: Dark forest + mint green text */
+  body.theme-mint-green {
+    --bg: #0a1a14;
+    --fg: #7af5c0;
+    --status-fg: #a0ffd8;
+    --toolbar-fg: #a0ffd8;
+    --title-color: rgba(122,245,192,0.30);
+    --meta-color: rgba(122,245,192,0.55);
+    --body-color: #7af5c0;
+  }
+
+  /* NEW: Warm dark + amber gold text */
+  body.theme-amber-gold {
+    --bg: #1a1408;
+    --fg: #f0c050;
+    --status-fg: #ffe0a0;
+    --toolbar-fg: #ffe0a0;
+    --title-color: rgba(240,192,80,0.30);
+    --meta-color: rgba(240,192,80,0.55);
+    --body-color: #f0c050;
+  }
+
+  /* NEW Batch 2: Rose gold metallic */
+  body.theme-rose-gold {
+    --bg: #1c1014;
+    --fg: #e8a0b0;
+    --status-fg: #f0c8d0;
+    --toolbar-fg: #f0c8d0;
+    --title-color: rgba(232,160,176,0.30);
+    --meta-color: rgba(232,160,176,0.55);
+    --body-color: #e8a0b0;
+  }
+
+  /* NEW Batch 2: Deep navy + bright white */
+  body.theme-deep-navy {
+    --bg: #0a0e1a;
+    --fg: #d0d8f0;
+    --status-fg: #e0e8ff;
+    --toolbar-fg: #e0e8ff;
+    --title-color: rgba(208,216,240,0.30);
+    --meta-color: rgba(208,216,240,0.55);
+    --body-color: #d0d8f0;
+  }
+
+  /* NEW Batch 2: Soft pink cherry blossom */
+  body.theme-cherry-blossom {
+    --bg: #2a0a18;
+    --fg: #ff9ec0;
+    --status-fg: #ffc0d8;
+    --toolbar-fg: #ffc0d8;
+    --title-color: rgba(255,158,192,0.30);
+    --meta-color: rgba(255,158,192,0.55);
+    --body-color: #ff9ec0;
+  }
+
+  /* NEW Batch 2: Dark slate + emerald green */
+  body.theme-slate-emerald {
+    --bg: #101a18;
+    --fg: #50d890;
+    --status-fg: #80f0b0;
+    --toolbar-fg: #80f0b0;
+    --title-color: rgba(80,216,144,0.30);
+    --meta-color: rgba(80,216,144,0.55);
+    --body-color: #50d890;
+  }
+
+  /* NEW Batch 2: Warm mocha + cream text */
+  body.theme-mocha-cream {
+    --bg: #1a1210;
+    --fg: #e8d0a8;
+    --status-fg: #f0e0c8;
+    --toolbar-fg: #f0e0c8;
+    --title-color: rgba(232,208,168,0.30);
+    --meta-color: rgba(232,208,168,0.55);
+    --body-color: #e8d0a8;
+  }
+
+  /* NEW Batch 2: Icy blue arctic frost */
+  body.theme-arctic-frost {
+    --bg: #0a1420;
+    --fg: #a0d8f0;
+    --status-fg: #c8e8ff;
+    --toolbar-fg: #c8e8ff;
+    --title-color: rgba(160,216,240,0.30);
+    --meta-color: rgba(160,216,240,0.55);
+    --body-color: #a0d8f0;
+  }
+
+  /* NEW Batch 2: Deep violet + electric indigo */
+  body.theme-electric-indigo {
+    --bg: #10082a;
+    --fg: #a080ff;
+    --status-fg: #c0a8ff;
+    --toolbar-fg: #c0a8ff;
+    --title-color: rgba(160,128,255,0.30);
+    --meta-color: rgba(160,128,255,0.55);
+    --body-color: #a080ff;
+  }
+
+  /* NEW Batch 2: Warm sunset peach */
+  body.theme-sunset-peach {
+    --bg: #1a1008;
+    --fg: #f0a878;
+    --status-fg: #ffc8a0;
+    --toolbar-fg: #ffc8a0;
+    --title-color: rgba(240,168,120,0.30);
+    --meta-color: rgba(240,168,120,0.55);
+    --body-color: #f0a878;
+  }
+
+  /* NEW Batch 3: forest-night — deep green over dark gradient */
+  body.theme-forest-night {
+    --bg: #0a1a14;
+    --fg: #b0d8b8;
+    --status-fg: #d8e8d0;
+    --toolbar-fg: #d8e8d0;
+    --title-color: rgba(176,216,184,0.30);
+    --meta-color: rgba(176,216,184,0.55);
+    --body-color: #b0d8b8;
+  }
+
+  /* cosmic-purple — vivid lilac on cosmic gradient */
+  body.theme-cosmic-purple {
+    --bg: #100020;
+    --fg: #d0a8ff;
+    --status-fg: #e8d0ff;
+    --toolbar-fg: #e8d0ff;
+    --title-color: rgba(208,168,255,0.30);
+    --meta-color: rgba(208,168,255,0.55);
+    --body-color: #d0a8ff;
+  }
+
+  /* cherry-red — bold red text on dark crimson gradient */
+  body.theme-cherry-red {
+    --bg: #1a0608;
+    --fg: #ff7080;
+    --status-fg: #ffb0b8;
+    --toolbar-fg: #ffb0b8;
+    --title-color: rgba(255,112,128,0.30);
+    --meta-color: rgba(255,112,128,0.55);
+    --body-color: #ff7080;
+  }
+
+  /* cyber-mint — neon mint over deep teal gradient */
+  body.theme-cyber-mint {
+    --bg: #001a14;
+    --fg: #5cffd0;
+    --status-fg: #b0ffe0;
+    --toolbar-fg: #b0ffe0;
+    --title-color: rgba(92,255,208,0.30);
+    --meta-color: rgba(92,255,208,0.55);
+    --body-color: #5cffd0;
+  }
+
+  /* dusk-rose — soft rose on dusty plum gradient */
+  body.theme-dusk-rose {
+    --bg: #2a0e1a;
+    --fg: #ffb0c8;
+    --status-fg: #ffd8e0;
+    --toolbar-fg: #ffd8e0;
+    --title-color: rgba(255,176,200,0.30);
+    --meta-color: rgba(255,176,200,0.55);
+    --body-color: #ffb0c8;
+  }
+
+  /* arctic-cyan — icy cyan on deep sea gradient */
+  body.theme-arctic-cyan {
+    --bg: #00161e;
+    --fg: #80e8ff;
+    --status-fg: #c0f0ff;
+    --toolbar-fg: #c0f0ff;
+    --title-color: rgba(128,232,255,0.30);
+    --meta-color: rgba(128,232,255,0.55);
+    --body-color: #80e8ff;
+  }
+
+  /* volcano-orange — molten orange on charcoal gradient */
+  body.theme-volcano-orange {
+    --bg: #1a0805;
+    --fg: #ff9050;
+    --status-fg: #ffc090;
+    --toolbar-fg: #ffc090;
+    --title-color: rgba(255,144,80,0.30);
+    --meta-color: rgba(255,144,80,0.55);
+    --body-color: #ff9050;
+  }
+
+  /* sapphire-deep — bright sapphire on midnight blue gradient */
+  body.theme-sapphire-deep {
+    --bg: #050a1e;
+    --fg: #80b8ff;
+    --status-fg: #c0d8ff;
+    --toolbar-fg: #c0d8ff;
+    --title-color: rgba(128,184,255,0.30);
+    --meta-color: rgba(128,184,255,0.55);
+    --body-color: #80b8ff;
+  }
+
+  /* champagne — warm gold on dark amber gradient */
+  body.theme-champagne {
+    --bg: #1a1408;
+    --fg: #f0d090;
+    --status-fg: #f8e0b8;
+    --toolbar-fg: #f8e0b8;
+    --title-color: rgba(240,208,144,0.30);
+    --meta-color: rgba(240,208,144,0.55);
+    --body-color: #f0d090;
+  }
+
+  /* obsidian — bright cool white on near-black gradient */
+  body.theme-obsidian {
+    --bg: #0a0a0a;
+    --fg: #e8e8f0;
+    --status-fg: #ffffff;
+    --toolbar-fg: #ffffff;
+    --title-color: rgba(232,232,240,0.30);
+    --meta-color: rgba(232,232,240,0.55);
+    --body-color: #e8e8f0;
+  }
+
+</style>
+</head>
+<body class="theme-{{THEME}}">
+
+<!-- Optional wallpaper layer -->
+{{WALLPAPER_DIV}}
+
+<!-- Status Bar -->
+<div class="status-bar">
+  <div class="left">
+    <span>{{STATUS_TIME}}</span>
+    <div class="notif-icons">{{NOTIF_ICONS}}</div>
+  </div>
+  <div class="right">
+    <span class="nfc">N</span>
+    <svg class="alarm-icon" viewBox="0 0 24 24"><path d="M12 6a6 6 0 016 6c0 3.31-2.69 6-6 6s-6-2.69-6-6 2.69-6 6-6zm0-2a8 8 0 100 16 8 8 0 000-16zm0 4v4l3 2-.75 1.23L10.75 13V8h1.5z"/></svg>
+    {{VONR_STACK}}
+    {{DATA_STACK}}
+    {{GNET_STACK}}
+    <div class="signal-bars">{{SIGNAL_BARS}}</div>
+    <div class="battery">
+      <div class="battery-body"><div class="{{BATT_FILL_CLASS}}" style="width:{{BATT_PCT}}%"></div></div>
+      <div class="battery-tip"></div>
+    </div>
+    <span class="battery-pct">{{BATT_PCT}}%</span>
+  </div>
+</div>
+
+<!-- Optional notification banner -->
+<div class="notif-banner {{NOTIF_BANNER_VISIBLE}}">
+  <div class="avatar">{{NOTIF_AVATAR_LETTER}}</div>
+  <div class="content">
+    <div class="name">{{NOTIF_NAME}}</div>
+    <div class="preview">{{NOTIF_PREVIEW}}</div>
+  </div>
+  <span class="when">{{NOTIF_WHEN}}</span>
+</div>
+
+<!-- Top toolbar -->
+<div class="top-toolbar">
+  <div class="back-btn">‹</div>
+  <div class="top-icons">
+    <svg viewBox="0 0 24 24"><path d="M4 9h6m4 0h6M4 15h2m4 0h10" stroke-linecap="round"/><circle cx="11" cy="9" r="2"/><circle cx="8" cy="15" r="2"/></svg>
+    <div class="three-dot">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+  </div>
+</div>
+
+<!-- Title row -->
+<div class="title-row {{TITLE_CLASS}}">{{TITLE_TEXT}}</div>
+
+<!-- Meta line -->
+<div class="meta-row">
+  <span class="date">{{DATE_LABEL}}</span>
+  <span class="sep">|</span>
+  <span class="chars">{{CHAR_COUNT}} characters</span>
+  <span class="sep">|</span>
+  <span class="cat">Uncategorized</span>
+  <span class="uncat-arrow">▾</span>
+</div>
+
+<!-- Body text -->
+<div class="body-row" style="--letter-spacing: {{LETTER_SPACING}}px">{{BODY_TEXT}}</div>
+
+<!-- Optional bottom edit toolbar (only for theme-yellow-italic) -->
+<div class="bottom-edit-toolbar">
+  <div class="tool">AI</div>
+  <div class="tool">⊟</div>
+  <div class="tool">Aa</div>
+  <div class="tool">≡</div>
+  <div class="tool">☑</div>
+  <div class="tool">📷</div>
+  <div class="tool">+</div>
+</div>
+
+</body>
+</html>

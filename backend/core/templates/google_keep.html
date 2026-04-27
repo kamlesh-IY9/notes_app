@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Google+Sans:wght@400;500;700&family=Noto+Sans:wght@400;500;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    font-family: {{FONT_FAMILY}};
+    overflow: hidden;
+    position: relative;
+  }
+
+  body.light {
+    background: #FFFFFF;
+    color: #202124;
+  }
+
+  body.dark {
+    background: #202124;
+    color: #E8EAED;
+  }
+
+  /* ── Status Bar ── */
+  .status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 28px 56px 0 56px;
+    height: 110px;
+    font-size: 38px;
+    font-weight: 500;
+  }
+
+  .status-bar .time { flex: 1; }
+  .status-bar .icons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .carrier-name {
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  .battery-pct {
+    font-size: 28px;
+    font-weight: 500;
+    margin-left: 4px;
+  }
+
+  .signal-bars { display: flex; gap: 3px; align-items: flex-end; height: 28px; }
+  .signal-bars .bar { width: 6px; border-radius: 2px; }
+  body.light .signal-bars .bar { background: #000; }
+  body.dark .signal-bars .bar { background: #fff; }
+  body.light .signal-bars .bar.empty { background: #ccc; }
+  body.dark .signal-bars .bar.empty { background: #555; }
+
+  .wifi-icon { width: 36px; height: 28px; }
+  body.light .wifi-icon path { fill: #000; }
+  body.dark .wifi-icon path { fill: #fff; }
+
+  .battery-body {
+    width: 56px; height: 26px;
+    border: 3px solid;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+  }
+  body.light .battery-body { border-color: #000; }
+  body.dark .battery-body { border-color: #fff; }
+  .battery-fill { height: 100%; border-radius: 1px; }
+  body.light .battery-fill { background: #000; }
+  body.dark .battery-fill { background: #fff; }
+  .battery-fill.low { background: #EA4335 !important; }
+  .battery-fill.charging { background: #34A853 !important; }
+  .battery-tip { width: 5px; height: 12px; border-radius: 0 3px 3px 0; }
+  body.light .battery-tip { background: #000; }
+  body.dark .battery-tip { background: #fff; }
+
+  .badge-5g, .badge-lte { font-size: 26px; font-weight: 700; }
+  .no-service { font-size: 26px; font-weight: 500; }
+
+  /* ── Top Bar ── */
+  .top-bar {
+    display: flex;
+    align-items: center;
+    padding: 24px 44px;
+    height: 120px;
+  }
+
+  .back-arrow {
+    font-size: 60px;
+    margin-right: 32px;
+  }
+  body.light .back-arrow { color: #202124; }
+  body.dark .back-arrow { color: #E8EAED; }
+
+  .top-icons {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+  }
+
+  .top-icon { width: 52px; height: 52px; }
+  body.light .top-icon path { stroke: #5F6368; fill: none; }
+  body.dark .top-icon path { stroke: #9AA0A6; fill: none; }
+
+  /* ── Note Content ── */
+  .note-content {
+    padding: 24px 56px;
+    padding-top: var(--body-offset, 0px);
+  }
+
+  .note-title {
+    font-family: 'Google Sans', 'Roboto', sans-serif;
+    font-size: var(--title-size, 30px);
+    font-weight: 500;
+    margin-bottom: 16px;
+    line-height: 1.35;
+    letter-spacing: var(--letter-spacing, 0px);
+  }
+
+  .note-body {
+    font-size: var(--body-size, 22px);
+    font-weight: 400;
+    line-height: 1.55;
+    white-space: pre-wrap;
+    letter-spacing: var(--letter-spacing, 0px);
+  }
+
+  .note-body.no-title .first-line {
+    font-size: calc(var(--body-size, 22px) + 2px);
+    font-weight: 500;
+  }
+
+  /* ── Bottom Date ── */
+  .date-label {
+    position: absolute;
+    bottom: 200px;
+    right: 56px;
+    font-size: 30px;
+  }
+  body.light .date-label { color: #80868B; }
+  body.dark .date-label { color: #9AA0A6; }
+
+  /* ── Bottom Nav ── */
+  .bottom-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0; right: 0;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home-indicator {
+    width: 280px;
+    height: 10px;
+    border-radius: 5px;
+  }
+  body.light .home-indicator { background: #000; }
+  body.dark .home-indicator { background: #fff; }
+</style>
+</head>
+<body class="{{THEME}}">
+
+<div class="status-bar">
+  <div class="time">{{STATUS_TIME}}</div>
+  <div class="icons">
+    <span class="carrier-name">{{CARRIER_NAME}}</span>
+    {{SIGNAL_BARS}}
+    {{WIFI_ICON}}
+    {{BADGE}}
+    {{BATTERY}}
+  </div>
+</div>
+
+<div class="top-bar">
+  <span class="back-arrow">←</span>
+  <div class="top-icons">
+    <svg class="top-icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke-width="2" stroke-linecap="round"/></svg>
+    <svg class="top-icon" viewBox="0 0 24 24"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>
+  </div>
+</div>
+
+<div class="note-content" style="--body-offset: {{BODY_OFFSET}}px; --letter-spacing: {{LETTER_SPACING}}px; --title-size: {{TITLE_SIZE}}px; --body-size: {{BODY_SIZE}}px;">
+  {{NOTE_CONTENT}}
+</div>
+
+<div class="date-label">{{DATE_LABEL}}</div>
+
+<div class="bottom-nav">
+  <div class="home-indicator"></div>
+</div>
+
+</body>
+</html>

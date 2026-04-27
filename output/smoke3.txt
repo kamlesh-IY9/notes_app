@@ -1,0 +1,121 @@
+2026-04-25 14:32:20,146 [INFO] __main__: DB ready: /home/kamleshpatil/Desktop/Test - M/notes_app/output/smoke_full.sqlite
+2026-04-25 14:32:20,261 [INFO] backend.core.llm_clients: Groq client initialized with model: llama-3.3-70b-versatile
+2026-04-25 14:32:20,331 [INFO] backend.core.llm_clients: NIM client initialized with model: meta/llama-3.3-70b-instruct
+2026-04-25 14:32:20,331 [INFO] __main__: LLM providers: ['groq', 'nim']
+2026-04-25 14:32:20,789 [INFO] __main__: Created smoke job c9294e4775df
+2026-04-25 14:32:20,792 [INFO] __main__: [job_started] {'job_id': 'c9294e4775df', 'batch_size': 5}
+2026-04-25 14:32:20,996 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:32:20,998 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99276, Requested 999. Please try again in 3m57.6s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:32:23,654 [INFO] httpx: HTTP Request: POST https://integrate.api.nvidia.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 14:32:25,763 [INFO] httpx: HTTP Request: POST https://integrate.api.nvidia.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 14:32:31,531 [INFO] sentence_transformers.base.model: No device provided, using cpu
+2026-04-25 14:32:31,915 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-25 14:32:31,916 [WARNING] huggingface_hub.utils._http: Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-25 14:32:31,943 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-04-25 14:32:32,199 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-25 14:32:32,226 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-25 14:32:32,228 [INFO] sentence_transformers.base.model: Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-04-25 14:32:32,480 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config_sentence_transformers.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-25 14:32:32,508 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config_sentence_transformers.json "HTTP/1.1 200 OK"
+2026-04-25 14:32:32,765 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-25 14:32:32,792 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/README.md "HTTP/1.1 200 OK"
+2026-04-25 14:32:33,045 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-25 14:32:33,077 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/modules.json "HTTP/1.1 200 OK"
+2026-04-25 14:32:33,340 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/sentence_bert_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-25 14:32:33,394 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/sentence_bert_config.json "HTTP/1.1 200 OK"
+2026-04-25 14:32:33,648 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/adapter_config.json "HTTP/1.1 404 Not Found"
+2026-04-25 14:32:33,927 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-25 14:32:33,971 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 5680.35it/s]
+2026-04-25 14:32:34,391 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/processor_config.json "HTTP/1.1 404 Not Found"
+2026-04-25 14:32:34,655 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-04-25 14:32:34,905 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/video_preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-04-25 14:32:35,159 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/preprocessor_config.json "HTTP/1.1 404 Not Found"
+2026-04-25 14:32:35,882 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-25 14:32:35,914 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-25 14:32:36,183 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-25 14:32:36,227 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-04-25 14:32:36,512 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-25 14:32:36,556 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/config.json "HTTP/1.1 200 OK"
+2026-04-25 14:32:36,844 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/tokenizer_config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-25 14:32:36,880 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/tokenizer_config.json "HTTP/1.1 200 OK"
+2026-04-25 14:32:37,149 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-04-25 14:32:37,408 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-25 14:32:37,744 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/1_Pooling/config.json "HTTP/1.1 307 Temporary Redirect"
+2026-04-25 14:32:37,799 [INFO] httpx: HTTP Request: HEAD https://huggingface.co/api/resolve-cache/models/sentence-transformers/all-MiniLM-L6-v2/c9745ed1d9f207416be6d2e6f8de32d1f16199bf/1_Pooling%2Fconfig.json "HTTP/1.1 200 OK"
+2026-04-25 14:32:38,055 [INFO] httpx: HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-04-25 14:32:38,084 [INFO] backend.core.dedup: Loaded sentence-transformers model: all-MiniLM-L6-v2
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.22it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  2.22it/s]
+2026-04-25 14:32:39,310 [INFO] backend.core.screenshot: Playwright browser launched
+2026-04-25 14:32:40,994 [INFO] backend.core.screenshot: Screenshot saved: /home/kamleshpatil/Desktop/Test - M/notes_app/output/jobs/c9294e4775df/screenshots/9000 deandre my wife and her friend kai wre t.jpg (miui_notes/white-black, q=84)
+2026-04-25 14:32:40,998 [INFO] backend.core.orchestrator: Entry 1 (ID 9000) accepted — miui_notes/white-black/wifi_cellular, no-title, 69w/1l
+2026-04-25 14:32:40,998 [INFO] __main__: >>> Entry 1/9000 | accepted | theme=white-black | (no title)
+2026-04-25 14:32:41,100 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:32:41,101 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99253, Requested 917. Please try again in 2m26.88s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:32:45,567 [INFO] httpx: HTTP Request: POST https://integrate.api.nvidia.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 14:32:45,575 [WARNING] backend.core.orchestrator: Validation failed (attempt 1): [{'name': 'line_count', 'passed': False, 'detail': 'Lines: 10 (need 1-5 without title)'}]
+2026-04-25 14:32:45,635 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:32:45,637 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99247, Requested 912. Please try again in 2m17.376s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:32:47,884 [INFO] httpx: HTTP Request: POST https://integrate.api.nvidia.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 14:32:49,777 [INFO] httpx: HTTP Request: POST https://integrate.api.nvidia.com/v1/chat/completions "HTTP/1.1 200 OK"
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  4.47it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  4.46it/s]
+2026-04-25 14:32:51,612 [INFO] backend.core.screenshot: Screenshot saved: /home/kamleshpatil/Desktop/Test - M/notes_app/output/jobs/c9294e4775df/screenshots/9001 brielle my sister didnt tell me what to .jpg (miui_notes/black-white, q=90)
+2026-04-25 14:32:51,615 [INFO] backend.core.orchestrator: Entry 2 (ID 9001) accepted — miui_notes/black-white/wifi_cellular, no-title, 85w/1l
+2026-04-25 14:32:51,615 [INFO] __main__: >>> Entry 2/9001 | accepted | theme=black-white | (no title)
+2026-04-25 14:32:51,728 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:32:51,729 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99240, Requested 989. Please try again in 3m17.856s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:32:56,870 [INFO] httpx: HTTP Request: POST https://integrate.api.nvidia.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 14:33:00,017 [INFO] httpx: HTTP Request: POST https://integrate.api.nvidia.com/v1/chat/completions "HTTP/1.1 200 OK"
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 24.39it/s]
+2026-04-25 14:33:01,711 [INFO] backend.core.screenshot: Screenshot saved: /home/kamleshpatil/Desktop/Test - M/notes_app/output/jobs/c9294e4775df/screenshots/9002 tiana my aunt said i should be happy abo.jpg (miui_notes/wallpaper-gradient, q=86)
+2026-04-25 14:33:01,717 [INFO] backend.core.orchestrator: Entry 3 (ID 9002) accepted — miui_notes/wallpaper-gradient/wifi_cellular, no-title, 99w/1l
+2026-04-25 14:33:01,717 [INFO] __main__: >>> Entry 3/9002 | accepted | theme=wallpaper-gradient | (no title)
+2026-04-25 14:33:01,819 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:33:01,820 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99229, Requested 952. Please try again in 2m36.384s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:33:03,989 [INFO] httpx: HTTP Request: POST https://integrate.api.nvidia.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 14:33:08,118 [INFO] httpx: HTTP Request: POST https://integrate.api.nvidia.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 14:33:08,125 [WARNING] backend.core.orchestrator: Validation failed (attempt 1): [{'name': 'us_spelling', 'passed': False, 'detail': 'British terms found: post'}]
+2026-04-25 14:33:08,259 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:33:08,261 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99221, Requested 1019. Please try again in 3m27.36s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:33:10,364 [INFO] httpx: HTTP Request: POST https://integrate.api.nvidia.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-25 14:33:13,240 [INFO] httpx: HTTP Request: POST https://integrate.api.nvidia.com/v1/chat/completions "HTTP/1.1 200 OK"
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 82.27it/s]
+2026-04-25 14:33:14,889 [INFO] backend.core.screenshot: Screenshot saved: /home/kamleshpatil/Desktop/Test - M/notes_app/output/jobs/c9294e4775df/screenshots/9003 emilio my daughter told me she drew a pi.jpg (miui_notes/gray-white, q=92)
+2026-04-25 14:33:14,892 [INFO] backend.core.orchestrator: Entry 4 (ID 9003) accepted — miui_notes/gray-white/cellular_only, no-title, 38w/1l
+2026-04-25 14:33:14,893 [INFO] __main__: >>> Entry 4/9003 | accepted | theme=gray-white | (no title)
+2026-04-25 14:33:15,022 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:33:15,023 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99213, Requested 974. Please try again in 2m41.567999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:33:16,432 [INFO] httpx: HTTP Request: POST https://integrate.api.nvidia.com/v1/chat/completions "HTTP/1.1 200 OK"
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]Batches: 100%|██████████| 1/1 [00:00<00:00, 28.08it/s]
+2026-04-25 14:33:18,108 [INFO] backend.core.screenshot: Screenshot saved: /home/kamleshpatil/Desktop/Test - M/notes_app/output/jobs/c9294e4775df/screenshots/9004 personal stuff.jpg (miui_notes/boat-orange, q=86)
+2026-04-25 14:33:18,114 [INFO] backend.core.orchestrator: Entry 5 (ID 9004) accepted — miui_notes/boat-orange/wifi_cellular, title='personal stuff', 34w/5l
+2026-04-25 14:33:18,114 [INFO] __main__: >>> Entry 5/9004 | accepted | theme=boat-orange | personal stuff
+2026-04-25 14:33:18,119 [INFO] __main__: [job_completed] {'job_id': 'c9294e4775df'}
+2026-04-25 14:33:18,119 [INFO] __main__: Smoke complete: 5 accepted, 0 failed
+2026-04-25 14:33:18,119 [INFO] __main__: Files generated:
+2026-04-25 14:33:18,119 [INFO] __main__:   9000_en_US_notes_people relationships___PART099_1.txt
+    deandre my wife and her friend kai wre talking about the layoff I dont know whats gonna happen we got a lot of boxes to pqck tomorrow kai said the manaer didnt give them a reason for letting people go deandre wasnt sure if shes gonna get to keep her job at the warehouse I saw the letter from hr on the kitchen table it was 2 pages long
+    
+2026-04-25 14:33:18,119 [INFO] __main__:   9001_en_US_notes_people relationships___PART099_2.txt
+    brielle my sister didnt tell me what to get her for her birthday gonna be tomorrow i think she likes them earrings i saw her looking at some at the mall in decatur there was this one pair with little yellow stones cost 50 dollars i dont know if i should get it shes been talking to her friend sam alot lately sam said something about a movie tonight i didnt ask whats the plan tho i just hope i dont mess up the gift
+    
+2026-04-25 14:33:18,119 [INFO] __main__:   9002_en_US_notes_people relationships___PART099_3.txt
+    tiana my aunt said i should be happy about the promotion i dont know why i cant just be happy theyre moving me to the inventory office hes giving me a tour tomorrow 8am sharp i hate mornings told him i was already familiar with the area he didnt listen said somethin about reviewing documents on the new job in the break room with coffee stains everywhere they got 27 boxes i need to sort thru tiana said i should call her after the tour i dont think i will theyre giving me a small desk by the window
+    
+2026-04-25 14:33:18,119 [INFO] __main__:   9003_en_US_notes_people relationships___PART099_4.txt
+    emilio my daughter told me she drew a pic of our cat i'm at the warehouse rn emilio said her teaacher mrs johnson liked it !! she useed like 12 coolored pencils to make it look like whiskers  
+    
+2026-04-25 14:33:18,119 [INFO] __main__:   9004_en_US_notes_people relationships___PART099_5.txt
+    personal stuff 
+    nova my mom was talking to her friend kai about the old surfboard 
+    i didnt see it in awhile 
+    room in her house is alredy full 
+    shesaid 27 dollars to fix it
+    
+2026-04-25 14:33:18,120 [INFO] __main__: Screenshots:
+2026-04-25 14:33:18,120 [INFO] __main__:   9000 deandre my wife and her friend kai wre t.jpg
+2026-04-25 14:33:18,120 [INFO] __main__:   9001 brielle my sister didnt tell me what to .jpg
+2026-04-25 14:33:18,120 [INFO] __main__:   9002 tiana my aunt said i should be happy abo.jpg
+2026-04-25 14:33:18,120 [INFO] __main__:   9003 emilio my daughter told me she drew a pi.jpg
+2026-04-25 14:33:18,120 [INFO] __main__:   9004 personal stuff.jpg

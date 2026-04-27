@@ -1,0 +1,110 @@
+# Persona configuration for note generation
+# Each note gets a unique persona drawn from these pools
+
+age_brackets:
+  - label: "teen"
+    range: [14, 19]
+    weight: 15
+  - label: "young_adult"
+    range: [20, 29]
+    weight: 30
+  - label: "adult"
+    range: [30, 44]
+    weight: 30
+  - label: "middle_aged"
+    range: [45, 59]
+    weight: 15
+  - label: "senior"
+    range: [60, 75]
+    weight: 10
+
+genders:
+  - label: "female"
+    weight: 50
+  - label: "male"
+    weight: 45
+  - label: "nonbinary"
+    weight: 5
+  # When gender == "nonbinary", note_generator should use they/them pronouns
+  # in the prompt and the relationship pool prefers neutral labels (partner,
+  # spouse, friend) plus the explicitly-flagged nonbinary_friend relationship.
+
+# Excluded states: Texas, Illinois, Washington
+states:
+  - AL - AK - AZ - AR - CA - CO - CT - DE - FL - GA
+  - HI - ID - IN - IA - KS - KY - LA - ME - MD - MA
+  - MI - MN - MS - MO - MT - NE - NV - NH - NJ - NM
+  - NY - NC - ND - OH - OK - OR - PA - RI - SC - SD
+  - TN - UT - VT - VA - WV - WI - WY
+
+excluded_states:
+  - TX
+  - IL
+  - WA
+
+occupations:
+  - student
+  - nurse
+  - teacher
+  - software engineer
+  - retail worker
+  - stay-at-home parent
+  - bartender
+  - construction worker
+  - freelance designer
+  - dental hygienist
+  - paralegal
+  - truck driver
+  - real estate agent
+  - barista
+  - mechanic
+  - personal trainer
+  - social worker
+  - restaurant manager
+  - electrician
+  - pharmacy tech
+  - physical therapist
+  - hairstylist
+  - office manager
+  - EMT
+  - accountant
+  - graphic designer
+  - chef
+  - warehouse worker
+  - insurance agent
+  - photographer
+
+ethnicity_buckets:
+  - white
+  - black
+  - hispanic
+  - mixed
+
+voice_quirks:
+  - id: lowercase_starts
+    description: "Doesn't capitalize first letter of lines"
+    weight: 20
+  - id: drop_apostrophes
+    description: "dont instead of don't, cant instead of can't"
+    weight: 15
+  - id: use_ampersand
+    description: "Uses & instead of 'and'"
+    weight: 12
+  - id: lol_lmao
+    description: "Occasionally uses lol or lmao"
+    weight: 10
+  - id: double_punctuation
+    description: "Uses !! or ?? or ..."
+    weight: 18
+  - id: no_end_periods
+    description: "Doesn't end lines with periods"
+    weight: 25
+  - id: word_merge
+    description: "Occasionally merges words (sisterout, gonnabe)"
+    weight: 8
+  - id: sparse_emoji
+    description: "Uses 1-2 emoji total in the note"
+    weight: 10
+  - id: abbreviations
+    description: "Uses u, bc, idk, rn, ngl, tbh"
+    weight: 12

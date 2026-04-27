@@ -1,0 +1,109 @@
+# Name pools organized by ethnicity and gender
+# Used for gender-consistent name assignment
+
+female:
+  white:
+    - Emma - Olivia - Ava - Sophia - Isabella - Mia - Charlotte - Amelia
+    - Harper - Evelyn - Abigail - Emily - Elizabeth - Sofia - Ella
+    - Madison - Scarlett - Victoria - Aria - Grace - Chloe - Camila
+    - Penelope - Riley - Layla - Lillian - Nora - Zoey - Hannah
+    - Lily - Eleanor - Hazel - Violet - Aurora - Savannah - Audrey
+    - Brooklyn - Bella - Claire - Skylar - Lucy - Paisley - Anna
+    - Caroline - Genesis - Aaliyah - Kennedy - Kinsley - Allison
+    - Maya - Sarah - Madelyn - Adeline - Alexa - Ariana - Elena
+    - Gabriella - Naomi - Alice - Sadie - Hailey - Eva - Emilia
+    - Autumn - Quinn - Nevaeh - Piper - Ruby - Serenity - Willow
+    - Everly - Cora - Kaylee - Lydia - Aubrey - Arianna - Eloise
+    - Peyton - Melanie - Gianna - Isabelle - Julia - Valentina
+    - Nova - Clara - Vivian - Reagan - Mackenzie - Madeline
+    - Brielle - Delilah - Isla - Rylee - Katherine - Sophie - Josephine
+    - Ivy - Liliana - Jade - Maria - Taylor - Hadley - Kylie
+    - Emery - Adalynn - Natalia - Annabelle - Faith - Alexandra - Ximena
+    - Ashley - Brianna - Raelynn - Bailey - Mary - Athena - Andrea
+    - Sloane - Eden - Emerson - Marlowe - Wren - Tatum - Ainsley
+    - Reese - Sutton - Blakely - Adley - Oakley - Birdie - Murphy
+    - Margot - Etta - Goldie - Maeve - Frankie - Stevie
+  black:
+    - Aaliyah - Imani - Zuri - Amara - Nia - Sanaa - Kai
+    - Aisha - Destiny - Jasmine - Tiana - Makenzie - Deja - Aniya
+    - Aliyah - Janiyah - Skyla - Armani - Kaia - Zariah - Brielle
+    - Kamila - Laila - Nalani - Sariah - Amira - Kennedi - Skai
+    - Tatum - Zhuri - Kailani - Milan - Lyric - Kaliyah - Journee
+    - Trinity - Janelle - Saniyah - Talia - Maya - Asia - Imari
+    - Khaleesi - Saniya - Samaria - Eboni - Cassidy - Treasure
+  hispanic:
+    - Sofia - Isabella - Valentina - Camila - Mariana - Lucia
+    - Gabriella - Elena - Daniela - Natalia - Alejandra - Victoria
+    - Ximena - Ana - Maria - Carolina - Adriana - Juliana - Catalina
+    - Fernanda - Paloma - Marisol - Esperanza - Carmen - Rosa
+    - Bianca - Selena - Alondra - Dulce - Esmeralda - Yesenia
+    - Renata - Mila - Soledad - Lola - Beatriz - Itzel - Mireya
+    - Liliana - Magdalena - Yolanda - Pilar - Estrella - Lupita
+  asian:
+    - Mei - Sakura - Aiko - Yuna - Hana - Priya - Ananya
+    - Suki - Lin - Jade - Lily - Jasmine - Maya - Mina
+    - Anh - Mai - Thi - Kaia - Rina - Sora - Nari
+    - Priti - Deepa - Kavya - Meera - Shreya - Divya
+  mixed:
+    - Aria - Luna - Nova - Kai - Sage - Phoenix - River
+    - Skylar - Quinn - Remy - Zara - Eden - Marley - Teagan
+    - Indigo - Aurora - Lyra - Briar - Onyx - Halo - Saoirse
+    - Iris - Juniper - Magnolia - Sloan - Tessa - Reign
+
+male:
+  white:
+    - Liam - Noah - Oliver - James - Elijah - William - Henry
+    - Lucas - Benjamin - Theodore - Jack - Levi - Alexander - Mason
+    - Ethan - Daniel - Jacob - Logan - Jackson - Sebastian - Aiden
+    - Owen - Samuel - Ryan - Nathan - Caleb - Luke - Dylan
+    - Andrew - Isaac - Grayson - Jaxon - Gabriel - Julian - Mateo
+    - Anthony - Lincoln - Joshua - Christopher - Maverick - Josiah
+    - David - Carter - Wyatt - Jayden - John - Leo - Connor
+    - Matthew - Asher - Thomas - Ezra - Hudson - Robert - Hunter
+    - Adrian - Cameron - Eli - Nolan - Carson - Colton - Landon
+    - Dominic - Austin - Miles - Declan - Easton - Zachary - Kai
+    - Cooper - Bentley - Xavier - Parker - Roman - Jason - Santiago
+    - Chase - Sawyer - Braxton - Gavin - Leonardo - Kayden - Bryson
+    - Ryder - Brandon - Blake - Kevin - Tyler - Ayden - Aaron
+    - Max - Tristan - Jonah - Dean - Christian - Kyle - Marcus
+    - Brooks - Cole - Axel - Wesley - Everett - Grant - Emmett
+    - Tucker - Beau - Bennett - Patrick - Finn - Jace - Reid
+    - Brody - Beckett - Crew - Kaiden - Jameson - Tate - Holden
+    - Knox - Atticus - Sullivan - Walker - Greyson - Shepherd
+    - Archer - Bowen - Jasper - Ridge - Otis - Forrest
+  black:
+    - Jayden - Khalil - Darius - Malik - Jamal - Andre - Isaiah
+    - Terrence - Marquis - DeShawn - Xavier - Tyrone - Dante - Lamar
+    - Jalen - Tariq - Keon - Omari - Rashad - Devonte - Kareem
+    - Mekhi - Nasir - Amari - Deandre - Kofi - Zion - King
+    - Cairo - Legend - Messiah - Saint - Ace - Major - Royal
+    - Tyrese - Jaylen - Dontae - Kameron - Trevon - Demarcus
+    - Quincy - Ezekiel - Booker - Donovan - Jermaine - Tyrell
+    - Marcus - Reggie - Andre - Miles - Khaleel
+  hispanic:
+    - Mateo - Santiago - Diego - Carlos - Miguel - Alejandro - Luis
+    - Andres - Emilio - Rafael - Manuel - Eduardo - Javier - Oscar
+    - Fernando - Ricardo - Francisco - Antonio - Sergio - Pablo
+    - Cesar - Hector - Marco - Rodrigo - Enrique - Arturo - Ivan
+    - Ramon - Guillermo - Julian - Cristian
+    - Joaquin - Cruz - Mauro - Esteban - Gerardo - Ignacio
+    - Ulises - Alfonso - Emiliano - Leandro - Tomas - Octavio
+    - Damian - Adrian - Pedro - Salvador - Felipe
+  asian:
+    - Wei - Hiroshi - Takeshi - Kenji - Ravi - Arjun - Vikram
+    - Min - Jun - Hao - Kai - Daichi - Yuki - Sanjay
+    - Raj - Dev - Nikhil - Aarav - Rohan - Akira - Tao
+    - Jin - Chen - Ahmad - Hassan - Ali - Dae - Sung
+  mixed:
+    - Kai - Miles - Jude - Phoenix - River - Atlas - Sage
+    - Ezra - Bodhi - Orion - Zion - Nico - Remy - Leo
+    - Rowan - Kingston - Maddox - Ari - Theo - Cyrus - Cassian
+    - Onyx - Ronan - Indie - Soren - Briar - Ace - Lex
+
+nonbinary:
+  all:
+    - Quinn - Sage - River - Phoenix - Avery - Riley - Jordan
+    - Morgan - Reese - Finley - Emery - Rowan - Hayden - Lennox
+    - Blake - Charlie - Drew - Jamie - Taylor - Alex - Ari
+    - Ellis - Kai - Remy - Sol - Wren - Dakota - Eden
+    - Harper - Lane - Rory - Sky - Tatum - Cameron - Casey

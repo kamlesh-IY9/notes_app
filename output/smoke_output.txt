@@ -1,0 +1,343 @@
+2026-04-25 14:29:43,370 [INFO] __main__: DB ready: /home/kamleshpatil/Desktop/Test - M/notes_app/output/smoke_full.sqlite
+2026-04-25 14:29:43,431 [INFO] backend.core.llm_clients: Groq client initialized with model: llama-3.3-70b-versatile
+2026-04-25 14:29:43,472 [INFO] backend.core.llm_clients: NIM client initialized with model: meta/llama-3.3-70b-instruct
+2026-04-25 14:29:43,472 [INFO] __main__: LLM providers: ['groq', 'nim']
+2026-04-25 14:29:43,710 [INFO] __main__: Created smoke job 0a8ec56447e8
+2026-04-25 14:29:43,712 [INFO] __main__: [job_started] {'job_id': '0a8ec56447e8', 'batch_size': 5}
+2026-04-25 14:29:43,841 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:43,843 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 979. Please try again in 6m17.568s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:43,843 [ERROR] backend.core.orchestrator: Generation attempt 1 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 979. Please try again in 6m17.568s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 979. Please try again in 6m17.568s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:43,881 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:43,882 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 856. Please try again in 4m31.296s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:43,882 [ERROR] backend.core.orchestrator: Generation attempt 2 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 856. Please try again in 4m31.296s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 856. Please try again in 4m31.296s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:43,919 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:43,921 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 920. Please try again in 5m26.592s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:43,921 [ERROR] backend.core.orchestrator: Generation attempt 3 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 920. Please try again in 5m26.592s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 920. Please try again in 5m26.592s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:43,960 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:43,961 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 970. Please try again in 6m9.792s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:43,961 [ERROR] backend.core.orchestrator: Generation attempt 4 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 970. Please try again in 6m9.792s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 970. Please try again in 6m9.792s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,001 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,002 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 835. Please try again in 4m13.152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,002 [ERROR] backend.core.orchestrator: Generation attempt 5 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 835. Please try again in 4m13.152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 835. Please try again in 4m13.152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,002 [ERROR] backend.core.orchestrator: Entry 1 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 835. Please try again in 4m13.152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 110, in start_job
+    result = await self._generate_single_entry(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 835. Please try again in 4m13.152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,005 [ERROR] __main__: >>> Entry 1 FAILED: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 835. Please try again in 4m13.152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,041 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,042 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 960. Please try again in 6m1.152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,042 [ERROR] backend.core.orchestrator: Generation attempt 1 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 960. Please try again in 6m1.152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 960. Please try again in 6m1.152s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,077 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,078 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 828. Please try again in 4m7.104s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,078 [ERROR] backend.core.orchestrator: Generation attempt 2 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 828. Please try again in 4m7.104s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 828. Please try again in 4m7.104s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,112 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,112 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 1008. Please try again in 6m42.624s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,112 [ERROR] backend.core.orchestrator: Generation attempt 3 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 1008. Please try again in 6m42.624s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 1008. Please try again in 6m42.624s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,151 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,152 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 919. Please try again in 5m25.728s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,152 [ERROR] backend.core.orchestrator: Generation attempt 4 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 919. Please try again in 5m25.728s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99458, Requested 919. Please try again in 5m25.728s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,192 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,193 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 803. Please try again in 3m44.64s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,193 [ERROR] backend.core.orchestrator: Generation attempt 5 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 803. Please try again in 3m44.64s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 803. Please try again in 3m44.64s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,193 [ERROR] backend.core.orchestrator: Entry 2 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 803. Please try again in 3m44.64s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 110, in start_job
+    result = await self._generate_single_entry(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 803. Please try again in 3m44.64s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,195 [ERROR] __main__: >>> Entry 2 FAILED: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 803. Please try again in 3m44.64s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,253 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,254 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 988. Please try again in 6m24.48s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,254 [ERROR] backend.core.orchestrator: Generation attempt 1 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 988. Please try again in 6m24.48s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 988. Please try again in 6m24.48s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,292 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,292 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 847. Please try again in 4m22.656s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,292 [ERROR] backend.core.orchestrator: Generation attempt 2 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 847. Please try again in 4m22.656s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 847. Please try again in 4m22.656s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,328 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,329 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 799. Please try again in 3m41.184s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,329 [ERROR] backend.core.orchestrator: Generation attempt 3 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 799. Please try again in 3m41.184s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 799. Please try again in 3m41.184s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,365 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,365 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 953. Please try again in 5m54.24s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,365 [ERROR] backend.core.orchestrator: Generation attempt 4 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 953. Please try again in 5m54.24s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 953. Please try again in 5m54.24s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,402 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,402 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 964. Please try again in 6m3.744s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,402 [ERROR] backend.core.orchestrator: Generation attempt 5 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 964. Please try again in 6m3.744s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 964. Please try again in 6m3.744s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,402 [ERROR] backend.core.orchestrator: Entry 3 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 964. Please try again in 6m3.744s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 110, in start_job
+    result = await self._generate_single_entry(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 964. Please try again in 6m3.744s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,419 [ERROR] __main__: >>> Entry 3 FAILED: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 964. Please try again in 6m3.744s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,456 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,457 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 920. Please try again in 5m25.728s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,457 [ERROR] backend.core.orchestrator: Generation attempt 1 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 920. Please try again in 5m25.728s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 920. Please try again in 5m25.728s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,491 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,492 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 840. Please try again in 4m16.608s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,492 [ERROR] backend.core.orchestrator: Generation attempt 2 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 840. Please try again in 4m16.608s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 840. Please try again in 4m16.608s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,527 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,528 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 839. Please try again in 4m15.744s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,528 [ERROR] backend.core.orchestrator: Generation attempt 3 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 839. Please try again in 4m15.744s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 839. Please try again in 4m15.744s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,562 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,562 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 826. Please try again in 4m4.512s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,562 [ERROR] backend.core.orchestrator: Generation attempt 4 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 826. Please try again in 4m4.512s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 826. Please try again in 4m4.512s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,606 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,607 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 956. Please try again in 5m56.832s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,607 [ERROR] backend.core.orchestrator: Generation attempt 5 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 956. Please try again in 5m56.832s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 956. Please try again in 5m56.832s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,607 [ERROR] backend.core.orchestrator: Entry 4 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 956. Please try again in 5m56.832s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 110, in start_job
+    result = await self._generate_single_entry(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 956. Please try again in 5m56.832s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,620 [ERROR] __main__: >>> Entry 4 FAILED: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 956. Please try again in 5m56.832s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,660 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,661 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 827. Please try again in 4m5.376s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,661 [ERROR] backend.core.orchestrator: Generation attempt 1 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 827. Please try again in 4m5.376s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 827. Please try again in 4m5.376s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,710 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,711 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 825. Please try again in 4m3.648s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,711 [ERROR] backend.core.orchestrator: Generation attempt 2 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 825. Please try again in 4m3.648s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 825. Please try again in 4m3.648s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,748 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,748 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 841. Please try again in 4m17.471999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,749 [ERROR] backend.core.orchestrator: Generation attempt 3 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 841. Please try again in 4m17.471999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 841. Please try again in 4m17.471999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,785 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,786 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 817. Please try again in 3m56.736s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,786 [ERROR] backend.core.orchestrator: Generation attempt 4 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 817. Please try again in 3m56.736s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 817. Please try again in 3m56.736s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,826 [INFO] httpx: HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-04-25 14:29:44,828 [WARNING] backend.core.llm_clients: groq failed: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 826. Please try again in 4m4.512s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,828 [ERROR] backend.core.orchestrator: Generation attempt 5 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 826. Please try again in 4m4.512s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 826. Please try again in 4m4.512s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,829 [ERROR] backend.core.orchestrator: Entry 5 failed: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 826. Please try again in 4m4.512s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+Traceback (most recent call last):
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 110, in start_job
+    result = await self._generate_single_entry(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/orchestrator.py", line 195, in _generate_single_entry
+    note = await generate_note(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/note_generator.py", line 136, in generate_note
+    note = await llm_clients.generate(
+  File "/home/kamleshpatil/Desktop/Test - M/notes_app/backend/core/llm_clients.py", line 86, in generate
+    raise RuntimeError(f"All LLM providers failed or none configured: {last_err}")
+RuntimeError: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 826. Please try again in 4m4.512s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,834 [ERROR] __main__: >>> Entry 5 FAILED: All LLM providers failed or none configured: Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kq1nmeycfzr9dyvrcm2hvkvs` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99457, Requested 826. Please try again in 4m4.512s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
+2026-04-25 14:29:44,839 [INFO] __main__: [job_completed] {'job_id': '0a8ec56447e8'}
+2026-04-25 14:29:44,839 [INFO] __main__: Smoke complete: 0 accepted, 5 failed

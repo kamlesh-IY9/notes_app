@@ -1,0 +1,142 @@
+# Relationship types for People & Relationships notes
+# The writer (first person) must clearly know the named person
+
+relationships:
+  - id: parent
+    labels: ["mom", "dad", "mother", "father", "mama", "papa", "pops"]
+    weight: 18
+  - id: sibling
+    labels: ["sister", "brother", "sis", "bro"]
+    weight: 14
+  - id: partner
+    labels: ["boyfriend", "girlfriend", "husband", "wife", "partner", "fiancé", "fiancée", "babe"]
+    weight: 16
+  - id: child
+    labels: ["son", "daughter", "kid", "baby"]
+    weight: 10
+  - id: friend
+    labels: ["best friend", "friend", "buddy", "bestie"]
+    weight: 18
+  - id: grandparent
+    labels: ["grandma", "grandpa", "nana", "papa", "granny", "gramps"]
+    weight: 6
+  - id: cousin
+    labels: ["cousin", "cuz"]
+    weight: 5
+  - id: uncle_aunt
+    labels: ["uncle", "aunt", "auntie"]
+    weight: 5
+  - id: coworker
+    labels: ["coworker", "boss", "manager", "colleague"]
+    weight: 4
+  - id: roommate
+    labels: ["roommate", "housemate"]
+    weight: 4
+
+  # ── Extended family additions ──
+  - id: godparent
+    labels: ["godmother", "godfather", "godparent"]
+    weight: 2
+  - id: grandkid
+    labels: ["grandkid", "grandson", "granddaughter"]
+    weight: 2
+  - id: family_friend
+    labels: ["family friend", "uncle figure", "aunt figure"]
+    weight: 3
+  - id: chosen_family
+    labels: ["chosen family", "chosen sis", "chosen bro"]
+    weight: 2
+  - id: kids_friends_parent
+    labels: ["my kid's friend's mom", "my kid's friend's dad", "the other parent at school"]
+    weight: 2
+
+  # ── Community / activity-based ──
+  - id: church_group_leader
+    labels: ["pastor", "youth leader", "small group leader"]
+    weight: 2
+  - id: kids_coach
+    labels: ["coach", "soccer coach", "swim coach", "kid's coach"]
+    weight: 3
+  - id: dog_park_friend
+    labels: ["dog park friend", "the lady from the dog park", "dog dad i met at the park"]
+    weight: 2
+  - id: running_buddy
+    labels: ["running buddy", "gym friend", "workout partner"]
+    weight: 2
+  - id: group_chat_friend
+    labels: ["the group chat", "my group chat", "old group chat friend"]
+    weight: 2
+
+  # ── Work expansion ──
+  - id: mentor
+    labels: ["mentor", "old mentor"]
+    weight: 2
+  - id: intern
+    labels: ["intern", "the intern", "my intern"]
+    weight: 2
+  - id: direct_report
+    labels: ["direct report", "my report"]
+    weight: 2
+  - id: team_lead
+    labels: ["team lead", "tech lead", "lead"]
+    weight: 2
+  - id: client
+    labels: ["client", "main client", "the new client"]
+    weight: 3
+  - id: vendor
+    labels: ["vendor", "the vendor", "supplier"]
+    weight: 2
+
+  # ── Service relationships (USA-typical) ──
+  - id: babysitter
+    labels: ["babysitter", "the sitter", "our sitter"]
+    weight: 3
+  - id: housekeeper
+    labels: ["housekeeper", "cleaning lady", "our cleaner"]
+    weight: 2
+  - id: landscaper
+    labels: ["landscaper", "yard guy", "lawn guy"]
+    weight: 2
+  - id: mechanic
+    labels: ["mechanic", "my mechanic", "auto guy"]
+    weight: 3
+  - id: realtor
+    labels: ["realtor", "agent", "our realtor"]
+    weight: 2
+  - id: barber
+    labels: ["barber", "hairdresser", "stylist"]
+    weight: 2
+  - id: dentist
+    labels: ["dentist", "dental hygienist"]
+    weight: 2
+  - id: vet
+    labels: ["vet", "vet tech", "the vet at petsmart"]
+    weight: 2
+  - id: pet_sitter
+    labels: ["pet sitter", "dog walker", "petsitter"]
+    weight: 2
+
+  # ── LGBTQ / same-sex / non-binary additions ──
+  # Generation logic in the orchestrator should occasionally pair these with
+  # same-gender names. Existing labels above were not modified; these are additions.
+  - id: same_sex_partner
+    labels: ["husband", "wife", "partner", "spouse", "boyfriend", "girlfriend", "significant other"]
+    weight: 4
+    same_gender: true
+  - id: co_parent
+    labels: ["co-parent", "co-parents", "kid's other parent"]
+    weight: 2
+    same_gender: any
+  - id: step_parent
+    labels: ["step-mom", "step-dad", "step-parent", "stepmom", "stepdad"]
+    weight: 2
+  - id: step_sibling
+    labels: ["step-sister", "step-brother", "step-sis", "step-bro"]
+    weight: 2
+  - id: step_kid
+    labels: ["step-son", "step-daughter", "step-kid"]
+    weight: 2
+  - id: nonbinary_friend
+    labels: ["my friend", "my best friend", "my buddy"]
+    weight: 2
+    pronouns: ["they", "them", "their"]
