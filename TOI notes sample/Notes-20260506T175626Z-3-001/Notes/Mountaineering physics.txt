@@ -1,0 +1,4 @@
+Mountaineering physics
+Dynamic vs static rope physics for rappelling.... Dynamic ropes stretch up to 30% to absorb fallfactor energy. dont use static line for lead climbing or u snap spine. look at uiaa fall rating for 9.5mm single ropes. also check gnss offset in deep canyons....
+garmin inreach uses iridium network but signal bounces off rockwalls (multipath error).
+need glonass + galileo for better fix in zion narrows. weightdistribution on 65l pack needs heavy stuff close to spine or center of gravity is trashed on technical scrambles

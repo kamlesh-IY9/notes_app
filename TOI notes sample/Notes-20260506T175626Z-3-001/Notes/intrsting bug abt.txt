@@ -1,0 +1,10 @@
+﻿intrsting bug abt... polymer glass transition temp at 88C from DSC thin film thickness measured at 59nm by ellipsometry.... porosity measured at 30% in printed sample
+
+carbon fiber layup angle sequence 0/86/90/-81
+surface roughness Ra of 89 um after shot peening
+>> tensile strength at 62 MPa after heat treatment cycle
+- sintering temp at 58C 4 5 hours in argon
+
+confused on this part
+>>  hardness after quench measured at not sure tho
+>> thermal conductivity at 55 W/mK for this composite

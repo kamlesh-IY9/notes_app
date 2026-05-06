@@ -1,4 +1,4 @@
-"""Contacts generator — synthetic saved-contact notes with strict US rules."""
+"""Contacts generator — synthetic saved-contact notes (US and India modes)."""
 
 from __future__ import annotations
 
@@ -32,21 +32,117 @@ SAFE_AREA_CODES = [
 EMAIL_DOMAINS = ["gmail.com", "outlook.com", "icloud.com", "protonmail.com", "yahoo.com"]
 
 FIRST_NAMES = [
-    "Marcus", "Sarah", "Leo", "Elena", "Parker", "Logan", "Miles", "Nina",
-    "Bella", "Bianca", "Derek", "Fiona", "Griffin", "Avery", "Camila",
-    "Jordan", "Maya", "Owen", "Rafael", "Sofia", "Tucker", "Eboni",
-    "Noah", "Jasmine", "Caleb", "Mila", "Evan", "Naomi", "Dylan",
-    "Kara", "Wesley", "Aaliyah", "Mateo", "Reese", "Andre", "Lucia",
+    # Male
+    "Marcus", "Leo", "Parker", "Logan", "Miles", "Derek", "Griffin", "Jordan",
+    "Owen", "Tucker", "Noah", "Caleb", "Evan", "Wesley", "Andre", "Xavier",
+    "Darius", "Malik", "Isaiah", "Santiago", "Diego", "Miguel", "Alejandro",
+    "Hiroshi", "Kenji", "Arjun", "Vikram", "Liam", "Oliver", "Elijah", "James",
+    "William", "Benjamin", "Lucas", "Henry", "Theodore", "Jack", "Levi",
+    "Alexander", "Jackson", "Daniel", "Michael", "Mason", "Sebastian", "Ethan",
+    "Samuel", "Jacob", "Asher", "Aiden", "John", "Joseph", "Wyatt", "David",
+    "Luke", "Julian", "Hudson", "Grayson", "Matthew", "Ezra", "Gabriel",
+    "Carter", "Isaac", "Jayden", "Luca", "Anthony", "Lincoln", "Thomas",
+    "Maverick", "Elias", "Josiah", "Charles", "Christopher", "Ezekiel",
+    "Jaxon", "Nathan", "Andrew", "Joshua", "Vincent", "Adrian",
+    "Cameron", "Nolan", "Waylon", "Brooks", "Cooper", "Christian", "Hunter",
+    "Khalil", "Jamal", "Terrence", "Marquis", "DeShawn", "Tyrone", "Dante",
+    "Lamar", "Jalen", "Tariq", "Keon", "Omari", "Rashad", "Devonte",
+    "Nasir", "Amari", "Zion", "King", "Ace", "Major", "Trevon", "Quincy",
+    "Booker", "Donovan", "Jermaine", "Carlos", "Luis", "Andres", "Emilio",
+    "Rafael", "Manuel", "Eduardo", "Javier", "Oscar", "Fernando", "Ricardo",
+    "Antonio", "Sergio", "Pablo", "Cesar", "Hector", "Marco", "Rodrigo",
+    "Enrique", "Arturo", "Ivan", "Ramon", "Julian", "Cristian", "Joaquin",
+    "Cruz", "Esteban", "Gerardo", "Tomas", "Damian", "Pedro", "Felipe",
+    "Wei", "Ravi", "Min", "Jun", "Hao", "Daichi", "Yuki", "Sanjay",
+    "Raj", "Dev", "Nikhil", "Aarav", "Rohan", "Akira", "Tao", "Jin",
+    "Cormac", "Stellan", "Henrik", "Alistair", "Bastian", "Leif", "Alden",
+    "Idris", "Talon", "Crispin", "Theron", "Warrick", "Broderick", "Caspian",
+    "Gareth", "Hadley", "Ingram", "Lowell", "Merrick", "Niall", "Pierce",
+    "Quinlan", "Vance", "Weldon", "Yates", "Zeb", "Gage", "Otto", "Holt",
+    "Calder", "Sterling", "Dex", "Fen", "Soren", "Bodie", "Beckett", "Crew",
+    "Kaiden", "Jameson", "Tate", "Holden", "Knox", "Atticus", "Sullivan",
+    "Walker", "Greyson", "Shepherd", "Archer", "Bowen", "Jasper", "Ridge",
+    "Otis", "Forrest", "Grant", "Emmett", "Bryson", "Ryder", "Brandon",
+    "Blake", "Kevin", "Tyler", "Aaron", "Max", "Tristan", "Jonah", "Dean",
+    "Kyle", "Cole", "Axel", "Finn", "Jace", "Reid", "Brody", "Beau",
+    "Patrick", "Chase", "Sawyer", "Braxton", "Gavin", "Leonardo", "Roman",
+    "Jason", "Colton", "Landon", "Dominic", "Eli", "Carson", "Declan",
+    "Easton", "Zachary", "Kai", "Bentley", "Emrys", "Lysander", "Rafferty",
+    # Female
+    "Sarah", "Nina", "Bella", "Bianca", "Fiona", "Avery", "Camila",
+    "Maya", "Sofia", "Eboni", "Jasmine", "Mila", "Naomi", "Kara",
+    "Aaliyah", "Reese", "Lucia", "Amara", "Imani", "Zuri", "Valentina",
+    "Priya", "Ananya", "Mei", "Olivia", "Emma", "Charlotte", "Amelia",
+    "Sophia", "Mia", "Isabella", "Ava", "Evelyn", "Luna", "Harper",
+    "Scarlett", "Elizabeth", "Eleanor", "Emily", "Chloe", "Violet",
+    "Penelope", "Gianna", "Aria", "Abigail", "Audrey", "Alice", "Hazel",
+    "Grace", "Nora", "Lily", "Layla", "Zoe", "Deja", "Aniya", "Aliyah",
+    "Janiyah", "Skyla", "Armani", "Kaia", "Zariah", "Brielle", "Kamila",
+    "Laila", "Nalani", "Sariah", "Amira", "Kennedi", "Skai", "Tatum",
+    "Zhuri", "Kailani", "Milan", "Lyric", "Kaliyah", "Journee", "Trinity",
+    "Janelle", "Saniyah", "Talia", "Sofia", "Isabella", "Camila", "Mariana",
+    "Daniela", "Natalia", "Alejandra", "Victoria", "Ximena", "Ana", "Maria",
+    "Carolina", "Adriana", "Juliana", "Catalina", "Fernanda", "Paloma",
+    "Marisol", "Esperanza", "Carmen", "Rosa", "Selena", "Alondra", "Dulce",
+    "Esmeralda", "Yesenia", "Renata", "Soledad", "Lola", "Beatriz", "Itzel",
+    "Mireya", "Liliana", "Magdalena", "Yolanda", "Pilar", "Estrella", "Lupita",
+    "Sakura", "Aiko", "Yuna", "Hana", "Suki", "Lin", "Jade", "Jasmine",
+    "Mina", "Anh", "Mai", "Thi", "Rina", "Sora", "Nari", "Meera", "Shreya",
+    "Divya", "Kavya", "Deepa", "Priti", "Nadia", "Simone", "Celeste",
+    "Daphne", "Ingrid", "Margot", "Vivienne", "Petra", "Delia", "Betsy",
+    "Greta", "Roslyn", "Willa", "Thea", "Imelda", "Odessa", "Yara", "Zola",
+    "Nyla", "Camille", "Odette", "Blythe", "Lena", "Miriam", "Callista",
+    "Becca", "Shira", "Tove", "Sable", "Alana", "Daria", "Coral", "Sylvie",
+    "Linnea", "Maren", "Veda", "Astrid", "Fern", "Tamsin", "Bridget",
+    "Colleen", "Shannon", "Kathleen", "Moira", "Siobhan", "Deirdre",
+    # Neutral / unisex
+    "Kai", "River", "Phoenix", "Avery", "Riley", "Jordan", "Morgan",
+    "Reese", "Finley", "Emery", "Rowan", "Hayden", "Blake", "Charlie",
+    "Drew", "Jamie", "Taylor", "Alex", "Ari", "Ellis", "Remy", "Sol",
+    "Wren", "Dakota", "Eden", "Harper", "Lane", "Rory", "Sky", "Cameron",
+    "Casey", "Quinn", "Sage", "Lennox", "Indie", "Soren", "Briar", "Ace",
+    "Lex", "Bodhi", "Orion", "Nico", "Jude", "Atlas", "Kingston", "Maddox",
+    "Theo", "Cyrus", "Cassian", "Onyx", "Ronan",
 ]
 LAST_NAMES = [
     "Miller", "Brooks", "Sterling", "Mendez", "Vance", "Carter", "Hayes",
     "Rivera", "Morgan", "Patel", "Bennett", "Coleman", "Price", "Ross",
     "Reed", "Foster", "Diaz", "Hughes", "Murphy", "Sullivan", "Bailey",
+    "Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Rodriguez",
+    "Martinez", "Hernandez", "Lopez", "Gonzalez", "Wilson", "Anderson", "Thomas",
+    "Taylor", "Moore", "Jackson", "Martin", "Lee", "Perez", "Thompson", "White",
+    "Harris", "Sanchez", "Clark", "Ramirez", "Lewis", "Robinson", "Walker", "Young",
+    "Allen", "King", "Wright", "Scott", "Torres", "Nguyen", "Hill", "Flores", "Green",
+    "Adams", "Nelson", "Baker", "Hall", "Campbell", "Mitchell",
+    "Roberts", "Gomez", "Phillips", "Evans", "Turner", "Parker", "Cruz",
+    "Edwards", "Collins", "Reyes", "Stewart", "Morris", "Morales", "Cook",
+    "Rogers", "Gutierrez", "Ortiz", "Cooper", "Peterson",
+    "Bryant", "Russell", "Griffin", "Diaz", "Hayes", "Myers", "Ford",
+    "Hamilton", "Graham", "Sullivan", "Wallace", "Woods", "Cole", "West",
+    "Jordan", "Owens", "Reynolds", "Fisher", "Ellis", "Harrison", "Gibson",
+    "McDonald", "Cruz", "Marshall", "Ortega", "Ramos", "Guerrero", "Munoz",
+    "Medina", "Vargas", "Castillo", "Romero", "Chavez", "Aguilar", "Salazar",
+    "Huang", "Chen", "Pham", "Tran", "Nguyen", "Kim", "Park", "Choi",
+    "Singh", "Kumar", "Sharma", "Gupta", "Kapoor", "Mehta", "Shah", "Bose",
+    "Thornton", "Blackwood", "Weston", "Harmon", "Dalton", "Frost", "Keller",
+    "Garrett", "Barton", "Haynes", "Knox", "Malone", "Randall", "Stanton",
+    "Whitfield", "Holloway", "Barker", "Byrd", "Chandler", "Eaton", "Holt",
 ]
 CITIES = [
-    "Portland", "Phoenix", "Boston", "Charlotte", "Nashville", "Sacramento", "Denver", "Miami", 
-    "Atlanta", "New York", "Las Vegas", "Philadelphia", "Orlando", "Detroit", "Tampa", 
-    "San Jose", "San Diego", "Raleigh", "Omaha", "Memphis", "Louisville", "Baltimore", "Columbus"
+    "Portland", "Phoenix", "Boston", "Charlotte", "Nashville", "Sacramento",
+    "Denver", "Miami", "Atlanta", "New York", "Las Vegas", "Philadelphia",
+    "Orlando", "Detroit", "Tampa", "San Jose", "San Diego", "Raleigh",
+    "Omaha", "Memphis", "Louisville", "Baltimore", "Columbus", "Indianapolis",
+    "Jacksonville", "San Francisco", "Salt Lake City", "Kansas City",
+    "Milwaukee", "Minneapolis", "St. Louis", "Boise", "Albuquerque",
+    "Tucson", "Colorado Springs", "Fresno", "Long Beach", "Sacramento",
+    "Virginia Beach", "Richmond", "Norfolk", "Durham", "Winston-Salem",
+    "Greensboro", "Fayetteville", "Aurora", "Lakewood", "Arvada",
+    "Fort Collins", "Pueblo", "Honolulu", "Anchorage", "Juneau",
+    "Baton Rouge", "New Orleans", "Shreveport", "Birmingham", "Montgomery",
+    "Huntsville", "Mobile", "Little Rock", "Fayetteville", "Knoxville",
+    "Chattanooga", "Clarksville", "Murfreesboro", "Columbia", "Greenville",
+    "Charleston", "Savannah", "Augusta", "Athens", "Macon",
 ]
 
 
@@ -165,47 +261,259 @@ CONTACT_CATEGORIES = [
         ["$450 fee", "Premium went up", "Closing costs", "Appraisal $500"],
         ["Submit pics tonight.", "Waiting on final approval.", "Check the Docusign email."],
     ),
+    ContactCategory(
+        "corporate_office",
+        ["IT Support", "HR Rep", "Office Manager", "Facilities Manager", "Admin Assistant", "Payroll Contact", "Building Security", "Department Head", "Procurement"],
+        ["Corporate HQ", "Regional Office", "Downtown Branch", "Tech Campus", "Main Office", "North Tower"],
+        ["Follow up on laptop ticket.", "HR form needs signature.", "Office supply order.", "Badge access request.", "Facilities request for AC.", "Payroll discrepancy to fix."],
+        ["No fee", "Reimbursement pending", "Company card", "Expense report"],
+        ["Submit ticket before EOD.", "CC manager on the email.", "Ask for confirmation number.", "Check internal portal first."],
+    ),
+    ContactCategory(
+        "freelance_creative",
+        ["Graphic Designer", "Web Developer", "Photographer", "Videographer", "Copywriter", "Social Media Manager", "UI Designer", "Brand Consultant", "Illustrator"],
+        ["Freelance Studio", "Creative Co.", "Independent", "Design Lab", "Boutique Studio", "Pixel & Ink"],
+        ["Logo revision round 2.", "Website launch checklist.", "Photo shoot deliverables.", "Video edit feedback needed.", "Content calendar draft.", "Brand guide final version."],
+        ["Quote: $400", "Invoice $850", "Deposit $200", "Rate $75/hr", "Package $1200"],
+        ["Send brief by Tuesday.", "Need source files too.", "Ask about turnaround time.", "Confirm file format before delivery."],
+    ),
+    ContactCategory(
+        "financial_legal",
+        ["Financial Advisor", "Accountant", "Tax Preparer", "Attorney", "Paralegal", "Banker", "Loan Officer", "Insurance Agent", "Estate Planner", "Notary"],
+        ["Financial Group", "Law Offices", "CPA Associates", "Wealth Management", "Insurance Agency", "First National Bank"],
+        ["Tax filing extension requested.", "Will and trust update.", "Loan refinance paperwork.", "IRA contribution question.", "Business license renewal.", "Contract review needed."],
+        ["Consult fee $150", "Filing fee $200", "No charge first meeting", "Retainer $500", "Processing fee $75"],
+        ["Bring last 2 years returns.", "Need notarized copy.", "Ask about payment plan.", "Confirm appointment is in-person.", "Send scanned docs beforehand."],
+    ),
 ]
 
 
 def _misspell(name: str) -> str:
-    """Randomly introduce a typo into a name."""
-    if random.random() > 0.15 or len(name) < 4:
+    """Randomly introduce a typo into a name with more variety."""
+    if random.random() > 0.18 or len(name) < 4:
         return name
-    idx = random.randint(1, len(name) - 2)
+    
+    idx = random.randint(1, len(name) - 1)
     chars = list(name)
-    chars[idx], chars[idx+1] = chars[idx+1], chars[idx]
+    r = random.random()
+    
+    if r < 0.4: # Swap
+        if idx < len(chars) - 1:
+            chars[idx], chars[idx+1] = chars[idx+1], chars[idx]
+    elif r < 0.7: # Omission
+        chars.pop(idx)
+    elif r < 0.9: # Duplication
+        chars.insert(idx, chars[idx])
+    else: # Wrong key (nearby char)
+        chars[idx] = random.choice("abcdefghijklmnopqrstuvwxyz")
+        
     return "".join(chars)
 
-def generate_contact_note(used_names: set[str] | None = None) -> dict:
+# ── India-specific data ───────────────────────────────────────────────────────
+
+INDIA_CITIES = [
+    "Mumbai", "Delhi", "Bangalore", "Hyderabad", "Chennai", "Pune", "Kolkata",
+    "Jaipur", "Ahmedabad", "Surat", "Lucknow", "Kanpur", "Nagpur", "Indore",
+    "Bhopal", "Patna", "Vadodara", "Coimbatore", "Agra", "Nashik", "Ranchi",
+    "Faridabad", "Meerut", "Rajkot", "Varanasi", "Ghaziabad", "Noida",
+    "Gurugram", "Chandigarh", "Mysore", "Bhubaneswar", "Visakhapatnam",
+    "Ludhiana", "Amritsar", "Jodhpur", "Raipur", "Kochi", "Thiruvananthapuram",
+    "Guwahati", "Dehradun", "Jalandhar", "Aurangabad", "Solapur", "Hubli",
+]
+
+INDIA_FIRST_NAMES = [
+    "Amit", "Rahul", "Vikram", "Suresh", "Rajesh", "Manoj", "Arun", "Sanjay",
+    "Deepak", "Pankaj", "Rohit", "Vivek", "Nikhil", "Karan", "Arjun", "Dev",
+    "Ankit", "Pradeep", "Ravi", "Mohit", "Ajay", "Vijay", "Gaurav", "Sachin",
+    "Ramesh", "Dinesh", "Harish", "Girish", "Manish", "Naresh", "Rakesh",
+    "Ashok", "Sunil", "Anil", "Kapil", "Tarun", "Varun", "Vishal", "Kartik",
+    "Akash", "Shubham", "Abhishek", "Himanshu", "Tushar", "Nitin", "Rohan",
+    "Karthik", "Suresh", "Venkat", "Bala", "Ravi", "Mani", "Prasad", "Subramaniam",
+    "Arnab", "Souvik", "Debashish", "Bikash", "Subho", "Arka", "Soumit",
+    "Priya", "Anjali", "Neha", "Pooja", "Kavita", "Sunita", "Rekha", "Meena",
+    "Geeta", "Sita", "Anita", "Sarita", "Savita", "Vandana", "Archana",
+    "Deepa", "Divya", "Priyanka", "Swati", "Shweta", "Ritu", "Nisha", "Preeti",
+    "Ananya", "Shreya", "Pallavi", "Madhuri", "Sneha", "Sonali", "Manisha",
+    "Komal", "Roshni", "Meenal", "Diksha", "Kiran", "Seema", "Sunita",
+    "Lakshmi", "Radha", "Meera", "Sridevi", "Geetha", "Revathi", "Kavya",
+    "Harpreet", "Gurpreet", "Manpreet", "Jaspreet", "Simran", "Navneet",
+]
+
+INDIA_LAST_NAMES = [
+    "Sharma", "Gupta", "Singh", "Verma", "Yadav", "Tiwari", "Dubey", "Mishra",
+    "Pandey", "Joshi", "Patel", "Shah", "Mehta", "Desai", "Gandhi", "Modi",
+    "Kumar", "Nair", "Pillai", "Menon", "Iyer", "Iyengar", "Reddy", "Naidu",
+    "Chatterjee", "Banerjee", "Mukherjee", "Ghosh", "Das", "Roy", "Sen", "Bose",
+    "Kaur", "Dhillon", "Sandhu", "Gill", "Bhatia", "Arora", "Khanna", "Kapoor",
+    "Saxena", "Srivastava", "Shukla", "Tripathi", "Chaudhary", "Aggarwal",
+]
+
+INDIA_CONTACT_CATEGORIES = [
+    ContactCategory(
+        "home_services",
+        ["Plumber", "Electrician", "Carpenter", "Painter", "AC Repair", "Pest Control", "Waterproofing", "Sofa Repair"],
+        ["Sri Ram Plumbers", "City Electricals", "Sharma Carpentry", "CoolAir AC Services", "CleanHome Pest Control"],
+        ["Fix kitchen pipe leak.", "Wiring check for inverter.", "Paint bedroom walls.", "AC gas refill needed.", "Termite treatment quote."],
+        ["Est: ₹500", "Quote: ₹1200", "₹800 including material", "₹300 visit charge"],
+        ["Can come Sunday morning.", "Ask about weekend slot.", "Needs photos before quote."],
+    ),
+    ContactCategory(
+        "auto_transport",
+        ["Mechanic", "Tyre Shop", "Auto Electrician", "Car Wash", "Driving Instructor", "Two-Wheeler Repair"],
+        ["Ram Motors", "City Tyre House", "Bajaj Auto Works", "Shine Car Wash", "Raj Driving School"],
+        ["Engine oil change due.", "Front tyre puncture fix.", "Battery replacement.", "Full car wash booking.", "Learn gear car driving."],
+        ["Est: ₹400", "₹150 per tyre", "₹600 battery", "₹250 full wash", "₹1500 per month"],
+        ["Drop bike Thursday morning.", "Ask if they take UPI.", "Check Google reviews first."],
+    ),
+    ContactCategory(
+        "health_medical",
+        ["Doctor", "Compounder", "Pharmacist", "Pathology Lab", "Physiotherapist", "Eye Doctor", "Dentist"],
+        ["Dr. Sharma Clinic", "City Pathology", "MediCare Pharmacy", "Vision Eye Centre", "SmileCare Dental"],
+        ["Blood test report followup.", "Eye checkup appointment.", "Refill BP medicines.", "Knee pain physio session.", "Tooth cleaning due."],
+        ["Fees: ₹300", "Lab: ₹800", "Copay ₹100", "₹500 session", "OPD ₹200"],
+        ["Bring Aadhaar card.", "Fast for 8 hrs before blood test.", "Confirm morning slot."],
+    ),
+    ContactCategory(
+        "education",
+        ["Tuition Teacher", "Coaching Sir", "College Professor", "School Teacher", "Music Teacher", "Computer Trainer"],
+        ["Sharma Coaching Centre", "City IIT Classes", "Excel Tuitions", "Digital Skills Academy"],
+        ["Math doubt session.", "NEET preparation schedule.", "Python course demo class.", "Board exam revision plan.", "Music class fees pending."],
+        ["₹2000/month", "₹500/session", "₹1500 batch fee", "First class free"],
+        ["Bring notebook and pen.", "Ask about weekend batch.", "Confirm timing before coming."],
+    ),
+    ContactCategory(
+        "finance_legal",
+        ["CA", "Tax Consultant", "LIC Agent", "Bank Manager", "Lawyer", "Loan Officer", "Mutual Fund Agent"],
+        ["Gupta & Associates CA", "LIC Office", "SBI Branch", "City Law Chambers", "Finwise Investments"],
+        ["ITR filing deadline.", "LIC premium due.", "Home loan documents.", "FD renewal query.", "Will preparation."],
+        ["CA fees ₹3000", "Premium ₹12000", "Processing ₹1500", "No charge consultation"],
+        ["Bring PAN and Aadhaar.", "Submit Form 16.", "Ask about GST registration."],
+    ),
+    ContactCategory(
+        "kirana_grocery",
+        ["Kirana Store", "Vegetable Vendor", "Milk Supplier", "Grocery Delivery", "Wholesale Dealer"],
+        ["Sharma General Store", "Ramu Kirana", "Fresh Veg Corner", "Daily Dairy"],
+        ["Monthly grocery order.", "Atta and dal stock over.", "Milk packets from tomorrow.", "Wholesale rate for pulses.", "Pending bill payment."],
+        ["₹2500 monthly", "₹150 pending", "Cash on delivery", "UPI accepted"],
+        ["Call before 8 AM.", "Ask about home delivery.", "Check expiry before buying."],
+    ),
+    ContactCategory(
+        "salon_parlour",
+        ["Barber", "Hair Stylist", "Parlour", "Mehendi Artist", "Tailor", "Dry Cleaner"],
+        ["Raju Hair Salon", "Lakme Studio", "Pooja Beauty Parlour", "Shahi Tailors", "Quick Dry Cleaners"],
+        ["Haircut appointment.", "Bridal mehendi booking.", "Suit stitching order.", "Saree dry clean pickup.", "Facial and cleanup."],
+        ["₹100 haircut", "₹800 mehendi", "₹1200 stitching", "₹200 dry clean"],
+        ["Needs 10 days for stitching.", "Book 2 weeks before event.", "Ask for advance booking discount."],
+    ),
+    ContactCategory(
+        "events_catering",
+        ["Caterer", "Decorator", "Pandit", "Photographer", "Tent House", "DJ"],
+        ["Shree Caterers", "Royal Decorators", "City Photography", "Om Events", "Sharma Tent House"],
+        ["Wedding catering menu.", "Birthday decoration booking.", "Pooja samagri list.", "Photo album delivery.", "Canopy rental for function."],
+        ["₹400 per plate", "Advance ₹5000", "Package ₹15000", "₹8000 day"],
+        ["Confirm headcount 3 days before.", "Ask for veg/non-veg rates.", "Get written estimate."],
+    ),
+    ContactCategory(
+        "personal_direct",
+        ["Neighbour", "Colony Secretary", "Building Watchman", "Society Member", "Mohalla Contact", "Volunteer"],
+        ["Society Office", "RWA", "Colony Group", "Building Committee"],
+        ["Society maintenance dues.", "Water supply complaint.", "Parking dispute.", "Gate pass for visitor.", "Noise complaint followup."],
+        ["₹2000 maintenance", "No cost", "Fine ₹500 maybe", "Cash only"],
+        ["Speak to secretary directly.", "Call after 6 PM.", "WhatsApp message first."],
+    ),
+    ContactCategory(
+        "repair_services",
+        ["Mobile Repair", "Laptop Repair", "TV Repair", "Washing Machine Repair", "Fridge Repair", "DTH Technician"],
+        ["QuickFix Mobile", "TechCare Laptops", "City Electronics Repair", "HomeAppliance Service"],
+        ["Phone screen crack fix.", "Laptop battery replacement.", "TV remote not working.", "Washing machine draining issue.", "Fridge cooling problem."],
+        ["₹500 screen", "₹800 battery", "₹350 visit charge", "₹1200 estimate"],
+        ["Ask for 3-month warranty.", "Get bill after repair.", "Check reviews on Google."],
+    ),
+]
+
+
+def _india_phone() -> str:
+    """Generate realistic Indian mobile number."""
+    first_digit = random.choice(["6", "7", "8", "9"])
+    remaining = "".join([str(random.randint(0, 9)) for _ in range(9)])
+    number = first_digit + remaining
+    fmt = random.choices(["plain", "space5", "hyphen5", "plus91"], weights=[30, 30, 25, 15], k=1)[0]
+    if fmt == "plain":
+        return number
+    elif fmt == "space5":
+        return f"{number[:5]} {number[5:]}"
+    elif fmt == "hyphen5":
+        return f"{number[:5]}-{number[5:]}"
+    else:
+        return f"+91 {number[:5]} {number[5:]}"
+
+
+def _india_address(city: str) -> str:
+    """Generate realistic Indian address."""
+    colonies = [
+        "Shanti Nagar", "Gandhi Colony", "Civil Lines", "Nehru Nagar", "Sector 12",
+        "Rajiv Nagar", "Lal Bahadur Colony", "New Colony", "Model Town", "Green Park",
+        "Adarsh Nagar", "Indira Nagar", "Vikas Nagar", "Vasant Vihar", "Saket",
+        "Karol Bagh", "Malviya Nagar", "Tilak Nagar", "Defence Colony", "Janakpuri",
+    ]
+    house_formats = [
+        f"H.No {random.randint(1, 999)}",
+        f"Flat {random.randint(1, 12)}{random.choice(['A','B','C','D'])}",
+        f"Plot {random.randint(1, 500)}",
+        f"D-{random.randint(1, 200)}",
+    ]
+    house = random.choice(house_formats)
+    colony = random.choice(colonies)
+    if random.random() < 0.4:
+        return f"{house}, {colony}, {city}"
+    return f"{house}, {colony}"
+
+
+def generate_contact_note(used_names: set[str] | None = None, used_first_counts: dict | None = None, language: str = "english") -> dict:
     """Generate one synthetic contacts-mode note and metadata."""
-    category = random.choice(CONTACT_CATEGORIES)
+    india = language == "hindi"
+    category = random.choice(INDIA_CONTACT_CATEGORIES if india else CONTACT_CATEGORIES)
     if used_names is None:
         used_names = set()
-    first = random.choice(FIRST_NAMES)
-    last = random.choice(LAST_NAMES)
+    if used_first_counts is None:
+        used_first_counts = {}
+
+    name_pool_first = INDIA_FIRST_NAMES if india else FIRST_NAMES
+    name_pool_last = INDIA_LAST_NAMES if india else LAST_NAMES
+
+    first = random.choice(name_pool_first)
+    last = random.choice(name_pool_last)
     full_name = f"{first} {last}" if random.random() < 0.65 else first
-    for _ in range(50):
-        first = random.choice(FIRST_NAMES)
-        last = random.choice(LAST_NAMES)
+    for _ in range(80):
+        first = random.choice(name_pool_first)
+        last = random.choice(name_pool_last)
         full_name = f"{first} {last}" if random.random() < 0.65 else first
-        if first.lower() not in used_names and full_name.lower() not in used_names:
+        if used_first_counts.get(first.lower(), 0) < 2 and full_name.lower() not in used_names:
             break
-            
+
     full_name_typo = _misspell(full_name)
     role = random.choice(category.roles)
-    org = random.choice(category.orgs)
-    phone = _phone()
+    phone = _india_phone() if india else _phone()
     email = _email(first, last, role)
-    city = random.choice(CITIES)
+    city = random.choice(INDIA_CITIES if india else CITIES)
 
-    addr = _address(city)
+    addr = _india_address(city) if india else _address(city)
     info_mode = random.choices(
-        ["both", "phone", "email", "phone_addr", "all"], 
-        weights=[5, 60, 0, 30, 5], 
+        ["both", "phone", "email", "phone_addr", "all"],
+        weights=[5, 60, 0, 30, 5],
         k=1
     )[0]
+
     def _randomize_dollars(s: str) -> str:
+        if india:
+            # Real people rarely write ₹ symbol — usually just the number or "Rs."
+            def repl_inr(m):
+                amt = m.group(1)
+                r = random.random()
+                if r < 0.55: return amt          # just "500" — most common
+                elif r < 0.85: return f"Rs. {amt}"  # "Rs. 500" — occasional
+                return m.group(0)                # "₹500" — rare (~15%)
+            return re.sub(r"₹(\d+)", repl_inr, s)
         def repl(m):
             amt = m.group(1)
             r = random.random()
@@ -229,7 +537,12 @@ def generate_contact_note(used_names: set[str] | None = None) -> dict:
 
     lines = []
     if layout == "sentence":
-        verbs = ["Talked to", "txtd", "called", "Checked with", "hit up", "check with", "call", "Met"]
+        verbs = [
+            "Talked to", "txtd", "called", "Checked with", "hit up", "check with", "call", "Met",
+            "Follow up w/", "Need to talk to", "Ask", "Reminder:", "Contact:", "Reached out to",
+            "Schedule w/", "Connect with", "Invoiced", "Paid", "Sent info to", "Got a quote from",
+            "Messaged", "Waiting on", "Pick up from", "Drop off at", "Discussed", "Meeting with"
+        ]
         verb = random.choice(verbs)
         from_loc = f"from {city}" if random.random() < 0.4 else ""
         intro = f"{verb} {full_name_typo} {role} {from_loc}"

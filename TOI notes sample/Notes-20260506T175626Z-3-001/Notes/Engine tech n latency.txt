@@ -1,0 +1,6 @@
+Engine tech n latency
+nanite in ue5 is gamechanger for drawcalls.... 
+
+basically removes polycount limits by using micropolygon geometry. lumen handles globalsillumination in realtime so no more baking lightmaps for 10 hours. check out directstorage api specs for nvme drives to see how it speeds up assetstreaming.... 
+
+need rtx 4090 to really see hardware raytracing at 4k without dlss ghosting. inputlag is real issue with framegeneration—need reflex lowlatency mode enabled or feels like playing in mud.

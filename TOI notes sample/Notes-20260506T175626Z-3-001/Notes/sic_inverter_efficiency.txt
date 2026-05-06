@@ -1,0 +1,11 @@
+﻿SiC inverter efficiency
+
+- regen braking recovering 60% of kinetic energy in city
+
+is this normal??
+NVH measurements showing  45dB peak at 51 rpm
+
+iirc range estimate off by 77% in cold weather testing
+cell voltage delta exceeding 23mv during discharge
+
+seems off need recheck

@@ -49,7 +49,7 @@ MIUI_THEMES = [
     "arctic-frost",
     "electric-indigo",
     "sunset-peach",
-    # Attractive themes batch 3 (added per user request — more variety)
+    # Attractive themes batch 3
     "forest-night",
     "cosmic-purple",
     "cherry-red",
@@ -60,14 +60,71 @@ MIUI_THEMES = [
     "sapphire-deep",
     "champagne",
     "obsidian",
+    # Batch 4 — rich dark tones
+    "ruby-wine",
+    "turquoise-depths",
+    "lilac-night",
+    "copper-bronze",
+    "aurora-green",
+    "terra-cotta",
+    "midnight-indigo",
+    "plum-haze",
+    "ember-glow",
+    "pine-shadow",
+    # Batch 5 — moody naturals
+    "seafoam-dark",
+    "vintage-sepia",
+    "ultraviolet",
+    "steel-slate",
+    "jade-deep",
+    "sand-dusk",
+    "crimson-night",
+    "teal-forest",
+    "neon-lime",
+    "blush-noir",
+    # Batch 6 — extra unique
+    "burnt-umber",
+    "glacier-blue",
+    "orchid-dark",
+    "honey-amber",
+    "storm-grey",
+    "blood-plum",
+    "aquamarine-dark",
+    "tobacco-brown",
+    "electric-violet",
+    "warm-charcoal",
+    # Pattern themes — shapes, grids, textures
+    "dot-matrix",
+    "dot-matrix-blue",
+    "diagonal-stripes",
+    "grid-lines",
+    "carbon-fiber",
+    "starfield-deep",
+    "bokeh-multicolor",
+    "concentric-rings",
+    "sunburst-amber",
+    "marble-night",
+    "woven-dark",
+    "hex-glow",
+    "crosshatch-navy",
+    "geometric-triangles",
+    "noise-purple",
 ]
 
-# US carrier names — realistic mix for status bar
+# US carrier names — realistic mix for status bar (English jobs)
 US_CARRIERS = [
     "T-Mobile", "AT&T", "Verizon", "T-Mobile", "AT&T", "Verizon",
     "T-Mobile", "AT&T",  # weighted heavier (big 3)
     "US Cellular", "Mint", "Cricket", "Metro",
     "Visible", "Google Fi", "Straight Talk", "Boost",
+]
+
+# Indian carrier names — for Hindi jobs
+INDIA_CARRIERS = [
+    "Jio", "Jio", "Jio",          # Jio is most common
+    "Airtel", "Airtel", "Airtel",  # Airtel second most common
+    "Vi", "Vi",                    # Vodafone Idea
+    "BSNL",
 ]
 
 # Font families per phone type — realistic system fonts
@@ -86,6 +143,26 @@ FONT_FAMILIES = {
         "'Roboto', 'Google Sans', sans-serif",
         "'Google Sans', 'Roboto', sans-serif",
         "'Noto Sans', 'Roboto', sans-serif",
+    ],
+}
+
+# Devanagari font stack — used for Hindi jobs across all app types
+FONT_FAMILIES_HINDI = {
+    "apple_notes": [
+        "'Noto Sans Devanagari', 'Inter', sans-serif",
+        "'Noto Sans Devanagari', -apple-system, sans-serif",
+    ],
+    "samsung_notes": [
+        "'Noto Sans Devanagari', 'Roboto', sans-serif",
+        "'Noto Sans Devanagari', 'Noto Sans', sans-serif",
+    ],
+    "google_keep": [
+        "'Noto Sans Devanagari', 'Roboto', sans-serif",
+        "'Noto Sans Devanagari', 'Google Sans', sans-serif",
+    ],
+    "miui_notes": [
+        "'Noto Sans Devanagari', 'Roboto', sans-serif",
+        "'Noto Sans Devanagari', sans-serif",
     ],
 }
 
@@ -109,6 +186,144 @@ WALLPAPER_CSS = {
     "sapphire-deep": "linear-gradient(180deg, #050a1e 0%, #0a142e 50%, #0e1c40 100%)",
     "champagne": "linear-gradient(180deg, #1a1408 0%, #2a2010 50%, #382c18 100%)",
     "obsidian": "linear-gradient(180deg, #0a0a0a 0%, #141418 50%, #1c1c20 100%)",
+    # Batch 4
+    "ruby-wine": "linear-gradient(180deg, #1a0510 0%, #2e0a1c 50%, #420e28 100%)",
+    "turquoise-depths": "linear-gradient(180deg, #001e1e 0%, #002e2a 50%, #003c36 100%)",
+    "lilac-night": "linear-gradient(135deg, #100a20 0%, #1e1035 50%, #2c1848 100%)",
+    "copper-bronze": "linear-gradient(180deg, #1a0e00 0%, #2c1a06 50%, #3e260a 100%)",
+    "aurora-green": "radial-gradient(ellipse at 50% 0%, #00b894 0%, transparent 60%), linear-gradient(180deg, #020c14 0%, #041824 100%)",
+    "terra-cotta": "linear-gradient(180deg, #1e0e08 0%, #2e1610 50%, #401e18 100%)",
+    "midnight-indigo": "linear-gradient(180deg, #04040e 0%, #080818 50%, #0e0e28 100%)",
+    "plum-haze": "radial-gradient(circle at 60% 40%, #6b2d8c 0%, transparent 50%), linear-gradient(180deg, #0e0416 0%, #1a0828 100%)",
+    "ember-glow": "radial-gradient(ellipse at 50% 80%, #ff5900 0%, transparent 50%), linear-gradient(180deg, #0e0600 0%, #1e0e00 100%)",
+    "pine-shadow": "linear-gradient(180deg, #040e08 0%, #081c10 50%, #0e2818 100%)",
+    # Batch 5
+    "seafoam-dark": "linear-gradient(135deg, #001e18 0%, #003028 50%, #004038 100%)",
+    "vintage-sepia": "linear-gradient(180deg, #14100a 0%, #221a0e 50%, #302414 100%)",
+    "ultraviolet": "radial-gradient(circle at 40% 30%, #5500cc 0%, transparent 55%), linear-gradient(135deg, #04000e 0%, #0c0020 100%)",
+    "steel-slate": "linear-gradient(180deg, #0c1018 0%, #141c26 50%, #1c2634 100%)",
+    "jade-deep": "linear-gradient(180deg, #001a0e 0%, #002c18 50%, #003c22 100%)",
+    "sand-dusk": "linear-gradient(180deg, #1a1208 0%, #2c1e0e 50%, #3c2c16 100%)",
+    "crimson-night": "linear-gradient(180deg, #140008 0%, #20000e 50%, #300016 100%)",
+    "teal-forest": "linear-gradient(135deg, #001818 0%, #002828 50%, #003838 100%)",
+    "neon-lime": "radial-gradient(ellipse at 50% 80%, #39ff14 0%, transparent 55%), linear-gradient(180deg, #020800 0%, #061200 100%)",
+    "blush-noir": "linear-gradient(135deg, #14080e 0%, #200e18 50%, #2e1422 100%)",
+    # Batch 6
+    "burnt-umber": "linear-gradient(180deg, #140800 0%, #221200 50%, #301c04 100%)",
+    "glacier-blue": "linear-gradient(180deg, #00101e 0%, #001c30 50%, #002840 100%)",
+    "orchid-dark": "linear-gradient(135deg, #140420 0%, #200830 50%, #2e1040 100%)",
+    "honey-amber": "linear-gradient(180deg, #1a0e00 0%, #2c1800 50%, #3e2400 100%)",
+    "storm-grey": "linear-gradient(180deg, #0a0c10 0%, #121418 50%, #1a1c22 100%)",
+    "blood-plum": "linear-gradient(180deg, #180010 0%, #26001c 50%, #360028 100%)",
+    "aquamarine-dark": "linear-gradient(135deg, #001a14 0%, #002c22 50%, #003c30 100%)",
+    "tobacco-brown": "linear-gradient(180deg, #180e00 0%, #261600 50%, #342000 100%)",
+    "electric-violet": "radial-gradient(circle at 50% 20%, #7c00ff 0%, transparent 50%), linear-gradient(180deg, #06000e 0%, #100018 100%)",
+    "warm-charcoal": "linear-gradient(180deg, #141210 0%, #201e1c 50%, #2c2a28 100%)",
+    # Pattern themes — shapes, grids, textures (CSS patterns via background shorthand)
+    "dot-matrix": (
+        "radial-gradient(circle, rgba(255,255,255,0.14) 1.5px, transparent 1.5px) 0 0 / 22px 22px, "
+        "linear-gradient(180deg, #080810 0%, #101018 100%)"
+    ),
+    "dot-matrix-blue": (
+        "radial-gradient(circle, rgba(80,160,255,0.22) 1.5px, transparent 1.5px) 0 0 / 18px 18px, "
+        "linear-gradient(180deg, #02051a 0%, #060a24 100%)"
+    ),
+    "diagonal-stripes": (
+        "repeating-linear-gradient(45deg, transparent 0px, transparent 14px, "
+        "rgba(255,255,255,0.05) 14px, rgba(255,255,255,0.05) 15px), "
+        "linear-gradient(180deg, #080810 0%, #14141e 100%)"
+    ),
+    "grid-lines": (
+        "repeating-linear-gradient(0deg, rgba(255,255,255,0.055) 0, rgba(255,255,255,0.055) 1px, "
+        "transparent 1px, transparent 26px), "
+        "repeating-linear-gradient(90deg, rgba(255,255,255,0.055) 0, rgba(255,255,255,0.055) 1px, "
+        "transparent 1px, transparent 26px), "
+        "linear-gradient(180deg, #050508 0%, #0c0c12 100%)"
+    ),
+    "carbon-fiber": (
+        "repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 3px, "
+        "transparent 3px, transparent 7px), "
+        "repeating-linear-gradient(-45deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 3px, "
+        "transparent 3px, transparent 7px), "
+        "linear-gradient(180deg, #060606 0%, #101010 100%)"
+    ),
+    "starfield-deep": (
+        "radial-gradient(circle, rgba(255,255,255,0.85) 1px, transparent 1px) 0 0 / 42px 42px, "
+        "radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px) 21px 21px / 64px 64px, "
+        "radial-gradient(circle, rgba(255,255,255,0.3) 0.5px, transparent 0.5px) 8px 8px / 28px 28px, "
+        "linear-gradient(180deg, #01010a 0%, #04041a 100%)"
+    ),
+    "bokeh-multicolor": (
+        "radial-gradient(circle at 15% 25%, rgba(255,80,140,0.28) 0%, transparent 18%), "
+        "radial-gradient(circle at 80% 15%, rgba(80,140,255,0.22) 0%, transparent 14%), "
+        "radial-gradient(circle at 55% 70%, rgba(120,255,160,0.18) 0%, transparent 20%), "
+        "radial-gradient(circle at 22% 78%, rgba(255,200,80,0.22) 0%, transparent 12%), "
+        "radial-gradient(circle at 88% 65%, rgba(200,80,255,0.20) 0%, transparent 16%), "
+        "radial-gradient(circle at 45% 40%, rgba(80,220,255,0.15) 0%, transparent 22%), "
+        "linear-gradient(180deg, #040406 0%, #0a0a0e 100%)"
+    ),
+    "concentric-rings": (
+        "radial-gradient(circle at 50% 58%, transparent 15%, rgba(255,255,255,0.045) 15%, rgba(255,255,255,0.045) 16.5%, transparent 16.5%), "
+        "radial-gradient(circle at 50% 58%, transparent 30%, rgba(255,255,255,0.04) 30%, rgba(255,255,255,0.04) 31.5%, transparent 31.5%), "
+        "radial-gradient(circle at 50% 58%, transparent 48%, rgba(255,255,255,0.035) 48%, rgba(255,255,255,0.035) 49.5%, transparent 49.5%), "
+        "radial-gradient(circle at 50% 58%, transparent 68%, rgba(255,255,255,0.025) 68%, rgba(255,255,255,0.025) 69.5%, transparent 69.5%), "
+        "linear-gradient(180deg, #04040e 0%, #0a0a1c 100%)"
+    ),
+    "sunburst-amber": (
+        "repeating-conic-gradient(from 0deg at 50% 68%, rgba(255,190,60,0.07) 0deg, "
+        "rgba(255,190,60,0.07) 5deg, transparent 5deg, transparent 10deg), "
+        "linear-gradient(180deg, #0a0700 0%, #180f00 100%)"
+    ),
+    "marble-night": (
+        "radial-gradient(ellipse at 20% 50%, rgba(180,180,230,0.13) 0%, transparent 45%), "
+        "radial-gradient(ellipse at 80% 20%, rgba(140,130,210,0.10) 0%, transparent 38%), "
+        "radial-gradient(ellipse at 60% 85%, rgba(100,100,190,0.09) 0%, transparent 35%), "
+        "repeating-linear-gradient(54deg, transparent 0px, transparent 9px, "
+        "rgba(255,255,255,0.025) 9px, rgba(255,255,255,0.025) 10px), "
+        "linear-gradient(180deg, #06060e 0%, #0e0e1c 100%)"
+    ),
+    "woven-dark": (
+        "repeating-linear-gradient(0deg, rgba(255,255,255,0.045) 0px, rgba(255,255,255,0.045) 2px, "
+        "transparent 2px, transparent 12px), "
+        "repeating-linear-gradient(90deg, rgba(255,255,255,0.045) 0px, rgba(255,255,255,0.045) 2px, "
+        "transparent 2px, transparent 12px), "
+        "linear-gradient(180deg, #060606 0%, #121212 100%)"
+    ),
+    "hex-glow": (
+        "radial-gradient(circle at 30% 25%, rgba(0,210,255,0.14) 0%, transparent 32%), "
+        "radial-gradient(circle at 70% 75%, rgba(0,255,160,0.12) 0%, transparent 32%), "
+        "repeating-linear-gradient(60deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, "
+        "transparent 1px, transparent 22px), "
+        "repeating-linear-gradient(-60deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, "
+        "transparent 1px, transparent 22px), "
+        "repeating-linear-gradient(0deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 1px, "
+        "transparent 1px, transparent 22px), "
+        "linear-gradient(180deg, #020c10 0%, #061420 100%)"
+    ),
+    "crosshatch-navy": (
+        "repeating-linear-gradient(45deg, rgba(80,130,255,0.07) 0px, rgba(80,130,255,0.07) 1px, "
+        "transparent 1px, transparent 16px), "
+        "repeating-linear-gradient(-45deg, rgba(80,130,255,0.07) 0px, rgba(80,130,255,0.07) 1px, "
+        "transparent 1px, transparent 16px), "
+        "linear-gradient(180deg, #030818 0%, #070d24 100%)"
+    ),
+    "geometric-triangles": (
+        "repeating-linear-gradient(60deg, transparent 0px, transparent 20px, "
+        "rgba(255,255,255,0.04) 20px, rgba(255,255,255,0.04) 21px), "
+        "repeating-linear-gradient(-60deg, transparent 0px, transparent 20px, "
+        "rgba(255,255,255,0.04) 20px, rgba(255,255,255,0.04) 21px), "
+        "repeating-linear-gradient(0deg, transparent 0px, transparent 20px, "
+        "rgba(255,255,255,0.04) 20px, rgba(255,255,255,0.04) 21px), "
+        "linear-gradient(180deg, #08080a 0%, #141416 100%)"
+    ),
+    "noise-purple": (
+        "radial-gradient(circle at 22% 40%, rgba(130,60,210,0.32) 0%, transparent 38%), "
+        "radial-gradient(circle at 76% 30%, rgba(90,40,170,0.26) 0%, transparent 32%), "
+        "radial-gradient(circle at 50% 82%, rgba(170,80,255,0.22) 0%, transparent 42%), "
+        "repeating-linear-gradient(30deg, rgba(255,255,255,0.018) 0px, rgba(255,255,255,0.018) 1px, "
+        "transparent 1px, transparent 16px), "
+        "linear-gradient(180deg, #060310 0%, #10061e 100%)"
+    ),
 }
 
 
@@ -127,10 +342,16 @@ async def close_browser():
     """Close the Playwright browser."""
     global _browser, _playwright
     if _browser:
-        await _browser.close()
+        try:
+            await _browser.close()
+        except Exception as e:
+            log.debug("Browser close ignored during shutdown: %s", e)
         _browser = None
     if _playwright:
-        await _playwright.stop()
+        try:
+            await _playwright.stop()
+        except Exception:
+            pass
         _playwright = None
 
 
@@ -142,6 +363,7 @@ async def render_screenshot(
     note_date: datetime,
     connectivity: str,
     output_path: str,
+    language: str = "english",
 ) -> str:
     """Render a phone screenshot and save as JPEG.
 
@@ -164,11 +386,11 @@ async def render_screenshot(
 
     # Build template variables
     if app_type == "miui_notes":
-        replacements = _build_miui_vars(note_text, has_title, theme, note_date)
+        replacements = _build_miui_vars(note_text, has_title, theme, note_date, language=language)
         size = {"width": 1170, "height": 2532}
     else:
         replacements = _build_legacy_vars(
-            note_text, has_title, app_type, theme, note_date, connectivity
+            note_text, has_title, app_type, theme, note_date, connectivity, language=language
         )
         sizes = {
             "apple_notes": {"width": 1170, "height": 2532},   # iPhone 14/15
@@ -209,12 +431,25 @@ async def render_screenshot(
 # MIUI Notes template builder (the primary look)
 # ────────────────────────────────────────────────────────────────────────────
 
-def _build_miui_vars(note_text: str, has_title: bool, theme: str, note_date: datetime) -> dict:
+def _build_miui_vars(
+    note_text: str,
+    has_title: bool,
+    theme: str,
+    note_date: datetime,
+    language: str = "english",
+) -> dict:
     """Build template variables for the MIUI Notes template."""
     if theme not in MIUI_THEMES:
         theme = "midnight-purple"
 
     vars = {"THEME": theme}
+
+    # Font family — Devanagari stack for Hindi, Roboto otherwise
+    if language == "hindi":
+        font_pool = FONT_FAMILIES_HINDI["miui_notes"]
+    else:
+        font_pool = ["'Roboto', 'Helvetica Neue', sans-serif", "'Roboto', sans-serif"]
+    vars["FONT_FAMILY"] = random.choice(font_pool)
 
     # Wallpaper layer (only for wallpaper themes + boat themes)
     if theme in WALLPAPER_CSS:
@@ -339,14 +574,18 @@ def _build_legacy_vars(
     theme: str,
     note_date: datetime,
     connectivity: str,
+    language: str = "english",
 ) -> dict:
     """Build template variables for the legacy (non-MIUI) templates."""
     vars = {"THEME": theme}
     vars["FOLDER_LABEL"] = random.choice(FOLDER_LABELS)
 
-    # Font family — random pick per render for natural variation
-    fonts = FONT_FAMILIES.get(app_type, FONT_FAMILIES["google_keep"])
-    vars["FONT_FAMILY"] = random.choice(fonts)
+    # Font family — use Devanagari stack for Hindi, otherwise normal system fonts
+    if language == "hindi":
+        font_pool = FONT_FAMILIES_HINDI.get(app_type, FONT_FAMILIES_HINDI["google_keep"])
+    else:
+        font_pool = FONT_FAMILIES.get(app_type, FONT_FAMILIES["google_keep"])
+    vars["FONT_FAMILY"] = random.choice(font_pool)
 
     months_full = [
         "", "January", "February", "March", "April", "May", "June",
@@ -385,7 +624,7 @@ def _build_legacy_vars(
             vars["STATUS_TIME"] = f"{sh12}:{sm:02d}"
 
     # Connectivity and status bar elements
-    vars.update(_build_connectivity_vars(connectivity, theme, app_type))
+    vars.update(_build_connectivity_vars(connectivity, theme, app_type, language))
 
     # Note content
     vars["NOTE_CONTENT"] = _build_note_html(note_text, has_title)
@@ -399,7 +638,7 @@ def _build_legacy_vars(
     return vars
 
 
-def _build_connectivity_vars(connectivity: str, theme: str, app_type: str = "") -> dict:
+def _build_connectivity_vars(connectivity: str, theme: str, app_type: str = "", language: str = "english") -> dict:
     vars = {}
 
     # ── Signal bars (scaled heights for high-DPI viewport) ──
@@ -425,7 +664,8 @@ def _build_connectivity_vars(connectivity: str, theme: str, app_type: str = "") 
     if app_type in ("samsung_notes", "google_keep"):
         # 55% chance to show carrier name on Android
         if random.random() < 0.55:
-            vars["CARRIER_NAME"] = random.choice(US_CARRIERS)
+            carrier_pool = INDIA_CARRIERS if language == "hindi" else US_CARRIERS
+            vars["CARRIER_NAME"] = random.choice(carrier_pool)
         else:
             vars["CARRIER_NAME"] = ""
     else:

@@ -1,0 +1,4 @@
+﻿SiC mosfets running at 3C junction temp under full load
+
+thermal runaway propagation test passed w/ 93s delay. NVH measurements showing 77dB peak at 53 rpmi believe stator copper fill  factor. speedy charging at 95C rate degrading cells faster than expected. motor efficiency hitting 42%  at peak operatingpoint. stator copper fill factor at 33% after?
+hold on... how does this work exactly. coolant  flow rate  at 72?.

@@ -1,0 +1,326 @@
+# Topics of Interest config for Hindi India TOI notes
+# All technical content must be India-context
+# Numbers in Indian format: ₹, lakh, crore; measurements in km/kg/liter
+
+toi_categories:
+  - id: technology_ai
+    topic_names:
+      - transformer architecture study
+      - GPU memory optimization
+      - attention mechanism analysis
+      - LLM fine-tuning notes
+      - RAG pipeline setup
+      - vector DB indexing
+      - model serving latency
+      - CUDA kernel profiling
+      - quantization techniques
+      - speculative decoding
+      - context length scaling
+      - embedding model comparison
+      - multimodal AI notes
+      - prompt engineering patterns
+      - open source LLM comparison
+    weight: 9
+
+  - id: indian_finance
+    topic_names:
+      - Nifty50 technical analysis
+      - FII n DII flow tracking
+      - options chain analysis
+      - mutual fund SIP strategy
+      - SEBI circular review
+      - grey market premium tracking
+      - sectoral rotation study
+      - RBI policy impact
+      - F&O expiry analysis
+      - smallcap momentum study
+      - NSE vs BSE liquidity
+      - futures rollover analysis
+      - IPO GMP tracking
+      - midcap index study
+      - Sensex vs Nifty divergence
+      - debt fund yield analysis
+      - ELSS tax saving notes
+      - gold bond vs physical gold
+      - index fund tracking error
+      - SGBs n sovereign bonds
+    weight: 9
+
+  - id: engineering_iit
+    topic_names:
+      - bridge fatigue analysis
+      - SiC MOSFET switching
+      - polymer glass transition
+      - thermal runaway propagation
+      - carbon fiber layup
+      - sintering process notes
+      - VLSI design notes
+      - control systems lecture
+      - heat transfer analysis
+      - structural load calculations
+      - signal processing notes
+      - embedded systems timing
+      - PCB layout analysis
+      - power electronics design
+    weight: 7
+
+  - id: cricket_sports
+    topic_names:
+      - bowling economy rate analysis
+      - batting strike rate optimization
+      - DRS referral strategy
+      - powerplay field settings
+      - death bowling yorker mechanics
+      - spin bowling grip variations
+      - IPL auction strategy
+      - net run rate calculation
+      - fielding placement notes
+      - match tempo analysis
+      - T20 powerplay batting
+      - swing bowling conditions
+      - Test match session analysis
+      - pitch deterioration notes
+      - batting collapse analysis
+      - reverse swing mechanics
+      - googly vs doosra grip
+      - impact player rule notes
+    weight: 9
+
+  - id: food_science_india
+    topic_names:
+      - fermentation notes for idli batter
+      - sourdough starter hydration
+      - dal tempering chemistry
+      - ghee clarification process
+      - paneer texture analysis
+      - spice extraction techniques
+      - maillard reaction in rotis
+      - koji fermentation experiment
+      - bread fermentation pH
+      - dosa batter ratio study
+      - biryani spice layering
+      - pickle fermentation notes
+      - chutney acidity balance
+      - pressure cooker physics
+    weight: 6
+
+  - id: bollywood_music
+    topic_names:
+      - mixing n mastering workflow
+      - Hindustani classical ragas
+      - tabla rhythm analysis
+      - sidechain compression for filmi songs
+      - vocal layering techniques
+      - background score production
+      - sound design for web series
+      - dubbing quality notes
+      - Carnatic music theory
+      - folk fusion production
+      - taal cycle counting
+      - shruti tuning notes
+      - ghazal microtonal study
+      - film score orchestration
+    weight: 6
+
+  - id: upsc_academic
+    topic_names:
+      - Indian polity amendment analysis
+      - geography monsoon patterns
+      - economy budget analysis
+      - environment n ecology notes
+      - history modern India timeline
+      - international relations current affairs
+      - science n tech section notes
+      - ethics case study analysis
+      - art n culture study
+      - disaster management notes
+      - governance n public policy
+      - internal security notes
+      - biodiversity conservation
+      - social issues analysis
+    weight: 7
+
+  - id: indian_agriculture
+    topic_names:
+      - drip irrigation efficiency
+      - soil pH testing notes
+      - MSP policy impact
+      - kharif crop yield estimation
+      - pesticide resistance study
+      - organic farming certification
+      - FPO formation notes
+      - PM Fasal Bima scheme review
+      - crop rotation planning
+      - fertigation scheduling
+      - micronutrient deficiency
+      - mandi pricing analysis
+      - polyhouse farming notes
+      - hydroponics setup costs
+    weight: 5
+
+  - id: automotive_india
+    topic_names:
+      - EV range optimization
+      - BS6 emission compliance
+      - CNG conversion notes
+      - two-wheeler suspension setup
+      - tractor PTO efficiency
+      - fuel injection timing
+      - NVH analysis for Indian roads
+      - regen braking in electric scooters
+      - battery thermal management
+      - Ola S1 Pro analysis
+      - EV charging infra notes
+      - auto rickshaw CNG kit
+      - electric bus range study
+      - Tata Nexon EV range cold
+    weight: 5
+
+  - id: health_fitness_india
+    topic_names:
+      - yoga asana biomechanics
+      - Ayurveda dosha analysis
+      - body composition tracking
+      - marathon training plan
+      - HIIT protocol notes
+      - nutrition for vegetarians
+      - sleep quality study
+      - physiotherapy session notes
+      - pranayama breathing technique
+      - running gait analysis
+      - naturopathy treatment notes
+      - Panchakarma detox notes
+      - fasting protocol study
+      - Surya Namaskar benefits
+    weight: 5
+
+  - id: weather_india
+    topic_names:
+      - monsoon onset prediction
+      - cyclone track analysis
+      - IMD forecast accuracy
+      - CAPE values for thunderstorms
+      - western disturbance study
+      - heat island effect in Delhi
+      - coastal fog analysis
+      - La Nina impact on India
+      - pre-monsoon convection
+      - northeast monsoon patterns
+      - heatwave threshold analysis
+      - cloud seeding experiment
+      - smog formation Delhi
+    weight: 4
+
+  - id: policy_india
+    topic_names:
+      - GST council meeting notes
+      - PLI scheme review
+      - Digital India initiative analysis
+      - state budget line items
+      - infrastructure project analysis
+      - NEP 2020 implementation notes
+      - SEBI regulation changes
+      - municipal corporation budget
+      - RERA compliance notes
+      - PM Gati Shakti review
+      - One Nation One Election debate
+      - MGNREGA effectiveness study
+      - smart city project notes
+      - UPI n fintech regulation
+    weight: 4
+
+  - id: startup_business
+    topic_names:
+      - unit economics analysis
+      - CAC vs LTV ratio
+      - fundraising term sheet notes
+      - ESOP structure notes
+      - D2C brand building
+      - quick commerce logistics
+      - SaaS metrics benchmarks
+      - vernacular market analysis
+      - tier2 user behavior notes
+      - B2B SaaS sales cycle
+      - VC funding stages India
+      - fintech RBI sandbox notes
+      - agritech startup model
+      - edtech retention problem
+    weight: 6
+
+  - id: space_isro
+    topic_names:
+      - Chandrayaan mission notes
+      - PSLV payload capacity
+      - Gaganyaan training notes
+      - reusable launch vehicle study
+      - Aditya-L1 solar mission
+      - ISRO vs SpaceX cost analysis
+      - satellite communication notes
+      - lunar south pole analysis
+      - cryogenic engine design
+      - OneWeb India launch notes
+    weight: 5
+
+  - id: gaming_esports
+    topic_names:
+      - BGMI tournament strategy
+      - Free Fire squad tactics
+      - Valorant agent meta India
+      - mobile gaming latency
+      - esports prize pool trends
+      - streaming monetization India
+      - content creator income model
+      - gaming chair ergonomics
+      - IGL communication notes
+      - ranked mode climbing notes
+      - FPS optimization mobile
+    weight: 5
+
+# Indian-specific numbers and units for LLM to use
+india_numbers:
+  currency_format: "₹X lakh or ₹X crore (not million/billion)"
+  number_system: "1,00,000 not 100,000"
+  units:
+    - km
+    - kg
+    - liter
+    - acre
+    - bigha
+    - MW
+    - GW
+    - bps
+    - rpm
+    - kmph
+    - crore
+    - lakh
+
+# Personal reaction phrases (same as English — person is writing in English first)
+reaction_phrases:
+  - is this normal??
+  - confused on this part
+  - need verify
+  - iirc
+  - dont quote me but
+  - might b wrong
+  - need recheck
+  - hmm
+  - from the session today
+  - wait no
+  - actually
+  - check this
+  - TODO look into this more
+  - hard to tell
+  - not sure tho
+  - need double check
+  - gotta look this up
+  - ok actually
+  - weird tho
+  - makes sense now
+  - need to test this
+  - still not clear
+  - from the Q&A
+  - asked the speaker abt this
+  - didnt catch the exact number
+  - the demo showed this
+  - someone in audience asked same
+  - revisit this

@@ -1,0 +1,5 @@
+﻿World partition setup
+
+roughly speaking niagara particle count capped at 88k 4 perf budget. double look at these numbers right & compute shader dispatching 99 thread groups efficiently
+
+hmm nanite triangle count at 92 million but frame time stable. speaking of which virtual shadow maps using 63mb pool allocation.... ok so also skeletal mesh LOD transition popping at distance 70...  anyway control rig foot ik solving in 11ms per frame. wait also PCG generating 77 variations per  biome preset...

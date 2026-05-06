@@ -1,0 +1,327 @@
+# India name pools organized by region and gender
+# Used by PersonaSampler when language == "hindi"
+#
+# Structure mirrors name_pools.yaml (gender -> region -> " - " separated list)
+# Surnames are stored separately; persona.py adds them ~25% of the time.
+
+female:
+  north_indian:
+    - Aarti - Aditi - Anjali - Anita - Annu - Archana - Babita - Bhavna
+    - Chandni - Chanchal - Deepa - Deepika - Divya - Durga - Garima - Geeta
+    - Gulshan - Hema - Hemlata - Indu - Jayanti - Jyoti - Kajal - Kanchan
+    - Kavita - Komal - Kiran - Lata - Laxmi - Madhuri - Mala - Manisha
+    - Meena - Meenu - Mohini - Nandini - Neelam - Neha - Nidhi - Nisha
+    - Nita - Pallavi - Pankhi - Pinki - Pooja - Pragati - Pratibha - Priya
+    - Pushpa - Radha - Ranjana - Rashmi - Reena - Rekha - Renu - Rina
+    - Ritu - Ruchika - Sadhna - Sapna - Seema - Shalini - Sharmila - Sheetal
+    - Shilpa - Shweta - Smita - Sonal - Sonam - Suchitra - Sudha - Sunita
+    - Swati - Tanvi - Tara - Uma - Usha - Vandana - Varsha - Vidya
+    - Vineeta - Vinita - Vrinda - Yasmin - Alka - Amita - Anupama - Archna
+    - Aruna - Asha - Bharti - Bindu - Chanda - Chitra - Damini - Dolly
+    - Guddi - Heera - Jyotsna - Kamla - Karuna - Kusum - Lakshmi - Leena
+    - Madhu - Mamta - Maya - Mona - Munni - Parvati - Poonam - Prachi
+    - Pushpanjali - Reeta - Roshni - Saroj - Savita - Shakuntala - Shanta
+    - Shreya - Sona - Sudha - Supriya - Taruna - Urvashi - Yamini
+
+  south_indian:
+    - Anitha - Archana - Bhavani - Deepa - Devika - Durga - Gomathi - Hema
+    - Indira - Jayalakshmi - Jayanthi - Jothi - Kavitha - Kalpana - Kamala
+    - Keerthi - Kumari - Lakshmi - Lalitha - Latha - Leela - Madhumitha
+    - Meena - Meenakshi - Nirmala - Padma - Padmavathi - Poornima - Radha
+    - Radhika - Ramya - Rani - Rekha - Revathi - Roja - Saranya - Saraswathi
+    - Savitha - Selvi - Shanthi - Shobha - Sridevi - Subashini - Suganya
+    - Sumathi - Sundari - Umamaheswari - Usha - Vanitha - Vasantha - Vijaya
+    - Vimala - Yamuna - Abirami - Ambika - Amritha - Anuradha - Bindhu
+    - Chitra - Geetha - Gowri - Harini - Hemavathi - Indhumathi - Iswarya
+    - Janaki - Jeyanthi - Kalaiselvi - Kanagavalli - Kanimozhi - Lavanya
+    - Malathi - Malliga - Mangai - Manonmani - Mythili - Nalini - Nithya
+    - Prabha - Preethi - Priyadharshini - Rajeshwari - Rithika - Sangeetha
+    - Saritha - Sharmila - Sheela - Snega - Sowmiya - Tamilarasi - Thamarai
+    - Thenmozhi - Valarmathi - Varalakshmi - Vennila - Vidhya - Vijayalakshmi
+
+  east_indian:
+    - Abhilasha - Arpita - Barnali - Bela - Bonita - Chandrani - Debarati
+    - Debjani - Deepika - Dona - Gopa - Indrani - Ipsita - Jhuma - Kakoli
+    - Kamala - Kankana - Keya - Krishnakoli - Lopamudra - Madhurima
+    - Malabika - Malobika - Moumita - Mousumi - Nilanjana - Nisha - Parama
+    - Papri - Pritha - Priya - Renuka - Rituparna - Ruma - Rupali - Sangita
+    - Sarmistha - Sangeeta - Shibani - Smaranika - Soma - Srabanti - Sreemoyee
+    - Sreelekha - Sujata - Sukanya - Suparna - Sushmita - Swati - Trina
+    - Tumpa - Udita - Urmila - Anuradha - Archita - Ashmita - Babita - Bidisha
+    - Bratati - Churni - Dola - Eshani - Gargi - Jaya - Karuna - Laboni
+    - Laxmipriya - Madhumita - Mamoni - Mimi - Mithu - Nandita - Pamela
+    - Piyali - Prerana - Rimjhim - Rinkle - Rohini - Sharmila - Shilpi
+    - Subhasree - Susmita - Tanushree - Trisha - Urvashi - Vasabi
+
+  west_indian:
+    - Alka - Amruta - Asha - Bhavna - Chhaya - Daksha - Darshana - Deepa
+    - Divya - Geeta - Hansa - Hetal - Ila - Jalpa - Jyoti - Kavita
+    - Komal - Krupali - Leela - Madhuri - Mala - Mamta - Manasi - Manisha
+    - Minal - Mitali - Naina - Namrata - Nandita - Nirmala - Nita - Palak
+    - Payal - Pooja - Pragna - Pratima - Priya - Rekha - Rima - Rita
+    - Shalini - Shanta - Sheetal - Shilpa - Shraddha - Sonal - Sunita
+    - Swati - Trupti - Uma - Vandana - Vasudha - Vidya - Vrinda - Aarti
+    - Amita - Anagha - Aparna - Asmita - Chaitrali - Chitra - Gauri - Geetanjali
+    - Hemali - Jagruti - Jinal - Kalyani - Kanchan - Kishori - Lata - Laxmi
+    - Madhavi - Meena - Monali - Mugdha - Neha - Nirupama - Padma - Parineeta
+    - Pragati - Radhika - Rajashree - Rashmi - Rohini - Rujuta - Saraswati
+    - Savita - Shubhada - Smita - Snehal - Sunetra - Tara - Ujwala - Vaishali
+    - Varsha - Vaishali - Veda - Vrishali - Yamini
+
+  punjabi:
+    - Amandeep - Amarjeet - Amrit - Amritpal - Arshdeep - Baljit - Balwinder
+    - Bhagwanti - Daljeet - Deepinder - Gurmeet - Gurpreet - Gurwinder
+    - Harbhajan - Harjinder - Harkirat - Harmanpreet - Harpreet - Inderjit
+    - Jasbir - Jasleen - Jaspreet - Jasween - Kamalpreet - Kiranjit - Kulwinder
+    - Mandeep - Maninder - Manpreet - Navdeep - Navjot - Navpreet - Paramjit
+    - Parminder - Rajwinder - Ravinder - Sandeep - Satinder - Simranpreet
+    - Sukhjit - Surinder - Amanjit - Anmolpreet - Barjinder - Diljot - Ekampreet
+    - Guneet - Gurleen - Gurveen - Harpuneet - Jashanpreet - Kanwarjit - Lovepreet
+    - Manvir - Navneet - Nimratpal - Paramveer - Priyanshi - Ramanpreet
+    - Simranjit - Sukhpreet - Taranjit - Tejpreet - Varinderpal
+
+  muslim:
+    - Aafreen - Aisha - Aiza - Alisha - Amina - Amreen - Anam - Anisa
+    - Arifa - Asma - Azra - Bilquis - Bushra - Fahmida - Farhat - Fatima
+    - Firoza - Gulnaz - Hina - Husna - Inayat - Irfana - Jasmin - Kulsum
+    - Lubna - Mariam - Mehrunisa - Mehnaz - Muneera - Nabeela - Nafisa
+    - Nasreen - Nazneen - Nida - Nusrat - Parveen - Rabia - Rahela - Razia
+    - Ruqaiya - Saba - Safoora - Sahiba - Sakina - Salma - Samreen - Shabana
+    - Shaheen - Shaista - Shazia - Sherifa - Shirin - Sirina - Sitara
+    - Tanveer - Yasmeen - Zahida - Zainab - Zeenat - Zubeida - Adeeba
+    - Afshan - Almas - Ambereen - Anjum - Arzu - Asifa - Asmaa - Atiya
+    - Ayesha - Benazir - Dilshad - Farida - Farzana - Fozia - Ghazala
+    - Haleema - Hamida - Haniya - Humera - Kaniz - Kausar - Khadija - Khurshid
+    - Mahnoor - Maimoona - Malika - Mishkat - Munira - Muzaffar - Nargis
+    - Parisa - Raheela - Riffat - Rohina - Roshan - Rukhsana - Saima - Samia
+    - Shanaz - Shehnaz - Sobia - Tabassum - Tahira - Uzma - Wajeeha - Warda
+
+  christian:
+    - Agnes - Alice - Angela - Anita - Anne - Bernadette - Catherine - Cecilia
+    - Christina - Clara - Dorothy - Elizabeth - Emily - Esther - Florence
+    - Frances - Gina - Gloria - Grace - Helen - Irene - Jessica - Joan
+    - Josephine - Julia - Karen - Laura - Lilly - Linda - Lucy - Margaret
+    - Maria - Mary - Monica - Nancy - Patricia - Philomena - Priscilla - Rachel
+    - Rebecca - Rosemary - Ruth - Sarah - Sheila - Sofia - Stella - Theresa
+    - Veronica - Vivian - Yvonne - Annamaria - Benita - Bridget - Carmelita
+    - Celina - Cheryl - Christy - Cynthia - Daisy - Dolores - Elsa - Fiona
+    - Flavia - Georgina - Glenda - Heidi - Hilary - Jacqueline - Janet - Jancy
+    - Jennifer - Joyce - Judith - Juliana - Justina - Katy - Lauretta
+    - Leonora - Leticia - Lina - Lissy - Loretta - Lourdes - Lucinda - Madeline
+    - Marcelina - Marcia - Marina - Marlene - Martha - Matilda - Maureen
+    - Miriam - Monika - Nathalie - Naomi - Nora - Norma - Olivia - Petra
+
+  northeast_indian:
+    - Aarohi - Anamika - Anjana - Barasha - Bijuli - Diku - Dolly - Gargi
+    - Gunjan - Hemolata - Hiramoni - Juri - Kangkana - Lakhimi - Malashree
+    - Mamoni - Mridula - Namita - Nilima - Padumi - Panchali - Priyankhi
+    - Rekha - Renuka - Rupa - Sangita - Sanjukta - Sarala - Sneha - Sunanda
+    - Tarali - Dolly - Geetanjali - Hem - Jyotika - Kaberi - Kanika - Keyali
+    - Lena - Lipi - Monika - Mrigakhi - Nandita - Niharika - Nilakshi - Pamela
+    - Puja - Ranjita - Rimi - Sabitri - Sabita - Shilpi - Sima - Supriya
+    - Tanuja - Trishna - Usha - Veena - Yashaswini
+
+male:
+  north_indian:
+    - Aarav - Abhishek - Aditya - Ajay - Akash - Amit - Amitabh - Anand
+    - Ankit - Ankur - Arun - Arvind - Ashok - Atul - Deepak - Devendra
+    - Dinesh - Gaurav - Govind - Harish - Hemant - Himanshu - Kamal - Karan
+    - Lalit - Mahesh - Manoj - Naresh - Naveen - Nikhil - Nilesh - Pankaj
+    - Pradeep - Prakash - Pranav - Prashant - Rahul - Rajesh - Rakesh - Ram
+    - Ramesh - Ravi - Ritesh - Rohit - Sachin - Sanjay - Sanjeev - Saurabh
+    - Shailesh - Shankar - Shivam - Shubham - Siddharth - Sunil - Suresh
+    - Uday - Vaibhav - Vikas - Vikash - Vikram - Vinay - Vineet - Vishal
+    - Vivek - Yogesh - Yash - Aakash - Abhijit - Abhinav - Alok - Amol
+    - Ashish - Ayush - Chirag - Dhruv - Harsh - Kuldeep - Mahendra - Mayank
+    - Mohit - Mukesh - Neeraj - Niraj - Pawan - Prateek - Raghav - Rajat
+    - Satyam - Shyam - Tarun - Tushar - Umesh - Vinod - Satish - Rajiv
+    - Sanjiv - Sudhir - Navin - Rohan - Chetan - Deepanshu - Gaurang - Girish
+    - Gopal - Goverdhan - Harendra - Jagdish - Kedar - Krishna - Lallan
+    - Laxman - Manish - Manmohan - Mohan - Nagesh - Narendra - Narendra
+    - Om Prakash - Pradeep - Radheshyam - Ramkishore - Ramswarup - Ravidatta
+    - Saket - Santosh - Shailendra - Shekhar - Tirthankar - Trilok
+
+  south_indian:
+    - Ajith - Arun - Arjun - Ashwin - Balachandran - Balaji - Balamurali
+    - Bhaskar - Dinesh - Giridhar - Gopinath - Hari - Harikrishna - Jayakumar
+    - Jayaraj - Karthik - Karthikeyan - Krishnamurthy - Krishnaswamy - Kumar
+    - Lakshminarayana - Lokesh - Mahesh - Manivannan - Murugan - Nagarajan
+    - Nagendra - Prabhu - Prakash - Prasad - Prashant - Raghavan - Ramakrishnan
+    - Ramesh - Ravi - Ravichandran - Santhosh - Saravanan - Senthil - Shankar
+    - Shiva - Soundararajan - Sridharan - Subramaniam - Suresh - Udayakumar
+    - Venkatesan - Vijay - Vijayakumar - Vinayak - Vishal - Vishnuprasad
+    - Anand - Annamalai - Arivazhagan - Balamurugan - Chandrasekaran - Ganesan
+    - Gopalkrishnan - Gurunathan - Ilango - Jayaganesh - Jeyaprakash - Kalidas
+    - Kaliyamurthy - Kamalakannan - Kannan - Karthikeyan - Kumaraguru
+    - Lakshmikanthan - Manickam - Manikandan - Muthu - Nandakumar - Natarajan
+    - Palani - Palanisamy - Periyasamy - Ranjith - Rangasamy - Sankaran
+    - Selvaraj - Selvakumar - Sivaraj - Somasundaram - Srinivasan - Sugumar
+    - Thiagarajan - Thirunavukkarasu - Thiruvenkatam - Velu - Venkataraman
+
+  east_indian:
+    - Abhijit - Abhishek - Aditya - Amitabha - Amlan - Aniket - Anindya
+    - Anirban - Arnab - Arpit - Ayan - Bikash - Biman - Biplab - Chiranjit
+    - Debashish - Dipankar - Dipendu - Gobinda - Hriday - Jatin - Kartik
+    - Kinkar - Koushik - Manab - Manash - Manas - Naren - Nilanjan - Pabitra
+    - Partha - Pinak - Prasenjit - Pronab - Ramkrishna - Ranjan - Rishav
+    - Saikat - Siddhartha - Shouvik - Soubhik - Sourav - Subhankar - Subhash
+    - Subrata - Sudipta - Sukanta - Susanta - Swapan - Tamal - Tathagata
+    - Tuhin - Ujjwal - Amalesh - Anupam - Arindam - Ashim - Asit - Atanu
+    - Barun - Biman - Biswarup - Chandan - Debasish - Debdulal - Debojyoti
+    - Dipak - Goutam - Himadri - Hiranmay - Indrajit - Jiban - Joydeb
+    - Kamal - Kartick - Kiran - Krishnendu - Madhusudhan - Mrinmoy - Mrityunjoy
+    - Narayan - Nikhilesh - Nirmalendu - Parimal - Pradip - Prashanta - Prodip
+    - Pulak - Ranajit - Rathin - Samaresh - Sanjib - Santanu - Satyabrata
+    - Sibshankar - Soumya - Subimal - Sudip - Sujan - Suken - Sukumar
+    - Sunirmal - Supriyo - Sushanta - Tapas - Tarpan - Tarun - Uday
+
+  west_indian:
+    - Abhishek - Aditya - Anand - Ankit - Atul - Chirag - Darshan - Dharmesh
+    - Dhruv - Gunjan - Hardik - Harshit - Himanshu - Jay - Jayesh - Jinesh
+    - Jiten - Kamlesh - Karan - Kedar - Kishan - Kiran - Kunal - Mahesh
+    - Mehul - Milan - Milind - Mukesh - Naresh - Nikhil - Nilesh - Parth
+    - Piyush - Pratik - Priyank - Rahul - Rajesh - Raju - Rajiv - Rakesh
+    - Rohan - Rohit - Sachin - Sandesh - Sunil - Swapnil - Tejas - Tushar
+    - Umesh - Vaibhav - Vimal - Vinay - Vivek - Ajinkya - Akshay - Amey
+    - Amol - Amit - Amrut - Anilkumar - Avinash - Balasaheb - Bharat - Chandrashekhar
+    - Chetan - Deepak - Devendra - Dinkar - Ganesh - Gaurav - Girish - Harshal
+    - Jagdish - Kiran - Krishnakant - Laxman - Manohar - Narendra - Nishant
+    - Omkar - Parag - Pradip - Prasad - Pravin - Pradeep - Prashant - Rajendra
+    - Ramchandra - Ramesh - Ranjit - Santosh - Sharad - Shriram - Shubhash
+    - Sudhakar - Suhas - Suresh - Swapnil - Vishwanath - Yogesh
+
+  punjabi:
+    - Amandeep - Amarjit - Amrit - Amritpal - Arshdeep - Baljit - Balwinder
+    - Bhagwant - Brijinder - Daljit - Dilpreet - Gurcharan - Gurdeep - Gurjit
+    - Gurmeet - Gurpreet - Hardeep - Hargobind - Harinder - Harjit - Harjot
+    - Harkirat - Harpreet - Harvinder - Inderjit - Jasbir - Jaspreet - Jaspal
+    - Jaswant - Kuldeep - Kulwant - Lakhveer - Mandeep - Manjit - Manpreet
+    - Navdeep - Navjot - Navpreet - Paramjit - Parminder - Ravinder - Sandeep
+    - Satnam - Simranjit - Sukhjit - Surinder - Tejpreet - Vikramjit
+    - Ajaipal - Amanjot - Amardeep - Angad - Anmol - Arjun - Baltej - Chatrik
+    - Davinder - Deepak - Dilbag - Ekamjot - Fatehdeep - Gagndeep - Gurnam
+    - Harprit - Jasdeep - Jasjit - Jodh - Kirpal - Kuldip - Lakhvir - Lovejit
+    - Mahinder - Manvir - Mehtab - Nirmal - Onkar - Parmjot - Ranjit - Ravjit
+    - Sarabjit - Sarbjinder - Shamsher - Sukhdev - Sukhvinder - Taranjit
+
+  muslim:
+    - Aamir - Abdullah - Adil - Afroz - Ahmad - Ahmed - Ahsan - Akbar - Akhlaq
+    - Akram - Ali - Altaf - Anwar - Arif - Asad - Asif - Azhar - Aziz - Faiz
+    - Farhan - Farooq - Faisal - Hamid - Hasan - Husain - Ibrahim - Imran
+    - Irfan - Ishaan - Jalal - Junaid - Karim - Khalid - Majid - Mohammad
+    - Mohammed - Mohsin - Mubarak - Mushtaq - Nadeem - Naeem - Nasir - Nawaz
+    - Omar - Pervez - Rafiq - Riyaz - Salim - Samir - Shahid - Shareef
+    - Shaukat - Tariq - Usman - Waheed - Wasim - Zahid - Zubair - Aamir
+    - Aatif - Abbas - Abid - Abu - Adnan - Affan - Afzal - Ajmal - Ajmer
+    - Akhtar - Alamgir - Alauddin - Aleem - Alim - Amjad - Anees - Arshad
+    - Asghar - Ashfaq - Asrar - Attiq - Ayaz - Ayyub - Azam - Basharat
+    - Basheer - Bilal - Danish - Ejaz - Ehtisham - Farrukh - Fateh - Fazil
+    - Ghulam - Habib - Hafiz - Haroon - Haseeb - Hashim - Ilyas - Iqbal
+    - Javed - Kamran - Kashif - Khaleel - Luqman - Mansoor - Maqsood - Masood
+    - Mazhar - Mehboob - Mujahid - Munawwar - Murad - Murtaza - Mustafa - Muzammil
+    - Naseem - Naved - Naveed - Nadir - Noman - Omer - Parvez - Qasim
+    - Rauf - Rehan - Sabir - Saeed - Sajid - Salman - Sameer - Sarfaraz
+    - Shahzad - Shamim - Shaukat - Sohail - Suleman - Tanvir - Tauseef - Wajid
+    - Yusuf - Zafar - Zain - Zeeshan - Zia
+
+  christian:
+    - Aaron - Abraham - Albert - Alex - Alvin - Anthony - Augustine - Benjamin
+    - Bernard - Brian - Christopher - Clement - Daniel - David - Donald - Edwin
+    - Emmanuel - Francis - Frederick - George - Gerald - Gilbert - Henry - Jacob
+    - James - John - Joseph - Joshua - Kevin - Lawrence - Leonard - Leslie
+    - Mark - Matthew - Michael - Nicholas - Patrick - Peter - Philip - Raymond
+    - Richard - Robert - Ronald - Samuel - Sebastian - Simon - Stephen - Thomas
+    - Vincent - William - Albin - Alfred - Aloysius - Ambrose - Andrew - Anselm
+    - Antonio - Artur - Babu - Baiju - Benny - Biju - Bobby - Boby - Clive
+    - Dominic - Edward - Eric - Ernest - Felix - Ferdinand - Fernando - Gerald
+    - Glenn - Gordon - Herman - Hershel - Ivan - Jerome - Johnson - Jonathan
+    - Julius - Karl - Kenneth - Leo - Linus - Luca - Lucas - Marcus - Martin
+    - Maxwell - Melvin - Merlin - Milton - Morris - Nathan - Nelson - Norman
+    - Oliver - Oscar - Otto - Pascal - Paul - Prince - Raphael - Reuben
+    - Reginald - Rex - Ronnie - Roy - Ruben - Rudolf - Ryan - Stanley - Stuart
+    - Terrence - Theodore - Timothy - Troy - Victor - Walter - Warren - Wesley
+
+  northeast_indian:
+    - Abhijit - Achyut - Akash - Amar - Amlan - Arko - Bhaskar - Bijoy
+    - Biswajit - Dipankar - Hitesh - Kaushik - Khagen - Lalit - Mridul - Nirmal
+    - Parag - Pranjit - Ranjit - Ratul - Satyajit - Saurav - Shreekant - Subroto
+    - Sudip - Tapan - Utpal - Vimal - Ajit - Akshaya - Anil - Aniruddha - Arun
+    - Asit - Babu - Bhaskar - Bijit - Bipul - Biswa - Chandrakanta - Chinmoy
+    - Dayal - Debajit - Debashis - Deep - Dhiren - Gautam - Gopal - Hemanta
+    - Hiren - Indra - Ishwar - Jogen - Jyotish - Kanak - Kankan - Krishnakanta
+    - Madhab - Manab - Mridul - Nabin - Nagen - Nikhil - Nilofar - Nitul
+    - Padma - Pankaj - Partha - Pranab - Probhat - Prodyut - Rajen - Ramen
+    - Sarat - Siddhanta - Sukumar - Tarapada - Tridip - Udayan
+
+nonbinary:
+  all:
+    - Anmol - Harshit - Jasleen - Jaspreet - Japneet - Jinesh - Kirtan
+    - Manmeet - Navneet - Preet - Simranjit - Taranpreet - Tejasvi
+    - Yashvardhan - Arjun - Devashree - Diya - Ishaan - Kiran - Meghna
+    - Neel - Nikhil - Parth - Pooja - Rajan - Robin - Roshan - Sachin
+    - Sam - Sandy - Sanya - Shreya - Simran - Taran - Uday - Veer - Yash
+
+# Surname pools by region — used ~25% of the time by PersonaSampler
+surnames:
+  north_indian:
+    - Sharma - Gupta - Singh - Verma - Yadav - Tiwari - Dubey - Mishra - Pandey
+    - Joshi - Shukla - Agarwal - Bansal - Garg - Mittal - Bhatnagar - Saxena
+    - Srivastava - Tripathi - Prasad - Chauhan - Rajput - Kushwaha - Patel
+    - Kumar - Chaudhary - Chaurasia - Dixit - Dube - Gautam - Goyal - Kapoor
+    - Khanna - Lal - Malhotra - Mathur - Mehrotra - Nanda - Narain - Rastogi
+    - Tandon - Upadhyay - Vishwakarma - Bhardwaj - Bhatt - Chandra - Dayal
+    - Dwivedi - Goel - Khare - Kishore - Misra - Nigam - Ojha - Pathak
+    - Porwal - Rawat - Shah - Tewari - Uniyal - Vyas - Yadav
+
+  south_indian:
+    - Kumar - Naidu - Reddy - Pillai - Nair - Menon - Iyer - Iyengar - Murthy
+    - Rao - Krishnan - Swaminathan - Venkataraman - Anand - Balakrishnan
+    - Gopalan - Natarajan - Subramaniam - Ramakrishnan - Srinivasan
+    - Chandrasekaran - Balasubramanian - Ranganathan - Krishnaswamy
+    - Parthasarathy - Ramamurthy - Vasudevan - Viswanathan - Lakshminarayanan
+    - Narayanasamy - Thirumalai - Venkateswaran - Ganapathy - Sundaresan
+    - Ramanujam - Muthusamy - Palanisamy - Rajagopalan - Shanmugasundaram
+    - Sivasubramanian - Soundarapandian - Venkatachalam - Vijayaraghavan
+
+  east_indian:
+    - Chatterjee - Banerjee - Mukherjee - Ghosh - Das - Roy - Sen - Bose
+    - Datta - Ganguly - Gupta - Sarkar - Chakraborty - Bhattacharya - Maitra
+    - Mitra - Chakravarti - Goswami - Bhattacherjee - Sanyal - Dey - Pal
+    - Basak - Biswas - Saha - Lahiri - Mandal - Mondal - Bera - Nandi
+    - Basu - Das - Kar - Nag - Paul - Sil - Som
+
+  west_indian:
+    - Patel - Shah - Mehta - Desai - Joshi - Gandhi - Modi - Parekh - Trivedi
+    - Sheth - Bhatt - Vora - Thakkar - Soni - Kapoor - Sharma - Kulkarni
+    - Patil - Deshmukh - Shinde - Kadam - Jadhav - More - Pawar - Sutar
+    - Satpute - Bhosale - Gaikwad - Nalawade - Wagh - Chavan - Deshpande
+    - Kale - Mane - Nair - Rane - Sawant - Shirke - Waghmare
+
+  punjabi:
+    - Singh - Kaur - Dhillon - Sandhu - Gill - Bhatia - Soni - Chhabra
+    - Khurana - Bajaj - Arora - Sethi - Malhotra - Kapoor - Chopra - Walia
+    - Grewal - Johal - Brar - Uppal - Anand - Bedi - Bhalla - Chawla
+    - Dhami - Dhingra - Garg - Hans - Hora - Khanna - Kohli - Luthra
+    - Makhija - Mangat - Mehta - Narang - Narula - Oberoi - Pannu - Randhawa
+    - Saini - Sidhu - Suri - Takkar - Taneja - Wasan
+
+  muslim:
+    - Khan - Ansari - Shaikh - Siddiqui - Qureshi - Abbasi - Ahmed - Chishti
+    - Farooqui - Hashmi - Hussain - Kazmi - Lodhi - Mirza - Momin - Naqvi
+    - Pathan - Rizvi - Sheikh - Sayyid - Usmani - Ali - Baig - Butt - Chaudhry
+    - Dar - Gul - Mallik - Mukhtar - Nomani - Osmani - Raza - Syed
+    - Tashkentov - Wali - Waseem - Zaidi
+
+  christian:
+    - D'Souza - Fernandes - Pereira - Rodrigues - Pinto - Carvalho - Almeida
+    - Costa - Gomes - Mascarenhas - Menezes - Noronha - Sequeira - Lobo
+    - Furtado - Monteiro - Cunha - De Silva - Rebello - Viegas - Thomas
+    - Philip - George - Mathew - Varghese - Abraham - Cherian - Isaac - Jacob
+    - James - John - Joseph - Kurian - Lukose - Mathai - Paul - Samuel
+    - Simon - Stephen - Thankachan - Verghese
+
+  northeast_indian:
+    - Bora - Baruah - Gogoi - Deka - Kalita - Nath - Pathak - Das - Roy
+    - Chutiya - Hazarika - Saikia - Sonowal - Moran - Doley - Bordoloi
+    - Bhuyan - Tamuli - Sarma - Sharma - Chetia - Handique - Phukon - Phukan
+    - Senapati - Barooah - Rajkhowa

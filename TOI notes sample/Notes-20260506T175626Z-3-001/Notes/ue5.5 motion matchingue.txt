@@ -1,0 +1,4 @@
+ue5.5 motion matchingue
+5.5 motion matching is huge shift away from traditional statemachines. basically querybased animationsystem that picks best pose from big database in realtime.... responsive as hell compared to old blendspaces.
+Dont need manually set up transitions between run n stop anymore. engine just looks at character trajectory n velocity to find perfect frame.... check out normalization methods in database settings—if weights arent unitary vector it gets twitchy.
+Also procedural interaction with worldcollision in controlrig is insane. foot ik feels more grounded without any sliding on uneven terrain.

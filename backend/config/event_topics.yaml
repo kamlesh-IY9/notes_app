@@ -1,0 +1,392 @@
+# Event topics config for US English event notes
+# These are seeds for LLM prompts — NOT templates
+
+event_types:
+  - id: work_meeting
+    labels:
+      - team standup
+      - 1-on-1
+      - all hands
+      - sprint review
+      - board meeting
+      - quarterly review
+      - offsite
+      - kickoff meeting
+      - town hall
+      - client call
+      - vendor meeting
+      - performance review
+      - skip-level
+      - strategy session
+      - design review
+      - post-mortem
+      - demo day
+      - roadmap planning
+      - budget review
+      - hiring panel
+      - onboarding session
+      - product sync
+      - engineering standup
+      - cross-team sync
+      - investor update
+      - ops review
+      - legal briefing
+      - compliance training
+    weight: 8
+
+  - id: social_personal
+    labels:
+      - birthday party
+      - bday dinner
+      - wedding reception
+      - baby shower
+      - graduation party
+      - housewarming
+      - game night
+      - cookout
+      - family reunion
+      - engagement party
+      - retirement party
+      - going away party
+      - holiday dinner
+      - friendsgiving
+      - potluck night
+      - pool party
+      - brunch
+      - paint n sip night
+      - trivia night
+      - murder mystery dinner
+      - karaoke night
+      - bonfire night
+      - rooftop hangout
+      - double date dinner
+      - surprise party
+      - wine n cheese night
+      - game watch party
+      - block party
+      - book club meetup
+      - bachelorette brunch
+    weight: 7
+
+  - id: learning_event
+    labels:
+      - conference
+      - workshop
+      - seminar
+      - hackathon
+      - webinar
+      - training session
+      - bootcamp
+      - networking event
+      - panel talk
+      - summit
+      - expo
+      - meetup
+      - demo day
+      - career fair
+      - guest lecture
+      - certification exam
+      - study group session
+      - coding sprint
+      - research symposium
+      - product launch event
+      - pitch competition
+      - startup mixer
+      - tech talk
+      - fireside chat
+      - fellowship info session
+    weight: 6
+
+  - id: personal_appointment
+    labels:
+      - dentist appt
+      - doctor visit
+      - therapy session
+      - haircut
+      - vet appt
+      - car service
+      - eye exam
+      - physio
+      - moving day
+      - DMV appt
+      - insurance appt
+      - tax appt
+      - dermatologist
+      - chiropractor
+      - blood test
+      - MRI scan
+      - notary appt
+      - contractor visit
+      - plumber coming
+      - electrician visit
+      - home inspection
+      - realtor showing
+      - spa day
+      - massage appt
+    weight: 5
+
+  - id: travel_outing
+    labels:
+      - road trip
+      - hiking trip
+      - concert
+      - sports game
+      - festival
+      - museum visit
+      - camping trip
+      - beach day
+      - ski trip
+      - day trip
+      - overnight trip
+      - wine tasting
+      - brewery tour
+      - escape room
+      - axe throwing
+      - go-karting
+      - kayaking day
+      - state park visit
+      - drive-in movie
+      - comedy show
+      - art gallery opening
+      - food festival
+      - farmers market run
+      - baseball game
+      - basketball game
+      - theme park day
+    weight: 5
+
+  - id: community_civic
+    labels:
+      - volunteer shift
+      - animal shelter
+      - food drive
+      - HOA meeting
+      - neighborhood cleanup
+      - PTA meeting
+      - town council meeting
+      - blood drive
+      - charity run
+      - fundraiser
+      - food bank shift
+      - park cleanup
+      - voter registration drive
+      - community garden day
+      - mentor meetup
+      - youth coaching session
+      - library volunteer
+    weight: 3
+
+# US cities — avoid TX, IL residents, WA residents per client rules
+# Chicago IL and Spokane WA ok as visit location, persona must not reside there
+us_cities:
+  northeast:
+    - Boston MA
+    - Philadelphia PA
+    - Pittsburgh PA
+    - Providence RI
+    - Hartford CT
+    - Albany NY
+    - Burlington VT
+    - Portland ME
+    - Newark NJ
+    - Baltimore MD
+    - New Haven CT
+    - Buffalo NY
+    - Rochester NY
+    - Syracuse NY
+    - Trenton NJ
+    - Wilmington DE
+    - Annapolis MD
+    - Camden NJ
+    - Bridgeport CT
+    - Worcester MA
+    - Springfield MA
+    - Lowell MA
+  southeast:
+    - Atlanta GA
+    - Charlotte NC
+    - Nashville TN
+    - Orlando FL
+    - Miami FL
+    - Raleigh NC
+    - Birmingham AL
+    - Louisville KY
+    - Richmond VA
+    - Columbia SC
+    - Jacksonville FL
+    - Savannah GA
+    - Greenville SC
+    - Asheville NC
+    - Knoxville TN
+    - Chattanooga TN
+    - Lexington KY
+    - Durham NC
+    - Wilmington NC
+    - Baton Rouge LA
+    - New Orleans LA
+    - Mobile AL
+    - Tallahassee FL
+    - Tampa FL
+    - Gainesville FL
+    - Augusta GA
+  midwest:
+    - Columbus OH
+    - Indianapolis IN
+    - Minneapolis MN
+    - Kansas City MO
+    - Omaha NE
+    - Milwaukee WI
+    - Cleveland OH
+    - Detroit MI
+    - Cincinnati OH
+    - St Louis MO
+    - Grand Rapids MI
+    - Des Moines IA
+    - Madison WI
+    - Akron OH
+    - Dayton OH
+    - Ann Arbor MI
+    - Fort Wayne IN
+    - Lincoln NE
+    - Wichita KS
+    - Fargo ND
+    - Sioux Falls SD
+    - Bloomington MN
+  west:
+    - Denver CO
+    - Phoenix AZ
+    - Las Vegas NV
+    - Portland OR
+    - Salt Lake City UT
+    - Boise ID
+    - Albuquerque NM
+    - Sacramento CA
+    - San Jose CA
+    - San Diego CA
+    - Tucson AZ
+    - Colorado Springs CO
+    - Reno NV
+    - Spokane WA
+    - Eugene OR
+    - Bend OR
+    - Provo UT
+    - Ogden UT
+    - Flagstaff AZ
+    - Santa Fe NM
+    - Fresno CA
+    - Bakersfield CA
+    - Riverside CA
+    - Irvine CA
+    - Long Beach CA
+    - Oakland CA
+    - San Francisco CA
+
+# Venue shorthand (casual, not "Embassy Suites, City, State")
+venues:
+  work:
+    - HQ
+    - conference room
+    - the office
+    - WeWork
+    - coworking space
+    - boardroom
+    - rooftop bar
+    - off-site venue
+    - hotel conference room
+    - innovation lab
+    - training room
+    - war room
+    - exec suite
+    - Regus
+    - open office floor
+    - zoom room
+    - breakout room
+  social:
+    - friend's place
+    - backyard
+    - park
+    - restaurant
+    - bar
+    - venue
+    - rooftop
+    - banquet hall
+    - airbnb
+    - lake house
+    - beach house
+    - someone's apartment
+    - dive bar
+    - rooftop lounge
+    - speakeasy
+    - garden patio
+    - brewery
+    - food hall
+    - wine bar
+    - pub
+    - basement bar
+    - deck
+  learning:
+    - convention center
+    - hotel ballroom
+    - campus
+    - coworking space
+    - community center
+    - auditorium
+    - library
+    - makerspace
+    - innovation hub
+    - amphitheater
+    - lecture hall
+    - startup campus
+    - tech center
+    - expo hall
+  outdoor:
+    - trailhead
+    - campsite
+    - park entrance
+    - marina
+    - ski lodge
+    - beach
+    - fairgrounds
+    - sports complex
+    - stadium parking lot
+    - botanical garden
+    - state park
+    - reservoir
+    - national forest
+    - waterfront
+    - boardwalk
+  personal:
+    - the clinic
+    - urgent care
+    - hospital
+    - dental office
+    - gym
+    - salon
+    - spa
+    - dealership
+    - auto shop
+    - DMV office
+
+# Banned — never use in English US event notes
+banned_states:
+  - Texas
+  - TX
+  - Illinois
+  - IL
+  - Washington
+  - WA
+
+# Banned globally-famous locations
+banned_landmarks:
+  - Eiffel Tower
+  - Taj Mahal
+  - Big Ben
+  - Statue of Liberty
+  - Times Square
+  - Grand Canyon
+  - Niagara Falls
+  - Hollywood sign
+  - Golden Gate Bridge
+  - Disneyland
+  - Disney World
+  - Empire State Building

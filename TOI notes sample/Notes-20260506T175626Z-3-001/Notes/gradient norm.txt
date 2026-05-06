@@ -1,0 +1,6 @@
+﻿attention mechanism analysis
+
+gradient norm exploding around step 1k.
+loRA rank 72 giving best  tradeoff for this taskdropout rate of 0.80 seems optimal 4 thisdataset.... am i reading thsi right??
+
+BLEU score way better but humaneval got worse somehow

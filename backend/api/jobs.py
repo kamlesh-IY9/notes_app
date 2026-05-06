@@ -21,8 +21,8 @@ class JobCreateRequest(BaseModel):
     )
     dark_mode_share: int = Field(default=25, ge=0, le=100)
     title_share: int = Field(default=70, ge=0, le=100)
-    date_min: str = Field(default="2021-04-25")
-    date_max: str = Field(default="2026-04-25")
+    date_min: str = Field(default="2026-04-27")
+    date_max: str = Field(default="2026-04-30")
     connectivity_distribution: dict = Field(
         default={"wifi_cellular": 60, "cellular_only": 25, "wifi_only": 10, "no_service": 5}
     )
@@ -31,6 +31,7 @@ class JobCreateRequest(BaseModel):
     )
     start_global_id: int = Field(default=1100)
     start_part: int = Field(default=32)
+    language: str = Field(default="english", description="Output language: 'english' or 'hindi'")
 
 
 @router.post("")

@@ -1,0 +1,318 @@
+# Topics for India / Hindi People & Relationships notes
+# Contains all 207 existing US topics + 45+ India-specific topics
+# India-specific topics are marked with a comment
+
+topics:
+  # ── Core / universal topics (carried over from US config) ──
+  - id: planning_event
+    labels: ["birthday party", "dinner plans", "road trip", "vacation", "holiday plans", "wedding", "baby shower", "graduation party", "game night", "cookout"]
+    weight: 7
+  - id: conflict
+    labels: ["argument", "fight", "disagreement", "tension", "annoyed", "frustrated", "upset with"]
+    weight: 4
+  - id: practical_appointment
+    labels: ["dental appointment", "doctor visit", "hair cut", "car maintenance", "meeting at bank", "lawyer consult"]
+    weight: 7
+  - id: financial_admin
+    labels: ["utility bill due", "insurance premium", "car loan payment", "check savings"]
+    weight: 7
+  - id: career_adulting
+    labels: ["job interview tomorrow", "prep for interview", "jury duty"]
+    weight: 6
+  - id: school_kids
+    labels: ["parent teacher meeting", "pick up kids from practice", "school forms due", "tuition payment"]
+    weight: 4
+  - id: entertainment
+    labels: ["movie times", "concert tickets", "game schedule", "show tonight", "booking code", "scan tickets at door"]
+    weight: 7
+  - id: update
+    labels: ["just found out", "told me", "called me", "texted me", "moved to", "got a new job", "broke up"]
+    weight: 5
+  - id: gift_idea
+    labels: ["gift for", "present idea", "what to get", "birthday coming up"]
+    weight: 5
+  - id: vent
+    labels: ["need to vent", "so tired of", "can't believe", "drives me crazy"]
+    weight: 5
+  - id: support
+    labels: ["going through", "be there for", "check in on", "call them", "help with"]
+    weight: 5
+  - id: milestone
+    labels: ["engaged", "pregnant", "new baby", "new house", "promoted", "graduated", "retired"]
+    weight: 5
+  - id: errands
+    labels: ["pick up from", "drop off at", "run to the store for", "get stuff for", "carpool"]
+    weight: 4
+  - id: to_do_list
+    labels: ["tasks for today", "reminders about", "stuff to do with", "things to pack for", "need to call back today"]
+    weight: 7
+  - id: locations
+    labels: ["places to eat with", "spots to visit next weekend", "directions to", "meeting point"]
+    weight: 5
+  - id: event_details
+    labels: ["time to meet", "what to wear to", "who is driving to", "ticket info", "parking pass"]
+    weight: 4
+  - id: home_maintenance
+    labels: ["fix leaky sink", "AC repair call", "plumber quote", "buy air filters", "measurements for new couch"]
+    weight: 7
+  - id: shopping_lists
+    labels: ["weekly groceries", "hardware store items", "buy from amazon", "online shopping"]
+    weight: 7
+  - id: health_fitness
+    labels: ["new gym routine", "daily vitamins list", "steps tracking goal", "running shoe models"]
+    weight: 5
+  - id: subscriptions_services
+    labels: ["cancel gym membership", "internet bill dispute", "subscriptions to pause"]
+    weight: 4
+  - id: travel_packing
+    labels: ["packing list", "carry on essentials", "what to pack for camping", "hotel booking confirm"]
+    weight: 4
+  - id: pet_care
+    labels: ["dog boarding instructions", "vaccination schedule", "mobile groomer contact"]
+    weight: 5
+  - id: account_info
+    labels: ["wifi password for guests", "locker combo", "gate code", "alarm pin", "netflix login"]
+    weight: 4
+  - id: pet_outdoor
+    labels: ["dog walk schedule", "vet appointment", "pet sitting handoff", "dog park meetup", "groomer drop-off"]
+    weight: 4
+  - id: outings_people
+    labels: ["zoo trip planning", "aquarium tickets", "museum hours", "kid's birthday party", "bowling night", "picnic spot"]
+    weight: 4
+  - id: practical_with_relationship
+    labels: ["pick up kids from school", "drop off lunch", "school pickup line", "carpool schedule", "playdate"]
+    weight: 4
+  - id: music
+    labels: ["concert tickets", "spotify playlist link", "music lesson schedule", "band practice tonight", "album drop reminder", "karaoke list"]
+    weight: 5
+  - id: pets_extra
+    labels: ["dog grooming day", "vet vaccine reminder", "new puppy training schedule", "dog meds refill", "dog food brand switch"]
+    weight: 5
+  - id: barber_salon
+    labels: ["barber appointment", "hair color touch-up", "beard trim", "salon tip cash", "eyebrow threading", "manicure"]
+    weight: 5
+  - id: errands_random
+    labels: ["dry cleaning pickup", "post office trip", "library books due", "mail package", "key copy at hardware"]
+    weight: 4
+  - id: business_planning
+    labels: ["quarterly review notes", "launch plan ideas", "strategy meeting followup", "pitch deck outline", "roadmap notes"]
+    weight: 4
+  - id: networking
+    labels: ["coffee chat notes", "industry event contact", "referral intro", "meet for lunch", "follow up after conference"]
+    weight: 5
+  - id: freelance_side_hustle
+    labels: ["client invoice to send", "side project deadline", "freelance gig details", "portfolio update ideas"]
+    weight: 5
+  - id: job_hunting
+    labels: ["job interview prep", "resume update notes", "recruiter call details", "offer letter compare", "salary negotiation notes"]
+    weight: 5
+  - id: office_dynamics
+    labels: ["meeting notes to review", "team issue to address", "performance review prep", "promotion conversation", "workplace drama"]
+    weight: 5
+  - id: startup_ideas
+    labels: ["app idea to research", "business idea to pitch", "market research notes", "co-founder conversation"]
+    weight: 4
+  - id: remote_work
+    labels: ["work from home setup", "zoom call notes", "deadline to track", "deliverable to submit", "home office upgrade"]
+    weight: 5
+  - id: financial_planning_personal
+    labels: ["budget tracker idea", "savings goal notes", "investment notes", "expense log", "credit card payoff plan"]
+    weight: 4
+  - id: food_cooking
+    labels: ["recipe to try", "meal prep plan", "restaurant to hit up", "new dish to make", "lunch ideas for the week"]
+    weight: 5
+  - id: self_care_mental_health
+    labels: ["therapy homework", "journaling prompt", "mindfulness reminder", "burnout check-in", "emotional reset note"]
+    weight: 5
+  - id: social_media_content
+    labels: ["post idea for instagram", "reel idea", "caption ideas", "youtube video idea", "content to repost"]
+    weight: 4
+  - id: home_decor_diy
+    labels: ["room makeover ideas", "furniture to get", "paint colors to try", "diy project list", "organizing plan"]
+    weight: 5
+  - id: parenting_kids
+    labels: ["school supply list", "kids activities schedule", "pediatrician reminder", "school event rsvp", "after school pickup plan"]
+    weight: 5
+  - id: holiday_seasonal
+    labels: ["holiday shopping list", "new year resolutions", "spring cleaning list", "back to school checklist"]
+    weight: 5
+  - id: neighborhood_community
+    labels: ["society meeting note", "community event signup", "neighborhood watch update", "local store recommendation"]
+    weight: 4
+  - id: dating_relationships
+    labels: ["date night idea", "anniversary note", "gift idea for partner", "couples activity plan", "date spot to try"]
+    weight: 5
+  - id: tech_gadgets
+    labels: ["app to download", "gadget to research", "phone upgrade notes", "software to try", "subscription to cancel"]
+    weight: 4
+  - id: travel_bucket_list
+    labels: ["bucket list trip", "places to visit", "travel wishlist", "dream vacation spot", "solo trip idea", "road trip"]
+    weight: 5
+  - id: study_school
+    labels: ["exam prep notes", "class notes to review", "study schedule", "finals week plan", "quiz topics to cover"]
+    weight: 5
+  - id: volunteer_community
+    labels: ["volunteer signup info", "charity event to join", "community service hours", "fundraiser to share"]
+    weight: 4
+  - id: wellness_routine
+    labels: ["sleep schedule to fix", "hydration goal", "screen time limit", "morning routine plan", "daily walk goal"]
+    weight: 5
+  - id: personal_goals
+    labels: ["habit tracker idea", "vision board stuff", "goal check-in", "things to work on this month", "skill to learn"]
+    weight: 5
+
+  # ── India-specific: Festivals & Religious ──
+  - id: diwali_prep
+    labels: ["Diwali cleaning", "lights decoration", "Diwali gift order", "mithai order", "puja samagri list", "fireworks plan", "new clothes shopping", "rangoli design", "diyas to buy", "invite family for Diwali"]
+    weight: 5
+  - id: holi_plans
+    labels: ["Holi colours to buy", "gulal shopping", "bhang thandai", "hosting Holi party", "Holi outfit", "travel home for Holi", "Holi bonfire plan", "meet friends for Holi"]
+    weight: 5
+  - id: eid_celebration
+    labels: ["Eid sevaiyaan recipe", "biryani for Eid", "salah time check", "new clothes for Eid", "Eidi money for kids", "Eid gathering plan", "roza breaking time", "iftaar menu", "Eid gifts", "namaz timing"]
+    weight: 4
+  - id: navratri_garba
+    labels: ["Navratri fasting plan", "garba outfit", "dandiya sticks", "Navratri venue", "garba group plan", "aarti timing", "prasad for Navratri", "fast menu planning"]
+    weight: 4
+  - id: durga_puja
+    labels: ["Durga Puja pandal visit", "dhunuchi nachh practice", "sindoor khela plan", "bhog menu", "puja committee donation", "Durga Puja new clothes", "idol immersion plan", "cultural programme"]
+    weight: 4
+  - id: ganesh_chaturthi
+    labels: ["Ganesh idol booking", "visarjan plan", "modak recipe", "Ganesh Chaturthi decoration", "prasad distribution", "community puja contribution", "aarti schedule"]
+    weight: 4
+  - id: karva_chauth
+    labels: ["Karva Chauth thali prep", "sargi menu", "karva thali decoration", "mehendi appointment", "fast break timing", "outfit for Karva Chauth", "moon sighting time"]
+    weight: 4
+  - id: raksha_bandhan
+    labels: ["rakhi design to buy", "rakhi gift ideas", "sister visit plan", "courier rakhi", "sweet box order", "Rakshabandhan celebration", "video call for Rakshabandhan"]
+    weight: 4
+  - id: christmas_celebration
+    labels: ["Christmas midnight mass", "Christmas cake order", "Christmas party plan", "Secret Santa gift", "carol singing", "Christmas tree decoration", "crib setup", "Christmas gift wrapping"]
+    weight: 3
+  - id: onam_festival
+    labels: ["Onam sadya menu", "banana leaf arrangement", "26-dish sadya plan", "boat race watch plan", "Onam pookalam design", "new clothes for Onam", "Onam gift"]
+    weight: 3
+  - id: pongal_makar_sankranti
+    labels: ["Pongal rice recipe", "sugarcane for Pongal", "kite flying plan", "Makar Sankranti tilgul", "lohri bonfire plan", "bhangra for Lohri", "gidda for Lohri", "Pongal pot decoration"]
+    weight: 3
+  - id: baisakhi_lohri
+    labels: ["Baisakhi mela plan", "bhangra dance prep", "gidda practice", "Baisakhi new clothes", "Lohri bonfire arrangement", "revdi and popcorn"]
+    weight: 3
+  - id: janmashtami_shivratri
+    labels: ["Janmashtami midnight celebration", "matki phod plan", "dahi handi decoration", "Maha Shivratri fast plan", "belpatra offering", "Shivratri puja", "temple decoration"]
+    weight: 3
+  - id: temple_puja_visit
+    labels: ["temple darshan plan", "temple queue time", "prasad to buy", "puja booking", "mandir donation", "arti timing", "pilgrimage plan", "temple festival", "tirth yatra plan"]
+    weight: 5
+  - id: mosque_church_gurudwara
+    labels: ["Friday namaz timing", "church service time", "gurudwara langar sewa", "Sunday mass plan", "qawwali program", "Juma preparation", "ardas at gurudwara", "dargah visit"]
+    weight: 4
+
+  # ── India-specific: Government / Legal ──
+  - id: aadhaar_pan_govt
+    labels: ["Aadhaar biometric update", "PAN card correction", "voter ID renewal", "driving licence slot", "ration card update", "Aadhaar mobile link", "e-KYC at bank", "DigiLocker setup"]
+    weight: 4
+  - id: rto_transport_govt
+    labels: ["RTO appointment", "vehicle registration renewal", "pollution certificate", "driving test slot", "RC book correction", "fastag recharge", "vehicle insurance renewal"]
+    weight: 4
+  - id: property_land_legal
+    labels: ["property registration", "stamp duty payment", "registry appointment", "land record check", "property tax payment", "mutation application", "advocate fees", "registry documents"]
+    weight: 4
+  - id: tax_gst_itr
+    labels: ["income tax return filing", "Form 16 from employer", "GST filing deadline", "ITR due date", "CA appointment", "advance tax payment", "TDS refund check", "tax saving investment"]
+    weight: 4
+  - id: police_legal_court
+    labels: ["FIR at police station", "court date coming up", "advocate consultation", "consumer forum complaint", "legal notice reply", "bail documents", "property dispute case"]
+    weight: 3
+  - id: passport_visa
+    labels: ["passport renewal appointment", "passport documents list", "visa application", "tatkal passport slot", "police verification", "embassy appointment", "OCI card renewal"]
+    weight: 4
+
+  # ── India-specific: Education / Career ──
+  - id: jee_neet_board_exam
+    labels: ["JEE mock test schedule", "NEET preparation", "board exam admit card", "coaching class fee", "exam centre check", "result day plan", "12th board revision", "UPSC prelims prep"]
+    weight: 5
+  - id: govt_job_exam
+    labels: ["SSC CGL preparation", "UPSC mains schedule", "state PSC form", "bank PO exam", "railway job exam", "teaching TET exam", "police constable exam", "government job form last date"]
+    weight: 5
+  - id: college_hostel_admission
+    labels: ["hostel room allotment", "mess fee payment", "college admission form", "entrance exam", "college counselling", "university fee deadline", "PG accommodation search", "mess menu"]
+    weight: 4
+  - id: scholarship_fee
+    labels: ["scholarship application deadline", "scholarship documents", "fee concession form", "education loan", "reimbursement claim", "merit scholarship result"]
+    weight: 4
+
+  # ── India-specific: Finance ──
+  - id: fd_investment_india
+    labels: ["FD maturity date", "mutual fund SIP", "gold investment", "PPF contribution", "NPS account", "RD at bank", "postal scheme", "NSC investment", "senior citizen scheme"]
+    weight: 4
+  - id: chit_fund_kuri
+    labels: ["chit fund monthly payment", "kuri due date", "committee instalment", "chit auction date", "self-help group meeting"]
+    weight: 3
+  - id: home_loan_emi
+    labels: ["home loan EMI due", "car loan payment", "personal loan EMI", "EMI bounce check", "prepayment plan", "loan foreclosure docs", "bank statement request"]
+    weight: 5
+  - id: gold_jewellery
+    labels: ["gold rate check", "gold purchase Akshaya Tritiya", "jeweller appointment", "jewellery repair", "making charges negotiate", "mortgage jewellery", "pledged gold release"]
+    weight: 4
+
+  # ── India-specific: Food & Daily Life ──
+  - id: tiffin_dabba
+    labels: ["tiffin service contact", "dabba waala timing", "home tiffin order", "monthly mess fee", "cooking gas cylinder", "ration shop visit", "grocery from market"]
+    weight: 5
+  - id: street_food_india
+    labels: ["pani puri outing", "chole bhature plan", "vada pav near office", "dosa corner visit", "chaat for evening snack", "samosa from that shop", "biryani order", "thali plan"]
+    weight: 5
+  - id: shaadi_baraat
+    labels: ["shaadi invitation", "baraat timing", "wedding shopping", "shaadi caterer", "wedding hall booking", "mehendi ceremony plan", "sangeet night", "dowry list argument", "shaadi budget"]
+    weight: 5
+  - id: vegetarian_fasting
+    labels: ["Ekadashi fast menu", "Monday fast plan", "Navratri diet", "Shravan fasting", "sabudana khichdi recipe", "fast-friendly shopping", "complete fast tomorrow"]
+    weight: 4
+
+  # ── India-specific: Transport ──
+  - id: irctc_train_travel
+    labels: ["IRCTC ticket booking", "train waiting list status", "platform number check", "tatkal booking slot", "train PNR status", "reservation chart", "station autorickshaw", "train food order"]
+    weight: 6
+  - id: local_transport_india
+    labels: ["metro card recharge", "DTC bus pass renewal", "auto meter dispute", "Ola/Uber booking issue", "bike service appointment", "petrol fill-up", "tyre puncture repair", "traffic jam update"]
+    weight: 5
+
+  # ── India-specific: Social / Community ──
+  - id: whatsapp_family_group
+    labels: ["WhatsApp family group drama", "forward message to verify", "mute group notification", "video call with relatives", "WhatsApp status seen", "family group admin issue"]
+    weight: 5
+  - id: society_colony_meeting
+    labels: ["RWA meeting agenda", "maintenance fee dispute", "society parking issue", "generator bill", "watchman complaint", "flat renovation permission", "society election"]
+    weight: 4
+  - id: arranged_marriage_rishta
+    labels: ["rishta proposal received", "horoscope matching", "matrimonial profile update", "family meeting plan", "shaadi.com profile", "rishta decline politely", "engagement plan"]
+    weight: 4
+  - id: cricket_ipl
+    labels: ["IPL match plan", "India match watch party", "fantasy cricket team", "cricket tickets", "stadium visit plan", "match result discussion", "live score check", "cricket ground plan"]
+    weight: 5
+  - id: bollywood_entertainment
+    labels: ["new Bollywood movie plan", "OTT show to watch", "multiplex booking", "web series episode", "film review to share", "actor news", "music album drop", "award show plan"]
+    weight: 5
+  - id: election_politics_india
+    labels: ["voting booth location", "voter ID ready", "polling day plan", "election rally", "party worker follow-up", "panchayat election", "election result watch"]
+    weight: 3
+  - id: ngo_social_work
+    labels: ["blood donation camp", "plantation drive", "cleanliness campaign", "NGO volunteer shift", "charity donation", "mahila mandal meeting", "self-help group meeting"]
+    weight: 3
+
+  # ── India-specific: Health ──
+  - id: govt_hospital_ayurveda
+    labels: ["OPD token at government hospital", "blood test at path lab", "Ayurveda treatment", "homeopathy doctor visit", "CGHS dispensary", "health camp in colony", "ESI hospital visit", "free health scheme"]
+    weight: 4
+  - id: insurance_mediclaim
+    labels: ["mediclaim renewal", "health insurance claim", "TPA hospital network", "cashless hospitalisation", "insurance agent visit", "term insurance premium"]
+    weight: 4
+
+  # ── India-specific: Home & Domestic ──
+  - id: domestic_help_india
+    labels: ["maid timing issue", "cook not coming", "bai leave today", "watchman holiday", "driver late again", "domestic help salary", "house help background check"]
+    weight: 5
+  - id: power_water_india
+    labels: ["electricity bill due", "power cut schedule", "water tanker booking", "boring repair", "inverter battery", "meter reading", "BESCOM/MSEB complaint", "water shortage issue"]
+    weight: 5

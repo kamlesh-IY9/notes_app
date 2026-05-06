@@ -52,6 +52,9 @@ CREATE TABLE IF NOT EXISTS entries (
     retry_count     INTEGER NOT NULL DEFAULT 0,
     -- dedup
     embedding       BLOB,  -- numpy array bytes
+    -- language / localisation
+    language        TEXT NOT NULL DEFAULT 'english',  -- 'english' or 'hindi'
+    note_text_en    TEXT,  -- English source (set for Hindi jobs; NULL for English jobs)
     -- timestamps
     created_at      TEXT NOT NULL DEFAULT (datetime('now')),
     updated_at      TEXT NOT NULL DEFAULT (datetime('now'))

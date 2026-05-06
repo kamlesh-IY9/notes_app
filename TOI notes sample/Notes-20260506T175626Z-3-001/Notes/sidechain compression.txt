@@ -1,0 +1,15 @@
+﻿Untitled
+
+sidechain compression ducking by ~58dB on teh kick....
+speaking of whch EQ cutting 65dB at 81Hz to reduce boxiness
+
+& then tempo at 103 bpm feels right 4 the verse but chorus needs faster.
+oh n high pass filter at  63Hz cleaning up low end mud.
+and then latency at 5ms causing timing issues during recording
+
+speaking of whch bridge modulates from 21 key to relative minor...
+hmm delay time at 29ms synced to quarter note at this tempo..
+sample rate at 60kHz  vs 39kHz hard to hear difference — guitar amp sim set to 24W mode sounds more natural
+
+gain staging at -17dBFS leaving enough headroom.
+might be wrong here tbhin lab today noticed

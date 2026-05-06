@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&family=Noto+Sans+Devanagari:wght@300;400;500;700&display=swap');
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -15,7 +15,7 @@
   }
 
   body {
-    font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+    font-family: {{FONT_FAMILY}};
     overflow: hidden;
     position: relative;
     background-color: var(--bg, #1a1a1a);
@@ -236,7 +236,7 @@
     font-weight: 400;
     color: var(--title-color, rgba(255,255,255,0.30));
     line-height: 1.05;
-    font-family: 'Roboto', sans-serif;
+    font-family: {{FONT_FAMILY}};
   }
 
   .title-row.has-title {
@@ -752,6 +752,82 @@
     --title-color: rgba(232,232,240,0.30);
     --meta-color: rgba(232,232,240,0.55);
     --body-color: #e8e8f0;
+  }
+
+  /* ── Batch 4 themes ── */
+  body.theme-ruby-wine { --bg:#200816; --fg:#ff9ec8; --status-fg:#ffc8e0; --toolbar-fg:#ffc8e0; --title-color:rgba(255,158,200,0.28); --meta-color:rgba(255,158,200,0.55); --body-color:#ff9ec8; }
+  body.theme-turquoise-depths { --bg:#001e1e; --fg:#60f0d8; --status-fg:#a0ffe8; --toolbar-fg:#a0ffe8; --title-color:rgba(96,240,216,0.28); --meta-color:rgba(96,240,216,0.55); --body-color:#60f0d8; }
+  body.theme-lilac-night { --bg:#12081e; --fg:#c8a0ff; --status-fg:#e0c8ff; --toolbar-fg:#e0c8ff; --title-color:rgba(200,160,255,0.28); --meta-color:rgba(200,160,255,0.55); --body-color:#c8a0ff; }
+  body.theme-copper-bronze { --bg:#1a0e00; --fg:#e8a860; --status-fg:#f8c880; --toolbar-fg:#f8c880; --title-color:rgba(232,168,96,0.28); --meta-color:rgba(232,168,96,0.55); --body-color:#e8a860; }
+  body.theme-aurora-green { --bg:#020c14; --fg:#00e8a0; --status-fg:#80ffd0; --toolbar-fg:#80ffd0; --title-color:rgba(0,232,160,0.28); --meta-color:rgba(0,232,160,0.55); --body-color:#00e8a0; }
+  body.theme-terra-cotta { --bg:#1e0e08; --fg:#f09070; --status-fg:#f8b898; --toolbar-fg:#f8b898; --title-color:rgba(240,144,112,0.28); --meta-color:rgba(240,144,112,0.55); --body-color:#f09070; }
+  body.theme-midnight-indigo { --bg:#060610; --fg:#9090f0; --status-fg:#c0c0ff; --toolbar-fg:#c0c0ff; --title-color:rgba(144,144,240,0.28); --meta-color:rgba(144,144,240,0.55); --body-color:#9090f0; }
+  body.theme-plum-haze { --bg:#0e0416; --fg:#d080ff; --status-fg:#e8b0ff; --toolbar-fg:#e8b0ff; --title-color:rgba(208,128,255,0.28); --meta-color:rgba(208,128,255,0.55); --body-color:#d080ff; }
+  body.theme-ember-glow { --bg:#0e0600; --fg:#ff8840; --status-fg:#ffb880; --toolbar-fg:#ffb880; --title-color:rgba(255,136,64,0.28); --meta-color:rgba(255,136,64,0.55); --body-color:#ff8840; }
+  body.theme-pine-shadow { --bg:#040e08; --fg:#80c898; --status-fg:#a8e0b8; --toolbar-fg:#a8e0b8; --title-color:rgba(128,200,152,0.28); --meta-color:rgba(128,200,152,0.55); --body-color:#80c898; }
+
+  /* ── Batch 5 themes ── */
+  body.theme-seafoam-dark { --bg:#001e18; --fg:#70e8d0; --status-fg:#a8f8e8; --toolbar-fg:#a8f8e8; --title-color:rgba(112,232,208,0.28); --meta-color:rgba(112,232,208,0.55); --body-color:#70e8d0; }
+  body.theme-vintage-sepia { --bg:#140e06; --fg:#e0c090; --status-fg:#f0d8b0; --toolbar-fg:#f0d8b0; --title-color:rgba(224,192,144,0.28); --meta-color:rgba(224,192,144,0.55); --body-color:#e0c090; }
+  body.theme-ultraviolet { --bg:#060010; --fg:#b060ff; --status-fg:#d0a0ff; --toolbar-fg:#d0a0ff; --title-color:rgba(176,96,255,0.28); --meta-color:rgba(176,96,255,0.55); --body-color:#b060ff; }
+  body.theme-steel-slate { --bg:#0c1018; --fg:#b0c8e0; --status-fg:#d0e0f0; --toolbar-fg:#d0e0f0; --title-color:rgba(176,200,224,0.28); --meta-color:rgba(176,200,224,0.55); --body-color:#b0c8e0; }
+  body.theme-jade-deep { --bg:#001a0e; --fg:#60d8a0; --status-fg:#90f0c0; --toolbar-fg:#90f0c0; --title-color:rgba(96,216,160,0.28); --meta-color:rgba(96,216,160,0.55); --body-color:#60d8a0; }
+  body.theme-sand-dusk { --bg:#1a1208; --fg:#e8c880; --status-fg:#f8e0a8; --toolbar-fg:#f8e0a8; --title-color:rgba(232,200,128,0.28); --meta-color:rgba(232,200,128,0.55); --body-color:#e8c880; }
+  body.theme-crimson-night { --bg:#140008; --fg:#ff6880; --status-fg:#ffb0c0; --toolbar-fg:#ffb0c0; --title-color:rgba(255,104,128,0.28); --meta-color:rgba(255,104,128,0.55); --body-color:#ff6880; }
+  body.theme-teal-forest { --bg:#001818; --fg:#60e8d0; --status-fg:#a0f8e8; --toolbar-fg:#a0f8e8; --title-color:rgba(96,232,208,0.28); --meta-color:rgba(96,232,208,0.55); --body-color:#60e8d0; }
+  body.theme-neon-lime { --bg:#020800; --fg:#a0ff40; --status-fg:#c8ff80; --toolbar-fg:#c8ff80; --title-color:rgba(160,255,64,0.28); --meta-color:rgba(160,255,64,0.55); --body-color:#a0ff40; }
+  body.theme-blush-noir { --bg:#140810; --fg:#f0a0c8; --status-fg:#f8c8e0; --toolbar-fg:#f8c8e0; --title-color:rgba(240,160,200,0.28); --meta-color:rgba(240,160,200,0.55); --body-color:#f0a0c8; }
+
+  /* ── Batch 6 themes ── */
+  body.theme-burnt-umber { --bg:#140800; --fg:#d88850; --status-fg:#f0b080; --toolbar-fg:#f0b080; --title-color:rgba(216,136,80,0.28); --meta-color:rgba(216,136,80,0.55); --body-color:#d88850; }
+  body.theme-glacier-blue { --bg:#00101e; --fg:#80c8f0; --status-fg:#b0e0ff; --toolbar-fg:#b0e0ff; --title-color:rgba(128,200,240,0.28); --meta-color:rgba(128,200,240,0.55); --body-color:#80c8f0; }
+  body.theme-orchid-dark { --bg:#140420; --fg:#d890f0; --status-fg:#ecc0ff; --toolbar-fg:#ecc0ff; --title-color:rgba(216,144,240,0.28); --meta-color:rgba(216,144,240,0.55); --body-color:#d890f0; }
+  body.theme-honey-amber { --bg:#1a0e00; --fg:#f0c060; --status-fg:#f8d890; --toolbar-fg:#f8d890; --title-color:rgba(240,192,96,0.28); --meta-color:rgba(240,192,96,0.55); --body-color:#f0c060; }
+  body.theme-storm-grey { --bg:#0a0c10; --fg:#c0c8d8; --status-fg:#e0e4f0; --toolbar-fg:#e0e4f0; --title-color:rgba(192,200,216,0.28); --meta-color:rgba(192,200,216,0.55); --body-color:#c0c8d8; }
+  body.theme-blood-plum { --bg:#180010; --fg:#f080c0; --status-fg:#f8b0d8; --toolbar-fg:#f8b0d8; --title-color:rgba(240,128,192,0.28); --meta-color:rgba(240,128,192,0.55); --body-color:#f080c0; }
+  body.theme-aquamarine-dark { --bg:#001a14; --fg:#50e8c8; --status-fg:#90f8e0; --toolbar-fg:#90f8e0; --title-color:rgba(80,232,200,0.28); --meta-color:rgba(80,232,200,0.55); --body-color:#50e8c8; }
+  body.theme-tobacco-brown { --bg:#180e00; --fg:#c89860; --status-fg:#e0b880; --toolbar-fg:#e0b880; --title-color:rgba(200,152,96,0.28); --meta-color:rgba(200,152,96,0.55); --body-color:#c89860; }
+  body.theme-electric-violet { --bg:#060010; --fg:#c060ff; --status-fg:#e0a0ff; --toolbar-fg:#e0a0ff; --title-color:rgba(192,96,255,0.28); --meta-color:rgba(192,96,255,0.55); --body-color:#c060ff; }
+  body.theme-warm-charcoal { --bg:#141210; --fg:#e0d8d0; --status-fg:#f0ece8; --toolbar-fg:#f0ece8; --title-color:rgba(224,216,208,0.28); --meta-color:rgba(224,216,208,0.55); --body-color:#e0d8d0; }
+
+  /* ── Original wallpaper-* themes (gradient via wallpaper div) ── */
+  body.theme-wallpaper-sunset,
+  body.theme-wallpaper-gradient,
+  body.theme-wallpaper-forest,
+  body.theme-wallpaper-geometric,
+  body.theme-wallpaper-bokeh {
+    --bg: #1a1a2e;
+    --fg: #ffffff;
+    --status-fg: #ffffff;
+    --toolbar-fg: #ffffff;
+    --title-color: rgba(255,255,255,0.28);
+    --meta-color: rgba(255,255,255,0.58);
+    --body-color: #ffffff;
+  }
+
+  /* ── Pattern themes — white text, semi-transparent title/meta, dark base ── */
+  body.theme-dot-matrix,
+  body.theme-dot-matrix-blue,
+  body.theme-diagonal-stripes,
+  body.theme-grid-lines,
+  body.theme-carbon-fiber,
+  body.theme-starfield-deep,
+  body.theme-bokeh-multicolor,
+  body.theme-concentric-rings,
+  body.theme-sunburst-amber,
+  body.theme-marble-night,
+  body.theme-woven-dark,
+  body.theme-hex-glow,
+  body.theme-crosshatch-navy,
+  body.theme-geometric-triangles,
+  body.theme-noise-purple {
+    --bg: #0e0e14;
+    --fg: #ffffff;
+    --status-fg: #ffffff;
+    --toolbar-fg: #ffffff;
+    --title-color: rgba(255,255,255,0.28);
+    --meta-color: rgba(255,255,255,0.58);
+    --body-color: #ffffff;
   }
 
 </style>

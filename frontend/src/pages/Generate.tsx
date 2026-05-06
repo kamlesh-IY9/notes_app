@@ -14,6 +14,7 @@ const DEFAULT_DATE_MAX = "2026-04-26";
 const DEFAULT_CONFIG: JobConfig = {
   dataset_type: 'people_relationships',
   batch_size: 100,
+  language: 'english',
   // MIUI-primary distribution (matches reference samples)
   app_distribution: { miui_notes: 70, apple_notes: 15, samsung_notes: 10, google_keep: 5 },
   contact_app_distribution: { miui_notes: 50, apple_notes: 30, samsung_notes: 12, google_keep: 8 },
@@ -30,34 +31,11 @@ const DEFAULT_CONFIG: JobConfig = {
 
 export default function Generate() {
   const [config, setConfig] = useState<JobConfig>(DEFAULT_CONFIG);
-  const [varyDates, setVaryDates] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const navigate = useNavigate();
 
   function setBatchSize(n: number) {
     setConfig((c) => ({ ...c, batch_size: n }));
-  }
-
-  function setDate(d: string) {
-    setConfig((c) => ({ ...c, date_min: d, date_max: d }));
-  }
-
-  function toggleVary() {
-    const next = !varyDates;
-    setVaryDates(next);
-    if (next) {
-      // vary across last 5 years
-      const fiveYearsAgo = new Date();
-      fiveYearsAgo.setFullYear(fiveYearsAgo.getFullYear() - 5);
-      setConfig((c) => ({
-        ...c,
-        date_min: fiveYearsAgo.toISOString().slice(0, 10),
-        date_max: TODAY,
-      }));
-    } else {
-      // Reset to the Apr 24-26 default (3-day shuffle)
-      setConfig((c) => ({ ...c, date_min: DEFAULT_DATE_MIN, date_max: DEFAULT_DATE_MAX }));
-    }
   }
 
   async function handleSubmit() {
@@ -85,6 +63,37 @@ export default function Generate() {
       </div>
 
       <div className="space-y-6">
+        {/* Language selector */}
+        <div className="glass-card p-6">
+          <label className="block text-sm font-semibold text-text-primary mb-4">
+            Language
+          </label>
+          <div className="grid grid-cols-2 gap-3">
+            {[
+              { id: 'english', label: 'English', sublabel: 'en_US · USA personas' },
+              { id: 'hindi', label: 'Hindi — हिंदी', sublabel: 'hi_IN · Indian personas · Devanagari' },
+            ].map((opt) => (
+              <button
+                key={opt.id}
+                onClick={() => setConfig((c) => ({ ...c, language: opt.id }))}
+                className={`min-h-[76px] rounded-lg px-3 py-3 text-left transition-all ${
+                  config.language === opt.id
+                    ? 'bg-accent text-white shadow-lg shadow-accent/30'
+                    : 'bg-bg-card text-text-secondary hover:bg-bg-card-hover'
+                }`}
+              >
+                <div className="text-sm font-semibold leading-tight">{opt.label}</div>
+                <div className="text-xs font-normal opacity-75 mt-1">{opt.sublabel}</div>
+              </button>
+            ))}
+          </div>
+          {config.language === 'hindi' && (
+            <p className="mt-3 text-xs text-text-muted">
+              Notes generated in English first, then translated to Hindi Devanagari. Indian names, states &amp; topics used.
+            </p>
+          )}
+        </div>
+
         {/* Dataset type */}
         <div className="glass-card p-6">
           <label className="block text-sm font-semibold text-text-primary mb-4">
@@ -92,8 +101,10 @@ export default function Generate() {
           </label>
           <div className="grid grid-cols-2 gap-3">
             {[
-              { id: 'people_relationships', label: 'People & Relationships', hint: 'current notes mode' },
-              { id: 'contacts', label: 'Contacts', hint: 'name + phone/email' },
+              { id: 'people_relationships', label: 'People & Relationships', hint: 'personal notes about people' },
+              { id: 'contacts',             label: 'Contacts',               hint: 'name + phone / email' },
+              { id: 'events',               label: 'Events',                 hint: 'calendar & meeting notes' },
+              { id: 'topics_of_interest',   label: 'Topics of Interest',     hint: 'learning & expert notes' },
             ].map((option) => (
               <button
                 key={option.id}
@@ -136,32 +147,36 @@ export default function Generate() {
           </div>
         </div>
 
-        {/* Date — single picker, today by default */}
+        {/* Date range — From / To */}
         <div className="glass-card p-6">
           <label className="block text-sm font-semibold text-text-primary mb-3">
-            Date
+            Date range
           </label>
-          <div className="flex items-center gap-3">
-            <input
-              type="date"
-              value={config.date_min}
-              max={TODAY}
-              disabled={varyDates}
-              onChange={(e) => setDate(e.target.value)}
-              className="flex-1 px-3 py-2 rounded-lg bg-bg-card border border-border text-text-primary text-sm focus:border-accent focus:outline-none disabled:opacity-50"
-            />
-            <label className="flex items-center gap-2 text-xs text-text-secondary cursor-pointer">
+          <div className="grid grid-cols-2 gap-3">
+            <div>
+              <p className="text-xs text-text-muted mb-1">From</p>
               <input
-                type="checkbox"
-                checked={varyDates}
-                onChange={toggleVary}
-                className="accent-accent"
+                type="date"
+                value={config.date_min}
+                max={config.date_max}
+                onChange={(e) => setConfig((c) => ({ ...c, date_min: e.target.value }))}
+                className="w-full px-3 py-2 rounded-lg bg-bg-card border border-border text-text-primary text-sm focus:border-accent focus:outline-none"
               />
-              vary across last 5 years
-            </label>
+            </div>
+            <div>
+              <p className="text-xs text-text-muted mb-1">To</p>
+              <input
+                type="date"
+                value={config.date_max}
+                min={config.date_min}
+                max={TODAY}
+                onChange={(e) => setConfig((c) => ({ ...c, date_max: e.target.value }))}
+                className="w-full px-3 py-2 rounded-lg bg-bg-card border border-border text-text-primary text-sm focus:border-accent focus:outline-none"
+              />
+            </div>
           </div>
           <p className="mt-2 text-xs text-text-muted">
-            Default: shuffle between Apr 24, 25, 26 (2026). Pick a different date if you need to.
+            Each note gets a random date + time within this range.
           </p>
         </div>
 

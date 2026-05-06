@@ -1,0 +1,3 @@
+Porsche
+
+readin on porsche taycan n hyundai egmp platform again.... basically about sic inverters way more efficient than old silicon stuff. 800v systems arent just about fastcharging, its about skineffect n heatmanagement.... double voltage means cut current in half so wires dont need b thick as firehose. savin weight = more range. need find specs on liquidcooled cables at 350kw chargers tho.... if pump fails chargerate drops to 50kw instantly to prevent connectormelting. check out chargingcurve graphs for 2025 models, some r flat until 60% which is insane 

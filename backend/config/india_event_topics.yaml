@@ -1,0 +1,325 @@
+# Event topics config for Hindi India event notes
+# These are seeds for LLM prompts — NOT templates
+# All locations must be Indian cities; events must be India-context
+
+event_types:
+  - id: work_meeting
+    labels:
+      - team standup
+      - sprint review
+      - client call
+      - offsite
+      - quarterly meet
+      - all hands
+      - town hall
+      - vendor meeting
+      - appraisal discussion
+      - 1-on-1
+      - performance review
+      - strategy session
+      - project kickoff
+      - daily sync
+      - design review
+      - hiring round
+      - product demo
+      - ops meeting
+      - investor pitch
+      - leadership meet
+      - cross-team sync
+      - budget review
+      - compliance training
+      - agile retrospective
+      - product roadmap session
+    weight: 8
+
+  - id: festival_religious
+    labels:
+      - Diwali party
+      - Holi celebration
+      - Eid gathering
+      - Navratri garba night
+      - Ganesh puja
+      - Durga Puja pandal visit
+      - Onam sadya
+      - Baisakhi celebration
+      - Janmashtami night
+      - Christmas party
+      - Lohri bonfire
+      - Raksha Bandhan
+      - Eid ul-Fitr
+      - Chhath puja
+      - Karva Chauth
+      - Ram Navami
+      - Shivratri pooja
+      - Vishu celebration
+      - Ugadi get-together
+      - Pongal celebration
+      - Teej celebration
+      - Govardhan puja
+      - Bhai Dooj get-together
+      - Guru Nanak Jayanti
+      - Dussehra mela
+      - Makar Sankranti kite flying
+      - Eid ul-Adha gathering
+      - Saraswati Puja
+      - Diwali puja at office
+      - Christmas midnight mass
+    weight: 9
+
+  - id: family_social
+    labels:
+      - cousin's wedding
+      - bday party
+      - baby shower
+      - engagement ceremony
+      - anniversary dinner
+      - family reunion
+      - farewell party
+      - naming ceremony
+      - graduation party
+      - housewarming pooja
+      - reception party
+      - bhai dooj
+      - roka ceremony
+      - mehendi function
+      - sangeet night
+      - mundan ceremony
+      - ring ceremony
+      - shaadi ka khana
+      - cousin's baby shower
+      - nana nani visit
+      - uncle's retirement party
+      - family get-together
+      - cousin's farewell dinner
+      - first birthday party
+      - anniversary celebration
+      - family picnic
+    weight: 7
+
+  - id: learning_event
+    labels:
+      - tech conference
+      - startup summit
+      - workshop
+      - seminar
+      - hackathon
+      - college fest
+      - TEDx talk
+      - industry expo
+      - coding bootcamp
+      - training session
+      - alumni meet
+      - career fair
+      - annual day
+      - cultural fest
+      - paper presentation
+      - research symposium
+      - investor demo day
+      - UPSC coaching session
+      - CAT prep workshop
+      - coding contest
+      - open mic event
+      - debate competition
+      - science exhibition
+      - intra-college sports fest
+      - placement prep session
+    weight: 6
+
+  - id: personal_appointment
+    labels:
+      - doctor appointment
+      - physio session
+      - dentist
+      - eye checkup
+      - haircut
+      - bank visit
+      - CA meeting
+      - RTO appointment
+      - passport office
+      - ration card work
+      - PAN card work
+      - Aadhaar update
+      - visa appointment
+      - EPFO office visit
+      - income tax office
+      - property registration
+      - court date
+      - LIC agent meeting
+      - mutual fund advisor
+      - loan officer meeting
+      - blood test
+      - health checkup
+      - physiotherapy
+      - vaccination appt
+    weight: 5
+
+  - id: travel_outing
+    labels:
+      - trekking trip
+      - hill station trip
+      - temple visit
+      - beach outing
+      - heritage walk
+      - IPL match
+      - cricket match
+      - concert
+      - art exhibition
+      - road trip
+      - pilgrimage trip
+      - dargah visit
+      - wildlife sanctuary visit
+      - waterfall trek
+      - national park visit
+      - weekend getaway
+      - dam visit
+      - fort visit
+      - ghats visit
+      - backwater cruise
+      - desert safari
+      - adventure camp
+      - valley trek
+      - river rafting trip
+      - cave exploration
+    weight: 4
+
+# Indian cities by tier — wide variety for non-repetition
+india_cities:
+  metro:
+    - Mumbai
+    - Delhi
+    - Bangalore
+    - Hyderabad
+    - Chennai
+    - Kolkata
+    - Pune
+    - Ahmedabad
+    - Jaipur
+    - Surat
+  tier2:
+    - Nagpur
+    - Lucknow
+    - Indore
+    - Bhopal
+    - Chandigarh
+    - Kochi
+    - Coimbatore
+    - Vadodara
+    - Nashik
+    - Patna
+    - Agra
+    - Varanasi
+    - Visakhapatnam
+    - Bhubaneswar
+    - Amritsar
+    - Ludhiana
+    - Guwahati
+    - Thiruvananthapuram
+    - Mangalore
+    - Mysore
+    - Rajkot
+    - Jodhpur
+    - Udaipur
+    - Ranchi
+    - Gwalior
+    - Jabalpur
+    - Raipur
+    - Cuttack
+    - Dehradun
+    - Meerut
+  tier3:
+    - Shimla
+    - Manali
+    - Ooty
+    - Munnar
+    - Pondicherry
+    - Haridwar
+    - Rishikesh
+    - Ajmer
+    - Pushkar
+    - Aurangabad
+    - Kolhapur
+    - Vapi
+    - Anand
+    - Bhavnagar
+    - Siliguri
+    - Imphal
+    - Shillong
+    - Gangtok
+    - Itanagar
+    - Aizawl
+
+# Indian venue shorthands — all casual, no formal address
+venues:
+  work:
+    - office
+    - coworking space
+    - HQ
+    - conference hall
+    - meeting room
+    - client office
+    - WeWork Bangalore
+    - 91springboard
+    - innovation lab
+    - training room
+    - boardroom
+    - zoom call
+    - tea room at office
+    - cafeteria meeting
+  social:
+    - someone's place
+    - flat
+    - restaurant
+    - community hall
+    - marriage hall
+    - rooftop
+    - terrace
+    - farmhouse
+    - dhaba
+    - resort
+    - banquet hall
+    - garden area
+    - poolside
+    - club house
+    - lawn
+    - veranda
+    - hotel lounge
+    - friend's flat
+  religious:
+    - temple
+    - gurudwara
+    - masjid
+    - church
+    - pandal
+    - mandir
+    - dargah
+    - ashram
+    - math
+    - samadhi sthal
+    - community hall
+    - society compound
+  outdoor:
+    - national park
+    - hill station
+    - lake
+    - beach
+    - heritage site
+    - stadium
+    - ground
+    - fort
+    - ghats
+    - garden
+    - valley
+    - dam
+    - waterfall
+    - eco resort
+    - base camp
+  personal:
+    - hospital
+    - clinic
+    - diagnostic centre
+    - bank branch
+    - government office
+    - registration office
+    - salon
+    - spa
+    - gym

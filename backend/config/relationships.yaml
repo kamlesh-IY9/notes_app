@@ -4,28 +4,28 @@
 relationships:
   - id: parent
     labels: ["mom", "dad", "mother", "father", "mama", "papa", "pops"]
-    weight: 18
+    weight: 8
   - id: sibling
     labels: ["sister", "brother", "sis", "bro"]
-    weight: 14
+    weight: 7
   - id: partner
     labels: ["boyfriend", "girlfriend", "husband", "wife", "partner", "fiancé", "fiancée", "babe"]
-    weight: 16
+    weight: 8
   - id: child
     labels: ["son", "daughter", "kid", "baby"]
-    weight: 10
+    weight: 6
   - id: friend
     labels: ["best friend", "friend", "buddy", "bestie"]
-    weight: 18
+    weight: 8
   - id: grandparent
     labels: ["grandma", "grandpa", "nana", "papa", "granny", "gramps"]
-    weight: 6
+    weight: 5
   - id: cousin
     labels: ["cousin", "cuz"]
-    weight: 5
+    weight: 4
   - id: uncle_aunt
     labels: ["uncle", "aunt", "auntie"]
-    weight: 5
+    weight: 4
   - id: coworker
     labels: ["coworker", "boss", "manager", "colleague"]
     weight: 4
@@ -36,85 +36,85 @@ relationships:
   # ── Extended family additions ──
   - id: godparent
     labels: ["godmother", "godfather", "godparent"]
-    weight: 2
+    weight: 3
   - id: grandkid
     labels: ["grandkid", "grandson", "granddaughter"]
-    weight: 2
+    weight: 3
   - id: family_friend
     labels: ["family friend", "uncle figure", "aunt figure"]
-    weight: 3
+    weight: 4
   - id: chosen_family
     labels: ["chosen family", "chosen sis", "chosen bro"]
-    weight: 2
+    weight: 3
   - id: kids_friends_parent
     labels: ["my kid's friend's mom", "my kid's friend's dad", "the other parent at school"]
-    weight: 2
+    weight: 3
 
   # ── Community / activity-based ──
   - id: church_group_leader
     labels: ["pastor", "youth leader", "small group leader"]
-    weight: 2
+    weight: 3
   - id: kids_coach
     labels: ["coach", "soccer coach", "swim coach", "kid's coach"]
-    weight: 3
+    weight: 4
   - id: dog_park_friend
     labels: ["dog park friend", "the lady from the dog park", "dog dad i met at the park"]
-    weight: 2
+    weight: 3
   - id: running_buddy
     labels: ["running buddy", "gym friend", "workout partner"]
-    weight: 2
+    weight: 3
   - id: group_chat_friend
     labels: ["the group chat", "my group chat", "old group chat friend"]
-    weight: 2
+    weight: 3
 
   # ── Work expansion ──
   - id: mentor
     labels: ["mentor", "old mentor"]
-    weight: 2
+    weight: 3
   - id: intern
     labels: ["intern", "the intern", "my intern"]
-    weight: 2
+    weight: 3
   - id: direct_report
     labels: ["direct report", "my report"]
-    weight: 2
+    weight: 3
   - id: team_lead
     labels: ["team lead", "tech lead", "lead"]
-    weight: 2
+    weight: 3
   - id: client
     labels: ["client", "main client", "the new client"]
-    weight: 3
+    weight: 4
   - id: vendor
     labels: ["vendor", "the vendor", "supplier"]
-    weight: 2
+    weight: 3
 
   # ── Service relationships (USA-typical) ──
   - id: babysitter
     labels: ["babysitter", "the sitter", "our sitter"]
-    weight: 3
+    weight: 4
   - id: housekeeper
     labels: ["housekeeper", "cleaning lady", "our cleaner"]
-    weight: 2
+    weight: 3
   - id: landscaper
     labels: ["landscaper", "yard guy", "lawn guy"]
-    weight: 2
+    weight: 3
   - id: mechanic
     labels: ["mechanic", "my mechanic", "auto guy"]
-    weight: 3
+    weight: 4
   - id: realtor
     labels: ["realtor", "agent", "our realtor"]
-    weight: 2
+    weight: 3
   - id: barber
     labels: ["barber", "hairdresser", "stylist"]
-    weight: 2
+    weight: 3
   - id: dentist
     labels: ["dentist", "dental hygienist"]
-    weight: 2
+    weight: 3
   - id: vet
     labels: ["vet", "vet tech", "the vet at petsmart"]
-    weight: 2
+    weight: 3
   - id: pet_sitter
     labels: ["pet sitter", "dog walker", "petsitter"]
-    weight: 2
+    weight: 3
 
   # ── LGBTQ / same-sex / non-binary additions ──
   # Generation logic in the orchestrator should occasionally pair these with
@@ -125,18 +125,149 @@ relationships:
     same_gender: true
   - id: co_parent
     labels: ["co-parent", "co-parents", "kid's other parent"]
-    weight: 2
+    weight: 3
     same_gender: any
   - id: step_parent
     labels: ["step-mom", "step-dad", "step-parent", "stepmom", "stepdad"]
-    weight: 2
+    weight: 3
   - id: step_sibling
     labels: ["step-sister", "step-brother", "step-sis", "step-bro"]
-    weight: 2
+    weight: 3
   - id: step_kid
     labels: ["step-son", "step-daughter", "step-kid"]
-    weight: 2
+    weight: 3
   - id: nonbinary_friend
     labels: ["my friend", "my best friend", "my buddy"]
-    weight: 2
+    weight: 3
     pronouns: ["they", "them", "their"]
+
+  # ── Expanded friend / social relationship variants ──
+  - id: girl_bestie
+    labels: ["my girl", "my bestie", "my homegirl", "girl bff", "my ride or die", "my day one"]
+    weight: 5
+    gender: female
+  - id: guy_friend
+    labels: ["my boy", "my homie", "my dawg", "my guy", "my bro", "my main man"]
+    weight: 5
+    gender: male
+  - id: work_friend
+    labels: ["work friend", "work wife", "work husband", "office bff", "my work bestie", "my desk neighbor"]
+    weight: 4
+  - id: gym_buddy
+    labels: ["gym buddy", "gym bestie", "workout buddy", "my gym bro", "my gym girl", "my fitness friend"]
+    weight: 3
+  - id: neighbor_friend
+    labels: ["my neighbor", "next door neighbor", "neighbor girl", "neighbor guy", "the lady next door", "the guy next door"]
+    weight: 3
+  - id: college_friend
+    labels: ["my college friend", "college roommate", "college bestie", "dorm buddy", "my old roommate", "frat bro", "sorority sister"]
+    weight: 4
+  - id: childhood_friend
+    labels: ["my childhood friend", "my old friend", "grew up with", "my homie from back then", "my bestie since forever"]
+    weight: 3
+  - id: online_friend
+    labels: ["my online friend", "internet friend", "discord friend", "my gaming friend", "my twitter friend"]
+    weight: 3
+  - id: ex_partner
+    labels: ["my ex", "ex-boyfriend", "ex-girlfriend", "ex-husband", "ex-wife", "my old boo", "my ex-partner"]
+    weight: 3
+  - id: neighbor_generic
+    labels: ["my neighbor", "neighbor", "the neighbor lady", "the neighbor dude"]
+    weight: 3
+
+  # ── Study / school social ──
+  - id: study_partner
+    labels: ["study partner", "study buddy", "my classmate", "lab partner", "project partner", "school friend"]
+    weight: 3
+  - id: class_friend
+    labels: ["my classmate", "my school friend", "kid from class", "girl from my class", "guy from my class"]
+    weight: 3
+
+  # ── Hobby / interest-based ──
+  - id: hiking_buddy
+    labels: ["hiking buddy", "trail friend", "camping buddy", "my hiking friend", "outdoor buddy"]
+    weight: 3
+  - id: yoga_friend
+    labels: ["yoga buddy", "yoga friend", "pilates friend", "my yoga girl", "my mat buddy"]
+    weight: 3
+  - id: gaming_friend
+    labels: ["gaming buddy", "my gaming friend", "game night buddy", "my poker buddy", "game night crew"]
+    weight: 3
+  - id: book_club_friend
+    labels: ["book club friend", "my book club buddy", "reading group friend"]
+    weight: 3
+  - id: music_friend
+    labels: ["band mate", "jam buddy", "music friend", "my band bro", "guitar buddy", "my band mate"]
+    weight: 3
+  - id: cooking_friend
+    labels: ["cooking buddy", "my foodie friend", "brunch friend", "my brunch girl", "my foodie crew"]
+    weight: 3
+
+  # ── Professional / career relationships ──
+  - id: old_colleague
+    labels: ["former coworker", "old coworker", "old colleague", "ex-coworker", "my old work friend"]
+    weight: 3
+  - id: business_partner
+    labels: ["business partner", "my partner", "my co-founder", "my biz partner", "work partner"]
+    weight: 3
+  - id: recruiter
+    labels: ["recruiter", "my recruiter", "the recruiter"]
+    weight: 3
+  - id: freelance_client
+    labels: ["my client", "freelance client", "my main client", "new client"]
+    weight: 3
+
+  # ── Healthcare / wellness ──
+  - id: therapist_counselor
+    labels: ["my therapist", "my counselor", "my psych", "my shrink", "my doctor"]
+    weight: 3
+  - id: personal_trainer
+    labels: ["my trainer", "personal trainer", "my PT", "my coach"]
+    weight: 3
+
+  # ── Neighbor / community ──
+  - id: apartment_neighbor
+    labels: ["my apartment neighbor", "the girl down the hall", "the guy upstairs", "neighbor across the hall", "my floor neighbor"]
+    weight: 3
+  - id: neighborhood_parent
+    labels: ["my kid's friend's mom", "my kid's friend's dad", "school run mom", "the mom from school", "pickup line dad"]
+    weight: 3
+
+  # ── Extended family additions ──
+  - id: nephew_niece
+    labels: ["my nephew", "my niece", "little nephew", "little niece"]
+    weight: 3
+  - id: in_law
+    labels: ["my mother-in-law", "my father-in-law", "mother in law", "father in law", "my MIL", "my FIL", "sister-in-law", "brother-in-law"]
+    weight: 4
+  - id: half_sibling
+    labels: ["half sister", "half brother", "my half sis", "my half bro"]
+    weight: 3
+  - id: twin
+    labels: ["my twin", "my twin sister", "my twin brother", "twin sis", "twin bro"]
+    weight: 3
+
+  # ── Faith / accountability ──
+  - id: prayer_partner
+    labels: ["my prayer partner", "accountability partner", "small group buddy", "church friend", "my faith friend", "prayer group member"]
+    weight: 3
+
+  # ── Language / cultural exchange ──
+  - id: language_partner
+    labels: ["language exchange partner", "my conversation buddy", "my Spanish partner", "language learning friend", "tandem partner", "my language pal"]
+    weight: 3
+
+  # ── School carpool / logistics ──
+  - id: carpool_parent
+    labels: ["carpool friend", "pickup buddy", "drop-off parent", "school carpool mom", "school carpool dad", "my carpool partner"]
+    weight: 3
+
+  # ── Loose work acquaintance ──
+  - id: coworker_distant
+    labels: ["the person from accounting", "colleague from the other floor", "someone from work", "that guy from HR", "the lady from marketing", "my work acquaintance"]
+    weight: 3
+
+  # ── Dorm / campus neighbor ──
+  - id: dorm_neighbor
+    labels: ["dorm neighbor", "hall neighbor", "my floor mate", "the girl across the hall", "the guy next door in the dorms", "my RA"]
+    weight: 3

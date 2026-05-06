@@ -1,0 +1,3 @@
+Dual pol radar is goat for stormchasing.... looking at zdr (differential reflectivity) vs cc. if cc drops below .90 in highreflectivity area that usually means radar hitting something isnt rain or hail.... debrisball is only way confirm tornado on ground at night when u cant see it. also need check kdp (specific diff phase) for heavyraincore to avoid getting hydroplaned off highway....
+
+nws memphis office has good whitepapers on hailspike artifact on radarscreen. beam bounces off hail to ground n back, makes storm look bigger than it is.

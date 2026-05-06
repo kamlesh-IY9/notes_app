@@ -1,0 +1,3 @@
+
+Atmospheric physics
+Looking at cape for plains this weekend.... if storm relative helicity hits 300+ m2/s2 we got problems. cappinginversion is holding for now but if it breaks by 4pm its discrete cells. check hrrr model for outflowboundaries near kansas border.... lcl heights r low enough for tornadogenesis if surfacewinds stay backed. skew-t diagrams show massive dryslot at 700mb which could enhance downdrafts

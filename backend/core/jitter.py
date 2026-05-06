@@ -131,47 +131,55 @@ def apply_jitter(note: str, persona: dict, style: dict) -> str:
 
 
 def _introduce_typos(text: str, count: int) -> str:
-    """Introduce realistic typos via adjacent-key swap, letter drop, or letter double."""
+    """Introduce realistic typos. The same word always gets the same typo throughout
+    the note — consistent imperfection, not random per-occurrence."""
     lines = text.split('\n')
+
+    # Find all unique eligible words
     all_eligible = []
-    
-    # First pass: find eligible words across all lines
     for line_idx, line in enumerate(lines):
         words = line.split(' ')
         for word_idx, w in enumerate(words):
             if len(w) > 3 and w.isalpha() and not (line_idx == 0 and word_idx == 0):
-                all_eligible.append((line_idx, word_idx))
+                all_eligible.append((line_idx, word_idx, w.lower()))
 
     if len(all_eligible) < 2:
         return text
 
-    for _ in range(min(count, len(all_eligible))):
-        if not all_eligible:
-            break
-        
-        choice = random.choice(all_eligible)
-        all_eligible.remove(choice)
-        line_idx, word_idx = choice
-        
-        words = lines[line_idx].split(' ')
-        word = words[word_idx]
-        
-        typo_type = random.choice(["swap", "drop", "double"])
-        char_idx = random.randint(1, len(word) - 2)  # Avoid first/last char
-        char = word[char_idx].lower()
+    # Build a word→typo_version map so each unique word gets one consistent typo
+    word_typo_map: dict[str, str] = {}
+    targets = random.sample(all_eligible, k=min(count, len(all_eligible)))
 
+    for line_idx, word_idx, word_lower in targets:
+        if word_lower in word_typo_map:
+            continue  # already decided typo for this word
+        word = lines[line_idx].split(' ')[word_idx]
+        if len(word) < 4:
+            continue
+        typo_type = random.choice(["swap", "drop", "double"])
+        char_idx = random.randint(1, len(word) - 2)
+        char = word[char_idx].lower()
         if typo_type == "swap" and char in ADJACENT_KEYS:
-            replacement = random.choice(ADJACENT_KEYS[char])
-            new_word = word[:char_idx] + replacement + word[char_idx + 1:]
+            new_word = word[:char_idx] + random.choice(ADJACENT_KEYS[char]) + word[char_idx + 1:]
         elif typo_type == "drop":
             new_word = word[:char_idx] + word[char_idx + 1:]
         elif typo_type == "double":
             new_word = word[:char_idx] + word[char_idx] + word[char_idx:]
         else:
             continue
+        word_typo_map[word_lower] = new_word
 
-        words[word_idx] = new_word
-        lines[line_idx] = ' '.join(words)
+    # Apply typos — ALL occurrences of a chosen word get the same replacement
+    for line_idx, line in enumerate(lines):
+        words = line.split(' ')
+        new_words = []
+        for word_idx, w in enumerate(words):
+            typo = word_typo_map.get(w.lower())
+            if typo and not (line_idx == 0 and word_idx == 0):
+                new_words.append(typo)
+            else:
+                new_words.append(w)
+        lines[line_idx] = ' '.join(new_words)
 
     return '\n'.join(lines)
 

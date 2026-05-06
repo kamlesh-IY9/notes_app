@@ -1,0 +1,257 @@
+# Persona configuration for India / Hindi note generation
+# Mirrors the structure of personas.yaml
+
+age_brackets:
+  - label: "teen"
+    range: [14, 19]
+    weight: 15
+  - label: "young_adult"
+    range: [20, 29]
+    weight: 30
+  - label: "adult"
+    range: [30, 44]
+    weight: 30
+  - label: "middle_aged"
+    range: [45, 59]
+    weight: 15
+  - label: "senior"
+    range: [60, 75]
+    weight: 10
+
+genders:
+  - label: "female"
+    weight: 50
+  - label: "male"
+    weight: 45
+  - label: "nonbinary"
+    weight: 5
+
+# All 28 Indian states + 8 Union Territories — no exclusions
+states:
+  - Andhra Pradesh - Arunachal Pradesh - Assam - Bihar - Chhattisgarh
+  - Goa - Gujarat - Haryana - Himachal Pradesh - Jharkhand - Karnataka
+  - Kerala - Madhya Pradesh - Maharashtra - Manipur - Meghalaya - Mizoram
+  - Nagaland - Odisha - Punjab - Rajasthan - Sikkim - Tamil Nadu - Telangana
+  - Tripura - Uttar Pradesh - Uttarakhand - West Bengal
+  - Delhi - Jammu and Kashmir - Ladakh - Chandigarh - Puducherry
+  - Andaman and Nicobar Islands - Lakshadweep - Dadra and Nagar Haveli
+
+excluded_states: []
+
+# 100+ occupations — from village to metro, all sectors
+occupations:
+  # Tech / IT / Startup
+  - software engineer
+  - data analyst
+  - product manager
+  - frontend developer
+  - backend developer
+  - DevOps engineer
+  - QA engineer
+  - IT support executive
+  - BPO agent
+  - call centre executive
+  - cybersecurity analyst
+  - startup founder
+  - freelancer
+  - YouTuber
+  - content creator
+  - digital marketer
+  - UI/UX designer
+  - app developer
+  - data entry operator
+  - graphic designer
+  # Government / Public sector
+  - IAS officer
+  - IPS officer
+  - government bank clerk
+  - post office worker
+  - railway employee
+  - army soldier
+  - CRPF constable
+  - municipal worker
+  - anganwadi worker
+  - ASHA worker
+  - panchayat member
+  - sarpanch
+  - block development officer
+  - tehsildar
+  - patwari
+  - income tax officer
+  - forest officer
+  - PWD engineer
+  - ration shop owner
+  - gram sevak
+  # Finance / Legal
+  - chartered accountant
+  - tax consultant
+  - LIC agent
+  - insurance agent
+  - bank manager
+  - bank teller
+  - stock broker
+  - mutual fund advisor
+  - advocate
+  - court clerk
+  - notary
+  - moneylender
+  # Health / Medical
+  - doctor
+  - MBBS intern
+  - nurse
+  - compounder
+  - lab technician
+  - pharmacist
+  - ANM nurse
+  - physiotherapist
+  - Ayurveda practitioner
+  - homeopathy doctor
+  - dentist
+  - medical store owner
+  # Education
+  - school teacher
+  - college lecturer
+  - professor
+  - principal
+  - coaching centre teacher
+  - private tutor
+  - anganwadi teacher
+  - engineering student
+  - medical student
+  - arts student
+  - law student
+  - MBA student
+  - ITI student
+  - polytechnic student
+  - NEET aspirant
+  - JEE aspirant
+  # Agriculture / Rural labour
+  - farmer
+  - agricultural labourer
+  - dairy farmer
+  - poultry farmer
+  - sugarcane farmer
+  - vegetable vendor
+  - MNREGA worker
+  - migrant worker
+  - orchard worker
+  - fisherman
+  - shepherd
+  - mill worker
+  # Trade / Commerce
+  - kirana store owner
+  - wholesale merchant
+  - cloth merchant
+  - jeweller
+  - hardware shop owner
+  - electronics shop owner
+  - mobile repair technician
+  - stationery shop owner
+  - chemist
+  - petrol pump attendant
+  - cold storage operator
+  - commission agent
+  # Transport
+  - auto rickshaw driver
+  - taxi driver
+  - Ola/Uber driver
+  - truck driver
+  - bus driver
+  - two-wheeler mechanic
+  - delivery executive
+  - courier agent
+  - tempo driver
+  # Skilled trades
+  - electrician
+  - plumber
+  - carpenter
+  - painter
+  - welder
+  - AC technician
+  - cable TV operator
+  - mobile shop worker
+  # Services / Personal care
+  - tailor
+  - beautician
+  - parlour owner
+  - salon worker
+  - cook
+  - hotel waiter
+  - dhaba owner
+  - street vendor
+  - halwai
+  - domestic helper
+  - security guard
+  - watchman
+  - sweeper
+  - driver
+  # Media / Creative
+  - journalist
+  - news reporter
+  - photographer
+  - wedding videographer
+  - event manager
+  - musician
+  - singer
+  # Religious / Social
+  - pandit
+  - maulvi
+  - NGO worker
+  - social worker
+  - mahila mandal member
+  # Other
+  - real estate agent
+  - travel agent
+  - astrologer
+  - retired government employee
+  - homemaker
+  - small business owner
+  - workshop owner
+  - factory supervisor
+  - daily wage worker
+
+# Regional identity buckets — these map to name pool keys in india_names.yaml
+ethnicity_buckets:
+  - north_indian
+  - south_indian
+  - east_indian
+  - west_indian
+  - punjabi
+  - muslim
+  - christian
+  - northeast_indian
+
+voice_quirks:
+  - id: lowercase_starts
+    description: "Doesn't capitalize first letter of lines"
+    weight: 20
+  - id: drop_apostrophes
+    description: "dont instead of don't, cant instead of can't"
+    weight: 15
+  - id: use_ampersand
+    description: "Uses & instead of 'and'"
+    weight: 12
+  - id: lol_lmao
+    description: "Occasionally uses lol or lmao"
+    weight: 10
+  - id: double_punctuation
+    description: "Uses !! or ?? or ..."
+    weight: 18
+  - id: no_end_periods
+    description: "Doesn't end lines with periods"
+    weight: 25
+  - id: word_merge
+    description: "Occasionally merges words"
+    weight: 8
+  - id: sparse_emoji
+    description: "Uses 1-2 emoji total in the note"
+    weight: 10
+  - id: abbreviations
+    description: "Uses u, bc, idk, rn, ngl, tbh"
+    weight: 12
+  - id: hindi_code_switch
+    description: "Occasionally uses a Hindi word (yaar, na, matlab, bas, arre)"
+    weight: 14
+  - id: question_tag_na
+    description: "Adds 'na?' or 'right?' at end of lines"
+    weight: 10

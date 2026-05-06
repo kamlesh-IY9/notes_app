@@ -4,105 +4,203 @@
 topics:
   - id: planning_event
     labels: ["birthday party", "dinner plans", "road trip", "vacation", "holiday plans", "wedding", "baby shower", "graduation party", "game night", "cookout"]
-    weight: 15
+    weight: 7
   - id: conflict
     labels: ["argument", "fight", "disagreement", "tension", "annoyed", "frustrated", "upset with"]
-    weight: 12
+    weight: 4
   - id: practical_appointment
     labels: ["dental appointment", "doctor visit", "hair cut", "car maintenance", "vet visit", "meeting at bank", "lawyer consult"]
-    weight: 15
+    weight: 7
   - id: financial_admin
     labels: ["tax payment", "pay IRS fines", "utility bill due", "insurance premium", "mortgage payment", "car loan payment", "check 401k"]
-    weight: 15
+    weight: 7
   - id: career_adulting
     labels: ["job interview tomorrow", "prep for interview", "HOA meeting tonight", "DMV appointment", "renew TSA precheck", "jury duty"]
-    weight: 15
+    weight: 7
   - id: school_kids
     labels: ["parent teacher meeting", "PTA meeting", "pick up kids from practice", "school forms due", "tuition payment"]
-    weight: 12
+    weight: 4
   - id: entertainment
     labels: ["movie times", "concert tickets", "game schedule", "show tonight", "booking code", "scan tickets at door", "buy popcorn before"]
-    weight: 15
+    weight: 7
   - id: update
     labels: ["just found out", "told me", "called me", "texted me", "moved to", "got a new job", "broke up"]
-    weight: 10
+    weight: 5
   - id: gift_idea
     labels: ["gift for", "present idea", "what to get", "birthday coming up"]
-    weight: 8
+    weight: 5
   - id: vent
     labels: ["need to vent", "so tired of", "can't believe", "drives me crazy"]
-    weight: 8
+    weight: 5
   - id: support
     labels: ["going through", "be there for", "check in on", "call them", "help with"]
-    weight: 8
+    weight: 5
   - id: milestone
     labels: ["engaged", "pregnant", "new baby", "new house", "promoted", "graduated", "retired"]
     weight: 5
   - id: errands
     labels: ["pick up from", "drop off at", "run to the store for", "get stuff for", "carpool"]
-    weight: 12
+    weight: 4
   - id: to_do_list
     labels: ["tasks for today", "reminders about", "stuff to do with", "things to pack for", "urgent fix around the house", "need to call back today"]
-    weight: 18
+    weight: 7
   - id: locations
     labels: ["places to eat with", "spots to visit next weekend", "directions to", "meeting point"]
-    weight: 10
+    weight: 5
   - id: event_details
     labels: ["time to meet", "what to wear to", "who is driving to", "ticket info", "flight boarding pass", "parking pass"]
-    weight: 12
+    weight: 4
   - id: home_maintenance
     labels: ["fix leaky sink", "AC repair call", "plumber quote", "buy air filters", "paint colors for living room", "measurements for new couch"]
-    weight: 15
+    weight: 7
   - id: shopping_lists
     labels: ["weekly groceries", "target haul", "hardware store items", "ikea shopping list", "costco run", "buy from amazon"]
-    weight: 18
+    weight: 7
   - id: health_fitness
     labels: ["new gym routine", "daily vitamins list", "meal prep containers to buy", "steps tracking goal", "running shoe models"]
-    weight: 10
+    weight: 5
   - id: subscriptions_services
     labels: ["cancel gym membership", "call comcast", "internet bill dispute", "subscriptions to pause", "renew car registration"]
-    weight: 12
+    weight: 4
   - id: travel_packing
     labels: ["packing list for hawaii", "carry on essentials", "what to pack for camping", "ski trip gear", "hotel booking confirm"]
-    weight: 12
+    weight: 4
   - id: pet_care
     labels: ["dog boarding instructions", "vaccination schedule", "buy more purina", "mobile groomer contact"]
-    weight: 10
+    weight: 5
   - id: account_info
     labels: ["wifi password for guests", "parents wifi pass", "locker combo", "gate code", "alarm pin", "netflix login"]
-    weight: 12
+    weight: 4
 
   # ── Pet / outdoor (activity topics that pair with relationships) ──
   - id: pet_outdoor
     labels: ["dog walk schedule", "vet appointment", "pet sitting handoff", "dog park meetup", "cat litter reminder", "bird feeder refill", "groomer drop-off"]
-    weight: 12
+    weight: 4
 
   # ── Outings with people ──
   - id: outings_people
     labels: ["zoo trip planning", "aquarium tickets", "museum hours", "kid's birthday party", "bbq at park", "picnic spot", "bowling night", "mini golf", "farmers market saturday", "pumpkin patch", "tree lighting", "parade route"]
-    weight: 14
+    weight: 4
 
   # ── Practical with relationship (USA logistics) ──
   - id: practical_with_relationship
     labels: ["pick up kids from soccer", "drop off lunch at office", "school pickup line", "carpool schedule", "playdate at our place", "babysitter availability"]
-    weight: 14
+    weight: 4
 
   # ── Music ──
   - id: music
     labels: ["concert tickets", "vinyl haul", "spotify playlist link", "learning guitar", "music lesson schedule", "band practice tonight", "festival lineup", "album drop reminder", "ticketmaster code", "karaoke list", "AirPods replacement", "vinyl record store run", "open mic night"]
-    weight: 10
+    weight: 5
 
   # ── Pets (extra activities, on top of pet_outdoor) ──
   - id: pets_extra
     labels: ["dog grooming day", "vet vaccine reminder", "new puppy training schedule", "fish tank cleaning", "kitten adoption", "dog meds refill", "dog food brand switch", "cat carrier pickup", "dog daycare drop-off", "puppy first checkup"]
-    weight: 10
+    weight: 5
 
   # ── Barber / salon / nail / personal grooming ──
   - id: barber_salon
     labels: ["barber appointment", "fade booking", "hair color touch-up", "beard trim", "salon tip cash", "eyebrow threading", "manicure", "pedicure", "nail tech booking", "lash fill", "spray tan slot", "wax appointment"]
-    weight: 10
+    weight: 5
 
   # ── Random USA errands ──
   - id: errands_random
     labels: ["dry cleaning pickup", "target run", "costco list", "post office trip", "dmv renewal slot", "library books due", "lottery ticket pickup", "mail package", "fedex drop-off", "shoe repair", "amazon return", "ups dropbox run", "key copy at hardware"]
-    weight: 12
+    weight: 4
+
+  # ── Business / career / professional ──
+  - id: business_planning
+    labels: ["quarterly review notes", "launch plan ideas", "strategy meeting followup", "pitch deck outline", "roadmap notes", "product ideas", "marketing plan draft", "goal setting for Q3", "business goal tracker"]
+    weight: 4
+  - id: networking
+    labels: ["linkedin connection to follow up", "coffee chat notes", "industry event contact", "referral intro", "meet for lunch", "connect with at the event", "reach out to about job", "introduce to my friend", "follow up after conference"]
+    weight: 5
+  - id: freelance_side_hustle
+    labels: ["client invoice to send", "side project deadline", "freelance gig details", "portfolio update ideas", "rate increase talk", "new client onboarding", "project scope notes", "invoice tracker"]
+    weight: 5
+  - id: job_hunting
+    labels: ["job interview prep", "resume update notes", "recruiter call details", "offer letter compare", "salary negotiation notes", "job search tracker", "follow up after interview", "references to contact"]
+    weight: 5
+  - id: office_dynamics
+    labels: ["meeting notes to review", "team issue to address", "performance review prep", "promotion conversation", "workplace drama", "project credit issue", "coworker conflict", "team building idea"]
+    weight: 5
+  - id: startup_ideas
+    labels: ["app idea to research", "business idea to pitch", "market research notes", "co-founder conversation", "startup idea rough draft", "product concept notes", "revenue model ideas"]
+    weight: 4
+  - id: remote_work
+    labels: ["work from home setup", "zoom call notes", "deadline to track", "deliverable to submit", "standup notes", "async update to send", "home office upgrade", "work schedule block"]
+    weight: 5
+
+  # ── Personal finance / money management ──
+  - id: financial_planning_personal
+    labels: ["budget tracker idea", "savings goal notes", "401k review", "investment notes", "expense log", "credit card payoff plan", "emergency fund update", "spending audit", "paycheck breakdown"]
+    weight: 4
+
+  # ── Food / cooking / eating out ──
+  - id: food_cooking
+    labels: ["recipe to try", "meal prep plan", "restaurant to hit up", "new dish to make", "cooking idea", "grocery list for recipe", "lunch ideas for the week", "brunch spot", "food truck near me"]
+    weight: 5
+
+  # ── Self care / mental health ──
+  - id: self_care_mental_health
+    labels: ["therapy homework", "journaling prompt", "mindfulness reminder", "burnout check-in", "emotional reset note", "things im grateful for", "mood tracker note", "mental health day plan", "vent session notes"]
+    weight: 5
+
+  # ── Social media / content ──
+  - id: social_media_content
+    labels: ["post idea for instagram", "tiktok idea", "content to repost", "reel idea", "caption ideas", "brand collab note", "youtube video idea", "twitter thread idea", "story idea"]
+    weight: 4
+
+  # ── Home decor / DIY ──
+  - id: home_decor_diy
+    labels: ["room makeover ideas", "furniture to get", "paint colors to try", "diy project list", "ikea haul wishlist", "organizing plan", "closet redo idea", "bathroom refresh notes"]
+    weight: 5
+
+  # ── Kids / parenting ──
+  - id: parenting_kids
+    labels: ["school supply list", "kids activities schedule", "pediatrician reminder", "school event rsvp", "after school pickup plan", "birthday party idea for kids", "kids homework help note", "summer camp info"]
+    weight: 5
+
+  # ── Seasonal / holiday ──
+  - id: holiday_seasonal
+    labels: ["holiday shopping list", "thanksgiving dinner plan", "christmas gift ideas", "new year resolutions", "halloween costume idea", "fourth of july bbq", "spring cleaning list", "back to school checklist"]
+    weight: 5
+
+  # ── Neighborhood / community ──
+  - id: neighborhood_community
+    labels: ["HOA meeting note", "neighborhood app post to make", "block party idea", "nextdoor complaint to log", "community event signup", "neighborhood watch update", "local store recommendation"]
+    weight: 4
+
+  # ── Dating / relationship admin ──
+  - id: dating_relationships
+    labels: ["date night idea", "anniversary note", "gift idea for partner", "couples activity plan", "date spot to try", "relationship talk to have", "date to remember", "first date idea"]
+    weight: 5
+
+  # ── Tech / gadgets / apps ──
+  - id: tech_gadgets
+    labels: ["app to download", "gadget to research", "phone upgrade notes", "tech setup idea", "software to try", "subscription to cancel", "device comparison notes", "tech tip from online"]
+    weight: 4
+
+  # ── Travel bucket list / wishlist ──
+  - id: travel_bucket_list
+    labels: ["bucket list trip", "places to visit before 40", "countries to travel to", "travel wishlist", "dream vacation spot", "solo trip idea", "road trip bucket list", "places dad wants to see", "trip idea for the group chat", "passport stamp goals"]
+    weight: 5
+
+  # ── Study / school / exam ──
+  - id: study_school
+    labels: ["exam prep notes", "class notes to review", "study schedule", "finals week plan", "quiz topics to cover", "flashcard topics", "semester goals", "homework tracker", "project deadline", "professor office hours"]
+    weight: 5
+
+  # ── Volunteer / community service ──
+  - id: volunteer_community
+    labels: ["volunteer signup info", "charity event to join", "food bank shift", "community service hours", "fundraiser to share", "nonprofit to donate to", "donation drop-off location", "community cleanup day", "neighbor help request", "mentorship program sign-up"]
+    weight: 4
+
+  # ── Wellness routine / health habits ──
+  - id: wellness_routine
+    labels: ["sleep schedule to fix", "hydration goal", "screen time limit", "morning routine plan", "daily walk goal", "no phone after 9pm", "meditation to try", "supplements to take", "stretch routine", "wind-down habit"]
+    weight: 5
+
+  # ── Personal goals / self-improvement ──
+  - id: personal_goals
+    labels: ["habit tracker idea", "vision board stuff", "goal check-in", "things to work on this month", "30-day challenge", "skill to learn", "book to finish", "accountability note", "weekly wins to log", "monthly review"]
+    weight: 5

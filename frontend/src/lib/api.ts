@@ -59,7 +59,7 @@ export interface Entry {
 }
 
 export interface JobConfig {
-  dataset_type: 'people_relationships' | 'contacts';
+  dataset_type: 'people_relationships' | 'contacts' | 'events' | 'topics_of_interest';
   batch_size: number;
   app_distribution: Record<string, number>;
   contact_app_distribution?: Record<string, number>;
@@ -70,6 +70,7 @@ export interface JobConfig {
   connectivity_distribution: Record<string, number>;
   start_global_id: number;
   start_part: number;
+  language?: string;
 }
 
 export interface Settings {

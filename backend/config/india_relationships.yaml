@@ -1,0 +1,332 @@
+# Relationship types for India / Hindi People & Relationships notes
+# Carries over all US relationships + adds India-specific ones
+# All weights balanced (3-6 range) to prevent repetition at scale
+
+relationships:
+  # ── Core family (universal) ──
+  - id: parent
+    labels: ["mom", "dad", "mother", "father", "mama", "papa", "pops", "amma", "appa", "baba"]
+    weight: 8
+  - id: sibling
+    labels: ["sister", "brother", "sis", "bro", "didi", "bhaiya", "choti", "bade bhai"]
+    weight: 7
+  - id: partner
+    labels: ["boyfriend", "girlfriend", "husband", "wife", "partner", "fiancé", "fiancée"]
+    weight: 7
+  - id: child
+    labels: ["son", "daughter", "kid", "baby", "beta", "beti"]
+    weight: 6
+  - id: friend
+    labels: ["best friend", "friend", "buddy", "bestie", "yaar"]
+    weight: 8
+  - id: grandparent
+    labels: ["grandma", "grandpa", "nana", "nani", "dada", "dadi", "granny", "gramps", "dadaji", "dadiji"]
+    weight: 5
+  - id: cousin
+    labels: ["cousin", "cuz", "cousine bhai", "cousine behen"]
+    weight: 5
+  - id: uncle_aunt
+    labels: ["uncle", "aunt", "auntie", "kaka", "kaki", "mama", "mami"]
+    weight: 5
+  - id: coworker
+    labels: ["coworker", "boss", "manager", "colleague", "office colleague"]
+    weight: 4
+  - id: roommate
+    labels: ["roommate", "housemate", "flat mate", "paying guest mate"]
+    weight: 4
+
+  # ── India-specific extended family ──
+  - id: chacha_chachi
+    labels: ["chacha", "chachi", "father's younger brother", "kaka", "kaki", "tauji"]
+    weight: 5
+  - id: tau_tai
+    labels: ["tau", "tai", "tauji", "father's elder brother", "bade papa", "bade baba"]
+    weight: 4
+  - id: mama_mami
+    labels: ["mama", "mami", "mother's brother", "maternal uncle", "mama ji", "mami ji"]
+    weight: 5
+  - id: maasi_masoo
+    labels: ["maasi", "maasi ji", "masoo", "mother's sister", "massi", "masad"]
+    weight: 5
+  - id: bua_fufa
+    labels: ["bua", "bua ji", "phuphi", "fufa", "fufa ji", "father's sister", "bua"]
+    weight: 4
+  - id: nana_nani
+    labels: ["nana", "nani", "nana ji", "nani ji", "maternal grandfather", "maternal grandmother"]
+    weight: 5
+  - id: dada_dadi
+    labels: ["dada", "dadi", "dada ji", "dadi ji", "paternal grandfather", "paternal grandmother"]
+    weight: 5
+  - id: jiju
+    labels: ["jiju", "jijaji", "sister's husband", "jija"]
+    weight: 4
+  - id: bhabhi
+    labels: ["bhabhi", "bhabhi ji", "bhaabhi", "brother's wife", "bhabi"]
+    weight: 5
+  - id: nanad
+    labels: ["nanad", "nanadji", "husband's sister", "devrani's nanad"]
+    weight: 3
+  - id: devara_jeth
+    labels: ["devar", "jeth", "husband's younger brother", "husband's elder brother", "devra"]
+    weight: 3
+  - id: derani_jethani
+    labels: ["derani", "jethani", "co-sister-in-law"]
+    weight: 3
+  - id: saas_sasur
+    labels: ["saas", "sasur", "saas ji", "sasur ji", "mother-in-law", "father-in-law", "sasu maa"]
+    weight: 5
+
+  # ── India extended family (further relatives) ──
+  - id: chachera_cousin
+    labels: ["chachera bhai", "chacheri behen", "tau ka ladka", "tau ki ladki", "extended cousin"]
+    weight: 4
+  - id: mamere_cousin
+    labels: ["mamere bhai", "mameri behen", "mama's son", "mama's daughter", "mamere"]
+    weight: 4
+  - id: family_friend_india
+    labels: ["family friend", "uncle figure", "aunty figure", "ghar ke bade", "trusted family friend"]
+    weight: 4
+
+  # ── Indian community / neighbourhood ──
+  - id: colony_uncle
+    labels: ["colony uncle", "uncle from colony", "neighbour uncle", "gupta uncle", "sharma uncle", "building uncle"]
+    weight: 5
+  - id: building_aunty
+    labels: ["building aunty", "neighbour aunty", "aunty next door", "floor aunty", "padosan aunty", "society aunty"]
+    weight: 5
+  - id: padosan_padosi
+    labels: ["padosan", "padosi", "next door neighbour", "flat neighbour", "downstairs neighbour", "upstairs neighbour"]
+    weight: 5
+  - id: mandir_friend
+    labels: ["mandir friend", "temple group friend", "puja group buddy", "bhajan group member", "kirtan friend"]
+    weight: 4
+  - id: mosque_friend
+    labels: ["masjid friend", "namaz group buddy", "mosque neighbour", "jamaat member"]
+    weight: 3
+  - id: gurudwara_sangat
+    labels: ["sangat member", "gurudwara friend", "langar sewa friend", "gurdwara committee member"]
+    weight: 3
+  - id: society_secretary
+    labels: ["society secretary", "RWA member", "building committee member", "maintenance secretary", "colony president"]
+    weight: 3
+  - id: mohalla_friend
+    labels: ["mohalla friend", "locality friend", "gali ka dost", "neighbourhood gang member", "para-friend"]
+    weight: 4
+  - id: pg_owner
+    labels: ["PG owner", "paying guest owner", "PG aunty", "landlord", "landlady", "makan maalik"]
+    weight: 4
+
+  # ── Indian work / trade ──
+  - id: office_sir_madam
+    labels: ["office sir", "sir ji", "madam", "manager sir", "saab", "huzoor"]
+    weight: 4
+  - id: seth_malik
+    labels: ["seth", "malik", "shop owner", "karobaar malik", "dukaan maalik", "boss seth"]
+    weight: 4
+  - id: kirana_wala
+    labels: ["kirana wala", "local shopkeeper", "grocery guy", "sabzi wala", "dukandaar", "panwala"]
+    weight: 5
+  - id: auto_wala
+    labels: ["auto wala", "auto driver bhai", "regular auto", "rickshaw wala", "cycle rickshaw wala"]
+    weight: 5
+  - id: delivery_boy
+    labels: ["delivery boy", "courier wala", "parcel wala", "delivery executive", "Swiggy delivery", "Zomato delivery"]
+    weight: 4
+  - id: darzi_tailor
+    labels: ["darzi", "tailor", "master ji", "sewing master", "blouse stitching lady", "boutique owner"]
+    weight: 4
+  - id: nai_barber
+    labels: ["nai", "barber", "nai ji", "saloon wala", "hair cut wala"]
+    weight: 4
+  - id: dhobi
+    labels: ["dhobi", "laundry wala", "dhobhi ghat person", "ironing wala", "press wala"]
+    weight: 3
+  - id: kabadi_wala
+    labels: ["kabadi wala", "scrap dealer", "old stuff wala", "raddhi wala"]
+    weight: 3
+  - id: building_watchman
+    labels: ["watchman", "security guard", "chowkidar", "gate guard", "security uncle"]
+    weight: 4
+  - id: maid_domestic
+    labels: ["maid", "bai", "kaamwali", "house help", "cook bai", "sweeper aunty", "bhaiya"]
+    weight: 5
+
+  # ── Indian education ──
+  - id: coaching_teacher
+    labels: ["coaching sir", "coaching madam", "tuition teacher", "sir at coaching", "coaching faculty"]
+    weight: 5
+  - id: college_senior
+    labels: ["college senior", "senior bhai", "senior didi", "batch senior", "college mentor"]
+    weight: 4
+  - id: hostel_roommate
+    labels: ["hostel roommate", "room partner", "roomie at hostel", "bunk partner"]
+    weight: 4
+  - id: batch_mate
+    labels: ["batch mate", "classmate", "batch ka dost", "section partner", "lab partner"]
+    weight: 4
+
+  # ── Indian health / wellness ──
+  - id: family_doctor
+    labels: ["family doctor", "our doctor", "doc uncle", "clinic doctor", "general physician"]
+    weight: 4
+  - id: compounder_pharmacist
+    labels: ["compounder", "pharmacist", "medical store uncle", "chemist", "dawai wala"]
+    weight: 3
+
+  # ── Extended USA relationships (carried over) ──
+  - id: godparent
+    labels: ["godmother", "godfather", "godparent"]
+    weight: 3
+  - id: grandkid
+    labels: ["grandkid", "grandson", "granddaughter", "pota", "poti", "naati", "naatoo"]
+    weight: 3
+  - id: kids_friends_parent
+    labels: ["my kid's friend's mom", "my kid's friend's dad", "the other parent at school", "bachche ke dost ke maa-baap"]
+    weight: 3
+  - id: kids_coach
+    labels: ["coach", "cricket coach", "football coach", "swim coach", "kid's coach", "sports teacher"]
+    weight: 4
+  - id: running_buddy
+    labels: ["running buddy", "gym friend", "workout partner", "morning walk buddy", "jogging partner"]
+    weight: 3
+  - id: group_chat_friend
+    labels: ["the group chat", "WhatsApp group member", "old group chat friend", "gang member"]
+    weight: 4
+  - id: mentor
+    labels: ["mentor", "old mentor", "guide", "guruji", "career mentor"]
+    weight: 3
+  - id: intern
+    labels: ["intern", "the intern", "my intern", "trainee"]
+    weight: 3
+  - id: direct_report
+    labels: ["direct report", "my report", "junior team member", "my subordinate"]
+    weight: 3
+  - id: team_lead
+    labels: ["team lead", "tech lead", "lead", "project lead", "team head"]
+    weight: 3
+  - id: client
+    labels: ["client", "main client", "the new client", "project client", "customer"]
+    weight: 4
+  - id: vendor
+    labels: ["vendor", "the vendor", "supplier", "goods vendor"]
+    weight: 3
+  - id: housekeeper
+    labels: ["housekeeper", "cleaning person", "maid service", "part-time help"]
+    weight: 3
+  - id: mechanic
+    labels: ["mechanic", "my mechanic", "auto workshop guy", "garaaj wala", "bike mechanic"]
+    weight: 4
+  - id: realtor
+    labels: ["realtor", "property agent", "broker", "property dealer", "estate agent"]
+    weight: 3
+  - id: dentist
+    labels: ["dentist", "dental hygienist", "daant wala doctor"]
+    weight: 3
+  - id: vet
+    labels: ["vet", "vet doctor", "pet doctor", "veterinarian"]
+    weight: 3
+  - id: pet_sitter
+    labels: ["pet sitter", "dog walker", "pet caretaker", "animal care person"]
+    weight: 3
+  - id: step_parent
+    labels: ["step-mom", "step-dad", "step-parent", "second mother", "second father"]
+    weight: 3
+  - id: step_sibling
+    labels: ["step-sister", "step-brother", "step-sis", "step-bro"]
+    weight: 3
+  - id: step_kid
+    labels: ["step-son", "step-daughter", "step-kid"]
+    weight: 3
+  - id: nonbinary_friend
+    labels: ["my friend", "my best friend", "my buddy"]
+    weight: 3
+    pronouns: ["they", "them", "their"]
+  - id: girl_bestie
+    labels: ["my girl", "my bestie", "my sakhi", "my saheli", "dost ladki", "best friend girl"]
+    weight: 5
+    gender: female
+  - id: guy_friend
+    labels: ["my boy", "my homie", "yaar", "dost", "mera dost", "my guy friend"]
+    weight: 5
+    gender: male
+  - id: work_friend
+    labels: ["work friend", "office dost", "my work bestie", "desk neighbour", "colleague friend"]
+    weight: 4
+  - id: gym_buddy
+    labels: ["gym buddy", "gym dost", "workout buddy", "exercise partner", "gym bhai"]
+    weight: 3
+  - id: neighbor_friend
+    labels: ["my neighbour", "next door person", "gali ka dost", "colony friend"]
+    weight: 4
+  - id: college_friend
+    labels: ["my college friend", "college roommate", "college bestie", "dorm buddy", "hostel friend"]
+    weight: 4
+  - id: childhood_friend
+    labels: ["my childhood friend", "bachpan ka dost", "old friend", "grew up with", "lifelong friend"]
+    weight: 4
+  - id: online_friend
+    labels: ["my online friend", "internet friend", "gaming friend", "discord buddy", "Twitter friend"]
+    weight: 3
+  - id: ex_partner
+    labels: ["my ex", "ex-boyfriend", "ex-girlfriend", "ex-husband", "ex-wife", "purana wala", "purani wali"]
+    weight: 3
+  - id: study_partner
+    labels: ["study partner", "study buddy", "classmate study group", "library partner"]
+    weight: 3
+  - id: hiking_buddy
+    labels: ["trekking buddy", "hiking friend", "trekking group member", "adventure friend"]
+    weight: 3
+  - id: gaming_friend
+    labels: ["gaming buddy", "game night buddy", "online gaming friend", "PUBG buddy", "carrom partner"]
+    weight: 3
+  - id: book_club_friend
+    labels: ["book club friend", "reading group member", "library group friend"]
+    weight: 3
+  - id: cooking_friend
+    labels: ["cooking buddy", "foodie friend", "restaurant buddy", "food outing friend"]
+    weight: 3
+  - id: old_colleague
+    labels: ["former coworker", "old coworker", "old colleague", "ex-coworker", "my old work friend"]
+    weight: 3
+  - id: business_partner
+    labels: ["business partner", "co-founder", "biz partner", "joint venture partner", "karobaar partner"]
+    weight: 3
+  - id: recruiter
+    labels: ["recruiter", "my recruiter", "the recruiter", "placement officer", "HR contact"]
+    weight: 3
+  - id: freelance_client
+    labels: ["my client", "freelance client", "my main client", "project client"]
+    weight: 3
+  - id: therapist_counselor
+    labels: ["my therapist", "counsellor", "psychiatrist", "mental health doctor", "my doctor"]
+    weight: 3
+  - id: personal_trainer
+    labels: ["my trainer", "personal trainer", "gym trainer", "fitness coach"]
+    weight: 3
+  - id: apartment_neighbor
+    labels: ["apartment neighbour", "the person next door", "flat neighbour", "floor mate"]
+    weight: 3
+  - id: nephew_niece
+    labels: ["my nephew", "my niece", "bhatija", "bhatiji", "little nephew", "little niece"]
+    weight: 4
+  - id: in_law
+    labels: ["mother-in-law", "father-in-law", "MIL", "FIL", "sister-in-law", "brother-in-law", "saas", "sasur", "saali", "sala"]
+    weight: 4
+  - id: half_sibling
+    labels: ["half sister", "half brother", "half bhai", "half behen"]
+    weight: 3
+  - id: twin
+    labels: ["my twin", "twin sister", "twin brother", "twin sis", "twin bro", "judwa"]
+    weight: 3
+  - id: prayer_partner
+    labels: ["prayer partner", "bhajan group friend", "kirtan group member", "satsang buddy", "puja group member"]
+    weight: 3
+  - id: carpool_parent
+    labels: ["carpool friend", "school pickup parent", "carpool partner", "school drop partner"]
+    weight: 3
+  - id: coworker_distant
+    labels: ["person from another department", "colleague from accounts", "someone from office", "that person from HR"]
+    weight: 3
+  - id: dorm_neighbor
+    labels: ["hostel neighbour", "hall neighbour", "floor mate at hostel", "dorm room neighbour"]
+    weight: 3

@@ -1,0 +1,4 @@
+﻿aero drag coefficient study
+
+range estimate off by 43% in cold weather testing.... then cell voltage delta exceeding 30mv during discharge pack energy density at 39 Wh/kg at cell level —  thermal runaway propagation test passed with  61s delay
+might b why is this happening?and NVH measurements showing 22dB peak at 58 rpm... then charging curve stays flat until 87% then drops sharply...

@@ -8,12 +8,18 @@ log = logging.getLogger(__name__)
 
 # Banned AI vocabulary — must NEVER appear in generated notes
 BANNED_AI_VOCAB = [
-    "delve", "leverage", "transformative", "seamless", "robust",
+    "delve", "tapestry", "testament", "orchestrate", "vibrant", "holistic",
+    "seamless", "comprehensive", "robust", "bespoke", "leverage", "utilize",
+    "whilst", "albeit", "moreover", "furthermore", "nonetheless", "consequently",
+    "therefore", "thus", "hence", "accordingly", "subsequently", "thereby",
+    "mum", "neighbour", "colour", "favourite", "honour", "behaviour", "centre",
+    "theatre", "litre", "metre", "fibre", "organise", "realise", "recognise",
+    "apologise", "specialise", "criticise", "analyse", "cheers", "mate", "bloody",
+    "quid", "telly", "chap", "bloke", "knackered", "pudding", "loo", "trolley",
     "synergy", "best practices", "landscape", "paradigm",
     "harness", "navigate", "unlock", "empower", "streamline",
-    "tapestry", "multifaceted", "nuanced", "foster", "cultivate",
-    "utilize", "comprehensive", "albeit", "whilst",
-    "furthermore", "moreover", "in conclusion", "additionally",
+    "multifaceted", "nuanced", "foster", "cultivate",
+    "in conclusion", "additionally",
     "crucial", "essential", "incredibly", "significantly",
 ]
 
@@ -32,6 +38,20 @@ BANNED_PHRASES = [
 # Pool of casual abbreviations / texting shortcuts. Per-call, we draw 3 random
 # items so the prompt the LLM sees is never identical twice in a row — this
 # breaks the lock-in where every note ended with "rn" / "ngl" / "tbh".
+# Pool of varied note-start phrases. 6 are sampled randomly per call so the
+# LLM never sees the same example set twice — breaks the "gotta/need" lock-in.
+START_POOL = [
+    "gotta call", "need to", "remind me to", "ask [rel] about",
+    "so [rel]", "check with", "low key worried abt", "finally talked to",
+    "cant stop thinking abt", "just heard from", "[rel] texted saying",
+    "almost forgot to", "been meaning to", "thinking abt",
+    "ok so", "heads up abt", "quick note on", "just realized",
+    "btw [rel]", "wondering if", "maybe ask", "told [rel] abt",
+    "been putting off", "latest with [rel]", "gonna bring up",
+    "schedule time w", "should probably", "dont forget abt",
+    "saw [rel] today", "got news from", "update on [rel]",
+]
+
 ABBREV_POOL = [
     "rn", "tbh", "ngl", "idk", "imo", "imho", "fyi", "btw", "bc", "cuz",
     "tho", "kinda", "prolly", "gonna", "wanna", "gotta", "yall", "lol",
@@ -60,6 +80,13 @@ TYPO_POOL = [
 def _sample_abbrevs(n: int = 3) -> str:
     """Return a comma-separated string of n random abbreviations."""
     return ", ".join(random.sample(ABBREV_POOL, k=min(n, len(ABBREV_POOL))))
+
+
+def _sample_starts(n: int = 6, rel_label: str = "") -> str:
+    """Return a newline list of n random example note starts (with [rel] filled in)."""
+    chosen = random.sample(START_POOL, k=min(n, len(START_POOL)))
+    filled = [s.replace("[rel]", rel_label) for s in chosen]
+    return "\n  ".join(f'"{s}..."' for s in filled)
 
 
 def _sample_typos(n: int = 3) -> str:
@@ -129,59 +156,57 @@ def build_generation_prompt(
     target_word_count: int,
     target_line_count: int,
     related_gender: str = "any",
+    banned_starts: list[str] | None = None,
+    language: str = "english",
 ) -> tuple[str, str]:
     """Build system + user prompts for Pass A note generation."""
     rel_label = _pick_gendered_label(relationship["labels"], related_gender)
     topic_label = random.choice(topic["labels"])
     quirk_instructions = _build_quirk_instructions(persona.get("voice_quirks", []))
+    example_starts = _sample_starts(6, rel_label)
 
-    title_instruction = ""
-    if has_title:
-        title_instruction = "Start with a 1-3 word title on line 1, then a blank line, then the body."
+    banned_line = ""
+    if banned_starts:
+        banned_line = f"- ABSOLUTELY DO NOT start with any of these overused words: {', '.join(banned_starts)}. Pick something completely different.\n"
+
+    if language == "hindi":
+        locale_rules = (
+            "- Use Indian English vocabulary and references — Indian services, places, and daily life.\n"
+            "- If you include a phone number, use Indian mobile format: 10 digits starting with 6, 7, 8, or 9 (e.g. 9876543210 or 98765 43210). Occasionally use +91 prefix but not always. Never use US area codes.\n"
+            "- If you mention a price, usually write just the number (e.g. '500', '1200') — only rarely use Rs. or ₹ symbol, like a real person casually jotting a note.\n"
+            "- References: autorickshaw, petrol, chai, colony, society, maidan, nagar, etc. are fine."
+        )
+    else:
+        locale_rules = (
+            "- STRICTLY EN_US vocabulary. No \"whilst\", \"colour\", \"cheers\", or \"mate\".\n"
+            "- If you include a phone number, NEVER use \"555\". Use a realistic 10-digit US number."
+        )
 
     system_prompt = f"""You write very short phone notes. Each note has {target_line_count} lines. Each line = one thought. Choppy, natural, like real phone notes.
-
-EXAMPLES:
-{title_instruction}
-
-{("pick up car" + chr(10) + chr(10)) if has_title else ""}gotta call the mechanic rn
-uncle bob said he already paid for it
-so making sure everything is good
-i need my car tomorrow
-
-need to remind mom
-shes supposed to call the insurance guy
-deal ends at midnight
-dont forget this is imp
-
-finance meeting with my boss
-he is asking for the Q3 numbers today
-i better finish the sheets rn
-this is actually stressful
 
 RULES:
 - {target_word_count} words total, {target_line_count} lines MAX.
 - One thought per line. Short fragments. NOT a story.
-- DO NOT talk about catching up after 5 years, meeting old friends, or nostalgia. Make the note an IMPORTANT task, reminder, or work-related thought that involves the relationship.
-- You MUST explicitly state the relationship. Example: 'my friend alex', 'uncle bob', 'mom', 'my boss'. DO NOT JUST SAY the name.
-- {related_name} is your {rel_label}. Mention them AND the relationship naturally in the note.
+- DO NOT talk about catching up after 5 years, meeting old friends, or nostalgia. Make the note an IMPORTANT task, reminder, or work-related thought.
+- REQUIRED: Use the RELATIONSHIP LABEL ("{rel_label}") naturally somewhere in the note. Not just the name — the actual label. e.g. "my {rel_label}", "ask {rel_label}", "with my {rel_label}", "{rel_label} said", etc.
+- Also mention the name {related_name} at least once.
+{banned_line}- VARY THE START. Pick one of these kinds of starts (rotate, never repeat the same opener twice):
+  {example_starts}
 - All lowercase. Drop apostrophes: dont, didnt, im, hes, shes, its, wasnt, wont
 - Use ... at end of some lines for trailing off
-- Use casual shortcuts naturally — pick from words like: {_sample_abbrevs(3)}
-- Extreme lazy abbreviations are encouraged: tmrw, 2moro, appt, est, wknd
-- 1-2 small typos OK — examples of the kind of natural misspellings: {_sample_typos(3)}
+- Use casual shortcuts naturally — pick from: {_sample_abbrevs(3)}
+- Extreme lazy abbreviations encouraged: tmrw, 2moro, appt, est, wknd, bc, rn, ngl, tbh
+- 1-2 small typos OK — e.g.: {_sample_typos(3)}
 - Avoid perfect punctuation. Rarely use commas (,). Never use slashes (/) or backslashes (\).
-- Sometimes drop periods at the end of lines, sometimes keep them. Do not be perfectly consistent.
+- Sometimes drop periods at end of lines, sometimes keep them. Never be perfectly consistent.
 - NO em dashes or semicolons.
-- Emotional and messy, not polished
-- If you include a phone number, NEVER use "555" patterns. Use a realistic 10-digit number. Mix it up with hyphens, dots, or spaces.
-- If you include a dollar amount, frequently omit the $ sign or use words like 'bucks' or 'dollars'.
-- If you include an email address, make it look realistic.
+- Mix in emotion: worried, excited, frustrated, confused, relieved, annoyed, happy, or neutral.
+{locale_rules}
 {quirk_instructions}
 
 Output ONLY the note lines."""
 
-    user_prompt = f"""{persona['age']}yo {persona['gender']}, {persona['occupation']} from {persona['state']}. Topic: {topic_label}. {related_name} is your {rel_label}. Mood: {mood}. Include one concrete detail."""
+    user_prompt = f"""{persona['age']}yo {persona['gender']}, {persona['occupation']} from {persona['state']}. Topic: {topic_label}. {related_name} is your {rel_label}. Mood: {mood}. Include one concrete detail and use the word "{rel_label}" in the note."""
 
     return system_prompt, user_prompt
 
@@ -215,12 +240,16 @@ def _build_quirk_instructions(quirks: list[str]) -> str:
 async def generate_note(llm_clients, persona: dict, relationship: dict,
                         topic: dict, mood: str, related_name: str,
                         has_title: bool, style: dict,
-                        related_gender: str = "any") -> str:
+                        related_gender: str = "any",
+                        banned_starts: list[str] | None = None,
+                        language: str = "english") -> str:
     """Generate a note using Pass A (primary LLM)."""
     system_prompt, user_prompt = build_generation_prompt(
         persona, relationship, topic, mood, related_name,
         has_title, style["word_count"], style["line_count"],
         related_gender=related_gender,
+        banned_starts=banned_starts,
+        language=language,
     )
 
     note = await llm_clients.generate(

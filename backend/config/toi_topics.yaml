@@ -1,0 +1,389 @@
+# Topics of Interest config for US English TOI notes
+# Seeds for LLM prompts — person writing notes WHILE listening to expert/session
+# NOT article text — personal note-taking style with reactions + approximate numbers
+
+toi_categories:
+  - id: technology_ai
+    topic_names:
+      - attention mechanism analysis
+      - transformer architecture notes
+      - GPU memory optimization
+      - vector database indexing
+      - LoRA fine-tuning
+      - RAG pipeline setup
+      - RLHF training notes
+      - diffusion model sampling
+      - inference latency analysis
+      - tokenizer behavior
+      - CUDA kernel profiling
+      - speculative decoding
+      - KV cache management
+      - quantization study
+      - mixture of experts routing
+      - context length scaling
+      - embedding model comparison
+      - LLM eval benchmarks
+      - multimodal model notes
+      - fine-tuning data quality
+    weight: 9
+
+  - id: automotive_ev
+    topic_names:
+      - SiC inverter efficiency
+      - regen braking systems
+      - 800V charging architecture
+      - battery thermal management
+      - aero drag coefficient study
+      - NVH analysis
+      - BMS cell balancing
+      - ADAS sensor fusion
+      - EV range cold weather
+      - liquid-cooled cable specs
+      - solid state battery notes
+      - lidar vs camera debate
+      - OTA update architecture
+      - V2G bidirectional charging
+      - torque vectoring notes
+    weight: 7
+
+  - id: music_production
+    topic_names:
+      - sidechain compression techniques
+      - mixing bus processing
+      - stem mastering workflow
+      - parallel compression
+      - mid-side EQ
+      - reverb tail analysis
+      - LUFS metering
+      - vocal chain setup
+      - sound design fundamentals
+      - gain staging notes
+      - low end mud cleanup
+      - sample rate comparison
+      - analog tape saturation
+      - drum bus processing
+      - spatial audio mixing
+      - vinyl emulation plugins
+      - live room acoustics
+      - stem separation tools
+    weight: 7
+
+  - id: food_science
+    topic_names:
+      - enzymology n fermentation
+      - baking temperature experiments
+      - koji fermentation
+      - sourdough hydration study
+      - maillard reaction notes
+      - sous vide precision
+      - dry aging process
+      - fermentation pH tracking
+      - bread starter notes
+      - fat percentage crumb structure
+      - emulsification chemistry
+      - sugar crystallization
+      - gluten network formation
+      - cheese aging biochemistry
+      - salt curing ratios
+    weight: 6
+
+  - id: weather_atmospheric
+    topic_names:
+      - atmospheric physics
+      - dual pol radar analysis
+      - CAPE n convective parameters
+      - El Nino pattern study
+      - hybrid AI forecast models
+      - storm relative helicity
+      - skew-T log-P analysis
+      - mesoscale convection notes
+      - LCL heights tornadogenesis
+      - HRRR model analysis
+      - inversion layer study
+      - dew point tracking
+      - cold front structure
+      - supercell morphology
+    weight: 6
+
+  - id: engineering_materials
+    topic_names:
+      - polymer glass transition
+      - carbon fiber layup angles
+      - SiC MOSFET switching
+      - tensile strength testing
+      - bridge fatigue analysis
+      - thin film deposition
+      - sintering process notes
+      - shot peening effects
+      - ellipsometry measurements
+      - thermal conductivity composite
+      - fracture mechanics analysis
+      - corrosion resistance testing
+      - 3D printing layer adhesion
+      - ceramic matrix composites
+    weight: 6
+
+  - id: sports_coaching
+    topic_names:
+      - wrestling weight cut log
+      - sprint biomechanics
+      - VO2 max protocol
+      - anaerobic threshold testing
+      - periodization planning
+      - serve mechanics analysis
+      - free throw form breakdown
+      - pass completion under pressure
+      - 40-yard dash timing
+      - recovery time between sets
+      - lactate threshold testing
+      - hip mobility drills
+      - throwing velocity analysis
+      - swim stroke efficiency
+      - jump mechanics study
+    weight: 5
+
+  - id: outdoor_adventure
+    topic_names:
+      - mountaineering physics
+      - kayaking route planning
+      - dynamic vs static rope
+      - pack weight distribution
+      - GNSS accuracy in canyons
+      - water treatment parameters
+      - route grading analysis
+      - fall factor calculation
+      - river flow CFS notes
+      - high altitude acclimatization
+      - anchor building techniques
+      - navigation dead reckoning
+      - layering system for cold
+      - tidal pattern study
+    weight: 5
+
+  - id: game_dev
+    topic_names:
+      - UE5.5 motion matching
+      - world partition setup
+      - control rig IK
+      - procedural animation notes
+      - shader optimization
+      - Lumen GI performance
+      - Nanite mesh budget
+      - animation state machine refactor
+      - physics-based character movement
+      - replication n netcode
+      - GPU particle systems
+      - asset streaming budget
+      - procedural level gen
+      - AI behavior trees
+      - input prediction lag
+      - anti-cheat implementation
+    weight: 7
+
+  - id: finance_markets
+    topic_names:
+      - options greeks analysis
+      - RSI divergence patterns
+      - earnings call notes
+      - sector rotation study
+      - bond yield curve analysis
+      - dark pool activity
+      - momentum factor study
+      - macro indicator review
+      - volatility surface analysis
+      - short interest tracking
+      - put-call ratio analysis
+      - Fed minutes interpretation
+      - CPI impact on equities
+      - pairs trading setup
+      - correlation breakdown study
+    weight: 6
+
+  - id: health_fitness
+    topic_names:
+      - body composition tracking
+      - stretching hip flexors
+      - hydration tracking
+      - heart rate zone training
+      - sleep quality analysis
+      - VO2 testing notes
+      - nutrition periodization
+      - injury prevention protocol
+      - blood pressure monitoring
+      - protein intake tracking
+      - cortisol cycle analysis
+      - zone 2 training notes
+      - cold exposure benefits
+      - grip strength testing
+      - basal metabolic rate calc
+    weight: 5
+
+  - id: science_academic
+    topic_names:
+      - chi-square test analysis
+      - gradient norm exploding
+      - BLEU score evaluation
+      - p-value interpretation
+      - regression diagnostics
+      - statistical power calculation
+      - replication crisis notes
+      - publication bias study
+      - sample size estimation
+      - Bayesian vs frequentist
+      - ANOVA interpretation
+      - effect size analysis
+      - meta-analysis methodology
+    weight: 5
+
+  - id: policy_government
+    topic_names:
+      - infrastructure bill review
+      - property tax rate analysis
+      - zoning law changes
+      - budget line items
+      - early voting logistics
+      - cosponsors n committee status
+      - approval rating trends
+      - federal spending breakdown
+      - local ballot measure notes
+      - housing policy analysis
+      - energy subsidy review
+      - healthcare cost breakdown
+      - trade tariff impact
+    weight: 4
+
+  - id: aviation
+    topic_names:
+      - piper cub modifications
+      - airspace class analysis
+      - engine tech n latency
+      - avionics upgrade notes
+      - weight n balance calc
+      - IFR approach procedure
+      - fuel burn optimization
+      - turbulence encounter notes
+      - crosswind landing technique
+      - ADS-B out compliance
+      - VFR flight planning
+      - instrument approach plates
+    weight: 4
+
+  - id: photography_video
+    topic_names:
+      - sensor dynamic range study
+      - lens aberration analysis
+      - raw vs log workflow
+      - color grading LUT study
+      - lighting ratio notes
+      - anamorphic lens behavior
+      - autofocus tracking modes
+      - ND filter stops calc
+      - drone gimbal calibration
+      - high speed shutter study
+      - flash sync speed limit
+      - focus stacking technique
+      - noise floor analysis
+    weight: 5
+
+  - id: hometech_diy
+    topic_names:
+      - solar panel wiring setup
+      - home automation protocol
+      - HVAC efficiency notes
+      - tankless water heater install
+      - subpanel wiring notes
+      - smart switch neutral wire
+      - irrigation controller setup
+      - whole-house audio wiring
+      - EV charger level 2 install
+      - insulation R-value calc
+      - crawlspace encapsulation
+      - deck ledger attachment
+    weight: 4
+
+  - id: cybersecurity
+    topic_names:
+      - zero trust architecture
+      - PKI certificate chain
+      - SQL injection patterns
+      - SIEM alert tuning
+      - phishing detection models
+      - endpoint detection notes
+      - OAuth flow analysis
+      - penetration test methodology
+      - threat intel feed setup
+      - container escape vectors
+      - network segmentation notes
+      - red team exercise notes
+    weight: 5
+
+  - id: real_estate_investing
+    topic_names:
+      - cap rate vs cash on cash
+      - DSCR loan notes
+      - short term rental analysis
+      - 1031 exchange mechanics
+      - property tax appeal process
+      - multifamily underwriting
+      - rent growth assumptions
+      - vacancy rate study
+      - house hacking strategy
+      - syndication waterfall notes
+    weight: 4
+
+# Personal reaction phrases — inject at least one per note
+reaction_phrases:
+  - is this normal??
+  - confused on this part
+  - need verify
+  - iirc
+  - dont quote me but
+  - might b wrong
+  - need recheck
+  - hmm
+  - from the session today
+  - wait no
+  - actually
+  - check this
+  - TODO look into this more
+  - hard to tell
+  - not sure tho
+  - need double check
+  - pretty sure abt this
+  - might be off here
+  - gotta look this up
+  - ok actually
+  - weird tho
+  - makes sense now
+  - need to test this
+  - still not clear on this
+  - asked the speaker abt this
+  - they mentioned it quickly
+  - didnt catch the exact number
+  - from the Q&A
+  - the demo showed this
+  - someone in audience asked same thing
+  - revisit this
+
+# Casual filler phrases that feel like real notes mid-sentence
+filler_phrases:
+  - speaking of whch
+  - also
+  - oh n
+  - and then
+  - which reminds me
+  - btw
+  - note to self
+  - compare with
+  - similar to last time
+  - might b why
+  - then again
+  - on top of that
+  - oh wait
+  - forgot to mention
+  - related to this
+  - side note
+  - kinda like
+  - goes along with
+  - from earlier today
+  - from last week's talk

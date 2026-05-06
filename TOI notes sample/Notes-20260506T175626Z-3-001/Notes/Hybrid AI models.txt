@@ -1,0 +1,4 @@
+Hybrid AI models
+Noaa project eagle is operational now with hybrid ai systems.... merging graphcast neuralnets with traditional global data assimilation system physics. 6day forecast now accurate as 5day used to be.... massive jump in hurricane track prediction speed.
+Also ecmwf maintainin 1 day lead on accuracy but only updates 2x daily whereas gfsv16 runs 4x. check out Artificial intelligence forecasting system performance during recent atmospheric river events.... 
+AI handles patterns better but still misses extremes sometimes so need verify with physicsbased hrrr for shortterm convective outlooks. srh values r still best calculated through traditional nwp grid.

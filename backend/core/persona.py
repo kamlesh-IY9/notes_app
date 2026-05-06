@@ -1,4 +1,4 @@
-"""Persona sampling engine — generates unique US personas for note generation."""
+"""Persona sampling engine — generates unique personas for note generation."""
 
 import random
 import re
@@ -12,24 +12,46 @@ import gender_guesser.detector as gender_detector
 log = logging.getLogger(__name__)
 CONFIG_DIR = Path(__file__).parent.parent / "config"
 
+# Probability of adding a surname to an Indian name (keeps it realistic)
+_INDIA_SURNAME_PROB = 0.25
+
 
 class PersonaSampler:
     """Samples unique personas from configured pools."""
 
-    def __init__(self):
+    def __init__(self, language: str = "english"):
+        self._language = language
         self._load_configs()
         self._gender_detector = gender_detector.Detector()
         self._used_names: set[str] = set()
         self._used_personas: list[dict] = []
 
+    def switch_language(self, language: str):
+        """Reload configs for a different language. Called at job start."""
+        if language != self._language:
+            self._language = language
+            self._load_configs()
+            log.info("PersonaSampler switched to language: %s", language)
+
     def _load_configs(self):
-        with open(CONFIG_DIR / "personas.yaml") as f:
+        if self._language == "hindi":
+            personas_file = "india_personas.yaml"
+            names_file = "india_names.yaml"
+            rel_file = "india_relationships.yaml"
+            topics_file = "india_topics.yaml"
+        else:
+            personas_file = "personas.yaml"
+            names_file = "name_pools.yaml"
+            rel_file = "relationships.yaml"
+            topics_file = "topics.yaml"
+
+        with open(CONFIG_DIR / personas_file) as f:
             self.persona_cfg = yaml.safe_load(f)
-        with open(CONFIG_DIR / "name_pools.yaml") as f:
+        with open(CONFIG_DIR / names_file) as f:
             self.name_pools = yaml.safe_load(f)
-        with open(CONFIG_DIR / "relationships.yaml") as f:
+        with open(CONFIG_DIR / rel_file) as f:
             self.rel_cfg = yaml.safe_load(f)
-        with open(CONFIG_DIR / "topics.yaml") as f:
+        with open(CONFIG_DIR / topics_file) as f:
             self.topic_cfg = yaml.safe_load(f)
 
         # Parse states list (YAML inline format)
@@ -98,9 +120,16 @@ class PersonaSampler:
         else:
             quirks = []
 
+        # For India: optionally append a surname (~25% of the time)
+        if self._language == "hindi" and random.random() < _INDIA_SURNAME_PROB:
+            surname = self._pick_surname(ethnicity)
+            full_name = f"{first_name} {surname}" if surname else first_name
+        else:
+            full_name = first_name
+
         return {
             "first_name": first_name,
-            "full_name": first_name,  # For notes, we often just use first name
+            "full_name": full_name,
             "age": age,
             "age_bracket": bracket["label"],
             "gender": gender,
@@ -148,6 +177,21 @@ class PersonaSampler:
         available = [n for n in names if n not in self._used_names]
         if available:
             return random.choice(available)
+        return random.choice(names)
+
+    def _pick_surname(self, ethnicity: str) -> str:
+        """Pick a regional surname for Indian personas (called ~25% of the time)."""
+        surname_pools = self.name_pools.get("surnames", {})
+        pool_data = surname_pools.get(ethnicity, [])
+        if not pool_data:
+            # Fallback to north_indian surnames
+            pool_data = surname_pools.get("north_indian", [])
+        names = []
+        for item in pool_data:
+            if isinstance(item, str):
+                names.extend([n.strip() for n in item.split(" - ") if n.strip()])
+        if not names:
+            return ""
         return random.choice(names)
 
     def verify_name_gender(self, name: str, expected_gender: str) -> bool:
@@ -225,3 +269,4 @@ class PersonaSampler:
         """Reset used names for a new batch."""
         self._used_names.clear()
         self._used_personas.clear()
+        log.debug("PersonaSampler reset (language=%s)", self._language)
