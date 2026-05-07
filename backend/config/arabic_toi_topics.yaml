@@ -1,0 +1,336 @@
+# Topics of Interest config for Arabic TOI notes — EXPANDED
+# 12 categories, 180+ topic names total
+# All technical content must be Arab/Gulf-world context
+
+toi_categories:
+  - id: technology_ai
+    topic_names:
+      - transformer architecture study
+      - GPU memory optimization
+      - attention mechanism analysis
+      - LLM fine-tuning notes
+      - RAG pipeline setup
+      - vector DB indexing
+      - model serving latency
+      - CUDA kernel profiling
+      - quantization techniques
+      - speculative decoding
+      - context length scaling
+      - embedding model comparison
+      - multimodal AI notes
+      - prompt engineering patterns
+      - open source LLM comparison
+      - Arabic NLP model notes
+      - Arabic speech recognition
+      - AI governance notes
+      - AI hallucination analysis
+      - edge inference on mobile
+      - vision transformer study
+      - diffusion model notes
+      - RLHF training notes
+      - model distillation study
+    weight: 9
+
+  - id: gulf_finance
+    topic_names:
+      - Tadawul technical analysis
+      - Aramco share price notes
+      - DFM index tracking
+      - sukuk yield analysis
+      - Islamic finance principles
+      - REITs in Saudi Arabia
+      - gold price per gram tracking
+      - dirham to dollar peg analysis
+      - ADNOC IPO notes
+      - Vision 2030 investment themes
+      - Gulf sovereign wealth funds
+      - Saudi Aramco dividend study
+      - GCC stock correlation
+      - ETF tracking error Gulf
+      - ADX trading notes
+      - crypto regulation UAE
+      - halal investment screening
+      - KSA REIT returns study
+      - offshore banking notes
+      - SAMA monetary policy
+      - UAE central bank digital currency
+      - fintech regulation ADGM
+      - Islamic bond structure
+      - profit rate vs interest rate
+      - Murabaha vs Ijara financing
+      - venture capital Gulf ecosystem
+    weight: 9
+
+  - id: engineering_construction
+    topic_names:
+      - NEOM construction notes
+      - Expo 2025 infrastructure
+      - foundation depth for sandy soil
+      - HVAC efficiency Gulf climate
+      - solar panel output in UAE heat
+      - concrete mix for high temperature
+      - structural load in high wind
+      - BIM modeling notes
+      - desalination plant efficiency
+      - smart city infrastructure
+      - underground cable routing
+      - EV charging station design
+      - district cooling system
+      - airport terminal design
+      - road junction optimization
+      - green building LEED notes
+      - offshore platform engineering
+      - pipeline corrosion study
+      - LNG terminal design
+      - metro rail expansion notes
+      - hyperloop feasibility Gulf
+      - seawater desalination RO
+    weight: 7
+
+  - id: arabic_sports
+    topic_names:
+      - Saudi Pro League analysis
+      - Al Hilal vs Al Nassr tactics
+      - Al Ahly formation study
+      - UAE football league notes
+      - F1 Abu Dhabi circuit analysis
+      - camel racing data notes
+      - falconry training notes
+      - Gulf athletics performance
+      - basketball UAE development
+      - cricket expat league Dubai
+      - padel court technique
+      - squash training notes
+      - horse racing Meydan
+      - swimming open water Gulf
+      - tennis indoor vs outdoor heat
+      - Al Ain FC tactical analysis
+      - Shabab Al Ahli attack pattern
+      - Ittihad vs Hilal rivalry
+      - Dubai Rugby 7s notes
+      - World Cup 2034 Saudi prep
+      - track and field heat training
+      - beach volleyball UAE circuit
+    weight: 8
+
+  - id: arabic_food_science
+    topic_names:
+      - date fermentation chemistry
+      - camel milk protein analysis
+      - labneh culture bacteria
+      - hummus texture optimization
+      - Arabic bread baking notes
+      - rose water distillation
+      - saffron extraction method
+      - halal food certification
+      - meat aging in dry climate
+      - cardamom gahwa brewing
+      - kunafa cheese stretch
+      - mandi rice steam cooking
+      - luqaimat batter ratio
+      - vegan Arabic cuisine
+      - desert truffle preservation
+      - harees wheat fermentation
+      - ghee clarification Gulf
+      - dried lime infusion chemistry
+      - Arabic ice cream stabilizers
+      - pomegranate molasses reduction
+    weight: 5
+
+  - id: health_fitness_arab
+    topic_names:
+      - heat exhaustion prevention notes
+      - Ramadan fasting metabolism study
+      - keto diet in Gulf climate
+      - dehydration tracking summer
+      - vitamin D deficiency Gulf
+      - air quality impact on lungs
+      - running at night in Dubai
+      - indoor cycling efficiency
+      - CrossFit heat acclimatization
+      - intermittent fasting research
+      - sleep quality in hot climate
+      - sand running biomechanics
+      - strength training notes
+      - body composition tracking
+      - physiotherapy session notes
+      - wet bulb temperature safety
+      - outdoor exercise after 7pm study
+      - heat-adapted aerobic capacity
+      - altitude training vs heat training
+      - cold water immersion recovery
+    weight: 6
+
+  - id: islamic_studies
+    topic_names:
+      - tajweed rules study
+      - Quran memorization technique
+      - fiqh notes on contemporary issues
+      - hadith classification study
+      - Sharia finance principles
+      - zakat calculation methodology
+      - Islamic calendar astronomy
+      - Arabic grammar balagha
+      - Islamic history timeline
+      - Seerah study notes
+      - fatwa research notes
+      - Islamic philosophy notes
+      - qibla direction calculation
+      - waqf endowment system
+      - tafsir methodology notes
+      - isnad chain verification
+      - differences between madhabs
+      - Islamic jurisprudence notes
+      - Muslim family law notes
+    weight: 7
+
+  - id: arabic_entertainment
+    topic_names:
+      - Arabic drama series analysis
+      - MBC production quality notes
+      - OSN streaming content
+      - Shahid platform algorithm
+      - Arab cinema festival notes
+      - Arabic music production
+      - oud tuning notes
+      - Arabian pop production
+      - Arabic podcast production
+      - social media Arabic content
+      - YouTube Arabic creator notes
+      - TikTok algorithm Arabic
+      - Ramadan TV series production
+      - Egyptian cinema techniques
+      - Lebanese music production
+      - khaleeji music arrangement
+      - tarab music theory
+      - Arabic comedy timing
+      - Gulf reality TV formats
+      - Arabic dubbing quality
+    weight: 5
+
+  - id: policy_gulf
+    topic_names:
+      - Vision 2030 progress notes
+      - Emiratization policy review
+      - NEOM project status notes
+      - oil production quota OPEC
+      - UAE foreign investment law
+      - KSA labor reform notes
+      - Gulf Union trade notes
+      - Expo 2025 Riyadh notes
+      - GCC VAT harmonization
+      - digital government UAE
+      - smart city regulations
+      - green hydrogen Gulf
+      - ADGM free zone notes
+      - DIFC financial regulations
+      - e-commerce regulations Gulf
+      - UAE golden visa expansion
+      - Saudi Aramco privatization
+      - sovereign wealth fund strategy
+      - Gulf food security study
+      - nuclear energy UAE Barakah
+    weight: 5
+
+  - id: real_estate_gulf
+    topic_names:
+      - Dubai off-plan market analysis
+      - freehold vs leasehold zones
+      - rental yield calculation Dubai
+      - Abu Dhabi property title deed
+      - RERA Dubai compliance notes
+      - DLD transaction fee study
+      - service charge benchmarks
+      - mortgage eligibility UAE
+      - Riyadh residential market
+      - short-term rental Airbnb Dubai
+      - Expo legacy area property
+      - handover delay legal notes
+      - Golden Visa property threshold
+      - Palm Jumeirah price trends
+      - studio vs 1BR ROI analysis
+      - off-plan payment plan comparison
+      - developer reputation analysis
+      - snagging list process
+      - property management fees
+      - Ejari registration process
+    weight: 6
+
+  - id: automotive_gulf
+    topic_names:
+      - EV range in Gulf heat
+      - Tesla in hot climate notes
+      - car AC efficiency notes
+      - SUV vs sedan for desert
+      - RTA vehicle registration
+      - electric bus range study
+      - Lucid Air heat performance
+      - fuel efficiency in traffic
+      - tyre pressure in heat
+      - 4x4 off-road suspension
+      - car insurance comparison
+      - hybrid vehicle notes
+      - autonomous vehicle testing Dubai
+      - Toyota Land Cruiser desert setup
+      - Nissan Patrol suspension mods
+      - EV charging time comparison
+      - range anxiety Gulf roads
+      - motorbike delivery fleet
+    weight: 5
+
+  - id: weather_climate
+    topic_names:
+      - UAE shamal wind analysis
+      - sandstorm forecasting
+      - wet bulb temperature study
+      - monsoon in Oman Khareef
+      - heat dome effect Gulf
+      - cloud seeding experiment UAE
+      - solar irradiance measurement
+      - humidity index health impact
+      - Riyadh fog formation
+      - Dubai flooding analysis 2024
+      - Lebanon snow season
+      - Morocco Atlas climate
+      - Red Sea coral bleaching
+      - Mediterranean storm track
+      - haboob dust storm prediction
+      - desert heat island effect
+      - fog desalination harvesting
+      - summer temperature record Gulf
+    weight: 4
+
+# Reaction phrases for Arabic TOI notes
+reaction_phrases:
+  - is this right??
+  - confused on this part
+  - need verify
+  - iirc
+  - dont quote me but
+  - might b wrong
+  - need recheck
+  - hmm
+  - from the session today
+  - wait no
+  - actually
+  - check this
+  - TODO look into this more
+  - hard to tell
+  - not sure tho
+  - need double check
+  - gotta look this up
+  - ok actually
+  - weird tho
+  - makes sense now
+  - need to test this
+  - still not clear
+  - from the Q&A
+  - asked the speaker abt this
+  - didnt catch the exact number
+  - the demo showed this
+  - someone in audience asked same
+  - revisit this
+  - yalla need to verify
+  - inshallah this is right
+  - not sure wallah
+  - need to ask someone abt this

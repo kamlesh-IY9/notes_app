@@ -1,0 +1,135 @@
+# Arabic name pools organized by gender and ethnicity bucket
+# Used by PersonaSampler when language == "arabic"
+# Structure mirrors india_names.yaml (gender -> ethnicity -> " - " separated list)
+# Surnames stored separately; persona.py adds them ~25% of the time.
+
+female:
+  gulf_arab:
+    - Fatima - Aisha - Mariam - Noura - Hessa - Shaikha - Latifa - Maitha
+    - Moza - Hind - Reem - Wadha - Mouza - Aysha - Asma - Afra
+    - Hamda - Khadija - Sheikha - Amna - Khulood - Maryam - Nayla - Wafa
+    - Badria - Hajer - Rahma - Shamsa - Thuraya - Umm Khalid - Ghada - Dalal
+    - Sana - Rania - Haya - Nadia - Najla - Samar - Hala - Lulua
+    - Manar - Maha - Zahrah - Rawdha - Roudha - Munira - Bushra - Arwa
+    - Sharifa - Khawla - Eman - Abeer - Wedad - Sawsan - Jumana - Lina
+    - Noor - Rand - Dima - Rana - Alia - Nada - Suha - Roaa
+
+  levantine:
+    - Lara - Nadia - Maya - Rima - Dana - Sana - Hala - Rania
+    - Dalia - Farah - Yasmine - Zeina - Jana - Sara - Carla - Nour
+    - Lynn - Pamela - Rita - Mirna - Tanya - Dima - Hiba - Nadine
+    - Rana - Samar - Roua - Roula - Christelle - Joanna - Jessica - Leila
+    - Myriam - Celine - Joelle - Marianne - Nathalie - Sandra - Stephanie - Wissam
+    - Amira - Dania - Ghada - Hana - Iman - Layla - Mira - Ruba
+    - Suha - Tala - Zaina - Amal - Asmaa - Bana - Doa - Hanaa
+    - Lujain - Manar - Nadia - Rasha - Rim - Rozan - Salam - Sama
+
+  egyptian:
+    - Dina - Hala - Iman - Nour - Rania - Samar - Heba - Aya
+    - Radwa - Doaa - Shimaa - Amira - Reham - Shereen - Yasmine - Mona
+    - Abeer - Asmaa - Basma - Eman - Hadeer - Lamia - Manar - Marwa
+    - Nawal - Noha - Rasha - Rehab - Reem - Riham - Sana - Sara
+    - Shaimaa - Sherin - Suzan - Wafaa - Zainab - Amani - Amel - Arwa
+    - Dalia - Engy - Fatma - Ghada - Hana - Hayam - Hend - Hind
+    - Israa - Lobna - Mai - Manal - Menna - Mervat - Mira - Mona
+    - Nahla - Nesma - Neveen - Nihal - Nora - Nourhan - Ola - Omnia
+
+  north_african:
+    - Amira - Hafsa - Khadija - Leila - Nadia - Yasmine - Houda - Meriem
+    - Asma - Khaoula - Wafa - Zineb - Hanane - Fatma - Nabila - Samira
+    - Amel - Anissa - Chaima - Dalila - Fadhila - Ghalia - Hadjer - Ikram
+    - Imene - Kahina - Karima - Lilia - Lynda - Malak - Merwa - Naouel
+    - Narimen - Nassima - Nihal - Oumaima - Rima - Roumaissa - Sabrina - Salma
+    - Sarah - Selma - Sihem - Sonia - Souad - Widad - Yousra - Zina
+    - Aicha - Bouchra - Chadia - Djamila - Fatiha - Fouzia - Ghizlane - Halima
+    - Hayat - Hind - Ilham - Jamila - Loubna - Louna - Maha - Maryem
+
+  south_asian_expat:
+    - Priya - Neha - Divya - Pooja - Anjali - Anita - Deepa - Kavita
+    - Sunita - Meena - Ritu - Sonal - Hema - Anita - Nisha - Swati
+    - Fatima - Ayesha - Amina - Zainab - Sana - Hina - Aisha - Nadia
+
+male:
+  gulf_arab:
+    - Mohammed - Ahmed - Abdullah - Khalid - Sultan - Fahad - Saeed - Hamad
+    - Rashid - Mansour - Zayed - Faisal - Turki - Nasser - Majid - Tariq
+    - Hassan - Hussein - Ali - Omar - Ibrahim - Yusuf - Waleed - Khaled
+    - Saif - Bader - Jassim - Yasser - Saud - Bandar - Nawaf - Mutlaq
+    - Saleh - Abdulrahman - Abdulaziz - Abdulkarim - Obaid - Musab - Hamdan
+    - Maktoum - Nahyan - Butti - Hareb - Theyab - Khalifa - Salem - Ghanim
+    - Saqer - Falah - Mubarak - Rashed - Marwan - Adnan - Akram - Wael
+    - Amr - Essam - Hani - Ihab - Karim - Loai - Maged - Osama
+
+  levantine:
+    - Omar - Ziad - Karim - Rami - Tarek - Samer - Wael - Hani
+    - Firas - Mazen - Imad - Bassel - Mohamad - Ahmad - Khaled - Nabil
+    - Samir - Elias - Ghassan - Jad - Laith - Marwan - Nadim - Riad
+    - Salam - Shadi - Toufic - Walid - Youssef - Zahi - Amir - Anas
+    - Bilal - Charbel - Dany - Eddy - Fadi - Georges - Habib - Jawad
+    - Kamal - Latif - Maher - Nizar - Paul - Pierre - Rafik - Ramzi
+    - Soheil - Tony - Victor - Wassim - Yasser - Zaki - Adel - Adib
+    - Alaa - Badr - Bassam - Emad - Eyad - Fares - Ghassan - Hasan
+
+  egyptian:
+    - Hossam - Amr - Sherif - Tamer - Wael - Adel - Ahmed - Mohamed
+    - Khaled - Mahmoud - Omar - Hani - Karim - Rami - Samir - Tarek
+    - Ayman - Essam - Hazem - Ibrahim - Islam - Kareem - Maher - Marwan
+    - Mostafa - Nader - Nasser - Raouf - Sameh - Samy - Sherif - Walid
+    - Yasser - Youssef - Zakariya - Abdallah - Abdelrahman - Adham - Akram
+    - Alaa - Amgad - Ashraf - Atef - Badr - Bassem - Emad - Eyad
+    - Fathy - Gamal - Gasser - Hamdy - Hesham - Hossein - Ihab - Imad
+    - Kamal - Mamdouh - Medhat - Mena - Mina - Mirna - Mohsen - Mokhtar
+
+  north_african:
+    - Youssef - Mehdi - Amine - Karim - Hamza - Bilal - Adam - Oussama
+    - Zakaria - Samir - Nabil - Abdelkader - Abdelhak - Abderrahim - Abdessamad
+    - Adil - Anis - Ayoub - Brahim - Chakib - Fouad - Hicham - Houssam
+    - Imad - Issam - Jawad - Khalil - Lotfi - Maher - Marouane - Mourad
+    - Moussa - Mustapha - Naceur - Nadir - Noureddine - Oussama - Rachid - Reda
+    - Riad - Sami - Samy - Sofiane - Soufiane - Tahar - Walid - Wissam
+    - Yacine - Younes - Zinedine - Zouhir - Abdellatif - Abdennour - Abdesslam
+    - Abdou - Aboubakr - Achraf - Adnane - Anas - Asim - Assil - Aya
+
+  south_asian_expat:
+    - Raj - Ravi - Suresh - Ramesh - Deepak - Vijay - Anil - Sunil
+    - Mohan - Sanjay - Amit - Rahul - Nikhil - Rohit - Vikas - Naveen
+    - Mohammad - Imran - Bilal - Zubair - Farhan - Amir - Asim - Tariq
+
+nonbinary:
+  all:
+    - Alex - Sam - Jordan - Casey - Morgan - Remy - Sasha - Kim
+    - Dana - Nour - Rima - Laith - Wael - Salam - Amal - Hana
+
+# Surname pools by ethnicity — added ~25% of the time
+surnames:
+  gulf_arab:
+    - Al-Rashidi - Al-Mansouri - Al-Qahtani - Al-Otaibi - Al-Ghamdi - Al-Harbi
+    - Al-Zahrani - Al-Shehri - Al-Dosari - Al-Nuaimi - Al-Marri - Al-Sulaiti
+    - Al-Kuwari - Al-Kaabi - Al-Shamsi - Al-Mazrouei - Al-Ketbi - Al-Muhairi
+    - Al-Falasi - Al-Hamdan - Al-Qubaisi - Al-Mansoori - Al-Neyadi - Al-Suwaidi
+    - Bin Laden - Bin Ali - Bin Mohammed - Al-Maktoum - Al-Nahyan - Al-Thani
+    - Al-Sabah - Al-Khalifa - Al-Said - Al-Hashimi - Al-Habsi - Al-Bulushi
+
+  levantine:
+    - Khoury - Haddad - Nassar - Azar - Abboud - Saleh - Ibrahim - Hassan
+    - Khalil - Daoud - Makhoul - Awad - Barakat - Chamoun - Frem - Gemayel
+    - Hakim - Jreij - Karam - Lahoud - Moawad - Murr - Raad - Salam
+    - Sarkis - Skaf - Trad - Ziadeh - Assaf - Bitar - Bou Saab - Choucair
+    - Daccache - Doueihi - Edde - Estephan - Fakhri - Feghali - Habib - Hajj
+
+  egyptian:
+    - Hassan - Hussein - Ahmed - Mohammed - Ibrahim - Ali - Omar - Salem
+    - Mansour - Kamel - Fouad - Amer - Sherif - Elmasry - Elbaz - Elgohary
+    - Elshazly - Elshikh - Elsisi - Fouad - Gaber - Gamal - Gohar - Hamdi
+    - Helmy - Kamal - Khalil - Lotfi - Makram - Marei - Nasser - Ragab
+    - Ragheb - Ramadan - Rashwan - Refaat - Saad - Sabry - Sadek - Safwat
+
+  north_african:
+    - Benali - Bensalem - Bouhajeb - Bouslama - Chaabouni - Chebbi - Elloumi - Farhat
+    - Ghribi - Hamza - Jebali - Kachoukh - Kahloun - Mansouri - Mabrouk - Meddeb
+    - Mehiri - Messaoudi - Mnif - Mosbah - Nefzi - Ouali - Rabhi - Rezgui
+    - Saadaoui - Sassi - Sfar - Sfaxi - Skhiri - Slama - Tlili - Toumi
+    - Trabelsi - Turki - Zaafouri - Zayani - Zghidi - Ammar - Aouini - Arfaoui
+
+  south_asian_expat:
+    - Sharma - Patel - Khan - Singh - Mehta - Siddiqui - Ansari - Ahmed

@@ -31,15 +31,21 @@ CONFIG_DIR = Path(__file__).parent.parent / "config"
 # Lazy-loaded config
 _us_config: dict | None = None
 _india_config: dict | None = None
+_arabic_config: dict | None = None
 
 
 def _load_config(language: str) -> dict:
-    global _us_config, _india_config
+    global _us_config, _india_config, _arabic_config
     if language == "hindi":
         if _india_config is None:
             with open(CONFIG_DIR / "india_event_topics.yaml") as f:
                 _india_config = yaml.safe_load(f)
         return _india_config
+    elif language == "arabic":
+        if _arabic_config is None:
+            with open(CONFIG_DIR / "arabic_event_topics.yaml") as f:
+                _arabic_config = yaml.safe_load(f)
+        return _arabic_config
     else:
         if _us_config is None:
             with open(CONFIG_DIR / "event_topics.yaml") as f:
@@ -134,6 +140,32 @@ def _sample_location(config: dict, event_type_id: str, language: str) -> str:
         if random.random() < 0.6:
             return f"{city} at {venue}"
         return city
+    elif language == "arabic":
+        arab_cities = config["arab_cities"]
+        # Pick region: 70% Gulf, 20% Levant/Egypt, 10% North Africa
+        region_roll = random.random()
+        if region_roll < 0.70:
+            city = random.choice(arab_cities.get("gulf", ["Dubai"]))
+        elif region_roll < 0.90:
+            city = random.choice(arab_cities.get("levant_egypt", ["Cairo"]))
+        else:
+            city = random.choice(arab_cities.get("north_africa", ["Casablanca"]))
+        venues = config["venues"]
+        if event_type_id == "work_meeting":
+            venue_pool = venues.get("work", [])
+        elif event_type_id == "religious_celebration":
+            venue_pool = venues.get("religious", [])
+        elif event_type_id == "travel_outing":
+            venue_pool = venues.get("outdoor", [])
+        elif event_type_id == "personal_appointment":
+            venue_pool = venues.get("personal", [])
+        else:
+            venue_pool = venues.get("social", [])
+        # 55% city + venue, 45% just city
+        if random.random() < 0.55 and venue_pool:
+            venue = random.choice(venue_pool)
+            return f"{city} at {venue}"
+        return city
     else:
         regions = config["us_cities"]
         region = random.choice(list(regions.keys()))
@@ -208,6 +240,16 @@ def build_event_prompt(
             "- Dates in natural format: 'March 15' or '15 March' or 'Mar 15'"
         )
         country_note = "Indian"
+    elif language == "arabic":
+        locale_rules = (
+            "- Location must be an Arab city (Dubai, Riyadh, Abu Dhabi, Cairo, Doha, etc.)\n"
+            "- Use Gulf/Arab context (souq, diwaniya, iftar, Eid, iqama, Salik, etc.)\n"
+            "- Currency: AED, SAR, KWD, EGP — NOT dollars\n"
+            "- Dates in natural format: 'March 15' or '15 March'\n"
+            "- NEVER mention Western countries as the location\n"
+            "- STRICTLY no 'whilst', 'cheers', 'mate'"
+        )
+        country_note = "Arab"
     else:
         locale_rules = (
             "- Location must be a real US city/state (casual format: 'Orlando FL', 'San Jose CA')\n"
@@ -364,7 +406,7 @@ def validate_event_note(note: str, language: str = "english") -> list[dict]:
                          "detail": f"Pre-2021 year: {pre2021.group()}"})
 
     # English-only checks
-    if language != "hindi":
+    if language not in ("hindi", "arabic"):
         if _BANNED_STATE_PATTERNS.search(note):
             failures.append({"name": "no_banned_states", "passed": False,
                              "detail": "Contains TX/IL/WA (banned states)"})

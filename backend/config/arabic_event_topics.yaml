@@ -1,0 +1,376 @@
+# Event topics config for Arabic event notes — EXPANDED
+# 6 event types, 150+ labels, 80+ cities, rich venue variety
+# Seeds for LLM prompts — NOT templates
+
+event_types:
+  - id: work_meeting
+    labels:
+      - team sync
+      - client meeting
+      - board meeting
+      - investor pitch
+      - HR interview
+      - performance review
+      - quarterly review
+      - project kickoff
+      - strategy session
+      - vendor meeting
+      - all hands
+      - town hall
+      - ops meeting
+      - product demo
+      - design review
+      - leadership meeting
+      - budget review
+      - compliance training
+      - recruitment round
+      - cross-team meeting
+      - daily standup
+      - sprint planning
+      - sales meeting
+      - business trip briefing
+      - partner meeting
+      - contract signing
+      - offsite planning
+      - team building day
+      - workshop
+      - CEO briefing
+      - audit meeting
+      - management review
+      - supplier meeting
+      - annual conference
+      - board of directors
+    weight: 8
+
+  - id: religious_celebration
+    labels:
+      - Eid ul-Fitr gathering
+      - Eid ul-Adha celebration
+      - Ramadan iftar dinner
+      - Ramadan suhoor
+      - Mawlid al-Nabi celebration
+      - Umrah trip
+      - Friday prayers
+      - Quran recitation gathering
+      - Muharram commemoration
+      - Isra wal-Mi'raj celebration
+      - last night of Ramadan prayers
+      - Laylat al-Qadr prayers
+      - family iftar gathering
+      - Eid morning prayers
+      - tarawih prayers
+      - zakat distribution day
+      - sadaqah event
+      - mosque gathering
+      - Islamic lecture night
+      - charity iftar event
+      - Eid al-Adha sacrifice
+      - Eid shopping trip
+      - Ramadan charity drive
+      - suhoor with friends
+      - religious conference
+      - Friday khutba
+      - Quran khatm gathering
+      - Islamic new year gathering
+      - Ashura commemoration
+      - fatwa seminar
+    weight: 9
+
+  - id: family_social
+    labels:
+      - wedding (nikah)
+      - family gathering
+      - baby aqeeqah
+      - engagement party
+      - diwaniya
+      - majlis gathering
+      - birthday celebration
+      - anniversary dinner
+      - farewell party
+      - graduation celebration
+      - housewarming
+      - baby shower
+      - khitba (proposal)
+      - mehndi night
+      - wedding reception (walima)
+      - family reunion
+      - cousin visit
+      - relative from abroad
+      - kids birthday party
+      - new baby visit
+      - family BBQ
+      - cousin's graduation
+      - family dinner out
+      - niece's birthday
+      - aunt's anniversary
+      - uncle's retirement
+      - sister's engagement
+      - brother's promotion lunch
+      - family holiday gathering
+      - summer family reunion
+      - grandparents anniversary
+    weight: 8
+
+  - id: learning_event
+    labels:
+      - tech conference
+      - GITEX summit
+      - startup meetup
+      - workshop
+      - webinar
+      - training session
+      - seminar
+      - university lecture
+      - graduation ceremony
+      - industry expo
+      - coding bootcamp
+      - career fair
+      - TEDx talk
+      - Arabnet conference
+      - professional certification exam
+      - hackathon
+      - innovation summit
+      - MBA class
+      - language course
+      - networking event
+      - alumni gathering
+      - leadership workshop
+      - HR summit
+      - fintech conference
+      - legal CPD session
+      - Islamic finance seminar
+      - UAE government forum
+      - Arab Health conference
+      - Cityscape exhibition
+      - Big 5 construction expo
+      - Step conference Beirut
+      - UAE AI forum
+    weight: 6
+
+  - id: personal_appointment
+    labels:
+      - doctor appointment
+      - dentist visit
+      - hospital checkup
+      - physio session
+      - eye checkup
+      - immigration office (ICA)
+      - traffic department (RTA)
+      - municipality visit
+      - embassy appointment
+      - visa renewal
+      - iqama renewal
+      - bank visit
+      - driving license renewal
+      - car registration renewal
+      - MOH appointment
+      - vaccine appointment
+      - blood test
+      - health screening
+      - insurance claim
+      - lawyer meeting
+      - notary appointment
+      - telecom office visit
+      - utilities setup
+      - real estate agent meeting
+      - tax registration
+      - PRO appointment
+      - medical fitness test
+      - labour card renewal
+      - passport renewal
+      - police clearance certificate
+    weight: 6
+
+  - id: travel_outing
+    labels:
+      - desert safari
+      - beach day
+      - mall outing
+      - heritage village visit
+      - souq trip
+      - corniche walk
+      - weekend trip
+      - road trip
+      - neighboring country trip
+      - boat trip
+      - camping in the desert
+      - water park
+      - theme park
+      - F1 race weekend
+      - concert
+      - art exhibition
+      - film festival
+      - museum visit
+      - hotel staycation
+      - brunch outing
+      - dune bashing
+      - wadi hike
+      - mountain drive
+      - island trip
+      - kayaking
+      - hot air balloon
+      - Burj Khalifa visit
+      - Dubai Frame
+      - Louvre Abu Dhabi
+      - Global Village visit
+      - Expo City visit
+      - dhow cruise dinner
+    weight: 5
+
+# Arab cities for location variety — wide pool
+arab_cities:
+  gulf:
+    - Dubai
+    - Abu Dhabi
+    - Riyadh
+    - Jeddah
+    - Mecca
+    - Medina
+    - Kuwait City
+    - Doha
+    - Muscat
+    - Manama
+    - Sharjah
+    - Ajman
+    - Ras Al Khaimah
+    - Fujairah
+    - Dammam
+    - Al Khobar
+    - Dhahran
+    - Tabuk
+    - Khamis Mushait
+    - Najran
+    - Yanbu
+    - Jubail
+    - Sohar
+    - Salalah
+    - Nizwa
+    - Sur
+    - Khasab
+    - Al Ain
+    - Hatta
+    - Umm Al Quwain
+    - Dubai Marina
+    - Business Bay
+    - Downtown Dubai
+    - DIFC
+    - Jumeirah
+    - Deira
+    - Bur Dubai
+  levant_egypt:
+    - Cairo
+    - Alexandria
+    - Beirut
+    - Amman
+    - Aqaba
+    - Sharm El Sheikh
+    - Hurghada
+    - Luxor
+    - Aswan
+    - Port Said
+    - Suez
+    - Tripoli (Lebanon)
+    - Sidon
+    - Zahlé
+    - Ramallah
+    - Zarqa
+    - Irbid
+    - Aqaba
+    - Giza
+  north_africa:
+    - Casablanca
+    - Rabat
+    - Marrakesh
+    - Fez
+    - Tangier
+    - Tunis
+    - Sfax
+    - Sousse
+    - Algiers
+    - Oran
+    - Tripoli
+
+# Venue shorthands — casual, no formal address
+venues:
+  work:
+    - office
+    - head office
+    - conference room
+    - boardroom
+    - co-working space
+    - WeWork Dubai
+    - Hub71 Abu Dhabi
+    - Astrolabs Dubai
+    - client office
+    - hotel lobby
+    - business lounge
+    - meeting room
+    - Zoom call
+    - Teams call
+    - virtual meeting
+    - training room
+    - DIFC office
+    - media city office
+    - free zone office
+    - business center
+  social:
+    - someone's place
+    - family home
+    - restaurant
+    - hotel ballroom
+    - banquet hall
+    - rooftop
+    - beach club
+    - pool area
+    - garden
+    - villa
+    - chalet
+    - diwaniya
+    - majlis
+    - private beach
+    - hotel lobby
+    - café
+    - penthouse
+    - resort ballroom
+    - outdoor terrace
+    - clubhouse
+  religious:
+    - mosque
+    - masjid
+    - Grand Mosque
+    - Islamic center
+    - community hall
+    - family home
+    - diwaniya
+    - prayer hall
+    - neighbourhood masjid
+    - cultural center
+  outdoor:
+    - desert
+    - beach
+    - corniche
+    - park
+    - marina
+    - heritage site
+    - souq
+    - wadi
+    - mountain
+    - national park
+    - island
+    - resort
+    - Hatta mountains
+    - Jebel Jais
+    - Ras Al Khaimah beaches
+    - Al Qudra lakes
+    - Dubai Creek
+  personal:
+    - hospital
+    - clinic
+    - medical center
+    - government office
+    - bank branch
+    - mall
+    - driving school
+    - embassy
+    - typing center
+    - PRO service office

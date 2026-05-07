@@ -16,7 +16,7 @@ from .llm_clients import LLMClients
 from .persona import PersonaSampler
 from .note_generator import generate_note, sample_style
 from .humanizer import humanize_note
-from .translator import translate_to_hindi
+from .translator import translate_to_hindi, translate_to_arabic
 from .validator import validate_note, auto_fix_note
 from .dedup import check_all_dedup, normalize_title, get_opening_trigram
 from .jitter import apply_jitter
@@ -423,13 +423,19 @@ class JobOrchestrator:
                 async with self._llm_semaphore:
                     note = await humanize_note(self.llm, note, persona)
 
-                # Step 9b: Pass C — translate to Hindi Devanagari (Hindi jobs only)
+                # Step 9b: Pass C — translate to target language (Hindi or Arabic jobs only)
                 note_text_en = None
                 job_language = config.get("language", "english")
                 if job_language == "hindi":
                     note_text_en = note  # preserve English source before translation
                     title_for_translate = note.split('\n')[0].strip() if has_title else None
                     note, _ = await translate_to_hindi(
+                        note, title_for_translate, has_title
+                    )
+                elif job_language == "arabic":
+                    note_text_en = note
+                    title_for_translate = note.split('\n')[0].strip() if has_title else None
+                    note, _ = await translate_to_arabic(
                         note, title_for_translate, has_title
                     )
 
@@ -593,14 +599,15 @@ class JobOrchestrator:
             used_names.add(contact["contact_name"].lower())
             used_first_counts[fname_lower] = used_first_counts.get(fname_lower, 0) + 1
 
-            # Pass C: translate contact note to Hindi if needed
+            # Pass C: translate contact note to target language if needed
             contact_note_en = None
             contact_language = config.get("language", "english")
             if contact_language == "hindi":
                 contact_note_en = note
-                note, _ = await translate_to_hindi(
-                    note, None, False
-                )
+                note, _ = await translate_to_hindi(note, None, False)
+            elif contact_language == "arabic":
+                contact_note_en = note
+                note, _ = await translate_to_arabic(note, None, False)
 
             return await self._save_contact_entry(
                 job_id, entry_num, global_id, part_num,
@@ -647,7 +654,7 @@ class JobOrchestrator:
 
         # Step 13: Build filenames
         job_language = config.get("language", "english")
-        locale = "hi_IN" if job_language == "hindi" else "en_US"
+        locale = "hi_IN" if job_language == "hindi" else "ar_AE" if job_language == "arabic" else "en_US"
         title_slug = _make_slug(title or (lines[0] if lines else "untitled"))
         txt_filename = f"{global_id}_{locale}_notes_people relationships___PART{part_num:03d}_{entry_num}.txt"
         jpg_filename = f"{global_id} {title_slug}.jpg"
@@ -771,7 +778,7 @@ class JobOrchestrator:
         connectivity = random.choices(conn_types, weights=conn_weights, k=1)[0]
 
         contact_language = (config or {}).get("language", "english")
-        contact_locale = "hi_IN" if contact_language == "hindi" else "en_US"
+        contact_locale = "hi_IN" if contact_language == "hindi" else "ar_AE" if contact_language == "arabic" else "en_US"
         lines = note.split('\n')
         title = lines[0].strip() if lines else contact["contact_name"]
         title_slug = _make_slug(title)
@@ -896,11 +903,14 @@ class JobOrchestrator:
             if failures:
                 log.warning("Accepting event after retries: %s", failures)
 
-            # Pass C: translate to Hindi if needed
+            # Pass C: translate to target language if needed
             note_en = None
             if language == "hindi":
                 note_en = note
                 note, _ = await translate_to_hindi(note, None, False)
+            elif language == "arabic":
+                note_en = note
+                note, _ = await translate_to_arabic(note, None, False)
 
             total_days = (date_max - date_min).days
             note_date = date_min + timedelta(days=random.randint(0, max(0, total_days)))
@@ -946,6 +956,9 @@ class JobOrchestrator:
             if language == "hindi":
                 note_en = note
                 note, _ = await translate_to_hindi(note, None, False)
+            elif language == "arabic":
+                note_en = note
+                note, _ = await translate_to_arabic(note, None, False)
 
             total_days = (date_max - date_min).days
             note_date = date_min + timedelta(days=random.randint(0, max(0, total_days)))
@@ -968,7 +981,7 @@ class JobOrchestrator:
     ) -> dict:
         """Save an events-mode entry."""
         language = config.get("language", "english")
-        locale = "hi_IN" if language == "hindi" else "en_US"
+        locale = "hi_IN" if language == "hindi" else "ar_AE" if language == "arabic" else "en_US"
 
         app_types = list(app_dist.keys())
         app_type = random.choices(app_types, weights=[app_dist[a] for a in app_types], k=1)[0]
@@ -1063,7 +1076,7 @@ class JobOrchestrator:
     ) -> dict:
         """Save a topics-of-interest entry."""
         language = config.get("language", "english")
-        locale = "hi_IN" if language == "hindi" else "en_US"
+        locale = "hi_IN" if language == "hindi" else "ar_AE" if language == "arabic" else "en_US"
 
         app_types = list(app_dist.keys())
         app_type = random.choices(app_types, weights=[app_dist[a] for a in app_types], k=1)[0]

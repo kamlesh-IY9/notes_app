@@ -31,15 +31,21 @@ CONFIG_DIR = Path(__file__).parent.parent / "config"
 
 _us_config: dict | None = None
 _india_config: dict | None = None
+_arabic_config: dict | None = None
 
 
 def _load_config(language: str) -> dict:
-    global _us_config, _india_config
+    global _us_config, _india_config, _arabic_config
     if language == "hindi":
         if _india_config is None:
             with open(CONFIG_DIR / "india_toi_topics.yaml") as f:
                 _india_config = yaml.safe_load(f)
         return _india_config
+    elif language == "arabic":
+        if _arabic_config is None:
+            with open(CONFIG_DIR / "arabic_toi_topics.yaml") as f:
+                _arabic_config = yaml.safe_load(f)
+        return _arabic_config
     else:
         if _us_config is None:
             with open(CONFIG_DIR / "toi_topics.yaml") as f:
@@ -145,6 +151,15 @@ def build_toi_prompt(
             "- Number system: 1,00,000 not 100,000\n"
             "- Measurements: km, kg, liter, not miles/pounds\n"
             "- Indian English shorthand is fine: 'n' for and, 'r' for are, 'b' for be"
+        )
+    elif language == "arabic":
+        locale_rules = (
+            "- Topic must be relevant to Arab world (Gulf finance, Tadawul, Saudi Vision 2030, "
+            "Islamic finance, Arabic football, Ramadan health, NEOM construction, Arabic AI, etc.)\n"
+            "- Currency: AED, SAR, KWD, EGP (NOT USD/INR)\n"
+            "- Measurements: km, kg, standard international units\n"
+            "- Number system: standard Western (1,000,000 — NOT Indian lakh system)\n"
+            "- Casual Arabic-English shorthand is fine: 'inshallah', 'yalla', 'mashallah' as filler"
         )
     else:
         locale_rules = (

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{LANG_ATTR}}" dir="{{TEXT_DIR}}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&family=Noto+Sans+Devanagari:wght@300;400;500;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400;1,500&family=Noto+Sans+Devanagari:wght@300;400;500;700&family=Noto+Sans+Arabic:wght@300;400;500;700&family=Noto+Naskh+Arabic:wght@400;500;700&display=swap');
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -820,7 +820,31 @@
   body.theme-hex-glow,
   body.theme-crosshatch-navy,
   body.theme-geometric-triangles,
-  body.theme-noise-purple {
+  body.theme-noise-purple,
+  /* New pattern themes */
+  body.theme-wave-dark,
+  body.theme-wave-blue,
+  body.theme-diamond-grid,
+  body.theme-zigzag-dark,
+  body.theme-honeycomb-dark,
+  body.theme-honeycomb-gold,
+  body.theme-circuit-board,
+  body.theme-topographic,
+  body.theme-brushed-metal,
+  body.theme-brushed-gold,
+  body.theme-aurora-borealis,
+  body.theme-rainfall,
+  body.theme-cobweb,
+  body.theme-aztec-dark,
+  body.theme-chevron-dark,
+  body.theme-polka-dots-color,
+  body.theme-linen-texture,
+  body.theme-blueprint,
+  body.theme-galaxy-spiral,
+  body.theme-neon-grid,
+  body.theme-retro-scanlines,
+  body.theme-bubble-wrap,
+  body.theme-mosaic-tiles {
     --bg: #0e0e14;
     --fg: #ffffff;
     --status-fg: #ffffff;
@@ -829,6 +853,69 @@
     --meta-color: rgba(255,255,255,0.58);
     --body-color: #ffffff;
   }
+
+  /* ── Batch 7: solid dark color themes ── */
+  body.theme-cobalt-pulse { --bg:#020818; --fg:#7eb8ff; --status-fg:#b0d4ff; --toolbar-fg:#b0d4ff; --title-color:rgba(126,184,255,0.28); --meta-color:rgba(126,184,255,0.55); --body-color:#7eb8ff; }
+  body.theme-rose-quartz { --bg:#2a1520; --fg:#f0b8d0; --status-fg:#f8d0e0; --toolbar-fg:#f8d0e0; --title-color:rgba(240,184,208,0.28); --meta-color:rgba(240,184,208,0.55); --body-color:#f0b8d0; }
+  body.theme-lava-black { --bg:#0a0402; --fg:#ff8050; --status-fg:#ffb090; --toolbar-fg:#ffb090; --title-color:rgba(255,128,80,0.28); --meta-color:rgba(255,128,80,0.55); --body-color:#ff8050; }
+  body.theme-ice-blue { --bg:#041428; --fg:#a0d8f8; --status-fg:#c8ecff; --toolbar-fg:#c8ecff; --title-color:rgba(160,216,248,0.28); --meta-color:rgba(160,216,248,0.55); --body-color:#a0d8f8; }
+  body.theme-forest-moss { --bg:#051008; --fg:#90c8a0; --status-fg:#b8e0c0; --toolbar-fg:#b8e0c0; --title-color:rgba(144,200,160,0.28); --meta-color:rgba(144,200,160,0.55); --body-color:#90c8a0; }
+  body.theme-deep-crimson { --bg:#1a0006; --fg:#ff8090; --status-fg:#ffb0b8; --toolbar-fg:#ffb0b8; --title-color:rgba(255,128,144,0.28); --meta-color:rgba(255,128,144,0.55); --body-color:#ff8090; }
+  body.theme-ash-white { --bg:#d0d0d8; --fg:#1a1a2a; --status-fg:#1a1a2a; --toolbar-fg:#1a1a2a; --title-color:rgba(0,0,20,0.28); --meta-color:rgba(0,0,20,0.55); --body-color:#1a1a2a; }
+  body.theme-saffron-dark { --bg:#120a00; --fg:#f0b040; --status-fg:#f8d080; --toolbar-fg:#f8d080; --title-color:rgba(240,176,64,0.28); --meta-color:rgba(240,176,64,0.55); --body-color:#f0b040; }
+  body.theme-pearl-grey { --bg:#b8b8c8; --fg:#1a1a2a; --status-fg:#1a1a2a; --toolbar-fg:#1a1a2a; --title-color:rgba(0,0,20,0.28); --meta-color:rgba(0,0,20,0.55); --body-color:#1a1a2a; }
+  body.theme-bronze-age { --bg:#1a1000; --fg:#e8a860; --status-fg:#f8c890; --toolbar-fg:#f8c890; --title-color:rgba(232,168,96,0.28); --meta-color:rgba(232,168,96,0.55); --body-color:#e8a860; }
+  body.theme-mango-dark { --bg:#0e0800; --fg:#ffa030; --status-fg:#ffc870; --toolbar-fg:#ffc870; --title-color:rgba(255,160,48,0.28); --meta-color:rgba(255,160,48,0.55); --body-color:#ffa030; }
+  body.theme-navy-gold { --bg:#04081e; --fg:#f0c860; --status-fg:#f8e090; --toolbar-fg:#f8e090; --title-color:rgba(240,200,96,0.28); --meta-color:rgba(240,200,96,0.55); --body-color:#f0c860; }
+  body.theme-graphite-blue { --bg:#0a0e14; --fg:#90b8e0; --status-fg:#b8d4f0; --toolbar-fg:#b8d4f0; --title-color:rgba(144,184,224,0.28); --meta-color:rgba(144,184,224,0.55); --body-color:#90b8e0; }
+  body.theme-dusty-rose { --bg:#1e0e14; --fg:#e8a8b8; --status-fg:#f0c8d4; --toolbar-fg:#f0c8d4; --title-color:rgba(232,168,184,0.28); --meta-color:rgba(232,168,184,0.55); --body-color:#e8a8b8; }
+  body.theme-teal-midnight { --bg:#001414; --fg:#60d8c8; --status-fg:#90ece0; --toolbar-fg:#90ece0; --title-color:rgba(96,216,200,0.28); --meta-color:rgba(96,216,200,0.55); --body-color:#60d8c8; }
+
+  /* ── Batch 8: light/paper themes (bright bg, dark text) ── */
+  body.theme-cream-light { --bg:#fdf6e8; --fg:#3a2a18; --status-fg:#3a2a18; --toolbar-fg:#3a2a18; --title-color:rgba(58,42,24,0.30); --meta-color:rgba(58,42,24,0.55); --body-color:#3a2a18; }
+  body.theme-warm-ivory { --bg:#fef9f0; --fg:#2a2010; --status-fg:#2a2010; --toolbar-fg:#2a2010; --title-color:rgba(42,32,16,0.28); --meta-color:rgba(42,32,16,0.55); --body-color:#2a2010; }
+  body.theme-sky-blue-light { --bg:#e8f4fc; --fg:#1a3a5a; --status-fg:#1a3a5a; --toolbar-fg:#1a3a5a; --title-color:rgba(26,58,90,0.28); --meta-color:rgba(26,58,90,0.55); --body-color:#1a3a5a; }
+  body.theme-pale-mint { --bg:#e8f8f0; --fg:#1a3a2a; --status-fg:#1a3a2a; --toolbar-fg:#1a3a2a; --title-color:rgba(26,58,42,0.28); --meta-color:rgba(26,58,42,0.55); --body-color:#1a3a2a; }
+  body.theme-soft-yellow { --bg:#fefce8; --fg:#3a380a; --status-fg:#3a380a; --toolbar-fg:#3a380a; --title-color:rgba(58,56,10,0.28); --meta-color:rgba(58,56,10,0.55); --body-color:#3a380a; }
+  body.theme-blush-pink-light { --bg:#fef0f4; --fg:#4a1a2a; --status-fg:#4a1a2a; --toolbar-fg:#4a1a2a; --title-color:rgba(74,26,42,0.28); --meta-color:rgba(74,26,42,0.55); --body-color:#4a1a2a; }
+  body.theme-off-white-dark { --bg:#f5f5f0; --fg:#1a1a18; --status-fg:#1a1a18; --toolbar-fg:#1a1a18; --title-color:rgba(26,26,24,0.28); --meta-color:rgba(26,26,24,0.55); --body-color:#1a1a18; }
+  body.theme-khaki-paper { --bg:#f0ece0; --fg:#2a2010; --status-fg:#2a2010; --toolbar-fg:#2a2010; --title-color:rgba(42,32,16,0.28); --meta-color:rgba(42,32,16,0.55); --body-color:#2a2010; }
+  body.theme-rice-paper { --bg:#faf8f0; --fg:#28240c; --status-fg:#28240c; --toolbar-fg:#28240c; --title-color:rgba(40,36,12,0.28); --meta-color:rgba(40,36,12,0.55); --body-color:#28240c; }
+  body.theme-charcoal-note { --bg:#2a2a2a; --fg:#e8e8e8; --status-fg:#ffffff; --toolbar-fg:#ffffff; --title-color:rgba(232,232,232,0.28); --meta-color:rgba(232,232,232,0.55); --body-color:#e8e8e8; }
+  /* Special: paper-grain light theme */
+  body.theme-paper-grain { --bg:#faf8f0; --fg:#28240c; --status-fg:#28240c; --toolbar-fg:#28240c; --title-color:rgba(40,36,12,0.28); --meta-color:rgba(40,36,12,0.55); --body-color:#28240c; }
+  /* Special: sand-texture warm */
+  body.theme-sand-texture { --bg:#1c1608; --fg:#e8d0a0; --status-fg:#f0e0c0; --toolbar-fg:#f0e0c0; --title-color:rgba(232,208,160,0.28); --meta-color:rgba(232,208,160,0.55); --body-color:#e8d0a0; }
+
+  /* ── Batch 9: vivid neons ── */
+  body.theme-neon-pink { --bg:#100010; --fg:#ff70b8; --status-fg:#ffb0d8; --toolbar-fg:#ffb0d8; --title-color:rgba(255,112,184,0.28); --meta-color:rgba(255,112,184,0.55); --body-color:#ff70b8; }
+  body.theme-neon-blue { --bg:#020814; --fg:#4090ff; --status-fg:#80b8ff; --toolbar-fg:#80b8ff; --title-color:rgba(64,144,255,0.28); --meta-color:rgba(64,144,255,0.55); --body-color:#4090ff; }
+  body.theme-neon-orange { --bg:#0c0400; --fg:#ff8030; --status-fg:#ffb870; --toolbar-fg:#ffb870; --title-color:rgba(255,128,48,0.28); --meta-color:rgba(255,128,48,0.55); --body-color:#ff8030; }
+  body.theme-neon-yellow { --bg:#060600; --fg:#e0e000; --status-fg:#f0f080; --toolbar-fg:#f0f080; --title-color:rgba(224,224,0,0.28); --meta-color:rgba(224,224,0,0.55); --body-color:#e0e000; }
+  body.theme-neon-purple { --bg:#080010; --fg:#c050ff; --status-fg:#e0a0ff; --toolbar-fg:#e0a0ff; --title-color:rgba(192,80,255,0.28); --meta-color:rgba(192,80,255,0.55); --body-color:#c050ff; }
+  body.theme-neon-green { --bg:#000a02; --fg:#40ff80; --status-fg:#90ffc0; --toolbar-fg:#90ffc0; --title-color:rgba(64,255,128,0.28); --meta-color:rgba(64,255,128,0.55); --body-color:#40ff80; }
+
+  /* ── Batch 10: exotic gradient themes ── */
+  body.theme-northern-lights { --bg:#000a10; --fg:#80ffd8; --status-fg:#c0fff0; --toolbar-fg:#c0fff0; --title-color:rgba(128,255,216,0.28); --meta-color:rgba(128,255,216,0.55); --body-color:#80ffd8; }
+  body.theme-galaxy-dust { --bg:#020108; --fg:#d0c0ff; --status-fg:#e8d8ff; --toolbar-fg:#e8d8ff; --title-color:rgba(208,192,255,0.28); --meta-color:rgba(208,192,255,0.55); --body-color:#d0c0ff; }
+  body.theme-lava-lamp { --bg:#0e0400; --fg:#ffb060; --status-fg:#ffd090; --toolbar-fg:#ffd090; --title-color:rgba(255,176,96,0.28); --meta-color:rgba(255,176,96,0.55); --body-color:#ffb060; }
+  body.theme-oil-slick { --bg:#050508; --fg:#e0d0ff; --status-fg:#f0e8ff; --toolbar-fg:#f0e8ff; --title-color:rgba(224,208,255,0.28); --meta-color:rgba(224,208,255,0.55); --body-color:#e0d0ff; }
+  body.theme-desert-sunset { --bg:#1a0420; --fg:#f0c870; --status-fg:#f8e0a0; --toolbar-fg:#f8e0a0; --title-color:rgba(240,200,112,0.28); --meta-color:rgba(240,200,112,0.55); --body-color:#f0c870; }
+  body.theme-tropical-night { --bg:#010e0a; --fg:#80f0c0; --status-fg:#b0f8e0; --toolbar-fg:#b0f8e0; --title-color:rgba(128,240,192,0.28); --meta-color:rgba(128,240,192,0.55); --body-color:#80f0c0; }
+  body.theme-deep-space { --bg:#000004; --fg:#c0d8ff; --status-fg:#e0ecff; --toolbar-fg:#e0ecff; --title-color:rgba(192,216,255,0.28); --meta-color:rgba(192,216,255,0.55); --body-color:#c0d8ff; }
+  body.theme-bioluminescent { --bg:#000c08; --fg:#60ffd8; --status-fg:#a0ffe8; --toolbar-fg:#a0ffe8; --title-color:rgba(96,255,216,0.28); --meta-color:rgba(96,255,216,0.55); --body-color:#60ffd8; }
+  body.theme-galaxy-spiral { --bg:#020008; --fg:#e0c8ff; --status-fg:#f0e0ff; --toolbar-fg:#f0e0ff; --title-color:rgba(224,200,255,0.28); --meta-color:rgba(224,200,255,0.55); --body-color:#e0c8ff; }
+
+  /* ── New pattern themes: custom colors ── */
+  body.theme-honeycomb-gold { --bg:#0c0a02; --fg:#f8d060; --status-fg:#fce890; --toolbar-fg:#fce890; --title-color:rgba(248,208,96,0.28); --meta-color:rgba(248,208,96,0.55); --body-color:#f8d060; }
+  body.theme-circuit-board { --bg:#000c04; --fg:#60ff80; --status-fg:#a0ffb8; --toolbar-fg:#a0ffb8; --title-color:rgba(96,255,128,0.28); --meta-color:rgba(96,255,128,0.55); --body-color:#60ff80; }
+  body.theme-blueprint { --bg:#020a1c; --fg:#80b8ff; --status-fg:#b0d4ff; --toolbar-fg:#b0d4ff; --title-color:rgba(128,184,255,0.28); --meta-color:rgba(128,184,255,0.55); --body-color:#80b8ff; }
+  body.theme-neon-grid { --bg:#000a10; --fg:#00d8ff; --status-fg:#80eeff; --toolbar-fg:#80eeff; --title-color:rgba(0,216,255,0.28); --meta-color:rgba(0,216,255,0.55); --body-color:#00d8ff; }
+  body.theme-wave-blue { --bg:#02061a; --fg:#80c8ff; --status-fg:#b0e0ff; --toolbar-fg:#b0e0ff; --title-color:rgba(128,200,255,0.28); --meta-color:rgba(128,200,255,0.55); --body-color:#80c8ff; }
+  body.theme-aurora-borealis { --bg:#020a06; --fg:#80ffd0; --status-fg:#b0ffe8; --toolbar-fg:#b0ffe8; --title-color:rgba(128,255,208,0.28); --meta-color:rgba(128,255,208,0.55); --body-color:#80ffd0; }
+  body.theme-brushed-metal { --bg:#0e1218; --fg:#d0d8e8; --status-fg:#e8ecf4; --toolbar-fg:#e8ecf4; --title-color:rgba(208,216,232,0.28); --meta-color:rgba(208,216,232,0.55); --body-color:#d0d8e8; }
+  body.theme-brushed-gold { --bg:#120e00; --fg:#e8c870; --status-fg:#f8e0a0; --toolbar-fg:#f8e0a0; --title-color:rgba(232,200,112,0.28); --meta-color:rgba(232,200,112,0.55); --body-color:#e8c870; }
+  body.theme-linen-texture { --bg:#0e0c08; --fg:#d8c8a0; --status-fg:#e8d8c0; --toolbar-fg:#e8d8c0; --title-color:rgba(216,200,160,0.28); --meta-color:rgba(216,200,160,0.55); --body-color:#d8c8a0; }
 
 </style>
 </head>

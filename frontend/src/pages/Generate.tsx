@@ -68,15 +68,16 @@ export default function Generate() {
           <label className="block text-sm font-semibold text-text-primary mb-4">
             Language
           </label>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 gap-3">
             {[
               { id: 'english', label: 'English', sublabel: 'en_US · USA personas' },
               { id: 'hindi', label: 'Hindi — हिंदी', sublabel: 'hi_IN · Indian personas · Devanagari' },
+              { id: 'arabic', label: 'Arabic — العربية', sublabel: 'ar_AE · Arab personas · RTL' },
             ].map((opt) => (
               <button
                 key={opt.id}
                 onClick={() => setConfig((c) => ({ ...c, language: opt.id }))}
-                className={`min-h-[76px] rounded-lg px-3 py-3 text-left transition-all ${
+                className={`min-h-[68px] rounded-lg px-3 py-3 text-left transition-all ${
                   config.language === opt.id
                     ? 'bg-accent text-white shadow-lg shadow-accent/30'
                     : 'bg-bg-card text-text-secondary hover:bg-bg-card-hover'
@@ -90,6 +91,11 @@ export default function Generate() {
           {config.language === 'hindi' && (
             <p className="mt-3 text-xs text-text-muted">
               Notes generated in English first, then translated to Hindi Devanagari. Indian names, states &amp; topics used.
+            </p>
+          )}
+          {config.language === 'arabic' && (
+            <p className="mt-3 text-xs text-text-muted">
+              Notes generated in English first, then translated to Arabic. Arab names &amp; Gulf/Arab topics used. RTL layout in screenshots.
             </p>
           )}
         </div>

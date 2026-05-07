@@ -1,0 +1,196 @@
+# Arabic Topics for People & Relationships notes
+# Expanded pools — 60+ topic categories, 300+ total labels
+# Covers universal + Arab/Gulf-specific topics to support 100+ non-repetitive notes
+
+topics:
+  # ── Core / Universal topics ──
+  - id: planning_event
+    labels: ["birthday party", "dinner plans", "road trip", "vacation", "holiday plans", "wedding", "baby shower", "graduation party", "game night", "BBQ night", "house party", "rooftop gathering", "beach day", "camping trip", "picnic plan"]
+    weight: 7
+  - id: conflict
+    labels: ["argument", "fight", "disagreement", "tension", "annoyed", "frustrated", "upset with", "falling out", "misunderstanding", "ignored me", "not speaking", "issue with"]
+    weight: 4
+  - id: practical_appointment
+    labels: ["doctor appointment", "dentist visit", "haircut", "car service", "bank visit", "legal meeting", "eye checkup", "physio session", "blood test", "annual checkup", "vaccine appointment"]
+    weight: 7
+  - id: financial_admin
+    labels: ["utility bill due", "insurance renewal", "car loan payment", "check savings account", "bank statement", "credit card bill", "DEWA bill", "Salik balance", "Nol card top-up", "internet bill"]
+    weight: 6
+  - id: career_adulting
+    labels: ["job interview tomorrow", "prep for interview", "promotion discussion", "salary negotiation", "performance review", "contract renewal", "offer letter", "resignation plan", "reference letter", "work visa renewal"]
+    weight: 6
+  - id: entertainment
+    labels: ["movie times", "concert tickets", "game schedule", "show tonight", "booking confirmation", "theme park visit", "stand-up comedy show", "Cirque du Soleil", "live match tickets", "F1 race weekend"]
+    weight: 7
+  - id: update
+    labels: ["just found out", "told me", "called me", "texted me", "moved to", "got a new job", "got engaged", "had a baby", "got promoted", "broke up", "moving abroad", "coming back home"]
+    weight: 5
+  - id: gift_idea
+    labels: ["gift for", "present idea", "what to get", "birthday coming up", "Eid gift idea", "wedding gift", "housewarming gift", "baby gift", "graduation gift", "farewell gift"]
+    weight: 5
+  - id: vent
+    labels: ["need to vent", "so tired of", "cant believe", "drives me crazy", "done with this", "fed up with", "annoying situation", "not fair", "frustrated abt"]
+    weight: 5
+  - id: support
+    labels: ["going through a rough time", "be there for", "check in on", "call them", "help with", "sick right now", "needs support", "hospital visit plan", "emotional support"]
+    weight: 5
+  - id: milestone
+    labels: ["engaged", "pregnant", "new baby", "new house", "promoted", "graduated", "retired", "new car", "business opened", "citizenship approved", "visa approved", "iqama renewed"]
+    weight: 5
+  - id: errands
+    labels: ["pick up from", "drop off at", "run to the store for", "get stuff for", "collect package", "mall errand", "supermarket run", "pharmacy stop"]
+    weight: 4
+  - id: to_do_list
+    labels: ["tasks for today", "reminders about", "stuff to do with", "things to pack for", "need to call back", "follow up with", "action items from meeting", "checklist for trip"]
+    weight: 7
+  - id: home_maintenance
+    labels: ["fix AC unit", "plumber quote", "DEWA maintenance", "buy new furniture", "fix leaky pipe", "AC filter change", "apartment painting", "handyman call", "electrical issue", "building maintenance"]
+    weight: 7
+  - id: shopping_lists
+    labels: ["weekly groceries", "mall shopping list", "buy online", "souq list", "electronics to get", "Carrefour run", "LuLu hypermarket", "Amazon UAE order", "noon.com order", "Namshi order"]
+    weight: 7
+  - id: health_fitness
+    labels: ["new gym routine", "daily vitamins", "steps goal", "running shoes", "nutrition plan", "protein shakes", "workout schedule", "yoga class", "swimming training", "sports clinic"]
+    weight: 5
+  - id: travel_packing
+    labels: ["packing list", "carry on essentials", "hotel booking confirm", "flight confirmation", "transit visa check", "travel insurance", "luggage weight limit", "airport taxi plan", "terminal check"]
+    weight: 5
+  - id: food_cooking
+    labels: ["recipe to try", "meal prep plan", "restaurant to hit", "new dish to make", "lunch ideas", "delivery order", "Talabat order", "Zomato restaurant", "Careem food", "brunch spot"]
+    weight: 5
+  - id: self_care_mental_health
+    labels: ["therapy notes", "journaling prompt", "mindfulness reminder", "stress check-in", "emotional reset", "burnout signal", "overwhelmed lately", "need a break", "digital detox plan"]
+    weight: 5
+  - id: dating_relationships
+    labels: ["date night idea", "anniversary note", "gift idea for partner", "couples activity plan", "dinner reservation", "surprise plan", "trip together", "engagement plan", "marriage discussion"]
+    weight: 5
+  - id: tech_gadgets
+    labels: ["app to download", "gadget to research", "phone upgrade notes", "software to try", "new laptop specs", "gaming setup", "smart home device", "tablet comparison"]
+    weight: 4
+  - id: personal_goals
+    labels: ["habit tracker idea", "goal check-in", "things to work on this month", "skill to learn", "reading list", "course to complete", "language learning", "certification plan"]
+    weight: 5
+  - id: business_planning
+    labels: ["quarterly review notes", "launch plan ideas", "strategy meeting follow-up", "pitch deck outline", "business plan", "startup idea", "freelance project", "partnership idea"]
+    weight: 5
+  - id: networking
+    labels: ["coffee chat notes", "industry event contact", "referral intro", "meet for lunch", "follow up after event", "LinkedIn connection", "mentor meeting", "introduce to someone"]
+    weight: 5
+  - id: office_dynamics
+    labels: ["meeting notes to review", "team issue to address", "performance review prep", "workplace drama", "colleague situation", "manager update", "team conflict", "project deadline stress"]
+    weight: 5
+  - id: remote_work
+    labels: ["work from home setup", "deadline to track", "deliverable to submit", "online meeting notes", "home office upgrade", "VPN issue", "remote team sync", "time zone juggling"]
+    weight: 4
+  - id: parenting_kids
+    labels: ["school supply list", "kids activities schedule", "pediatrician reminder", "school event", "after school pickup plan", "homework help", "kids summer camp", "school fees payment"]
+    weight: 5
+  - id: social_media
+    labels: ["post idea for Instagram", "reel idea", "TikTok content plan", "YouTube video idea", "content calendar", "story to share", "reel to post"]
+    weight: 4
+  - id: home_decor_diy
+    labels: ["apartment makeover", "furniture to get", "IKEA trip plan", "paint colors", "new curtains", "balcony setup", "plant shopping", "decor from Pan Emirates"]
+    weight: 4
+  - id: holiday_seasonal
+    labels: ["Dubai Shopping Festival plan", "National Day plans", "New Year countdown", "summer vacation", "winter holiday", "back to school prep", "spring cleaning"]
+    weight: 5
+  - id: neighborhood_community
+    labels: ["building meeting note", "community event signup", "neighbor situation", "local store recommendation", "new café opened nearby", "park event", "community BBQ"]
+    weight: 4
+
+  # ── Arab/Gulf-specific: Ramadan & Religious ──
+  - id: ramadan_plans
+    labels: ["iftar dinner plan", "suhoor menu", "tarawih timing", "Ramadan TV series", "Ramadan gift list", "iftaar gathering", "Ramadan charity drive", "Laylat al-Qadr prayers", "mosque night programme", "Ramadan schedule at work", "fasting tips", "iftar at restaurant", "send Ramadan hamper", "Ramadan decoration", "break fast timing"]
+    weight: 6
+  - id: eid_celebration
+    labels: ["Eid outfit shopping", "Eidi money for kids", "Eid visit schedule", "Eid prayer time", "Eid ul-Fitr plans", "Eid ul-Adha sacrifice plan", "walima invitation", "Eid greeting cards", "Eid food prep", "Eid house decoration", "Eid morning prayer location", "Eid gift wrap", "buy sweets for Eid", "Eid family gathering plan"]
+    weight: 6
+  - id: hajj_umrah
+    labels: ["Umrah trip plan", "Hajj registration", "Mecca hotel booking", "Madinah visit plan", "ihram checklist", "Umrah visa application", "Haj package comparison", "Tawaf timing", "Zamzam water to bring back", "Umrah group plan", "prayer schedule Mecca", "Madinah Nabawi visit"]
+    weight: 5
+  - id: mosque_prayer
+    labels: ["Friday prayers plan", "masjid programme", "Quran class timing", "Islamic lecture", "religious gathering", "prayer timing app", "mosque donation", "tarawih location", "jumaa khutba notes", "masjid event"]
+    weight: 5
+  - id: zakat_charity
+    labels: ["zakat calculation", "charity organization", "sadaqah plan", "donate this month", "charity iftar sponsorship", "food basket for workers", "fidya payment", "kaffarah calculation", "zakatul fitr"]
+    weight: 4
+
+  # ── Arab/Gulf-specific: Social Culture ──
+  - id: diwaniya_majlis
+    labels: ["diwaniya this Thursday", "majlis night", "gahwa to prepare", "invite to diwaniya", "arrange chairs for majlis", "dates and coffee ready", "sheikh visit the majlis", "Friday diwaniya", "host the majlis this week", "men's gathering tonight"]
+    weight: 6
+  - id: wasta_networking
+    labels: ["wasta connection to contact", "referral from uncle", "intro from manager", "favour to ask", "connection at ministry", "know someone at that company", "recommend me to HR", "put in a word for me", "call from uncle re job"]
+    weight: 5
+  - id: arabic_wedding
+    labels: ["nikah ceremony", "wedding invitation", "mehndi night", "walima dinner", "wedding shopping", "mahr discussion", "zaffa music", "wedding venue booking", "bride outfit", "groom suit", "wedding photographer", "wedding caterer", "invite list for wedding", "wedding budget"]
+    weight: 6
+  - id: arabic_family_gathering
+    labels: ["family iftar gathering", "cousins visit", "aunt's birthday", "grandparents visit", "family lunch on Friday", "relatives from abroad", "family reunion plan", "weekend at grandma's", "big family dinner", "extended family visit"]
+    weight: 5
+  - id: expat_community
+    labels: ["expat meetup", "community event Dubai", "national day celebration", "country club event", "cultural night out", "embassy event", "national community gathering", "diaspora event", "hometown friends here"]
+    weight: 4
+
+  # ── Arab/Gulf-specific: Government & Admin ──
+  - id: visa_iqama
+    labels: ["iqama renewal", "visa run to Oman", "residency renewal", "work permit status", "family visa application", "NOC from employer", "immigration appointment", "Emirates ID renewal", "absher appointment", "MOI online service", "sponsor change process", "exit re-entry visa", "dependent visa", "visit visa for parents"]
+    weight: 7
+  - id: rta_traffic_gulf
+    labels: ["salik recharge", "RTA fine payment", "Nol card top-up", "car registration renewal", "traffic fine check", "parking app Dubai", "driving test slot", "vehicle inspection", "Muwasalat bus pass", "toll gate issue", "black points check", "RTA service center"]
+    weight: 5
+  - id: government_services
+    labels: ["DLD appointment", "DEWA connection", "Etisalat bill", "du telecom upgrade", "Municipality permit", "Ministry visit", "e-government service", "digital ID setup", "Tamm app appointment", "MOHRE complaint", "MOL inquiry", "AMER center visit", "Tas-heel service", "Tasheel appointment"]
+    weight: 5
+
+  # ── Arab/Gulf-specific: Finance ──
+  - id: remittance_transfer
+    labels: ["send money to family", "Western Union transfer", "Al Ansari exchange rate", "bank wire transfer", "Al Fardan exchange", "monthly support home", "UAE Exchange visit", "money transfer app", "Wise transfer", "remittance rate check", "send to Pakistan", "send to Egypt", "send to India"]
+    weight: 6
+  - id: gold_souq
+    labels: ["gold rate check", "buy gold at souq", "gold 24k vs 22k price", "jewellery making charges", "gold souvenir purchase", "Deira gold souq visit", "sell old gold", "gold investment plan", "gold biscuit price", "Gold Centre Dubai"]
+    weight: 5
+  - id: property_gulf
+    labels: ["off-plan unit deposit", "handover date follow-up", "service charge due", "NOC from developer", "Ejari registration", "property rent increase", "real estate agent meeting", "title deed pickup", "Golden Visa property", "Makani number", "RERA complaint", "rent dispute", "landlord negotiation"]
+    weight: 5
+  - id: banking_gulf
+    labels: ["ADCB account", "Emirates NBD transfer", "FAB bank appointment", "credit card limit request", "bank loan inquiry", "fixed deposit rate", "Islamic banking account", "cheque clearance", "IBAN details to send", "salary transfer setup"]
+    weight: 5
+
+  # ── Arab/Gulf-specific: Food & Daily Life ──
+  - id: arabic_food
+    labels: ["kabsa recipe", "mandi dinner plan", "harees for Ramadan", "luqaimat to make", "shawarma outing", "hummus prep", "biryani for guests", "Arabic sweets order", "kunafa from that place", "madfoon lamb", "mansaf plan", "jareesh recipe", "saleeg notes", "machboos plan", "fattoush salad"]
+    weight: 6
+  - id: coffee_gahwa
+    labels: ["gahwa to prepare", "Arabic coffee set", "cardamom for gahwa", "dates to serve", "café meetup", "karak chai run", "tea for the meeting", "coffee break plan", "Tim Hortons run", "Costa Coffee", "Starbucks order", "Caribou Coffee"]
+    weight: 5
+  - id: expat_life
+    labels: ["flight home for vacation", "annual leave plan", "ship goods back home", "accommodation renewal", "cost of living comparison", "company car allowance", "end of service gratuity", "move to new flat", "expat community event", "flight ticket home", "summer holiday home country"]
+    weight: 5
+
+  # ── Arab/Gulf-specific: Transport & Travel ──
+  - id: road_trip_gulf
+    labels: ["road trip to Muscat", "Abu Dhabi weekend", "drive to Fujairah beach", "Oman border crossing", "Bahrain causeway trip", "Qatar road trip", "fuel up for long drive", "desert drive plan", "camping spot in Hatta", "Al Ain visit", "Khasab ferry trip"]
+    weight: 5
+  - id: flights_travel
+    labels: ["Emirates flight booking", "Etihad ticket", "Air Arabia deal", "flydubai booking", "flight to Cairo", "transit at Dubai airport", "airport transfer plan", "hotel near airport", "Umrah flight", "business class upgrade", "travel agency contact", "holiday package deal"]
+    weight: 5
+  - id: shopping_malls
+    labels: ["Dubai Mall plan", "Mall of the Emirates", "Ibn Battuta mall", "Abu Dhabi mall", "BurJuman visit", "City Centre Mirdif", "Wafi City", "Gold and Diamond Park", "IKEA Dubai trip", "Carrefour hypermarket"]
+    weight: 4
+
+  # ── Arab/Gulf-specific: Health ──
+  - id: hospital_clinic_gulf
+    labels: ["DHA appointment", "Mediclinic visit", "American Hospital Dubai", "Aster Clinic", "NMC Hospital", "Thumbay Hospital", "Burjeel Hospital", "health insurance claim", "MOH health card renewal", "mandatory medical test", "x-ray at hospital", "specialist referral"]
+    weight: 5
+  - id: health_insurance
+    labels: ["Daman insurance card", "Thiqa card renewal", "health insurance upgrade", "add dependent to plan", "insurance claim form", "reimbursement request", "insured hospital list", "pre-authorization request"]
+    weight: 4
+
+  # ── Arab/Gulf-specific: Education ──
+  - id: school_university_gulf
+    labels: ["school registration deadline", "university application", "IELTS test booking", "Emirates College", "university fees", "scholarship application", "attestation of degree", "KHDA approval", "MOHE equivalency", "British curriculum school", "IB programme school", "ADEK registration"]
+    weight: 5
+  - id: arabic_language
+    labels: ["Arabic class timing", "Quran reading class", "Arabic alphabet for kids", "Duolingo Arabic", "Arabic tutor contact", "Arabic course fee", "MSA vs dialect notes", "letter to learn this week"]
+    weight: 4

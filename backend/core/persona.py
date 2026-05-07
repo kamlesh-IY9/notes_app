@@ -39,6 +39,11 @@ class PersonaSampler:
             names_file = "india_names.yaml"
             rel_file = "india_relationships.yaml"
             topics_file = "india_topics.yaml"
+        elif self._language == "arabic":
+            personas_file = "arabic_personas.yaml"
+            names_file = "arabic_names.yaml"
+            rel_file = "arabic_relationships.yaml"
+            topics_file = "arabic_topics.yaml"
         else:
             personas_file = "personas.yaml"
             names_file = "name_pools.yaml"
@@ -120,8 +125,8 @@ class PersonaSampler:
         else:
             quirks = []
 
-        # For India: optionally append a surname (~25% of the time)
-        if self._language == "hindi" and random.random() < _INDIA_SURNAME_PROB:
+        # For India/Arabic: optionally append a surname (~25% of the time)
+        if self._language in ("hindi", "arabic") and random.random() < _INDIA_SURNAME_PROB:
             surname = self._pick_surname(ethnicity)
             full_name = f"{first_name} {surname}" if surname else first_name
         else:

@@ -1,0 +1,193 @@
+# Persona configuration for Arabic note generation
+# Countries: UAE, Saudi Arabia, Kuwait, Qatar, Oman, Bahrain, Jordan, Egypt, Morocco, Lebanon
+# Mirrors the structure of india_personas.yaml
+
+age_brackets:
+  - label: "teen"
+    range: [15, 19]
+    weight: 10
+  - label: "young_adult"
+    range: [20, 29]
+    weight: 30
+  - label: "adult"
+    range: [30, 44]
+    weight: 32
+  - label: "middle_aged"
+    range: [45, 59]
+    weight: 18
+  - label: "senior"
+    range: [60, 75]
+    weight: 10
+
+genders:
+  - label: "female"
+    weight: 48
+  - label: "male"
+    weight: 47
+  - label: "nonbinary"
+    weight: 5
+
+# Arab countries + large expat hubs
+states:
+  - UAE - Saudi Arabia - Kuwait - Qatar - Oman - Bahrain
+  - Jordan - Egypt - Morocco - Lebanon - Tunisia - Algeria
+  - Palestine - Iraq - Libya - Sudan - Yemen
+
+excluded_states: []
+
+# Occupations covering Gulf + Levant + North Africa context
+occupations:
+  # Tech / IT
+  - software engineer
+  - data analyst
+  - product manager
+  - frontend developer
+  - backend developer
+  - DevOps engineer
+  - cybersecurity analyst
+  - IT support specialist
+  - digital marketer
+  - UI/UX designer
+  - app developer
+  - content creator
+  - e-commerce specialist
+  - startup founder
+  - freelance developer
+  # Government / Public sector
+  - government employee
+  - civil servant
+  - military officer
+  - police officer
+  - municipality worker
+  - ministry official
+  - public relations officer
+  - customs officer
+  - immigration officer
+  # Finance / Banking
+  - bank manager
+  - bank teller
+  - financial advisor
+  - investment analyst
+  - insurance agent
+  - accountant
+  - auditor
+  - real estate agent
+  - mortgage advisor
+  - stockbroker
+  # Health / Medical
+  - doctor
+  - nurse
+  - pharmacist
+  - lab technician
+  - physiotherapist
+  - dentist
+  - hospital administrator
+  - medical intern
+  # Education
+  - school teacher
+  - university professor
+  - lecturer
+  - private tutor
+  - school principal
+  - university student
+  - high school student
+  - MBA student
+  - PhD researcher
+  # Engineering / Construction
+  - civil engineer
+  - mechanical engineer
+  - electrical engineer
+  - architect
+  - project manager
+  - quantity surveyor
+  - site engineer
+  - HVAC technician
+  - oil and gas engineer
+  - petroleum engineer
+  # Business / Trade
+  - business owner
+  - import/export trader
+  - wholesale merchant
+  - retail shop owner
+  - restaurant owner
+  - café owner
+  - supply chain manager
+  - logistics coordinator
+  # Services
+  - driver
+  - taxi driver
+  - delivery driver
+  - security guard
+  - hotel receptionist
+  - hotel manager
+  - travel agent
+  - event coordinator
+  - sales executive
+  - customer service agent
+  # Media / Creative
+  - journalist
+  - photographer
+  - videographer
+  - social media influencer
+  - graphic designer
+  # Legal / Administrative
+  - lawyer
+  - legal advisor
+  - HR manager
+  - administrative assistant
+  - secretary
+  # Skilled trades
+  - electrician
+  - plumber
+  - carpenter
+  - AC technician
+  - mechanic
+  # Other
+  - homemaker
+  - retired government employee
+  - small business owner
+  - entrepreneur
+  - NGO worker
+
+# Regional identity buckets — map to name pool keys in arabic_names.yaml
+ethnicity_buckets:
+  - gulf_arab
+  - levantine
+  - egyptian
+  - north_african
+  - south_asian_expat
+
+voice_quirks:
+  - id: lowercase_starts
+    description: "Doesn't capitalize first letter of lines"
+    weight: 20
+  - id: drop_apostrophes
+    description: "dont instead of don't, cant instead of can't"
+    weight: 15
+  - id: use_ampersand
+    description: "Uses & instead of 'and'"
+    weight: 12
+  - id: lol_haha
+    description: "Occasionally uses lol or haha"
+    weight: 10
+  - id: double_punctuation
+    description: "Uses !! or ?? or ..."
+    weight: 18
+  - id: no_end_periods
+    description: "Doesn't end lines with periods"
+    weight: 25
+  - id: word_merge
+    description: "Occasionally merges words"
+    weight: 8
+  - id: sparse_emoji
+    description: "Uses 1-2 emoji total in the note"
+    weight: 12
+  - id: abbreviations
+    description: "Uses u, bc, idk, rn, ngl, tbh"
+    weight: 12
+  - id: arabic_code_switch
+    description: "Occasionally uses Arabic word (yalla, inshallah, habibi, mashallah, khalas)"
+    weight: 18
+  - id: question_tag_la
+    description: "Adds 'la?' or 'right?' at end of lines"
+    weight: 8
