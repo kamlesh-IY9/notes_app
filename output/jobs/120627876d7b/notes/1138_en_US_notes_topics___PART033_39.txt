@@ -1,0 +1,6 @@
+maillard reaction temperature thresholds
+expert saying 320f vs 340f is huge diff
+wait no, thats like 22% more browning
+which reminds me, TODO look into ph levels n how they affect it
+seems like 140-160f is kinda ideal for cellvoltage... of flavor compounds
+n around 370f is where it gets crazy, 14dB more crispiness or smth...

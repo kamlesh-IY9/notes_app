@@ -1,0 +1,6 @@
+frame pacing and vsync tearing
+dont quote me but frame rate caps at 58fps reduces tearing by approx 43%
+CAPE says 60Hz monitor w 22ms response time is pretty sweet
+then again might need 2 upgrade gpu 4 4k gaming...
+n get gsync or freesync 2 reduce screen tearing, pretty sure abt this
+fastsync wont work w my old NVIDIA card tho...

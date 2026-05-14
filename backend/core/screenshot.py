@@ -178,6 +178,12 @@ MIUI_THEMES = [
     "retro-scanlines",
     "bubble-wrap",
     "mosaic-tiles",
+    # Batch 11 — Complex Advanced Shapes & Patterns
+    "retro-grid",
+    "diagonal-stripes-sharp",
+    "isometric-cubes",
+    "glassmorphism",
+    "polka-dots-heavy",
 ]
 
 # US carrier names — realistic mix for status bar (English jobs)

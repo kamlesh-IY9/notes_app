@@ -1,0 +1,5 @@
+aerodynamic drag coefficient testing
+expert saying drag coeff is around 0.27, seems little high n needs recheck
+prolly cuz of front grill design, similar to last time we tested at 65mph
+got 23.5% reduction in drag w/ new rear spoiler, thats pretty good i think
+nvh is still an issue tho, need to work on that... maybe smth w/ the wheel wells

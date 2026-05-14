@@ -1,0 +1,5 @@
+netcode rollback implementation
+def need ~27ms client-server sync or it's gonna be laggy
+seems off, on top of that 32 player matches might be too much
+hmm, 14.5kb packets n 43% packet loss tolerance
+need confirm if this is stable at 60hz, fastcharging updates...

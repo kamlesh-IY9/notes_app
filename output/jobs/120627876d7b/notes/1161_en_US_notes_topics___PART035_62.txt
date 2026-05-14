@@ -1,0 +1,6 @@
+ui layout anchoring and scaling
+expert saying 47% of users quit games w/o intuitive ui... seems off to me rn
+on top of that, scaling issues can cause 12.5fps lag, which is noticeable
+confused on this part: smth about anchoring to screen corners n edges
+mentioned 85dB sound effect limit to prevent distortion... interesting
+still trying to wrap my head around fastresize algorithms...

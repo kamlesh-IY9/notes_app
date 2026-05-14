@@ -1,0 +1,5 @@
+level design choke point analysis
+expert says 27% of players get stuck at narrow corridors... prolly why halo's 2nd lvl has 22dB ambient noise n that funnel shape, need recheck
+might b why they added more signposting tho, approx 43% reduction in player frustration
+fasttravel options should b 150ft apart, makes sense i guess
+n i think he said 12fps drop at choke points is acceptable... seems low tho

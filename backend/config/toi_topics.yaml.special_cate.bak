@@ -1,0 +1,289 @@
+# Topics of Interest config for STRICT BATCH 3
+# ONLY 12 specific categories. Highly deep subtopics to prevent repetition.
+# Strict adherence to client guidelines: NO celebrities, NO singers, NO boarding passes.
+
+toi_categories:
+  - id: education_school_college
+    topic_names:
+      - lab equipment scheduling and calibration
+      - thesis defense logistics and presentation structure
+      - study group syllabus breakdown for midterm
+      - library archives access request process
+      - grading rubric for final engineering project
+      - campus wifi mesh network upgrade details
+      - biochemistry lecture notes on enzyme kinetics
+      - linear algebra matrix multiplication review
+      - student housing maintenance request logs
+      - grant proposal submission timeline
+      - intramural sports bracket scheduling
+      - academic advising degree path requirements
+      - chemistry titration lab safety procedures
+      - architecture studio model building materials
+      - linguistics phonetics chart memorization
+    weight: 8
+
+  - id: career_work_life
+    topic_names:
+      - quarterly OKR tracking spreadsheet setup
+      - agile sprint retrospective action items
+      - vendor procurement steps and RFP process
+      - HR benefits enrollment deadline notes
+      - B2B sales funnel conversion metrics
+      - warehouse inventory audit discrepancies
+      - server migration downtime window planning
+      - remote work VPN troubleshooting steps
+      - new hire onboarding checklist completion
+      - marketing budget allocation breakdown
+      - SOC2 compliance documentation review
+      - daily standup blockers and dependencies
+      - payroll processing holiday schedule
+      - UX design wireframe feedback loop
+      - client retention strategy session notes
+    weight: 8
+
+  - id: entertainment_movies_tv
+    topic_names:
+      - three-point lighting setups for interviews
+      - foley sound recording techniques
+      - screenwriting heros journey structure
+      - non-linear video editing proxy workflow
+      - anamorphic lens flare characteristics
+      - color grading LUT adjustments in DaVinci
+      - boom mic placement for dialogue scenes
+      - steadycam vest balancing parameters
+      - practical special effects rigging
+      - aspect ratio framing techniques
+      - green screen chroma keying thresholds
+      - script continuity breakdown sheets
+      - focal length depth of field calculations
+      - storyboard panel shot lists
+      - frame rate conversion artifacts
+    weight: 8
+
+  - id: entertainment_music
+    topic_names:
+      - mix EQ frequencies for bass guitar
+      - circle of fifths chord progressions
+      - MIDI quantization and swing settings
+      - analog synthesizer oscillator tuning
+      - drum kit mic placement techniques
+      - vocal compression knee and ratio settings
+      - mastering LUFS loudness targets
+      - acoustic guitar restringing gauge tension
+      - sidechain routing for kick and bass
+      - reverb tail pre-delay calculations
+      - polyrhythm timing signatures
+      - audio interface sample rate latency
+      - subtractive synthesis envelope ADSR
+      - condenser mic phantom power requirements
+      - live sound feedback loop suppression
+    weight: 8
+
+  - id: entertainment_gaming
+    topic_names:
+      - pathfinding algorithm optimization
+      - sprite sheet resolution and atlas packing
+      - level design choke point analysis
+      - frame pacing and vsync tearing
+      - procedural generation seed values
+      - hit-box collision detection layers
+      - shader compilation stutter fixes
+      - character rigging inverse kinematics
+      - dialogue tree branching logic
+      - netcode rollback implementation
+      - inventory management data structures
+      - GPU particle system limits
+      - save state serialization formats
+      - UI layout anchoring and scaling
+      - controller deadzone analog stick tuning
+    weight: 8
+
+  - id: lifestyle_food
+    topic_names:
+      - dough hydration percentage calculations
+      - Maillard reaction temperature thresholds
+      - sous vide timing logs for steak
+      - sourdough starter feeding ratios
+      - emulsion stability for vinaigrettes
+      - tempering chocolate crystal structures
+      - coffee espresso extraction pressure
+      - fermentation pH levels for kimchi
+      - salt curing ratios for preservation
+      - pastry lamination butter temperatures
+      - deep frying smoke point comparisons
+      - gelatin blooming liquid measurements
+      - pressure cooking altitude adjustments
+      - dry aging humidity control parameters
+      - cheese rennet coagulation times
+    weight: 8
+
+  - id: lifestyle_traditions_celebrations
+    topic_names:
+      - cultural ceremonial sequence planning
+      - historical origins of harvest festivals
+      - venue layout for ritual seating
+      - traditional garment fabric sourcing
+      - astrological calendar date selection
+      - symbolic meaning of altar offerings
+      - procession route permit logistics
+      - acoustic requirements for chanting
+      - ancestral lineage recitation order
+      - generational recipe preservation methods
+      - floral arrangement symbolism
+      - ceremonial fire safety clearances
+      - traditional dance choreography notation
+      - seasonal transition folklore study
+      - feast table setting protocols
+    weight: 8
+
+  - id: lifestyle_hobbies_leisure
+    topic_names:
+      - woodworking dovetail joint types
+      - DSLR aperture and shutter speed combinations
+      - pottery kiln firing temperature schedules
+      - model train scale track gauges
+      - crochet yarn weight and hook sizes
+      - aquarium nitrogen cycle water testing
+      - stamp collecting condition grading
+      - board game meeple storage dimensions
+      - oil painting medium drying times
+      - amateur radio antenna length tuning
+      - indoor hydroponic nutrient mixing
+      - fountain pen nib grinding angles
+      - leatherworking saddle stitch technique
+      - telescope equatorial mount alignment
+      - origami crease pattern logic
+    weight: 8
+
+  - id: outdoor_adventure
+    topic_names:
+      - mountaineering knot tying figure eight
+      - kayak route topographic map reading
+      - tent waterproofing silnylon layers
+      - climbing carabiner kN strength ratings
+      - backpacking base weight minimization
+      - avalanche beacon grid search protocols
+      - mountain bike tire PSI terrain adjustments
+      - water purification filter micron sizes
+      - high altitude acclimatization schedules
+      - backcountry ski skin glue maintenance
+      - compass magnetic declination calculation
+      - hammock suspension tree strap angles
+      - survival fire starting friction methods
+      - rappelling descender friction control
+      - trail grading elevation gain analysis
+    weight: 8
+
+  - id: finance_society_weather
+    topic_names:
+      - barometric pressure drop correlations
+      - Doppler radar velocity color scales
+      - cumulonimbus cloud formation rates
+      - El Nino sea surface temperature anomalies
+      - dew point spread and fog likelihood
+      - jet stream upper level trough tracking
+      - hurricane category wind speed thresholds
+      - atmospheric inversion layer trapping
+      - tornado CAPE instability indexes
+      - relative humidity psychrometer readings
+      - microburst downdraft velocities
+      - cold front boundary collision dynamics
+      - snowfall ratio temperature dependency
+      - isobar map pressure gradient force
+      - UV index solar radiation peaks
+    weight: 8
+
+  - id: travel_transportation_vacation
+    topic_names:
+      - Rome historical walking tour itineraries
+      - Kyoto temple preservation architectural details
+      - local transit map routing efficiency
+      - museum exhibit chronological sequencing
+      - national park trail elevation profiles
+      - historical monument limestone erosion
+      - subway rail gauge differences
+      - ancient ruin excavation grid mapping
+      - regional cuisine historical ingredient trade
+      - coastal tide pool exploration schedules
+      - mountain pass seasonal road closures
+      - cathedral stained glass restoration dates
+      - ferry crossing nautical mile times
+      - indigenous cultural site access rules
+      - high speed rail magnetic levitation specs
+    weight: 8
+
+  - id: travel_transportation_automotive
+    topic_names:
+      - V8 engine torque spec calculations
+      - ceramic coating curing time logs
+      - tire pressure monitoring systems TPMS
+      - synthetic oil viscosity temperature ranges
+      - disc brake rotor heat dissipation
+      - transmission gear ratio calculations
+      - ECU remap air fuel mixture tuning
+      - suspension strut rebound damping
+      - aerodynamic drag coefficient testing
+      - battery alternator voltage output
+      - exhaust manifold backpressure flow
+      - spark plug gap firing efficiency
+      - catalytic converter precious metal loads
+      - differential limited slip mechanisms
+      - chassis torsional rigidity measurements
+    weight: 8
+
+# Personal reaction phrases — inject at least one per note
+reaction_phrases:
+  - is this normal??
+  - confused on this part
+  - need verify
+  - iirc
+  - dont quote me but
+  - might b wrong
+  - need recheck
+  - hmm
+  - from the session today
+  - wait no
+  - actually
+  - check this
+  - TODO look into this more
+  - hard to tell
+  - not sure tho
+  - need double check
+  - pretty sure abt this
+  - might be off here
+  - gotta look this up
+  - ok actually
+  - weird tho
+  - makes sense now
+  - need to test this
+  - still not clear on this
+  - asked the speaker abt this
+  - they mentioned it quickly
+  - didnt catch the exact number
+  - from the Q&A
+  - the demo showed this
+  - someone in audience asked same thing
+  - revisit this
+
+# Casual filler phrases that feel like real notes mid-sentence
+filler_phrases:
+  - speaking of whch
+  - also
+  - oh n
+  - and then
+  - which reminds me
+  - btw
+  - note to self
+  - compare with
+  - similar to last time
+  - might b why
+  - then again
+  - on top of that
+  - oh wait
+  - forgot to mention
+  - related to this
+  - side note
+  - kinda like
+  - goes along with
+  - from earlier today
+  - from last week's talk

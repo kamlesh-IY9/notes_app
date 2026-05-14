@@ -1,0 +1,6 @@
+dialogue tree branching logic
+def gonna use this in my game dev proj prolly, iirc 27% of players interact w npc's n a meaningful way
+speaking of whch, npc dialogue trees can have upto 43% more endings w this logic
+or smth like that, idk lol...
+fastbranching gives 22dB better player engagement n my opin
+need to look into CAPE n RSI for more info...

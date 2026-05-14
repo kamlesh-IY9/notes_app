@@ -1,0 +1,6 @@
+anamorphic lens flare characteristics
+dr jones says flare is diffraction at 140 degree angle on edge 35 ... actually on top of that we r talkin bout radial blaze too, from glass elements themselves not just air gaps
+n this diffraction case, you got that high intensity burst on edge
+wait no dont forget, blaze gets more intense when image sharpness drops ie if subject way overexposed
+our examples 48db to 17db reduction on flare using coatings on lens on top of optimized element distance, like CAPE on optical axis
+got to make sure element flat n clean too b or u get more aberrations

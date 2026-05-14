@@ -1,0 +1,5 @@
+drum kit mic placement techniques
+expert saying 17" fr drum head is sweet spot for mic placement... might be off here
+something about 12dB boost around 5khz n smth about proximity effect
+similar to last time, talkin about 3-4" off axis, vs straight on... check this
+getting around 22dB signal n -6dB gain on preamp, cellvoltage seems low...

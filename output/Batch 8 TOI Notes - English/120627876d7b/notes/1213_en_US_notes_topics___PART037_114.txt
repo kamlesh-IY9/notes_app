@@ -1,0 +1,6 @@
+quarterly OKR tracking spreadsheet setup
+ok so 27 columns for metrics rn, hmm seems like a lot
+on top of that we need to merge cells for 43% of the template
+from the session today, i think i can handle the data validation
+got a few ?s on conditional formatting tho... 17 different rules
+n need to review the RSI template from last qtr, kinda similar

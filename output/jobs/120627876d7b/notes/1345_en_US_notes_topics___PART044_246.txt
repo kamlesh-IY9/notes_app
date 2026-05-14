@@ -1,0 +1,6 @@
+battery alternator voltage output
+ok actually 14.2v is nominal n prolly can go up to 14.7v
+expert says 43% of vehicles have issues around 13.8v
+compare with last time we tested n got 12.9v on that old truck
+and then he mentioned something about ripple effect on cellvoltage...
+around 22dB noise reduction with new alternator design

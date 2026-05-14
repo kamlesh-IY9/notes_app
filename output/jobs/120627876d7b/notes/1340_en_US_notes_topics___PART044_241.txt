@@ -1,0 +1,5 @@
+maillard reaction temperature thresholds
+expert says 325f is def the threshold for onset, seems off, i thought it was lower
+note to self: look up amylase denaturation temps n how they relate to maillard
+reacts fastest around 375f, dont quote me but thats a big jump from 325
+hmm, water activity levels play a role, 0.65 aw is approx critical point...

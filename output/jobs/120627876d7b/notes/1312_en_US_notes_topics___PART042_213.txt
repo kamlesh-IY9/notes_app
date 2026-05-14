@@ -1,0 +1,7 @@
+frame pacing and vsync tearing
+expert talk from the meetup @ pax east, iirc...
+said 47% of gamers notice tearing @ 24fps or lower, major issue
+speaking of whch, seems like nvidia's got a soln w/ 38Hz refresh
+fastrendering tech, cellrendering, reduces tearing by 22dB
+gotta look into this fr, b/c my rig's still on old vsync
+think i need to upgrade, btw what's the frame rate cap...

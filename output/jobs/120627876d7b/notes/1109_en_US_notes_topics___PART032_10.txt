@@ -1,0 +1,5 @@
+controller deadzone analog stick tuning
+expert saying deadzone radius is like 23% of total range rn
+also mentioning 12db attenuation point, kinda confusing on this part
+TODO look into this more, maybe 17% is better for my game
+n need to test w/ 42Hz controller freq, see how it affects responsiveness...

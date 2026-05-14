@@ -1,0 +1,6 @@
+linear algebra matrix multiplication review
+matrix dims gotta match ie 3x4 n 4x2 to multiply
+results in 3x2 matrix, roughly 43% slower than vec mult
+gotta look this up, is this normal?? 22dB noise reduction
+then again, what if matrices are sparse, diff story...
+rsi issues from writing this out by hand, maybe switch to python

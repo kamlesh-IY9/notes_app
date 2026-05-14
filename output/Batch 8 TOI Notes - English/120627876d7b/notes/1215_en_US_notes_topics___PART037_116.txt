@@ -1,0 +1,6 @@
+netcode rollback implementation
+expert talk today mentiond 37.5% reduction in lag
+need 2 double check 4 our gameserver, prolly applies 2 our NVH issues
+note to self: ask dev team bout 22ms tickrate implementation
+from the session today, seems like CAPE is key 2 fast sync...
+rollback netcode supposedly reduces jitter by 14.2dB, tbh sounds too good 2 b true

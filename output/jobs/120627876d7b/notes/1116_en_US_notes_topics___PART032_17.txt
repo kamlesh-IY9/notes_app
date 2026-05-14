@@ -1,0 +1,5 @@
+focal length depth of field calculations
+tbh 24mm lens @ f2.8 getting like 43% dof... is this normal??
+on top of that, expert saying 50mm lens @ f4 gets 22% more blur n iirc thats pretty standard for movies
+n they showed example from marvel movie, dof @ 35mm f1.4 was approx 17ft... might b wrong tho
+expert used term "hyperfocal distance" n i dont totally get it yet...

@@ -1,0 +1,7 @@
+campus wifi mesh network upgrade details
+just starting... system requirements n channel assignment same as hvac etc
+using eap-tls wifi auth, rolling out secure access points in dorms iirc 120+ aps w power over eth
+new wifi6 client setup req will auto detect mesh net
+mesh node placement will focus on densely populated areas: libraries, cafeterias, student union, "and then" around quad on campus n using wall warts
+focusing on reducing ntl latency, will optimize for best path first to improve coverage, 35% increase est... n currently "huh" avg download speeds 30-50 mbps, new will aim for 100-200
+more details to come, q&a time now 5!

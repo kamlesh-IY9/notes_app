@@ -1,0 +1,6 @@
+Doppler radar velocity color scales
+talking about velocity ranges 43% of time spent on mesoscale stuff
+confused on this part - smth about 22dB threshold n storm speed tracking
+prolly gonna look into color palette specs more...
+then again 5mph wind diff can be huge, saw that in kona last yr
+TODO check RSI metrics n how they apply to HI storms...

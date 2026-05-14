@@ -1,0 +1,6 @@
+color grading LUT adjustments in DaVinci
+lut curve adjustments around 43% seems off gotta look this up
+on top of that node graph setup is kinda confusing rn
+fasttracking to 22dB n clipping is harsh fr
+need to play w/ CAPE n RSI settings to get it just right
+gotta check out blackmagic design tutorials on this...

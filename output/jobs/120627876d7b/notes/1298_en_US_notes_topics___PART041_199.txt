@@ -1,0 +1,6 @@
+steadycam vest balancing parameters
+ok so iso 40kg load n about 23.5lbs counterbalance... seems kinda low might b wrong
+gimbal ring diameter approx 14.2in fyi
+frank says 12.8 pivot point is ideal but idk need recheck
+note to self: look up stabilizer mount types... n whats diff btw sled n vest
+getting around 32dB noise reduction w/ new vest design... n thats pretty cool

@@ -1,0 +1,9 @@
+barometric pressure drop correlations
+speaker says avg baro pressure drop per hr @ storm fronts is like 0.03 inches?
+sounds right, guess my hubby noticed it too during that monsoon last yr...
+"saturation point" for pressure drop seems to be around 42.5% chance of rain on radar
+that's what i thought! still hard to tell if this correlates with cellvoltage
+sudden pressure changes impact stock market, supposedly 17% volatility
+whattt? needs more data imo
+algorithms using 'spline fn' interpolation to correlate pressure & market fluctuations
+yeah, tried that w/ 50% stock buyback strategy last yr:

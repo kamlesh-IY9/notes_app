@@ -1,0 +1,6 @@
+level design choke point analysis
+expert says 67% of players get stuck at narrow corridors
+oh n idk if that's true need double check
+mentioned something about 4.2sec avg time 2 clear choke points
+nvho (noise, vibration, harshness) of environment affects player anxiety...
+need recheck what he meant by "funneling" n how 2 apply it 2 my design

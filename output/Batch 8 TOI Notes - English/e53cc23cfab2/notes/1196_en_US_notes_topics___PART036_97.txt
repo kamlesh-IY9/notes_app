@@ -1,0 +1,6 @@
+procedural generation seed values
+expert says 43% of map gen is def tied to seed val n fyi thats a lot
+need verify if thats actually the case tho...
+then again 22dB noise reduction via fft makes sense
+seed val of 8675309 creates some crazy level layouts n might be off here
+fastgeneration algo uses like 3.14 miles of spline curves...

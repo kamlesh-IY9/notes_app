@@ -1,0 +1,8 @@
+hit-box collision detection layers
+saying 99% of gamedevs do hit-boxes
+uses spheres, boxes, cones... sounds fancy but ppl prob just use like w/e works
+poly-to-mesh conversion takes too long... 'specially in games with 1000 anims
+iirc it's like 4-5ms per convert... seems too slow?
+oh n the order of polys matters w/ convex hulls
+simplified versions called 'seperate axis theorem' n others... prob easier 2 impl
+tried using AABB but like 10% more complex 2 set up... hmm

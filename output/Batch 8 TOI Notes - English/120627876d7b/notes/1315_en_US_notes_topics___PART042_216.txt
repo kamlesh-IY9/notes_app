@@ -1,0 +1,5 @@
+doppler radar velocity color scales
+expert saying 53.2mph threshold for red color n thats pretty fast tho
+dont quote me but seems off prolly cuz of beamwidth issue
+note to self: look up antenna gain... 22.5dB thats a lot of signal loss
+fasttracking storms n cell velocity around 17.4mph... btw what about tornadoes

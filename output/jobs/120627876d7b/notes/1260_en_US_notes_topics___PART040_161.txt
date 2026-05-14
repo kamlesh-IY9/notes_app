@@ -1,0 +1,6 @@
+procedural generation seed values
+expert saying 23.7% of seeds r legit unique
+gotta look this up, oh n whats perlin noise?
+seeds affect map gen, terrain roughness approx 4.2x
+octave count matters, iirc 6 or 7 is std
+fastgenerating maps n 3d models...

@@ -1,0 +1,6 @@
+reverb tail pre-delay calculations
+idk if im getting this... 127ms pre-delay time
+wait no, thats like 4.5dB gain reduction
+on top of that, room size matters, 12ft x 15ft = 22dB decay
+n density 43% affects reverb tail, make sense btw
+compare with last time, was using 95ms, huge diff...

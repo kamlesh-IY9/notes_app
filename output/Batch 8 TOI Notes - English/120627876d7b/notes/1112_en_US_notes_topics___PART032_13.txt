@@ -1,0 +1,6 @@
+campus wifi mesh network upgrade details
+they're using 27 aps n 43% more coverage or smth like that
+idk if thats normal??
+new mesh network has 22dB signal strength might b why
+they said 95% uptime n fasthandoff between aps
+is 5ms latency good??... n they're using some CAPE protocol

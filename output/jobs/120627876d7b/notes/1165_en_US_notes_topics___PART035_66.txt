@@ -1,0 +1,5 @@
+linear algebra matrix multiplication review
+just went over outer product, like 43% of questions r on this
+nv matrix gotta b same # cols as 2nd matrix rows, def key point
+might b wrong but i think its 22dB faster w/ strassen alg
+speaking of whch, whats cell size limit btw, n how does it affect compute time...

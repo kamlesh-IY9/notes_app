@@ -1,0 +1,6 @@
+student housing maintenance request logs
+avg response time 4.2 hrs which reminds me i need to check our sys
+hard to tell if 23% increase in requests is due to more students or just better reporting
+rly hope we can implement something like CAPE to track work orders n reduce backlog
+from the meetup talk, around 17% of requests r for HVAC issues, mostly during summer months...
+n 82% resolution rate seems ok, but can we do better?

@@ -1,0 +1,6 @@
+snowfall ratio temperature dependency
+temp around 25f, snowfall ratio drops to 4% or so... kinda low
+speaking of which, 15f threshold seems critical, ratio jumps to 22%
+might be off here but didnt we discuss 18:1 ratio last yr?
+ratio fluctuates wildly at 28f, 12db drop in predictability n all
+confused on this part, somethin about nws models...

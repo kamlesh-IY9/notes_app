@@ -1,0 +1,6 @@
+level design choke point analysis
+ok so 47% of players get stuck at choke points n thats prolly due to poor navmesh design
+oh n whats the avg player speed thru these areas... approx 12mph
+tho i think thats a bit low compare to last time we tested it was more like 15mph
+CAPE says 22dB ambient noise reduces player anxiety n thats a thing to consider
+gotta test this on our own map...

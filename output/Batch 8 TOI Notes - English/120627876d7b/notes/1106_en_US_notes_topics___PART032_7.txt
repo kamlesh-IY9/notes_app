@@ -1,0 +1,6 @@
+sous vide timing logs for steak
+seems like 129f for 1.5hrs is optimal for medium rare, not sure tho
+on top of that, 43% of chefs at Mohegan Sun use 2hrs n 15min for ribeye
+iirc, some dude said 22dB noise reduction helps w/ even cooking... idk
+fastcooking at 140f for 45min gets u well done, but texture might be off...
+still trying to figure out cell voltage impact on heater performance...

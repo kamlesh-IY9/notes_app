@@ -1,0 +1,6 @@
+daily standup blockers and dependencies
+ok so like 43% of projects r delayed cuz of blockers dont quote me but
+oh n they said avg team has 2-3 dependencies unresolved at any given time
+hmm fasttracking issues helps reduce that number by 22%
+not sure tho if this works for our team, need to try it out n see
+oh n something about rsi metrics too, 17% reduction in delays if we track it right...

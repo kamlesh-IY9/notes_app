@@ -1,0 +1,6 @@
+character rigging inverse kinematics
+expert says 47% of animation time is spent on ik n 23deg of freedom is a lot to handle
+oh n i gotta look this up but btwn forward n inverse kinematics whats the diff
+hard to tell when he's talking so fast n using terms like jacobian matrices
+he mentioned 12ms processing time for ik algo n thats pretty fast btw
+gotta ask him about maya n 3ds max implementation later...

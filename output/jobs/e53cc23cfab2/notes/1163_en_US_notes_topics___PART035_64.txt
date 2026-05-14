@@ -1,0 +1,5 @@
+shader compilation stutter fixes
+def need to check this, 37% frame rate boost from the meetup talk
+r similar to last time, they mentioned 22dB diff in NVH
+hmm fastloading, cellvoltage caps at 1.8v n reduces stutter by 14%...
+gotta look into CAPE, RSI integration for my gaming rig

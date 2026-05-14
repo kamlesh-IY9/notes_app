@@ -1,0 +1,6 @@
+shader compilation stutter fixes
+expert saying 23.5ms avg stutter time lol kinda high
+dont quote me but 17% perf boost possible n need to test
+note to self: try batch compiling, reduce shader count
+fastloading times r key, like 42dB reduction in lag...
+compare with last time, was 31ms stutter time n that was bad

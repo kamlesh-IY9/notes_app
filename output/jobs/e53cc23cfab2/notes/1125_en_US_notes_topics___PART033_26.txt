@@ -1,0 +1,6 @@
+frame pacing and vsync tearing
+expert says 47% of gamers notice tearing, seems off bc iirc its way more annoying
+nvidia is working on it, 22fps is where it starts to get bad
+actually, my old gtx 970 did 28dB better with vsync on
+and then he mentions gsync, tho i dont have a gsync monitor...
+think i need to upgrade, bc frame pacing is killing my gaming experience...

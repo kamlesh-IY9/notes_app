@@ -1,0 +1,9 @@
+frame rate conversion artifacts
+fr talking about 12-bit per color but didnt explain how it matters
+video compression fr is really sensitive to interpolation artifacts
+some sources say 42-55Hz looks fr smooth but iirc it's way more subtle than that
+gotta look this up later... maybe its 42 like ps3 era
+note to self: interpolate 5 to 23 frames in the middle of playback n get those artifacts
+the dude explained 3 types of inter and i only caught the first 2 (i swear its motion, temporal...)
+also something about 4:5 in between cadence n framerate "seize your brain"
+4:2:0 in chroma sub what it "does it matter"

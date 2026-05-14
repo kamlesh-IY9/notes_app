@@ -1,0 +1,6 @@
+mastering LUFS loudness targets
+expert says -18 lu fs is optimal n i think thats pretty low lol
+been using -14 n it sounds fine to me
+need to verify on my own tracks n comp to last time
+similar to last time, he mentioned -20 for podcasting, thats way too quiet imo
+approx 22dB headroom for mastering, gonna try that...

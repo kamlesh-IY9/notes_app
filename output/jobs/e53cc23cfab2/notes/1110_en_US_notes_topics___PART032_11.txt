@@ -1,0 +1,9 @@
+remote work vpn troubleshooting steps
+ok actually didnt know the diff btw pptp n l2tp
+"typically we see 43% of issues with pptp protocol"... why tho?
+l2tp support in newer cisco vpn clients... no idea which ones tho
+also what's the deal with split tunneling idk is that the same as ntp?
+"n" set a static ip on the client device helps but doesnt always resolve
+"our company uses 2factor auth but forgot to enable on remote acc" lol what a mistake
+tbh still confusion on diff between openvpn n openconnect  ... does it matter rn?
+troubleshooting steps: restart router "maybe" (jk always the client),

@@ -1,0 +1,6 @@
+GPU particle system limits
+expert saying 430k particles is max n it starts to lag
+hmm thats pretty low lol
+similar to last time i played overwatch, fps dropped to 22fps n thats with radeon rx 6700
+wait no, whats the diff between gpu n cpu handling particles...
+n whats the deal with 43% of gpu power going to physics calcs...

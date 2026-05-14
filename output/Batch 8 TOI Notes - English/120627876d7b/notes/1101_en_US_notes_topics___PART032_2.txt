@@ -1,0 +1,6 @@
+origami crease pattern logic
+expert said 37% of designs use sink folds, n thats a lot oh n i think i messed up my tessellation try today...
+from the session today, i noted 22 layers in one model, seems like a lot to me
+might b wrong but i thought i saw 15degree angle in that one demo, need to review vids
+n fyi, vertex creases are key, around 4.5mm wide on avg
+oh n he mentioned cp notation, gonna look that up later...

@@ -1,0 +1,6 @@
+frame pacing and vsync tearing
+expert says 47% of gamers notice tearing issues
+ok actually i dont rly notice it thats weird
+vsync limits framerate to 59.5hz prolly why i dont see it
+speaking of whch, nvidia sync tech reduce tearing by 23dB
+need confirm if thats legit or just marketing...

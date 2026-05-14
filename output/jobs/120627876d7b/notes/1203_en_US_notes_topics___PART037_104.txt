@@ -1,0 +1,5 @@
+model train scale track gauges
+ok so scale is like 1:48 approx, then again maybe 1:53?
+HO gauge is 0.625in iirc, seems off but yeah
+n he's saying S gauge is 0.883in, fasttrack setup
+22% grade is max incline hmm, lots of math...

@@ -1,0 +1,6 @@
+architecture studio model building materials
+ie foam board costs around $23/sheet, gotta look this up
+also, basswood approx 12% cheaper fyi
+scale models need precisely 1/16" thickness, pretty sure abt this
+material selection huge impact on nvh...
+gotta research 3d printing costs, around $45/lb n time consumption...

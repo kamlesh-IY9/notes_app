@@ -1,0 +1,6 @@
+remote work vpn troubleshooting steps
+vpn latency around 43% worse w/ outdated firmware, seems off
+speaking of whch, need confirm if our company uses CAPE or RSI encryption
+avg employee has 22 failed login attempts per mo, mostly due to pw reset issues
+ie, weak pw policies n lack of 2fa...
+need to review our vpn config, maybe switch to openvpn...

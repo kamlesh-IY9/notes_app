@@ -1,0 +1,6 @@
+boom mic placement for dialogue scenes
+expert says 6-8 ft above actor's head for best capture, hmm
+on top of that, angle matters btw, approx 45deg off axis
+TODO look into zeppelin windscreens, they reduce noise by 22dB
+n they mentioned using a boom w/ a shotgun mic for outdoor scenes, works well at 12ft n 80mph wind
+on top of that, positioning 3ft off side of face is key...

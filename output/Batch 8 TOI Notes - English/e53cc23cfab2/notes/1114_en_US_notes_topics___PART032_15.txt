@@ -1,0 +1,5 @@
+condenser mic phantom power requirements
+just learned that most mics need 24-48v on pins 2-3, not +48, this matters rn for low self noise in my soundboard bc it's not 48v pure it's filtered... 43-ish percent noise reduction @ 35db
+can't recall which standard... iso, ebu, or that one ieee standard we learned bout 10 min ago?
+phantom power for active mics is 1-5ma, inactive needs 0.5-1.5v for biasing...  then how you got 48v is still fuzzy
+voltage stability matters, any ripples in voltage can 'cook' the transistors, and then we'd have distortion in the recording... TODO: research what kinda voltage regulators would work for reliable phantom power

@@ -1,0 +1,6 @@
+chemistry titration lab safety procedures
+approx 27% of lab accidents happen during titration, need recheck stats
+using 0.5M naoh soln, ph level around 12.4 or smth like that
+then again, what if we mess up the burette calibration, like 0.02ml off
+nvho (noise, vibration, humidity) levels in lab seem ok, around 42dB...
+still worried about those nasty chemicals, eg hydrochloric acid, sulfuric acid...

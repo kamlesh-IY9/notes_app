@@ -1,0 +1,6 @@
+boom mic placement for dialogue scenes
+expert saying 6-8 inches abt right distance btw mic n actor's mouth
+also mentions 42dB sensitivity which seems kinda low... might be off here
+n they're using schoeps cmits btw, pretty expensive mics
+fastdialogue scenes need more headroom ie 12-15dB... hard to tell if thats right tho
+also somethin abt keeping mic 3ft off axis...

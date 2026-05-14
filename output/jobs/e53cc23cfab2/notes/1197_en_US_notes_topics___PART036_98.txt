@@ -1,0 +1,6 @@
+linear algebra matrix multiplication review
+def gonna need to review this stuff... 34% of problems on last exam were mat mul
+dont quote me but i think prof said 27.5mb of memory req for large mat ops
+also somethin about caching n 43% speedup on certain ops
+ie matrix dims gotta be compatible or it wont work n all
+not sure tho if thats 22dB improvement or just 2x speedup... nvm

@@ -1,0 +1,6 @@
+sidechain routing for kick and bass
+pretty sure abt this, 43% of sound engs do it rn...
+compression threshold around -23dB n release time 120ms
+note to self: try 4:1 ratio, sounds kinda crazy but might work
+fastcompressing the bass n kick, getting that 12dB gain reduction
+iirc plugin order matters, eq before comp kinda thing...

@@ -1,0 +1,6 @@
+subway rail gauge differences
+std gauge 4ft 8.5in, rus use 5ft, from the meetup talk
+hard to tell which is better, prolly depends on terrain n load
+rus gauge is wider by approx 1.5in, allows for more stability
+and then iirc speaker said something about 12% more efficient
+at high speeds like 60mph...

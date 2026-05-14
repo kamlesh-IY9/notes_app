@@ -1,0 +1,5 @@
+relative humidity psychrometer readings
+expert saying 62% rh is ideal for storage btw
+idk why but 55% seems more realistic or smth like that
+then again temps around 75f affect readings hmm
+need recheck calibrations after 22db noise test n psychrometer was off by 3%...

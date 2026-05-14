@@ -1,0 +1,9 @@
+pathfinding algorithm optimization
+just talkin about vidgame optimizations
+ok so this algo is key to fast NPC movement...
+- avg improvement is 23-30% in terms of gpu usage vs navmesh methods
+n kinda crazy that we're still tweaking stuff from 10 yrs ago
+- this "dijkstra" method is key, tbh faster than a* ... 15ms vs 30ms @ 1000 agents
+- oh n, these optimized paths are now used for dynamic sound propagation too
+- might b wrong but i'm thinking it's applicable to other fields like simulation and robotics?
+now they're talkin about more "probabilistic" methods for even bigger performance boosts...

@@ -1,0 +1,6 @@
+netcode rollback implementation
+expert says 27ms avg lag reduction w/ new algo... hmm
+iirc we had 32ms last patch n that was still pretty bad
+wait no thats actually a 15% improvement btw
+which reminds me to check our nvh tests on the new build...
+need to verify 22dB noise reduction claim too

@@ -1,0 +1,6 @@
+transmission gear ratio calculations
+expert saying 3.72 final drive ratio, might be off here
+think its 3.84 or smthn, need confirm
+speaking of which, 22dB loss fyi, pretty significant
+at 65mph, torque output around 278lbs-ft, feels low tbh...
+gear switching algos pretty complex, btw

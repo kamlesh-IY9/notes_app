@@ -1,0 +1,6 @@
+non-linear video editing proxy workflow
+expert saying 4k footage is 43% harder to work w/
+need recheck that stat...
+proxy files r like 1/5 size of orig, 22dB less quality but fast enough for rough cuts
+note to self: try fr 10bit color depth on next project
+hmm dont know if my old mac can handle 4k @ 29.97fps...

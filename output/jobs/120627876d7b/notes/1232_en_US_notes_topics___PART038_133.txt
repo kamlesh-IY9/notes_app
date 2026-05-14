@@ -1,0 +1,5 @@
+lab equipment scheduling and calibration
+сылка to 87.5% utilization rate, btw seems high n prolly need to double check
+confused on this part - 42dB noise threshold for NVH testing?
+which reminds me to ask about cell voltage calibration every 3.5 months
+fastcharging modes affect RSI by around 23% ... need to review notes again

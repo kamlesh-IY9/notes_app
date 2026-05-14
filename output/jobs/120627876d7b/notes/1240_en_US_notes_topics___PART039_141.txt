@@ -1,0 +1,7 @@
+isobar map pressure gradient force
+so like pressure gradient force is 43% stronger near coastlines ngl
+force is approx 22dB more intense on weather maps
+confused on this part, smth about wind chill factor...
+on top of that, pressure diffs of 3.5mb can cause major changes in weather patterns, btw
+n i thought it was all about temp, not sure tho
+seems like CAPE values are key to predicting these forces...

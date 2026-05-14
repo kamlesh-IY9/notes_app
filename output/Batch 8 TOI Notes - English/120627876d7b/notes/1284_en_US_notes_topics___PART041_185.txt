@@ -1,0 +1,6 @@
+color grading LUT adjustments in DaVinci
+lut preview window showing 27% approx brightness shift
+oh n check this, 14.2 stop dynamic range prolly too much for this scene
+hard to tell if its the LUT n the grade or the footage itself
+nvidia 3080 gpu helping with fast rendering, around 23sec per clip
+still trying to match the reference image, abt 3.4 gamma offset...

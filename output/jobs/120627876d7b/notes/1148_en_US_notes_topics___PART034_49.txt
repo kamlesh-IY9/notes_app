@@ -1,0 +1,4 @@
+b2b sales funnel conversion metrics
+expert says avg conversion rate is 22.5%
+check this, thats way higher than i thought bc our team is @ 17%
+gotta look this up, whats rly driving this, which reminds me to review our mql to sql ratio, its been lagging n i think its bc of poor lead scoring...

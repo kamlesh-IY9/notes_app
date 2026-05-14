@@ -1,0 +1,6 @@
+netcode rollback implementation
+expert says 27ms delay is kinda standard now
+oh n i think he mentioned 32% reduction in fr n input lag or smth like that
+gotta look this up, didnt know about client-side pred n server-side corr
+rollback netcode def helps w/ desync issues, around 14dB less noise n glitches
+he mentioned some indie game doing this w/ 43% better response time...

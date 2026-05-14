@@ -1,0 +1,6 @@
+frame rate conversion artifacts
+expert saying 24fps to 60fps conversion gives 32dB distortion?? is this normal??
+iirc it kinda depends on the interpolation algo used... might b why some movies look weird on my 4k tv
+n they mentioned 43% of viewers cant notice the difference... seems low to me
+fasttracking the conversion n u get annoying artifacts... cellvoltage spikes or somethin
+might b wrong but didnt we used to have this issue w/ hdmi 1.4??...

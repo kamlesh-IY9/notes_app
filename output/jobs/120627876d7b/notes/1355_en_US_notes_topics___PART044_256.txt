@@ -1,0 +1,6 @@
+mix EQ frequencies for bass guitar
+prolly around 63hz for low end n 180hz for mid... similar to last time
+compare with last session, thot it was 59hz or smth like that
+boosting 4-6db at 100hz makes a big diff, or so it seems
+getting a good sound around 43% mix of low n high freqs...
+fasteqing n tweaking cellvoltage on my amp helps too

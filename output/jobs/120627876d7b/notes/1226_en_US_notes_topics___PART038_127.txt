@@ -1,0 +1,6 @@
+hit-box collision detection layers
+expert saying 43% of games use sphere vs box collision lol
+oh n around 27dB of precision loss when using capsule colliders
+hard to tell if its worth it bc of the 12ms delay
+actually kinda makes sense n they showed 1.5 miles of in-game terrain
+nvm gonna try it out myself...

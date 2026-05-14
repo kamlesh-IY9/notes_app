@@ -1,0 +1,6 @@
+focal length depth of field calculations
+aperture around 2.8 and then f stop 5.6 n 35mm lens
+hmm 43% of image in focus with 50mm lens at 5 feet
+is this normal?? depth of field 22 inches
+need verify calculation for 24fps... and then check hyperfocal distance
+around 17 feet n etc

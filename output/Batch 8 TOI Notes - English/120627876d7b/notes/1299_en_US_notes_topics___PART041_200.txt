@@ -1,0 +1,6 @@
+dialogue tree branching logic
+expert says 47% of players skip dialogues altogether wait no
+avg player engages w/ 23.5 dialogue nodes per gameplay session vs 12.1 in 2018
+gotta look this up: noise reduction algos in dialogue recognition and then
+around 15dB threshold for ?>"/>
+UGH my audio sucks in this room...

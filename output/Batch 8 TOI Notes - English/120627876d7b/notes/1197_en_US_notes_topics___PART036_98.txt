@@ -1,0 +1,5 @@
+acoustic requirements for chanting
+expert saying 87db min for effective chanting... actually kinda low
+w/ resonant freq abt 22hz n then harmonics matter too
+hard to tell if 1/3 octave bands def make a difference
+needs careful microphone placement... and then monitoring sound levels

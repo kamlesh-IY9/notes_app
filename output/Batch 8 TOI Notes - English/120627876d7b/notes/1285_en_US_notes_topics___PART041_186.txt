@@ -1,0 +1,5 @@
+subway rail gauge differences
+std gauge in us is 4ft 8.5in, but some lines r 4ft 9in... need double check
+nyc subway mostly std, but some old lines r 4ft 8.25in, idk why
+tokyo subway uses 4ft 9.5in n some places, affects metro car design
+gotta look this up, Std gauge % is like 55% globally, Rest r broad gauge...

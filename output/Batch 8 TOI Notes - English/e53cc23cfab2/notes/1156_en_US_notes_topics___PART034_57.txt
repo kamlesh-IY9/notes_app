@@ -1,0 +1,6 @@
+audio interface sample rate latency
+eg 44.1kHz sample rate got 12.5ms latency, check this
+gotta look up asio4all, prolly reduce latency to 7.3ms
+then again may need better interface, like focusrite
+22dB signal to noise ratio n thats pretty good
+fasttracking audio probs n cellvoltage drops...

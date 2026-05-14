@@ -1,0 +1,9 @@
+green screen chroma keying thresholds
+lecturer: threshold ranges btw, most used are btw 128-192 green 160-240 blue
+idk, kinda low w/ contrast 2 much 128 btw 30-70% brightness
+n need recheck math on this green screen threshold
+think we can tweak code for 143 as min threshold w/ 43% tolerance?
+note to self: check 3 colour profile effect on chroma extraction...
+"3blue 1brown" type animated sequences dont work well, rly too much info to process in 1 frame
+also talked about chromatic aberration, CAPE 2: how they correct 4
+some examples of low-budget shots, surprisingly good chroma key w/ $10 kit (green sheet 1x1m)

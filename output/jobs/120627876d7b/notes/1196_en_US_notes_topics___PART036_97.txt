@@ -1,0 +1,6 @@
+isobar map pressure gradient force
+expert saying 1013mb pressure diff is ~2% n thats a big deal
+wait no thats really small... need double check
+also talked about 15mph winds n 25dB noise
+iirc isobars are like 4-6 miles apart n that affects stock prices somehow
+def gonna look into this fastdata collection n cellvolume analysis...

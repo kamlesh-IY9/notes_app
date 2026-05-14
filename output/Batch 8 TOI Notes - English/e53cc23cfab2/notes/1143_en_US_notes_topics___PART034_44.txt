@@ -1,0 +1,8 @@
+origami crease pattern logic
+he's saying a typical origami model uses around 70-80 creases right? some are more complex tho n like 300+
+he's explaining the symmetries - eg x4, x6, mirror.. all the way from D4 to D12 i think
+he's pushing on "nesting" theory where creases kinda fold in/out of each other
+check this "fold angles"
+need recheck this calc n tho, 62degrees isn't making sense n his vid
+he says we only need 5 diff crease types n for simplicity
+speaking of whch, is it me or is folding paper meditative af

@@ -1,0 +1,5 @@
+frame pacing and vsync tearing
+from the meetup talk, guy said 47.3% of gamers notice tearing iirc
+nvidia's got a fix w/ gsync which reduces tearing by abt 23dB
+which reminds me, i had major issues w/ screen tearing on my 144hz monitor...
+he said 65fps is the sweet spot for minimal tearing, gonna try that tonight

@@ -1,0 +1,5 @@
+biochemistry lecture notes on enzyme kinetics
+enzyme turnover num is like 43% per sec
+confused on this part tho... speaking of whch km value is abt 2.5mM
+vmax is 22umol/min, might b wrong n dont get y its not 25
+fastreaction kinetics is key here... n substrate conc is like 1.8mM

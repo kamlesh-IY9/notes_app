@@ -1,0 +1,7 @@
+cold front boundary collision dynamics
+dr harrison saying u gotta get past this pseudo-adiabatic cooling rate of 8.3degf/hr...def seems super low to me ngl
+then again, might be my own dumb interpretation of it
+bc the whole 'potential vorticity' thing is still kinda fuzzy to me
+don't quote me but id say thats when convection starts kickin in around 1200ft avg
+when PV is at its ceiling, then fronts collide, creates this crazy updraft...like 500ft/s rate
+need to reread chapter 7 on boundary layer theory now

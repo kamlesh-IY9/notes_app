@@ -1,0 +1,6 @@
+subtractive synthesis envelope adsr
+expert says attack time around 23ms, actually pretty fast
+then again decay stage takes like 43% of total time n sustain is 12dB
+need confirm but iirc adsr affects lowpass filter cutoff, lol pretty important
+think i got it, release stage is like 1.5sec tho...
+envelope shaping sound design is key here...

@@ -1,0 +1,5 @@
+condenser mic phantom power requirements
+expert says 38-45 volts dc req for most mics, dont quote me but i think thats a bit lower than last time
+note to self: check Behringer xenyx specs, btw does it even matter bc most mixers can handle 48v
+sennheiser mkh series needs around 44v n 2.5ma to function properly...
+compare with last time we used rode nt1, was it 42v or something?

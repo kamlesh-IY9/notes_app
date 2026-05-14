@@ -917,6 +917,52 @@
   body.theme-brushed-gold { --bg:#120e00; --fg:#e8c870; --status-fg:#f8e0a0; --toolbar-fg:#f8e0a0; --title-color:rgba(232,200,112,0.28); --meta-color:rgba(232,200,112,0.55); --body-color:#e8c870; }
   body.theme-linen-texture { --bg:#0e0c08; --fg:#d8c8a0; --status-fg:#e8d8c0; --toolbar-fg:#e8d8c0; --title-color:rgba(216,200,160,0.28); --meta-color:rgba(216,200,160,0.55); --body-color:#d8c8a0; }
 
+  /* ── Batch 11: Complex Advanced Shapes & Patterns ── */
+  body.theme-retro-grid {
+    --bg: #09031c; --fg: #ff4081; --status-fg: #ff80ab; --toolbar-fg: #ff80ab; --title-color: rgba(255,64,129,0.28); --meta-color: rgba(255,64,129,0.55); --body-color: #ff4081;
+    background: 
+      linear-gradient(transparent 95%, rgba(255,64,129,0.3) 100%),
+      linear-gradient(90deg, transparent 95%, rgba(255,64,129,0.3) 100%);
+    background-size: 80px 80px;
+    background-color: var(--bg);
+  }
+  body.theme-diagonal-stripes-sharp {
+    --bg: #111111; --fg: #ffcc00; --status-fg: #ffe066; --toolbar-fg: #ffe066; --title-color: rgba(255,204,0,0.28); --meta-color: rgba(255,204,0,0.55); --body-color: #ffcc00;
+    background: repeating-linear-gradient(
+      45deg,
+      #1a1a1a,
+      #1a1a1a 40px,
+      #111111 40px,
+      #111111 80px
+    );
+  }
+  body.theme-isometric-cubes {
+    --bg: #0d1b2a; --fg: #41ead4; --status-fg: #8bf0e1; --toolbar-fg: #8bf0e1; --title-color: rgba(65,234,212,0.28); --meta-color: rgba(65,234,212,0.55); --body-color: #41ead4;
+    background-color: var(--bg);
+    background-image: 
+      linear-gradient(30deg, #1b263b 12%, transparent 12.5%, transparent 87%, #1b263b 87.5%, #1b263b),
+      linear-gradient(150deg, #1b263b 12%, transparent 12.5%, transparent 87%, #1b263b 87.5%, #1b263b),
+      linear-gradient(30deg, #1b263b 12%, transparent 12.5%, transparent 87%, #1b263b 87.5%, #1b263b),
+      linear-gradient(150deg, #1b263b 12%, transparent 12.5%, transparent 87%, #1b263b 87.5%, #1b263b),
+      linear-gradient(60deg, #415a77 25%, transparent 25.5%, transparent 75%, #415a77 75%, #415a77),
+      linear-gradient(60deg, #415a77 25%, transparent 25.5%, transparent 75%, #415a77 75%, #415a77);
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  }
+  body.theme-glassmorphism {
+    --bg: #000000; --fg: #ffffff; --status-fg: #ffffff; --toolbar-fg: #ffffff; --title-color: rgba(255,255,255,0.4); --meta-color: rgba(255,255,255,0.7); --body-color: #ffffff;
+    background-color: var(--bg);
+    background-image: radial-gradient(circle at 15% 20%, rgba(255, 0, 128, 0.4) 0%, transparent 40%),
+                      radial-gradient(circle at 85% 80%, rgba(0, 200, 255, 0.4) 0%, transparent 40%);
+  }
+  body.theme-polka-dots-heavy {
+    --bg: #2a0800; --fg: #ffb347; --status-fg: #ffcc80; --toolbar-fg: #ffcc80; --title-color: rgba(255,179,71,0.28); --meta-color: rgba(255,179,71,0.55); --body-color: #ffb347;
+    background-image: radial-gradient(#4d1000 20%, transparent 20%), radial-gradient(#4d1000 20%, transparent 20%);
+    background-color: var(--bg);
+    background-position: 0 0, 40px 40px;
+    background-size: 80px 80px;
+  }
+
 </style>
 </head>
 <body class="theme-{{THEME}}">

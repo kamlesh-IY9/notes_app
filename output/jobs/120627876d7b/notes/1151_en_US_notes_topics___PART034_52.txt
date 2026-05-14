@@ -1,0 +1,7 @@
+pathfinding algorithm optimization
+expert says 27.5% reduction in latency w/ new navmesh
+compare with last time, was only 12%...
+need recheck code btw, smth about 430 nodes/sec
+might b why our game lagging at 42fps n 24dB noise
+fastsearching, cellvoltage...
+think i got it, eg less recursive calls

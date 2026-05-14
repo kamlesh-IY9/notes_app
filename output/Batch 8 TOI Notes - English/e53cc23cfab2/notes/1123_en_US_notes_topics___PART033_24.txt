@@ -1,0 +1,7 @@
+atmospheric inversion layer trapping
+doc smith's explainin how temp inversions trap pollutants
+in valley areas... usually at low pressure 3-5 km up also
+at 22degf dewpoints < evap rates bc of inversions, air gets cooler
+near surface, particulate matter accumulates, hard to tell how this affects
+asthma attacks locally, iirc, nysDept Envirment cites inversion cases @ 43% higher particulate count
+if models predict a temp inversion, can prep accordingly - install particulate filters, w/ better ventilation systems

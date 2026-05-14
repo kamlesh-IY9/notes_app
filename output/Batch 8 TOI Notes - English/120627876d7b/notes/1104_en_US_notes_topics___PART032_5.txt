@@ -1,0 +1,6 @@
+relative humidity psychrometer readings
+ok actually pretty sure abt this... 63% rh is kinda high n then we talk about dry bulb temp around 82f
+and then wet bulb temp is approx 75f iirc
+nvh of psychrometer is low, around 2dbh...
+pretty sure its used in finance to predict weather patterns
+CAPE value is around 1200, pretty high...

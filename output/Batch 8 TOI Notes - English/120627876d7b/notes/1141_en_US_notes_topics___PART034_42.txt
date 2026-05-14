@@ -1,0 +1,6 @@
+amateur radio antenna length tuning
+ok so 102.7MHz needs abt 8.6ft antenna, prolly can trim mine down a bit
+got 9.2ft now, need recheck swr, was getting 2.4:1, want under 1.5:1
+note to self: try tuning during night, less interference n stuff
+idk if i can get down to 1.2:1 like he said, seems hard...
+compare with last time, was getting 22dB loss, now its 18.5dB, thats better i guess...

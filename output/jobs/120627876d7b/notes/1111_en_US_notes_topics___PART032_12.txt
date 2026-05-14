@@ -1,0 +1,6 @@
+lab equipment scheduling and calibration
+expert saying 87% of instrument errors come from bad calibration lol
+tho i'm confused on this part - they're using some kinda cape software
+n they said it takes around 23hrs to calibrate a single spectrometer
+on top of that u gotta schedule it 2wks in advance... seems like a lot
+from the meetup talk yesterday too

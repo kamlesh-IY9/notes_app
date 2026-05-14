@@ -1,0 +1,5 @@
+avalanche beacon grid search protocols
+grid size like 10x15 meters or smth like that
+expert saying 43% of ppl dont mark their position b4 searching wait no
+also talked about signal strength @ 22dB n freq interference
+probly gotta get new bca tracker its old also dont remember how 2 use it...

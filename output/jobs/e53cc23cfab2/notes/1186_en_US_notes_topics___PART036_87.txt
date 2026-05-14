@@ -1,0 +1,6 @@
+condenser mic phantom power requirements
+def need 48v prolly around 44-46v to be safe
+from the meetup talk, pretty sure abt this...
+note to self: check my old neumann tlm103 n sennheiser mkh416 specs
+need 3-4ma of curr, tbh thats a pretty low draw...
+phantom power off cant use condensers, thats like 22dB loss n ruins the sound

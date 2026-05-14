@@ -1,0 +1,5 @@
+sidechain routing for kick and bass
+expert saying like 42dB reduction is key n might b why my tracks sound so muddy actually
+he's using fabfilter proq3 fr sidechaining, not sure tho if i can afford it
+got a tip to set threshold around -23.5 n ratio 4.5:1, gonna try that
+fastcompressing the kick drum... makes sense i guess

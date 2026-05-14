@@ -1,0 +1,6 @@
+netcode rollback implementation
+need confirm but sounds like 87.5% reduction in lag w/ new sync tech
+similar to last time we did this, fyi prolly gonna impact server load n 23ms delay
+from the session today, 11.2kb packet size is key for fastcharging cellvoltage
+rollback testing showed 18.5dB noise reduction, pretty cool...
+w/o client-side pred, not sure how this affects NVH, todo: ask about RSI impact

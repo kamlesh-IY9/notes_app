@@ -1,0 +1,6 @@
+tire pressure monitoring systems TPMS
+expert saying smth about 32psi being optimal n 43% of cars r underinflated iirc
+note to self: check my own tire pressure... been getting around 22mph worse gas mileage lately
+r they talking about direct TPMS or indirect? need verify
+seems like some systems use wheel speed sensors n can detect 12dB differences in sound waves...
+fastcharging my tires not a thing apparently... n cellvoltage monitoring is diff story altogether...

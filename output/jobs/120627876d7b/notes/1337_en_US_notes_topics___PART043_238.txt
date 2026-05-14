@@ -1,0 +1,5 @@
+aspect ratio framing techniques
+expert saying 2.39:1 ratio gives more cinematic feel, check this
+similar to last time, 24fps n 1080p res, gets 43% more engagement
+TODO look into anamorphic lenses, they get 22dB n better bokeh
+fastframing n cellvoltage matter too, n gonna try on my next project...

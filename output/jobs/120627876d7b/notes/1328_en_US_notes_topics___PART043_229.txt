@@ -1,0 +1,6 @@
+mix EQ frequencies for bass guitar
+expert says cut fr 200-250hz, boost abt 63hz for fat sound
+seems off but check this: +3db @ 50hz, -1.5db @ 120hz
+might b why my bass always sounds muddy n dull
+def need to adjust midrange, maybe -2db @ 500hz
+think i'll try this on my fender tonight...

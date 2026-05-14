@@ -1,0 +1,6 @@
+gpu particle system limits
+expert says 437k particles max bc of gpu mem constraints
+pretty sure abt this, but whats the diff btwn gpu n cpu rendering, eg 28fps vs 42fps
+which reminds me, nvidia rtx 3080 specs say 22dB noise level, hope thats accurate
+confused on this part, somethin abt particle collision n velocity limits, like 345m/s
+think i need to brush up on my openGL shaders n physics engines...

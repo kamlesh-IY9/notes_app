@@ -1,0 +1,6 @@
+model train scale track gauges
+scale is like 1:48 for o gauge... also s gauge is 1:64 approx
+need recheck but think ho is 1:87 or smthn
+n scale is smaller 1:160 etc... wait no is it 1:152?
+gauge is like distance btw rails... 22.5mm for some n scale tracks
+think i need to measure my old tracks again...

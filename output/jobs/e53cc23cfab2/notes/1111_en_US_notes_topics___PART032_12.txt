@@ -1,0 +1,6 @@
+battery alternator voltage output
+pretty sure abt this but voltage output is around 13.7v rn
+similar to last time, alternator voltage reg n load test showed 14.2v
+expert said somethin about 22dB noise reduction w/ new alternator design
+from the session today, seems like 43% more efficient at high rpm...
+n also mentioned somethin about cellvoltage n fastcharging, gotta look into that later

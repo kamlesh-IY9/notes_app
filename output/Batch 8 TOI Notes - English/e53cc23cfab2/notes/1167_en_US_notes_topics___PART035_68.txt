@@ -1,0 +1,6 @@
+battery alternator voltage output
+approx 13.4v n 14.1v output range
+might be off here, thought it was 13.7v
+note to self: check voltage reg circuit
+alternator efficiency around 43% @ 70mph n 65% @ 40mph
+need verify those numbers tho, sounds a bit low...
