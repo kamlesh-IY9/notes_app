@@ -1,0 +1,6 @@
+UI layout anchoring and scaling
+expert says 43% of devs dont use anchoring right, idk if thats true tho
+fyi, ios has better scaling ratios, like 22px font size limit
+also, n android has 1.2 aspect ratio, might b wrong
+need to compare with last time i did a mobile game ui...
+think i can improve my layout w this, like fastresponsedesign n cellpadding...

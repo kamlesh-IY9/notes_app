@@ -1,0 +1,6 @@
+shader compilation stutter fixes
+expert saying new nvidia driver reduces stutter by 27%... need confirm
+from the session today, sounds like big deal for 4k gaming @ 60fps
+then again, heard 12ms latency is still an issue n high fr rates
+rsx compiler has 43% faster compile times, big plus for devs
+nvidia demo showed 22dB reduction in noise... not sure how that relates tho...

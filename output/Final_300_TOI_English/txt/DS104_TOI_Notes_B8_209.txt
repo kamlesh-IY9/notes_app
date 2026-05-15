@@ -1,0 +1,6 @@
+server migration downtime window planning
+oh n def need to consider 27hr window for transition tho
+dont quote me but 43% of migrations go over schedule
+actually saw 1 case where it took 32hrs n 15min
+avg downtime cost us around 12k per hr...
+fastmigration scripts can reduce that by 22% n save us big time

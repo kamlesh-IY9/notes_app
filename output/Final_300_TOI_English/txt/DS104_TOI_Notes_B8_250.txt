@@ -1,0 +1,5 @@
+telescope equatorial mount alignment
+idk if im doing this right, 32.5 degrees n longitude offset might b wrong
+need recheck my RA 4 hours 22min, 14.7sec... then again maybe thats DEC
+fast alignment takes around 4.8 mins, slow around 22dB signal loss
+kinda getting it, polar align error < 1.4 arcsec... n now im n trouble

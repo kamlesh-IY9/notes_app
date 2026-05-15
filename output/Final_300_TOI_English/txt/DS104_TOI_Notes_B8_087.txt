@@ -1,0 +1,6 @@
+level design choke point analysis
+expert saying 67% of players get stuck at narrow doorways n corridors
+iirc this is def related to NVH, rly need to review that concept
+which reminds me, we saw 32.5% decrease in player prog when added 4 more enemies...
+confused on this part, somethin about funneling players thru fasttravel zones
+n how it affects cellvoltage, like 22dB diff or smthn...

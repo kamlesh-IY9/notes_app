@@ -1,0 +1,6 @@
+lab equipment scheduling and calibration
+equipment utilization r around 43% lol dont quote me but
+seems low... is this normal??
+calibration cycle every 22hrs n 15min might b why
+def need 2 check temp +/- 0.5 degrees fahrenheit
+CAPE software used 2 track scheduling n usage stats

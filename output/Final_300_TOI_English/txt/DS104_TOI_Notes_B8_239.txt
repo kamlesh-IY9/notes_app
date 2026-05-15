@@ -1,0 +1,6 @@
+biochemistry lecture notes on enzyme kinetics
+ok so michaelis constant is like 43% of vmax, def matters in catalysis
+speaking of whch, km values r around 22mM, might b wrong tho
+enzyme substrate binding is fast, like 1/10th of a sec
+vmax is max velocity, around 250 umol/min, n substrate conc is key
+cell signaling pathways...

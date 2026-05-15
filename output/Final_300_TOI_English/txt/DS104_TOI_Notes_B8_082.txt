@@ -1,0 +1,6 @@
+ecu remap air fuel mixture tuning
+tuning ecu for better mpg... around 27% gain eg on 05 civic, not sure tho if its worth the risk
+lambda sensor reading 0.95, might b why its running rich
+AFE filter helps, 12.5 hp gain @ 5500 rpm, need confirm if thats w/o dyno test
+lambda to fuel trim ratio, etc... like 14.7:1 air fuel mix, goal is 13.5 might b doable
+rsi on fuel injectors, 22ohm resistance, seems high n might b why its not optimal

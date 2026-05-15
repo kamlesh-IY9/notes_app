@@ -1,0 +1,6 @@
+exhaust manifold backpressure flow
+expert says 37.5% loss in flow rate bc of restrictors
+is this normal?? seems high to me
+nvh issues pop up around 22dB noise level
+might b why they use larger diameter pipes, ie 2.5in
+hmm, cell voltage drop around 0.8v...

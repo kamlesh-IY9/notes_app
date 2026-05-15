@@ -1,0 +1,6 @@
+ancient ruin excavation grid mapping
+ok actually 37.5% of all excavations use gps now, on top of that they use approx 12' squares for grid mapping
+tbh i thought it was more like 25%... nthought about using drones n thermal imaging for site mapping too
+fastmapping tech can cover like 2.5 miles in 1hr, pretty sure abt this, seen it in a doc ...
+site in mexico used 45dB sensors for subterranean scanning, interesting
+on top of that they mentioned gis software for data analysis, gotta look into that...

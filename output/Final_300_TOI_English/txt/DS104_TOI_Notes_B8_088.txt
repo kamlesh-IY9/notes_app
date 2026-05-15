@@ -1,0 +1,6 @@
+shader compilation stutter fixes
+expert says shader compilation takes around 23ms rn, thats pretty long iirc
+note to self: check if our game engine can handle 43% more vertex data bc thats what causes the stutter
+fastshaderloading or smth like that can reduce stutter by 17dB...
+need to test on lower end gpu, maybe nvidia 1060 or smth
+fixes wont work if cellvoltage is too low, gotta check powertargets too...

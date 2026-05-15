@@ -1,0 +1,9 @@
+warehouse inventory audit discrepancies
+trying to get a handle on why shipments keep missing ...
+avg discrepancy rate is 5.27% iirc, which sounds pretty high n
+we looked @ CAPE and RSI metrics ... can't say much w/o more data tho
+todo: dig deeper into warehouse operations ... maybe its a training issue
+found out that "cycle counts" are still weekly, not bi-weekly as it should be ...
+should be able to decrease discrepancies by 40% by automating receipt checks
+oh n, what about those "dead stock" accounts? need to clear out
+hard to tell if it's a people problem or sys problems

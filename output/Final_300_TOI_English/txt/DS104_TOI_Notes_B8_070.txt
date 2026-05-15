@@ -1,0 +1,6 @@
+server migration downtime window planning
+expert saying 27hrs downtime is avg, seems long to me, need confirm
+bc of db sync issues n app updates, 43% of migrations go over estimated time
+then again, heard of some places doing it in 12hrs or less, like 9hrs w/ good planning
+confused on this part - what's diff btw cutover vs phased rollout, will look up later...
+he mentioned 95% uptime guarantee, sounds good, but what about during peak hrs, eg friday nites...

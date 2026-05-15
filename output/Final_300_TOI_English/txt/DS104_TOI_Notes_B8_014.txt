@@ -1,0 +1,6 @@
+condenser mic phantom power requirements
+thinking 48v btw might be off here...
+needs around 44-46v to work properly iirc
+speaking of which, noise floor is like 22dB
+confused on this part - P48 vs T power, w/o adapter?
+trying to recall if my old neumann had this issue...

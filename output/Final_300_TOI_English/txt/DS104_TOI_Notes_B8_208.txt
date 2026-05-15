@@ -1,0 +1,5 @@
+subtractive synthesis envelope adsr
+envelope has 4 stages: attack, decay, sustain, release... 23db drop in 1st stage iirc
+actually 43% of sound is in decay phase rn, then again, attack can b as low as 10ms
+sustain level around 50%, n release takes upto 2.5s... fastattacking sounds r more prominent
+need to tweak these params to get desired sound, maybe around 31% sustain n 18db drop...

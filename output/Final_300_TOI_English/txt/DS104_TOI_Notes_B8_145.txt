@@ -1,0 +1,5 @@
+netcode rollback implementation
+expert saying 37ms avg latency is goal, seems low tbh
+similar to last time, they mentioned 22fps cap n 43% packet loss
+iirc thats pretty standard for online gaming, TODO look into this more
+fastsync n interpolation r key, btw what's the diff btw client n server side rollbacks...

@@ -1,0 +1,7 @@
+server migration downtime window planning
+gotta plan downtime w/ clients... typical migration <1 hr <15% error rate ... ok
+expert says 7-10 min w/o comms rly imp 4 24/7 ops
+planning downtime w/ clients is key r/costs
+oh n how 2 handle 51% site outtage b4 go live
+'zero data loss' = 99.999% uptime 'high assurance' = 99.9% uptime
+we gotta make this work or else 1 big mess...

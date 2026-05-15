@@ -1,0 +1,3 @@
+sprite sheet resolution and atlas packing
+ok so he's talkn bout spr sheet res, 1024x1024 is decent but 2048x2048 is way better for pixel art ngl. packing tho, atlas size is 32x32, but "should b 16x16"... might b why they use 32x32, less issues with texture repeats, "idk what's a good balance tho"
+he's sayin atlas size = sprite count / sqrt(atlas size) or somethin, like 64 texels for pixel art, 128 for vector. got 100 sprites, atlas wud be 32x32 n 20x20... w/e. don't forget about padding, gotta be a power of 2 for graphics cards to handle... or so iirc

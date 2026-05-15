@@ -1,0 +1,5 @@
+non-linear video editing proxy workflow
+expert talkin bout 4k proxy workflow rn, 23.97fps tho
+he mentioned 12.5Mbps bitrate, kinda low n 34% smaller file size
+from the session today, confused on this part... similar to last time
+he said 18dB noise reduction helps, i gotta try this on my next project n see...

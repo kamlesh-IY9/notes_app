@@ -1,0 +1,6 @@
+subtractive synthesis envelope adsr
+ok so attack time around 23ms, decay 140ms...
+wait no thats not right, oh n makes sense now
+fr like 30db reduction n then sustain at 46%
+tbh never thought of using env for drum sounds...
+adsr on a moog filter is everything, like 18dB/octave slope

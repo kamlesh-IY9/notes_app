@@ -1,0 +1,5 @@
+model train scale track gauges
+just learned from the session today nscale is 1:160 ratio which is pretty small dont quote me but its like 0.118in fr gauge...
+which reminds me i saw a layout w/ 22.5deg curves n it looked so cool
+think i can pull off a 4x8ft table w/ ho scale n some fastcharging spots
+need to check cellvoltage on my old locomotive n make sure its around 12.4v

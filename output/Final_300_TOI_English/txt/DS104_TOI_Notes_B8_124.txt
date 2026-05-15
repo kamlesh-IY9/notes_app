@@ -1,0 +1,6 @@
+server migration downtime window planning
+expert says 27hr window is kinda standard n we need 2 check this
+our system's sql db size is around 432gb n migration speed is 12mb/s btw
+might b why they r suggesting 3am sat n sun, less than 12% user traffic
+need double check with team, dont wanna mess up n get 22db of complaints from customers
+should ask about cell backup n failover protocol...

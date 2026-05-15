@@ -1,0 +1,5 @@
+campus wifi mesh network upgrade details
+so they're upgrading to 802.11ax n now, abt 43% faster than current setup
+new ap's will be placed every 200ft or so, not sure tho if that's enough coverage
+signal strength will be aroun 22dB better, and then they're gonna test it w/o interference from cell towers
+need double check on the exact cost, but i think it's aroun $1.2m... seems like alot of $$

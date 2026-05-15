@@ -1,0 +1,5 @@
+green screen chroma keying thresholds
+expert just said 42.5% threshold for decent keying n btw thats w/ smth like 4:2:2 subsampling
+from the session today i think i got it but need confirm what exactly is luma range
+which reminds me of CAPE demo last yr, they had 23.7dB signal n it looked rly good
+still trying to wrap my head around spinal screen prep to avoid green spill...

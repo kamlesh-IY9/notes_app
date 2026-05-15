@@ -1,0 +1,6 @@
+isobar map pressure gradient force
+from the meetup talk, 34.5mb pressure diff causes 22mph winds iirc
+speaking of whch, presenter mentioned 45% chance of storm sys n eastern wi
+confused on this part, something about 982mbar low pres syst n lake mich
+nasa data shows 18.2dB increase in wind noise w/ 5mph gusts, r u kidding me
+gradient force calc is like, 0.035n/sqmi or smthn...

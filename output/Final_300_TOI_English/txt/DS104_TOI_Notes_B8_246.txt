@@ -1,0 +1,6 @@
+suspension strut rebound damping
+check this, strut rebound @ 23% ngl thats high
+on top of that, low speed damping 12lbs/in, hmm
+wait no, thats not how it works, rebound @ 42mph
+rsi of 1.7, thats a big deal...
+nvh reduction of 18dB, nice

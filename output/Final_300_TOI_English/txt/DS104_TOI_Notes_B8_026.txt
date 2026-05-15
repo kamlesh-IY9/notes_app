@@ -1,0 +1,6 @@
+campus wifi mesh network upgrade details
+ie 27 access points added, dont quote me but around 43% more coverage
+ngl, 22dB signal strength increase is huge, need recheck specs tho
+and then they talked about w/o password auth, kinda sketchy ngl
+new aps have 802.11ax, supposed to be way faster...
+and lower latency, around 10-12ms, which is pretty dope

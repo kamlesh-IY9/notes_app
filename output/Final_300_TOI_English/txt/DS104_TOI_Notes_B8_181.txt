@@ -1,0 +1,5 @@
+remote work VPN troubleshooting steps
+expert saying 87% of issues r firewall related n i'm thinking wait no
+idk if thats true but he's saying ping times @ 43ms r normal
+speaking of whch i had 22dB packet loss last wk n it was a nightmare
+from the session today i gotta check my WAN config n maybe restart the router...

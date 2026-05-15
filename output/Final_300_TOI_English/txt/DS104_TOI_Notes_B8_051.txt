@@ -1,0 +1,6 @@
+mix EQ frequencies for bass guitar
+so like 63hz n 125hz def key ranges or smth like that
+cutting 250hz seems off, idk maybe 22dB is too much
+which reminds me, low end boost around 43% at 30hz-ish
+he's saying fastattack compression, like 10:1 ratio btw
+ncpy settings, w/ makeup gain...

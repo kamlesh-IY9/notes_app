@@ -1,0 +1,6 @@
+level design choke point analysis
+expert says 37% of players get stuck at narrow corridors, pretty sure about this
+bottlenecks r bad, fyi, 22fps dropoff when many enemies spawn
+oh n need verify, do 45deg angles really reduce player frustration?
+ngl, makes sense, 3.5 sec avg response time to threats in tight spaces...
+think im gonna try this out on my own map, see if it improves gameplay

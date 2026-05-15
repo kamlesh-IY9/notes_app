@@ -1,0 +1,7 @@
+server migration downtime window planning
+talkin bout migratin servers to cloud on top of that gotta minimize downtime... idk how they do it
+4:00 am - 6:00 am window considered "golden" for least impact on users (60% reduction in RSI)
+tryna avoid key bus hours 7-9 am, n 4-6 pm EST on top of that
+check this, apparently "delta time" b/w original n new server can affect downtime duration (avg 20-30 minutes)
+pretty sure abt this, they mention some kinda "confidence level" 98% for complete migration in min downtime window
+what happens when servers re-sync? (22ms avg) anyone got an idea?

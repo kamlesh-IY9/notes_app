@@ -1,0 +1,5 @@
+pathfinding algorithm optimization
+expert says 43% of game dev time is spent on this lol
+note to self:look into a* algo n dijkstra's... 22ms avg response time is this normal??
+from the session today, seems like funnel algo is fastcharging path calc...
+hmm, w/o heuristics we get 15% more calc time... n what's the diff between cape n rsi in pathing??

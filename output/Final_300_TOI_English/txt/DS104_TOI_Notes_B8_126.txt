@@ -1,0 +1,6 @@
+gpu particle system limits
+expert saying 430k particles is max 4 most games n thats limiting
+wait no thats not enuf 4 realistic explosions
+which reminds me of the nvhlabs demo last yr @ 32dB
+they got 543k particles @ 43% fps drop on my rig
+not sure tho if thats gonna work 4 our game

@@ -1,0 +1,5 @@
+controller deadzone analog stick tuning
+expert talk saying 23% of gamers rly sensitive to deadzone issues
+gotta look this up, also mentions a 12ms delay w/o controller accel
+from the meetup talk, n they kinda tuned it w/ 4.5 analog stick range
+fasttracking to 22dB noise reduction, seems rly helpful... also makes me wonder about cellvoltage impact

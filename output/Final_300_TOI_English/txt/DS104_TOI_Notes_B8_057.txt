@@ -1,0 +1,5 @@
+vocal compression knee and ratio settings
+so like 4:1 ratio for vocals or smth like that
+wait no, he said 3.7:1 for more subtle compression
+also, knee at around 22dB, n soft knee helps w/ NVH
+btw, threshold at -23db, kinda makes sense, i guess...

@@ -1,0 +1,6 @@
+battery alternator voltage output
+expert saying avg output 13.4v n some cars go up to 14.7v idk if thats normal
+note to self: check my dodge voltage bc i think its around 12.9v
+he mentioned smth about 85% efficiency at 70mph
+wait no is that watts or volts...
+n he said if voltage drops below 12.2v it can cause nvh issues

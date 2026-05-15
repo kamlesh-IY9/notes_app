@@ -1,0 +1,6 @@
+compass magnetic declination calculation
+expert saying declination is like 11.5 degrees east in tn
+is this normal??
+and then he mentions variation w/ altitude, approx 32ft/mile change
+TODO look into this more, how it affects navigation in smoky mtns
+he's talking about using a baseplate compass w/ rotating bezel...

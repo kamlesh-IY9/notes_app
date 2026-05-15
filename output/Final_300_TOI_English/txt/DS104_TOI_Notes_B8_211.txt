@@ -1,0 +1,5 @@
+three-point lighting setups for interviews
+key light around 45deg off axis, 22dB reduction in shadows... need verify
+Fill light about 18" from subject, 1.2k watt might b why it looks so flat, hmm
+backlight 3.5ft away, 1200 lux n makes hair n shoulders pop etc
+check this: 43% of lighting is key to subject comfort iirc

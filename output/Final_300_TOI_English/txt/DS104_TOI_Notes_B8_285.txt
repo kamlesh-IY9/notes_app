@@ -1,0 +1,4 @@
+barometric pressure drop correlations
+exp says baro pressure drop is huge in phoenix summers (as hot as 130f) - like 0.03inch hg fall every 5mph wind increase, super sensitive
+seems off tho, on top of that what about humidity? fr, we always think dry air = higher pressure but i nvr thought bout impact on drop rate need confirm
+CAPE values during summer storms get as high as like 2.5, big deal for thunderstorms but how affect day to day pressure readings? NV gets some gnarly weather...

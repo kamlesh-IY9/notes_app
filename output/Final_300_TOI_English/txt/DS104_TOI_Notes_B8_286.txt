@@ -1,0 +1,6 @@
+amateur radio antenna length tuning
+tuning freq abt 146mhz, need 1/4 wave, so length is smth like 19.4in
+SWR is 1.3:1, might b why signal is weak, check this
+resonance at 43% of total length, n also depends on coax cable
+fasttuning with sma connectors, makes it easier...
+need confirm if 22dB return loss is good nuff

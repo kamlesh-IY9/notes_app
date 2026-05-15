@@ -1,0 +1,6 @@
+analog synthesizer oscillator tuning
+expert says 432hz is optimal, i thought it was 440... wait no
+he's using a vco, fyi voltage controlled oscillator, 22dB gain
+actually thats pretty high, which reminds me to check my own rig
+voltage swing is like 4.2v pp, n i need to adjust mine to 3.8v
+osc tuning takes about 43% of overall synth setup time...

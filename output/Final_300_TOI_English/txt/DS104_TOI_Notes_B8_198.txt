@@ -1,0 +1,5 @@
+tire pressure monitoring systems TPMS
+explaining how TPMS uses transducers ...check this w/o direct wire connection, via freq modulating ...then again don't know how  they detect leak
+sent signals thru 1.5 volts  sensor n battery cellvolatage, get temp n pressure...wonderin what temp ranges are (say above 130f)
+tire pressure: 35-43 psi, some trucks got stiffer sidewall >45 psi
+these modulators r used in a matrix, can track pressures...think wierd how 20ms delay between sending n recieving info still makes it fastenough?
